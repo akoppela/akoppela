@@ -9,7 +9,7 @@ var Menu = new Class({
 		
 		this.columns.fade('hide');
 		
-		this.menu.addEvents({
+		this.columns.addEvents({
 			'mouseenter': this.stopTimer.bind(this),
 			'mouseleave': this.startTimer.bind(this)
 		});
@@ -40,6 +40,7 @@ var Menu = new Class({
 	},
 	
 	start: function(e){
+		this.check(e);
 		this.curElement = $(e.target).getElement('ul') || $(e.target).getNext();
 		if(!this.curElement || this.curElement.get('tag') != 'ul') return false;
 		

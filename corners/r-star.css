@@ -1,0 +1,46 @@
+.r-star, 
+.r-star-shape{
+	position:relative;
+	overflow:hidden;
+	padding:10px 0;
+}
+
+.r-star, 
+.r-star-shape .content{
+	background:#88d2fc;
+}
+
+.r-star .content, 
+.r-star-shape .content{
+	padding:10px 20px;
+}
+
+.r-star .cn,
+.r-star-shape .cn{
+	position:absolute;
+	width:20px;
+	height:20px;
+	left:-10px;
+	top:-10px;
+	background:url(r-star.png);
+}
+
+.r-star .cn.tr, .r-star .cn.br,
+.r-star-shape .cn.tr, .r-star-shape .cn.br {
+	margin-left:100%;
+}
+
+.r-star .cn.bl, .r-star .cn.br,
+.r-star-shape .cn.bl, .r-star-shape .cn.br {
+	top:auto;
+}
+
+
+
+.r-star-shape .cn{
+	background:url(r-star2.png);
+}
+
+.r-star-shape .cn.tl, .r-star-shape .cn.bl {
+	width:100%;
+} 
