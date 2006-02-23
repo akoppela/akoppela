@@ -127,10 +127,11 @@ a {
 }
 
 #slogan-frame-wrapper {
-	width:354px
+	width:531px
 }
 
 #first-frame {
+	margin-right:177px;
 	float:left;
 	background:#fe9800;
 	width:177px;
