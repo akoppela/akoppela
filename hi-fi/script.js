@@ -95,7 +95,6 @@
 			op2 = osi/293;
 	        document.getElementById("signin").style.opacity = op2; 
 	        document.getElementById("signin").style.filter = 'alpha(opacity='+op2*100+')'; 
-			document.getElementById("signin").style.display = "block";
 			document.getElementById('form-wrapper').style.marginRight = -293+osi+"px";
 			document.getElementById('open-si').style.display = "none";
 	        t1osi=setTimeout('opensi()', 1); 
@@ -117,7 +116,6 @@
 			document.getElementById('open-si').style.display = "none";
 	        t2osi=setTimeout('closesi()', 1); 
 	        if (osi == 0) {
-	        	document.getElementById("signin").style.display = "none";
 				document.getElementById('open-si').style.display = "block";
 	        }
 	        
