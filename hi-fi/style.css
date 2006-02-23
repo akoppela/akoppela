@@ -151,12 +151,12 @@ a {
 }
 
 #sign-in {
-	overflow:hidden;
 	z-index:1;
 	float:right;
 	width:293px;
 	height:140px;
 	background: url(images/welcome_bg.jpg) repeat-x;
+	overflow:hidden;
 }
 
 #open-si {
