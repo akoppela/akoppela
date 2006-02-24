@@ -17,7 +17,7 @@ window.addEvent('domready', function(){
 	
 	$('back').addEvent('click', function(e){
 		e.stop();
-		$('first-frame').set('morph', {duration: '700', transition: Fx.Transitions.Back.easeOut});
+		$('first-frame').set('morph', {duration: '800', transition: Fx.Transitions.Back.easeOut});
 		$('first-frame').morph('.first-frame');
 		myMorph1.start({
 			opacity : 1
@@ -26,6 +26,34 @@ window.addEvent('domready', function(){
 			opacity : 0
 		});
 	});
-
+	
+	var myMorph3 = new Fx.Morph($('nav-back'));
+	var myMorph4 = new Fx.Morph($('nav-forvard'));
+	
+	$('nav-forvard').addEvent('click', function(e){
+		e.stop();
+		$('nav-anim').set('morph', {duration: '500', transition: Fx.Transitions.Back.easeOut});
+		$('nav-anim').morph('.nav1');
+		myMorph4.start({
+			opacity : 0
+		});
+		myMorph3.start({
+			opacity : 1
+		});
+	});
+	
+	$('nav-back').addEvent('click', function(e){
+		e.stop();
+		$('nav-anim').set('morph', {duration: '500', transition: Fx.Transitions.Back.easeIn});
+		$('nav-anim').morph('.nav-anim');
+		myMorph4.start({
+			opacity : 1
+		});
+		myMorph3.start({
+			opacity : 0
+		});
+		
+	});
+	
 });
 

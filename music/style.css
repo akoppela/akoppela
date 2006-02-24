@@ -276,6 +276,7 @@ a {
 }
 
 #nav {
+	overflow:hidden;
 	height:34px;
 	background:#001237;
 }
@@ -303,9 +304,36 @@ a {
 	color:#f00;
 }
 
-#nav li p {
+.separ {
 	float:left;
 	margin:0 5px;
+}
+
+#nav-anim {
+	margin-left:-575px;
+}
+
+#nav-back {
+	visibility:hidden;
+	opacity:0;
+	filter: alpha(opacity=0);
+	display:block;
+	color:#f00;
+	cursor:pointer;
+	float:right;
+	margin-right:-65px;
+}
+
+#nav-forvard {
+	display:block;
+	color:#f00;
+	cursor:pointer;
+	float:right;
+	margin:0 10px;
+}
+
+#nav1 {
+	margin-left:0;
 }
 
 #content-wrapper {
