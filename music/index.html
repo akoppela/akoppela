@@ -6,8 +6,9 @@
 	<meta name="keywords" content="music, music shop" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<title>Music shop | Main</title>
-	<script type="text/JavaScript" src="script.js"></script>
 	<script type="text/javascript" src="mootools-1.2.1-core-nc.js"></script>
+	<script type="text/javascript" src="mootools-1.2-more.js"></script>
+	<script type="text/JavaScript" src="script.js"></script>
 </head>
 <body>
 	<div id="container-wrapper">
@@ -53,6 +54,17 @@
 										<img id="view-cart" src="images/view_cart.gif" alt="view cart" />
 									</div>
 									<div id="second-frame">
+										<p id="title-signin">Autorization:</p>
+										<form>
+											<input class="in-bor" id="sign-in" type="text" value="Login" onblur="if(this.value=='')this.value='Login';" onclick="if(this.value=='Login')this.value='';" />
+											<input class="in-bor" type="password" value="password" onblur="if(this.value=='')this.value='password';" onclick="if(this.value=='password')this.value='';"/>
+											<input id="log-but" type="image" src="images/login.gif" />
+											<label for="remind">
+												<input id="remind" type="checkbox" />
+												Remind me
+											</label>
+											<p id="back">&larr; Back</p>
+										</form>
 									</div>
 								</div>
 							</div>
