@@ -135,8 +135,13 @@ a {
 	float:left;
 	background:#fe9800;
 	width:177px;
-	padding-bottom:85px;
 	height:85px;
+	margin-right:177px;
+	margin-left:0;
+}
+
+#first-frame-anim {
+	margin-left:-354px;
 }
 
 #cart {
@@ -736,4 +741,17 @@ a {
 #second-nav li p {
 	float:left;
 	margin-right:5px;
+}
+
+.tip {
+	background:#f00;
+	color: #fff;
+	z-index: 13000;
+}
+
+.tip-title {
+	font-size: 11px;
+	margin: 0;
+	color: #fff;
+	padding: 8px 8px 4px;
 }
