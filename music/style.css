@@ -158,7 +158,7 @@ a {
 }
 
 #head-nav a:hover {
-	text-decoration:underline;
+	text-decoration:underline;f
 	color:#f00;
 }
 
@@ -434,7 +434,7 @@ a {
 
 #nav-anim {
 	margin-left:-575px;
-	width: 520px;
+	width: 526px;
 }
 
 #nav-f-b-round {
