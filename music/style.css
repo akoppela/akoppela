@@ -130,7 +130,8 @@ body {
 	color:#333;
 	width:100%;
 	height:100%;
-	width: expression(((document.documentElement.clientWidth || document.body.clientWidth) > 780)? "100%" : "780px");
+	width: expression(((document.documentElement.clientWidth || document.body.clientWidth) > 960)? "100%" : "960px");
+	min-width:930px;
 }
 
 #container-wrapper {
@@ -140,7 +141,6 @@ body {
 #container {
 	margin:0 10px;
 	padding:6px 0;
-	min-width:780px;
 }
 
 a {
@@ -434,7 +434,7 @@ a {
 
 #nav-anim {
 	margin-left:-575px;
-	width: 575px;
+	width: 520px;
 }
 
 #nav-f-b-round {
