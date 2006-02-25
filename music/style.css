@@ -130,7 +130,7 @@ body {
 	color:#333;
 	width:100%;
 	height:100%;
-	width: expression(((document.documentElement.clientWidth || document.body.clientWidth) > 960)? "100%" : "960px");
+	width: expression(((document.documentElement.clientWidth || document.body.clientWidth) > 930)? "100%" : "930px");
 	min-width:930px;
 }
 
