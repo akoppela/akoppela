@@ -5,7 +5,7 @@ window.addEvent('domready', function(){
 		
 	$('login').addEvent('click', function(e){
 		e.stop();
-		$('first-frame').set('morph', {duration: '500', transition: Fx.Transitions.Back.easeIn});
+		$('first-frame').set('morph', {duration: '500', transition: Fx.Transitions.Circ.easeInOut});
 		$('first-frame').morph('.first-frame-anim');
 		myMorph1.start({
 			opacity : 0
@@ -17,7 +17,7 @@ window.addEvent('domready', function(){
 	
 	$('back').addEvent('click', function(e){
 		e.stop();
-		$('first-frame').set('morph', {duration: '800', transition: Fx.Transitions.Back.easeOut});
+		$('first-frame').set('morph', {duration: '500', transition: Fx.Transitions.Circ.easeInOut});
 		$('first-frame').morph('.first-frame');
 		myMorph1.start({
 			opacity : 1
@@ -35,10 +35,10 @@ window.addEvent('domready', function(){
 		$('nav-anim').set('morph', {duration: '500', transition: Fx.Transitions.Back.easeOut});
 		$('nav-anim').morph('.nav1');
 		myMorph4.start({
-			opacity : 0
+			color : '#000'
 		});
 		myMorph3.start({
-			opacity : 1
+			color : '#fff'
 		});
 	});
 	
@@ -47,10 +47,10 @@ window.addEvent('domready', function(){
 		$('nav-anim').set('morph', {duration: '500', transition: Fx.Transitions.Back.easeIn});
 		$('nav-anim').morph('.nav-anim');
 		myMorph4.start({
-			opacity : 1
+			color : '#fff'
 		});
 		myMorph3.start({
-			opacity : 0
+			color : '#000'
 		});
 		
 	});

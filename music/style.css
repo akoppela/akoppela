@@ -61,7 +61,6 @@ a {
 	margin-bottom:9px;
 }
 
-
 #slogan-wrapper {
 	width:100%;
 	float:right;
@@ -276,9 +275,13 @@ a {
 }
 
 #nav {
-	overflow:hidden;
 	height:34px;
 	background:#001237;
+}
+
+#nav-menu {
+	overflow:hidden;
+	float:left;
 }
 
 #nav ul {
@@ -313,23 +316,41 @@ a {
 	margin-left:-575px;
 }
 
-#nav-back {
-	visibility:hidden;
-	opacity:0;
-	filter: alpha(opacity=0);
-	display:block;
-	color:#f00;
-	cursor:pointer;
+#nav-f-b-round {
 	float:right;
-	margin-right:-65px;
+	width:138px;
+	margin:6px 10px 0 0;
+}
+
+#nav-f-b-border, #nav-f-b-round b {
+    background-color: #f00;
+}
+
+#nav-f-b-border {
+	height:14px;
+	padding:1px 4px;
+}
+
+#nav-f-b {
+	background:#f00;
+}
+
+#nav-back {
+	display:block;
+	color:#000;
+	cursor:pointer;
+	float:left;
+	margin-left:5px;
+	padding:0 2px 2px 0;
 }
 
 #nav-forvard {
+	margin-right:5px;
+	padding:0 0 2px 2px;
 	display:block;
-	color:#f00;
+	color:#fff;
 	cursor:pointer;
 	float:right;
-	margin:0 10px;
 }
 
 #nav1 {
