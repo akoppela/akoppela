@@ -168,7 +168,7 @@ a {
 #header li {
 	text-transform:uppercase;
 	display:inline;
-	margin:0 11px;
+	margin:0 12px 0 8px;
 }
 
 #header li a {
@@ -218,7 +218,10 @@ a {
 	float:left;
 	height:41px;
 	display:inline;
-	line-height:47px;
+}
+
+#nav li img {
+	margin-top:13px;
 }
 
 #auth {
