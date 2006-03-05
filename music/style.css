@@ -536,6 +536,7 @@ a {
 }
 
 .submit2 {
+	cursor:pointer;
 	vertical-align:top;
 	font-family:tahoma;
 	font-weight:bold;

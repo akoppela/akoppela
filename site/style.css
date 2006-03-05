@@ -162,13 +162,13 @@ a {
 
 #header ul {
 	float:right;
-	list-style-type:none;
+	margin-right:12px;
 }
 
 #header li {
 	text-transform:uppercase;
 	display:inline;
-	margin:0 12px 0 8px;
+	margin-left:19px;
 }
 
 #header li a {
@@ -303,7 +303,7 @@ a {
 }
 
 #news li {
-	margin-top:20px;
+	margin-top:18px;
 }
 
 #news li p {
@@ -311,7 +311,7 @@ a {
 	text-indent:10px;
 	text-align:justify;
 	font-weight:bold;
-	margin-bottom:10px;
+	margin-bottom:8px;
 }
 
 #news li a {
