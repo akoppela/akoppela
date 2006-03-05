@@ -1,6 +1,6 @@
 html {
 	color: #000;
-	background: #FFF;
+	background: #094863;
 }
 
 body,
@@ -267,6 +267,7 @@ a {
 	font-weight:bold;
 	text-transform:uppercase;
 	width:138px;
+	background:#fff;
 }
 
 #pass {
@@ -276,9 +277,11 @@ a {
 	text-transform:uppercase;
 	float:left;
 	width:109px;
+	background:#fff;
 }
 
 #search {
+	background:#fff;
 	height:15px;
 	margin:4px 10px 3px 0;
 	float:left;
@@ -344,7 +347,7 @@ a {
 
 #footer {
 	clear:both;
-	height:100px;
+	height:70px;
 	background:#094863;
 }
 
