@@ -123,6 +123,10 @@ select {
 	*font-size: 100%;
 }
 
+img, div { 
+	behavior: url(iepngfix.htc); 
+}
+
 body {
 	background:#fff;
 	font-family:arial;
@@ -151,10 +155,9 @@ a {
 
 #logo {
 	float:left;
-	margin-left:30px;
 }
 
-#head_car {
+#head-car {
 	clear:left;
 	float:left;
 	margin-top:11px;
@@ -176,25 +179,23 @@ a {
 	float:right;
 	display:inline;
 	margin-right:2px;
+	font-family:"arial narrow";
+	font-weight:bold;
+	text-align:left;
 }
 
-.title-contact {
-	text-align:left;
-	font-family:"arial narrow";
+#header strong {
 	font-size:12px;
 	color:#6c6b6b;
-	font-weight:bold;
 	text-transform:uppercase;
 }
 
-.number {
-	font-family:"arial narrow";
+#header p {
 	font-size:28px;
 	color:#68767b;
-	font-weight:bold;
 }
 
-.blue {
+#header span {
 	color:#61bddb;
 }
 
