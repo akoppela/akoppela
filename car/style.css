@@ -513,9 +513,9 @@ a {
 }
 
 #copyright img {
+	float:left;
 	width:67px;
 	height:26px;
-	float:left;
 	margin-top:2px;
 	margin-right:13px;
 }
