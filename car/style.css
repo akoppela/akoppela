@@ -321,9 +321,10 @@ a {
 }
 
 .info-end p {
+	font-weight:bold;
 	margin-top:3px;
-	font-family:"Arial Narrow";
-	font-size:14px;
+	font-family:"Arial";
+	font-size:13px;
 	margin-left:2px;
 	color:#000;
 }
