@@ -45,6 +45,10 @@ window.addEvent('domready', function(){
 		myMorph3.start({
 			display : "none"
 		});
+		$('second-nav').slide('hide');
+		$('price').slide('hide');
+		$('selected-car').slide('hide');
+		mySlide5.slideIn();
 		e.stop();
 	});
 		

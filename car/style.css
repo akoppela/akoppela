@@ -164,6 +164,8 @@ a {
 }
 
 #lada-center {
+	width:585px;
+	height:216px;
 	float:right;
 	margin-top:30px;
 }
@@ -511,6 +513,8 @@ a {
 }
 
 #copyright img {
+	width:67px;
+	height:26px;
 	float:left;
 	margin-top:2px;
 	margin-right:13px;
@@ -525,5 +529,7 @@ a {
 }
 
 #footer-car {
+	width:301px;
+	height:171px;
 	float:right;
 }
