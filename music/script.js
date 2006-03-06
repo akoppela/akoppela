@@ -56,4 +56,3 @@ window.addEvent('domready', function(){
 	});
 	
 });
-
