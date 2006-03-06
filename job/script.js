@@ -6,6 +6,7 @@ window.addEvent('domready', function(){
 	var mySlide4 = new Fx.Slide($('price'));
 	var mySlide5 = new Fx.Slide($('oper'));
 	var mySlide6 = new Fx.Slide($('selected-car'));
+	var mySlide7 = new Fx.Slide($('photo-gal'));
 	var myMorph3 = new Fx.Morph($('extra'));
 	var myMorph2 = new Fx.Morph($('content-index'));
 	var myMorph1 = new Fx.Morph($('content-second'));
@@ -13,6 +14,7 @@ window.addEvent('domready', function(){
 	$('second-nav').slide('hide');
 	$('price').slide('hide');
 	$('selected-car').slide('hide');
+	$('photo-gal').slide('hide');
 		
 	$('auto').addEvent('click', function(e){
 		e = new Event(e);
@@ -34,6 +36,16 @@ window.addEvent('domready', function(){
 		e.stop();
 	});
 	
+	$('photo-nav').addEvent('click', function(e){
+		e = new Event(e);
+		mySlide7.slideIn();
+		mySlide5.slideOut();
+		mySlide4.slideOut();
+		e.stop();
+	});
+	
+	
+	
 	$('company').addEvent('click', function(e){
 		e = new Event(e);
 		myMorph2.start({
@@ -48,6 +60,7 @@ window.addEvent('domready', function(){
 		$('second-nav').slide('hide');
 		$('price').slide('hide');
 		$('selected-car').slide('hide');
+		$('photo-gal').slide('hide');
 		mySlide5.slideIn();
 		e.stop();
 	});
@@ -56,6 +69,7 @@ window.addEvent('domready', function(){
 		e = new Event(e);
 		mySlide4.slideIn();
 		mySlide5.slideOut();
+		mySlide7.slideOut();
 		e.stop();
 	});
 	
