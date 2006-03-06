@@ -25,10 +25,10 @@ window.addEvent('domready', function(){
 		myMorph2.start({
 			display : "none"
 		});
-		myMorph1.start({
+		myMorph3.start({
 			display : "block"
 		});
-		myMorph3.start({
+		myMorph1.start({
 			display : "block"
 		});
 		e.stop();

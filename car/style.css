@@ -164,9 +164,9 @@ a {
 }
 
 #lada-center {
+	float:right;
 	width:585px;
 	height:216px;
-	float:right;
 	margin-top:30px;
 }
 
