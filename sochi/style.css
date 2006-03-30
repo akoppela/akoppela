@@ -138,8 +138,6 @@ body {
 	max-width:1280px;
 	width: expression(document.documentElement.clientWidth > 1280 ? "1280px" : "100%");
 	margin:0 auto;
-	border-left:1px solid #666;
-	border-right:1px solid #666;
 }
 
 a {
@@ -150,6 +148,8 @@ a {
 	min-height:100%;
 	height:auto !important;
 	height:100%;
+	border-left:1px solid #666;
+	border-right:1px solid #666;
 }
 
 #header {
@@ -901,6 +901,8 @@ a {
 }
 
 #footer {
+	border-left:1px solid #666;
+	border-right:1px solid #666;
 	border-top:14px solid #e3e4e9;
 	height:93px;
 	background:#ebe6df;
