@@ -138,6 +138,8 @@ body {
 	max-width:1280px;
 	width: expression(document.documentElement.clientWidth > 1280 ? "1280px" : "100%");
 	margin:0 auto;
+	border-left:1px solid #666;
+	border-right:1px solid #666;
 }
 
 a {
@@ -319,6 +321,7 @@ a {
 }
 
 #catalog {
+	width:364px;
 	margin-left:30px;
 	margin-right:606px;
 	overflow:hidden;
