@@ -608,27 +608,27 @@ a {
 	line-height:48px;
 }
 
-#content table {
+#table-news {
 	overflow:hidden;
 	background: #f5f6f0 url(img/new_prod_bg.jpg) no-repeat bottom;
 }
 
-#content td {
+#table-news td {
 	vertical-align:top;
 }
 
-#content td h4 {
+#table-news td h4 {
 	font-weight:bold;
 	font-size:14px;
 	margin:30px 0 30px 10px;
 }
 
-#content td p {
+#table-news td p {
 	font-size:14px !important;
 	margin:0 0 20px 10px;
 }
 
-#content th {
+#table-news th {
 	width:715px;
 	height:43px;
 	background: url(img/new_product.jpg) no-repeat;
@@ -649,7 +649,7 @@ a {
 	background: url(img/table_left.jpg) no-repeat !important;
 }
 
-#content th h3 {
+#table-news th h3 {
 	font-size:18px !important;
 	color:#fff !important;
 	font-weight:normal !important;
@@ -666,7 +666,7 @@ a {
 	height:9px;
 }
 
-#content td img {
+#table-news td img {
 	margin-top:10px;
 }
 
@@ -848,6 +848,43 @@ a {
 	font-weight:bold;
 	text-indent:-9000px;
 	background: url(img/contact_form.png) no-repeat 15px 11px;
+}
+
+#table-cart {
+	background:#f5f6f0;
+}
+
+#table-cart th {
+	height:43px;
+	border-right:2px solid #dad7c6;
+}
+
+.nobord {
+	border:none !important;
+}
+
+#table-cart th p {
+	text-indent:-9000px;
+}
+
+.c1 {
+	width:91px;
+	background: url(img/c1.jpg) no-repeat;
+}
+
+.c2 {
+	width:459px;
+	background: url(img/c2.jpg) no-repeat;
+}
+
+.c3 {
+	width:98px;
+	background: url(img/c3.jpg) no-repeat;
+}
+
+.c4 {
+	width:62px;
+	background: url(img/c4.jpg) no-repeat;
 }
 
 #shop {
