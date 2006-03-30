@@ -232,6 +232,8 @@ a {
 	background:#dddac9;
 	border-bottom:1px solid #c9c4ae;
 	display:block;
+	width:950px;
+	overflow:hidden;
 }
 
 #nav li {
