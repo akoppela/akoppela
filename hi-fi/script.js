@@ -27,19 +27,19 @@
 		    if(!t) t = event; 
 		    _x = t.clientX;
 			_y = t.clientY;
-			if (_x+_dx+document.getElementById("myalt").clientWidth>document.body.clientWidth) {
-				_x = document.body.clientWidth-document.getElementById("myalt").clientWidth-(_dx+3);
+			if (_x+_dx+document.getElementById("myalt").clientWidth>document.documentElement.clientWidth) {
+				_x = document.documentElement.clientWidth-document.getElementById("myalt").clientWidth-(_dx+3);
 				right = true;
 			}
-			if (_y+_dx+document.getElementById("myalt").clientHeight>document.body.clientHeight) {
-				_y = document.body.clientHeight-document.getElementById("myalt").clientHeight-_dy;
+			if (_y+_dx+document.getElementById("myalt").clientHeight>document.documentElement.clientHeight) {
+				_y = document.documentElement.clientHeight-document.getElementById("myalt").clientHeight-_dy;
 				bottom = true;
 			}
 			if(bottom&&right) {
-				_y = document.body.clientHeight-document.getElementById("myalt").clientHeight-_dy*4;
+				_y = document.documentElement.clientHeight-document.getElementById("myalt").clientHeight-_dy*4;
 			}
-			document.getElementById("myalt").style.left = _dx+_x+document.body.scrollLeft+"px";
-			document.getElementById("myalt").style.top = _dy+_y+document.body.scrollTop+"px";
+			document.getElementById("myalt").style.left = _dx+_x+document.documentElement.scrollLeft+"px";
+			document.getElementById("myalt").style.top = _dy+_y+document.documentElement.scrollTop+"px";
 			
 		}
 	} 
