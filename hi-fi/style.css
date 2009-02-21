@@ -91,6 +91,9 @@ a {
 
 #nav li {
 	float:left;
+	background: url(images/separator.gif) no-repeat;
+	vertical-align:bottom;
+	height:34px;
 }
 
 .menuitem {
@@ -170,6 +173,7 @@ a {
 
 #form-wrapper {
 	margin-right:-293px;
+	overflow:hidden;
 }
 
 #sign-in form {
