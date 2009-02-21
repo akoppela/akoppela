@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+	<meta name="description" content="Hi-Fi Technics Store" />
+	<meta name="keywords" content="hi-fi, technics" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Hi-Fi Technics Store | Main</title>
+	<script type="text/JavaScript" src="script.js"></script>	
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<a href="#"><img id="logo" src="images/logo.jpg" alt="Logo" /></a>
+			<ul>
+				<li>
+					<a id="site-map" href="#">Site Map</a>
+				</li>
+				<li>
+					<a id="home" href="#">Home</a>
+				</li>
+			</ul>
+		</div>
+		<div id="slogan">
+			<img id="slog" src="images/slogan.jpg" alt="Slogan" />
+		</div>
+		<div id="nav">
+			<ul>
+				<li>
+					<a href="#"><img onmousemove="obj=document.getElementById('myalt'); moveAlt('Company');" onmouseout="hideAlt();" class="menuitem" src="images/company.gif" alt="" /></a>
+					<img src="images/separator.gif" alt=" " />
+				</li>
+				<li>
+					<a href="#"><img onmousemove="obj=document.getElementById('myalt'); moveAlt('Products');" onmouseout="hideAlt();" class="menuitem" src="images/products.gif" alt="" /></a>
+					<img src="images/separator.gif" alt=" " />
+				</li>
+				<li>
+					<a href="#"><img onmousemove="obj=document.getElementById('myalt'); moveAlt('Services');" onmouseout="hideAlt();" class="menuitem" src="images/services.gif" alt="" /></a>
+					<img src="images/separator.gif" alt=" " />
+				</li>
+				<li>
+					<a href="#"><img onmousemove="obj=document.getElementById('myalt'); moveAlt('Resellers');" onmouseout="hideAlt();" class="menuitem" src="images/resellers.gif" alt="" /></a>
+					<img src="images/separator.gif" alt=" " />
+				</li>
+				<li>
+					<a href="#"><img onmousemove="obj=document.getElementById('myalt'); moveAlt('Support');" onmouseout="hideAlt();" class="menuitem" src="images/support.gif" alt="" /></a>
+					<img src="images/separator.gif" alt=" " />
+				</li>
+				<li>
+					<a href="#"><img onmousemove="obj=document.getElementById('myalt'); moveAlt('Contacts');" onmouseout="hideAlt();" class="menuitem" src="images/contacts.gif" alt="" /></a>
+					<img src="images/separator.gif" alt=" " />
+				</li>
+			</ul>
+		</div>
+		<div id="welcome-wrapper">
+			<div id="welcome">
+				<img id="computer" src="images/computer.jpg" alt="computer" />
+				<img onclick="slide();" class="pointer" src="images/pointer.gif" alt="pointer" />
+				<p class="head orange">Welcome to</p>
+				<p class="orange bold">OUR HI FI ONLINE COMPANY</p>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 	ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 	tation
+				</p>
+			</div>
+		</div>
+		<div id="sign-in">
+			<p onclick="opensi();" id="open-si">Sign-In, click here.</p>
+			<div id="form-wrapper">
+				<form id="signin" action="">
+					<p onclick="obj=document.getElementById('signin'); disappear(0); closesi();">[x]</p>
+					<input class="login orbor" type="text" name="logintext" value="Login" onblur="if(this.value=='')this.value='Login';" onclick="if(this.value=='Login')this.value='';" size="15" />
+					<input class="password orbor" type="password" value="Password" onblur="if(this.value=='')this.value='Password';" onclick="if(this.value=='Password')this.value='';" size="10" />
+					<input class="submit" type="image" src="images/submit_bg.gif" value="" />
+					<div onclick="remind();" id="label1">
+						<label for="rem">
+							<input id="rem" name="reminput" type="checkbox" />
+							<img id="remimg" src="images/remind0.gif" alt="" />
+							Password reminder
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="head-wrapper">
+			<div id="head-content">
+				<img src="images/product.jpg" alt="Futured Product" />
+			</div>
+		</div>
+		<div id="head-news">
+			<img src="images/news_head.jpg" alt="Company News" />
+		</div>
+		<div id="wrapper">
+			<div id="content">
+				<a href="#"><img src="images/kpk_big.jpg" alt="kpk" /></a>
+				<h2>Some New Product Features List</h2>
+				<p>zveniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam <br /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim </p>
+			</div>
+		</div>
+		<div id="news">
+			<ul>
+				<li>
+					<img class="dot" src="images/dot.gif" alt=" " />
+					<span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh commodo consequat.</span>
+					<p><a href="#">Read more</a></p>
+					<img src="images/news_li_bottom.jpg" alt=" " />
+				</li>
+				<li>
+					<img class="dot" src="images/dot.gif" alt=" " />
+					<span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh commodo consequat.</span>
+					<p><a href="#">Read more</a></p>
+					<img src="images/news_li_bottom.jpg" alt=" " />
+				</li>
+			</ul>
+		</div>
+		<div id="text2">
+			<ul>
+				<li class="bor">
+					<a href="#"><img class="left" src="images/kpk_small.gif" alt="kpk" /></a>
+					<a href="#"><img class="left sp" src="images/buy_now.jpg" alt="Buy now!" /></a>
+					<a href="#"><img class="left" src="images/add.jpg" alt="Add to cart" /></a>
+					<h3>SOME PRODUCT NAME DESCRIPTION</h3>
+					<img class="dot" src="images/blue_dot.gif" alt=" " />
+					<span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh commodo consequat.</span>
+					<p><a href="#">Read more</a></p>
+				</li>
+				<li>
+					<img class="left" src="images/kpk_small.gif" alt="kpk" />
+					<a href="#"><img class="left sp" src="images/buy_now.jpg" alt="Buy now!" /></a>
+					<a href="#"><img class="left" src="images/add.jpg" alt="Add to cart" /></a>
+					<h3>SOME PRODUCT NAME DESCRIPTION</h3>
+					<img class="dot" src="images/blue_dot.gif" alt=" " />
+					<span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh commodo consequat.</span>
+					<p><a href="#">Read more</a></p>
+				</li>
+			</ul>
+		</div>
+		<div id="clearfloat">
+		</div>
+		<div id="footer">
+			<p>Copyright (R) 2003 CompanyName.com</p>
+			<ul>
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">About Us</a>
+				</li>
+				<li>
+					<a href="#">Support</a>
+				</li>
+				<li>
+					<a href="#">Services</a>
+				</li>
+				<li>
+					<a href="#">Contacts</a>
+				</li>
+				<li>
+					<a href="#">Help</a>
+				</li>
+				<li>
+					<a href="#">FAQ</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="myalt"></div>
+</body>	
+</html>
