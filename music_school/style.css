@@ -166,6 +166,7 @@ a {
 #nav {
 	height:65px;
 	background: url(images/nav_bg.jpg) repeat-x;
+	text-align:center;
 }
 
 .nav-border {
@@ -173,19 +174,32 @@ a {
 }
 
 #nav ul {
-	text-align:center;
+	margin:0 auto;
+	padding:0;
+	white-space:nowrap;
+	width:809px;
+}
+
+*html #nav ul {
+	padding-top:4px;
 }
 
 #nav li {
-	display:inline;
+	float:left;
 	margin:0;
-	padding:15px 25px;
+	padding:15px 25px 0;
+	height:45px;
+}
+
+*html #nav li {
+	height:41px;
 }
 
 #nav li a {
 	font-family: "Times New Roman";
 	font-size:24px;
 	color:#fced9a;
+	float:left;
 }
 
 #wrapper {
