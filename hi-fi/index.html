@@ -62,13 +62,15 @@
 				<form id="signin" action="">
 					<p onclick="obj=document.getElementById('signin'); disappear(0); closesi();">[x]</p>
 					<input class="login orbor" type="text" name="logintext" value="Login" onblur="if(this.value=='')this.value='Login';" onclick="if(this.value=='Login')this.value='';" size="15" />
-					<input class="password orbor" type="password" value="Password" onblur="if(this.value=='')this.value='Password';" onclick="if(this.value=='Password')this.value='';" size="10" />
+					<div id="pass">
+						<input class="password orbor" type="password" value="Password" onblur="if(this.value=='')this.value='Password';" onclick="if(this.value=='Password')this.value='';" size="10" />
+					</div>
 					<input class="submit" type="image" src="images/submit_bg.gif" value="" />
 					<div onclick="remind();" id="label1">
 						<label for="rem">
-							<input id="rem" name="reminput" type="checkbox" />
 							<img id="remimg" src="images/remind0.gif" alt="" />
 							Password reminder
+							<input id="rem" name="reminput" type="checkbox" />
 						</label>
 					</div>
 				</form>
@@ -127,8 +129,7 @@
 				</li>
 			</ul>
 		</div>
-		<div id="clearfloat">
-		</div>
+		<div class="clearfloat"></div>
 		<div id="footer">
 			<p>Copyright (R) 2003 CompanyName.com</p>
 			<ul>

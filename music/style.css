@@ -130,8 +130,6 @@ body {
 	color:#333;
 	width:100%;
 	height:100%;
-	width: expression(((document.documentElement.clientWidth || document.body.clientWidth) > 930)? "100%" : "930px");
-	min-width:930px;
 }
 
 #container-wrapper {
@@ -141,6 +139,8 @@ body {
 #container {
 	margin:0 10px;
 	padding:6px 0;
+	width: expression(((document.documentElement.clientWidth || document.body.clientWidth) < 930)? "930px" : "auto");
+	min-width:930px;
 }
 
 a {
@@ -450,7 +450,7 @@ a {
 
 #nav-f-b-border {
 	height:14px;
-	padding:1px 4px;
+	padding:1px 5px;
 }
 
 #nav-f-b {
@@ -462,13 +462,13 @@ a {
 	color:#000;
 	cursor:pointer;
 	float:left;
-	margin-left:5px;
-	padding:0 2px 2px 0;
+	padding-left:5px;
+	padding-right:2px;
 }
 
 #nav-forvard {
-	margin-right:5px;
-	padding:0 0 2px 2px;
+	padding-right:5px;
+	padding-left:2px;
 	display:block;
 	color:#fff;
 	cursor:pointer;
@@ -487,7 +487,6 @@ a {
 
 #content {
 	margin:0 124px 0 162px;
-	height:588px;
 }
 
 #search {
@@ -687,6 +686,10 @@ a {
 	margin:7px 4px 0 -100%;
 }
 
+*html #left {
+}
+
+
 #music-nav {
 	width:158px;
 	height:289px;
@@ -791,7 +794,6 @@ a {
 #new-rel {
 	margin-top:4px;
 	width:118px;
-	height:382px;
 	border:1px solid #8a91a0;
 	background:#001237;
 	text-align:center;
@@ -836,8 +838,12 @@ a {
 }
 
 #rel-text {
-	margin:0 12px;
+	margin:0 12px 28px;
 	color:#999;
+}
+
+*html #rel-text {
+	margin:0 12px 24px;
 }
 
 #footer {
