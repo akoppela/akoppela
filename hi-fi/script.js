@@ -20,6 +20,7 @@
 	}
 	
 	onload = function() {
+		document.getElementById("news").style.height = document.getElementById("text2").clientHeight+'px';
 		document.onmousemove = function(t) { 
 			right = false;
 			bottom = false;
@@ -121,11 +122,7 @@
 	        
 		}		
 	}
-	
-	onload = function() {
-		document.getElementById("news").style.height = document.getElementById("text2").clientHeight+'px';
-	}
-	
+		
 	onresize = function() {
 		document.getElementById("news").style.height = document.getElementById("text2").clientHeight+'px';
 	}
