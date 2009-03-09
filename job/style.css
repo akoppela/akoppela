@@ -124,7 +124,7 @@ select {
 }
 
 img, div { 
-	1behavior: url(iepngfix.htc); 
+	behavior: url(iepngfix.htc); 
 }
 
 body {
