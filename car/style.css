@@ -201,13 +201,23 @@ a {
 	color:#61bddb;
 }
 
+#main-wrapper {
+	float:right;
+	width:100%;
+	margin-left:-191px;
+}
+
+#text-content {
+	margin-left:191px;
+}
+
 #wrapper {
 	float:left;
 	width:100%;
+	margin-right:-160px;
 }
 
 #content-index {
-	margin-left:194px;
 }
 
 #ban {
@@ -254,7 +264,7 @@ a {
 }
 
 #content-second {
-	margin:0 160px 0 194px;
+	margin-right:160px;
 	border-left:3px solid #959595;
 }
 
@@ -348,8 +358,7 @@ a {
 }
 
 #extra {
-	float:left;
-	margin-left:-160px;
+	float:right;
 	width:160px;
 }
 
@@ -388,9 +397,9 @@ a {
 }
 
 #nav-news {
+	clear:left;
 	float:left;
 	width:191px;
-	margin-left:-100%;
 }
 
 #nav {

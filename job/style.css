@@ -124,7 +124,7 @@ select {
 }
 
 img, div { 
-	behavior: url(iepngfix.htc); 
+	1behavior: url(iepngfix.htc); 
 }
 
 body {
@@ -201,13 +201,23 @@ a {
 	color:#61bddb;
 }
 
+#main-wrapper {
+	float:right;
+	width:100%;
+	margin-left:-191px;
+}
+
+#text-content {
+	margin-left:191px;
+}
+
 #wrapper {
 	float:left;
 	width:100%;
+	margin-right:-160px;
 }
 
 #content-index {
-	margin-left:194px;
 }
 
 #ban {
@@ -255,8 +265,9 @@ a {
 
 #content-second {
 	display:none;
-	margin:0 160px 0 194px;
+	margin-right:160px;
 	border-left:3px solid #959595;
+	height:auto;
 }
 
 .title-text-second {
@@ -350,8 +361,8 @@ a {
 
 #extra {
 	display:none;
-	float:left;
-	margin-left:-160px;
+	clear:right;
+	float:right;
 	width:160px;
 }
 
@@ -364,6 +375,10 @@ a {
 
 #extra li {
 	margin-top:10px;
+}
+
+#selected-car ul {
+	padding-bottom:30px;
 }
 
 #selected-car li a {
@@ -379,7 +394,6 @@ a {
 }
 
 #model {
-	margin-top:30px;
 }
 
 #model ul {
@@ -394,9 +408,9 @@ a {
 }
 
 #nav-news {
+	clear:left;
 	float:left;
 	width:191px;
-	margin-left:-100%;
 }
 
 #nav {
