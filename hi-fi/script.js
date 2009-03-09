@@ -1,4 +1,5 @@
-
+	
+		
 	var hide = true;
 	var _x, _y;
 
@@ -40,7 +41,6 @@
 			}
 			document.getElementById("myalt").style.left = _dx+_x+document.documentElement.scrollLeft+"px";
 			document.getElementById("myalt").style.top = _dy+_y+document.documentElement.scrollTop+"px";
-			
 		}
 	} 
 	
@@ -121,3 +121,12 @@
 	        
 		}		
 	}
+	
+	onload = function() {
+		document.getElementById("news").style.height = document.getElementById("text2").clientHeight+'px';
+	}
+	
+	onresize = function() {
+		document.getElementById("news").style.height = document.getElementById("text2").clientHeight+'px';
+	}
+	

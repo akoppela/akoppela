@@ -139,7 +139,7 @@ body {
 #container {
 	margin:0 10px;
 	padding:6px 0;
-	width: expression(((document.documentElement.clientWidth || document.body.clientWidth) < 930)? "930px" : "auto");
+	width: expression(document.documentElement.clientWidth < 930 ? "930px" : "auto");
 	min-width:930px;
 }
 
@@ -479,14 +479,25 @@ a {
 	margin-left:0;
 }
 
+#main-wrapper {
+	float:left;
+	margin-right:-124px;
+	width:100%;
+	margin-top:4px;
+}
+
+#text {
+	margin-right:124px;
+}
+
 #content-wrapper {
 	width:100%;
-	float:left;
-	margin:7px 0 6px;
+	float:right;
+	margin-left:-162px;
 }
 
 #content {
-	margin:0 124px 0 162px;
+	margin-left:162px;
 }
 
 #search {
@@ -547,7 +558,7 @@ a {
 #content-text {
 	background:#e6e6e6;
 	margin-top:1px;
-	height:537px;
+	height:538px;
 }
 
 #content-price {
@@ -682,13 +693,8 @@ a {
 
 #left {
 	float:left;
-	width:158px;
-	margin:7px 4px 0 -100%;
+	width:154px;
 }
-
-*html #left {
-}
-
 
 #music-nav {
 	width:158px;
@@ -737,7 +743,7 @@ a {
 
 #vote {
 	width:158px;
-	height:150px;
+	height:151px;
 	background:#666;
 }
 
@@ -780,9 +786,10 @@ a {
 }
 
 #right {
-	float:left;
+	float:right;
 	width:120px;
-	margin: 7px 0 0 -120px;
+	margin-top:4px;
+	margin-bottom:4px;
 }
 
 #save {
