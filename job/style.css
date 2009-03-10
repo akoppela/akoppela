@@ -211,6 +211,10 @@ a {
 	margin-left:191px;
 }
 
+*html #text-content {
+	margin-left:225px;
+}
+
 #wrapper {
 	float:left;
 	width:100%;
@@ -241,6 +245,9 @@ a {
 
 .black {
 	color:black;
+}
+
+#flash-left {
 }
 
 #hyundai {
