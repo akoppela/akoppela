@@ -7,14 +7,16 @@ window.addEvent('domready', function(){
 	var mySlide5 = new Fx.Slide($('oper'));
 	var mySlide6 = new Fx.Slide($('selected-car'));
 	var mySlide7 = new Fx.Slide($('photo-gal'));
-	var myMorph3 = new Fx.Morph($('extra'));
-	var myMorph2 = new Fx.Morph($('content-index'));
+	var mySlide8 = new Fx.Slide($('content-index'));
 	var myMorph1 = new Fx.Morph($('content-second'));
+	var mySlide9 = new Fx.Slide($('model'));
 	
 	$('second-nav').slide('hide');
 	$('price').slide('hide');
 	$('selected-car').slide('hide');
 	$('photo-gal').slide('hide');
+	$('model').slide('hide');
+	$('oper').slide('hide');
 		
 	$('auto').addEvent('click', function(e){
 		e = new Event(e);
@@ -24,23 +26,23 @@ window.addEvent('domready', function(){
 	
 	$('hyundai-car').addEvent('click', function(e){
 		e = new Event(e);
-		myMorph2.start({
-			display : "none"
+		mySlide7.slideOut();
+		mySlide8.slideOut().chain(function(){
+			mySlide5.slideIn();
+			mySlide9.slideIn();
 		});
-		myMorph3.start({
-			display : "block"
-		});
-		myMorph1.start({
-			display : "block"
-		});
+		mySlide4.slideOut();
 		e.stop();
 	});
 	
 	$('photo-nav').addEvent('click', function(e){
 		e = new Event(e);
-		mySlide7.slideIn();
-		mySlide5.slideOut();
-		mySlide4.slideOut();
+		mySlide5.slideOut().chain(function(){
+			mySlide7.slideIn();
+		});
+		mySlide4.slideOut().chain(function(){
+			mySlide7.slideIn();
+		});
 		e.stop();
 	});
 	
@@ -48,28 +50,24 @@ window.addEvent('domready', function(){
 	
 	$('company').addEvent('click', function(e){
 		e = new Event(e);
-		myMorph2.start({
-			display : "block"
+		mySlide9.slideOut().chain(function(){
+			mySlide8.slideIn();
 		});
-		myMorph1.start({
-			display : "none"
-		});
-		myMorph3.start({
-			display : "none"
-		});
-		$('second-nav').slide('hide');
-		$('price').slide('hide');
-		$('selected-car').slide('hide');
-		$('photo-gal').slide('hide');
-		mySlide5.slideIn();
+		mySlide5.slideOut();
+		mySlide7.slideOut();
+		mySlide4.slideOut();
+		mySlide6.slideOut();
 		e.stop();
 	});
 		
 	$('price-nav').addEvent('click', function(e){
 		e = new Event(e);
-		mySlide4.slideIn();
-		mySlide5.slideOut();
-		mySlide7.slideOut();
+		mySlide5.slideOut().chain(function(){
+			mySlide4.slideIn();	
+		});
+		mySlide7.slideOut().chain(function(){
+			mySlide4.slideIn();	
+		});
 		e.stop();
 	});
 	
