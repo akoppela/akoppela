@@ -123,7 +123,7 @@ window.addEvent('domready', function(){
 		myMorph3.start({
 			'margin-left': 0
 		}).chain(function(){
-			pos = 1;
+			pos = 0;
 		});	
 		e.stop();
 	});
@@ -141,7 +141,7 @@ window.addEvent('domready', function(){
 		myMorph3.start({
 			'margin-left': -1595
 		}).chain(function(){
-			pos = 0;
+			pos = 1;
 		});	
 		e.stop();
 	});
