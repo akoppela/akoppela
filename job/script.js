@@ -121,7 +121,7 @@ window.addEvent('domready', function(){
 		e = new Event(e);
 		myMorph2.cancel();
 		myMorph3.start({
-			'margin-left': -1595
+			'margin-left': 0
 		}).chain(function(){
 			pos = 1;
 		});	
@@ -139,7 +139,7 @@ window.addEvent('domready', function(){
 		e = new Event(e);
 		myMorph2.cancel();
 		myMorph3.start({
-			'margin-left': 0
+			'margin-left': -1595
 		}).chain(function(){
 			pos = 0;
 		});	
