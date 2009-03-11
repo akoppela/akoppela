@@ -217,16 +217,103 @@ a {
 	margin-right:-191px;
 }
 
-#content-index {
+#flash {
+	margin-top:20px;
+	margin-left:7px;
+	height:112px;
+}
+
+#flash-left {
+	float:left;
+	margin-top:24px;
+}
+
+#overflow-flash {
+	width:720px;
+	overflow:hidden;
+	float:left;
+	margin:0 6px;
+}
+
+#animat {
+	width:3000px;
+	overflow:hidden;
+}
+
+#flash ul {
+	overflow:hidden;
+}
+
+#flash li {
+	width:141px;
+	height:109px;
+	border-bottom:3px solid #ababab;
+	float:left;
+	margin:0 2px;
+}
+
+#flash li:hover {
+	border-bottom:3px solid #1F4B68;
+}
+
+.flash-element {
+	margin-bottom:1px;
+	height:105px;
+	margin-top:2px;
+}
+
+.flash-element:hover {
+	margin-top:1px;
+	border:1px solid #CBCAD0;
+}
+
+.flash-img {
+	overflow:hidden;
+	height:83px;
+	text-align:center;
+}
+
+#flash li p {
+	text-align:center;
+	position:bottom;
+}
+
+#flash-right {
+	margin-top:24px;
+	cursor: pointer;
+}
+
+#cars {
+	padding-top:13px;
+	margin-left:27px;
+	height:105px;
+}
+
+#cars li {
+	float:left;
+	margin-bottom:15px;
+	width:190px;
+}
+
+#cars li a {
+	padding-left:24px;
+	background: url(images/blue_bg_arrow.gif) no-repeat 0 2px;
+	color:#000;
+}
+
+#cars li a:hover {
+	background: url(images/red_bg_arrow.gif) no-repeat 0 2px;
+	color:#03538b;
 }
 
 #ban {
 	margin:5px 0 19px;
 }
 
-#content-index li {
+.main-border {
 	border-left:3px solid #03538b;
 	margin-bottom:25px;
+	clear:both;
 }
 
 .title-text {
@@ -244,6 +331,7 @@ a {
 }
 
 #flash-left {
+	cursor: pointer;
 }
 
 #hyundai {
@@ -253,7 +341,7 @@ a {
 }
 
 #text {
-	padding-bottom:50px;
+	height:165px;
 	text-align:justify;
 	margin:25px 60px 0 0;
 }

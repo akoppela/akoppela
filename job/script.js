@@ -10,6 +10,11 @@ window.addEvent('domready', function(){
 	var mySlide8 = new Fx.Slide($('content-index'));
 	var myMorph1 = new Fx.Morph($('content-second'));
 	var mySlide9 = new Fx.Slide($('model'));
+	var myMorph2 = new Fx.Morph($('animat'), {duration: '80000', transition: Fx.Transitions.Linear});
+	var myMorph3 = new Fx.Morph($('animat'), {duration: '4000', transition: Fx.Transitions.Circ.easeInOut});
+	var pereodical;
+	var pos;
+
 	
 	$('second-nav').slide('hide');
 	$('price').slide('hide');
@@ -83,5 +88,72 @@ window.addEvent('domready', function(){
 		e.stop();
 	});
 	
+	pos = 0;
+	
+	var fx = function() {
+		if(pos == 0) {
+			myMorph2.start({
+				'margin-left': -1595
+			}).chain(function(){
+				myMorph2.start({
+					'margin-left': 0
+				});
+			}).chain(function(){
+				fx();
+			});	
+		} 
+		if(pos == 1) {
+			myMorph2.start({
+				'margin-left': 0
+			}).chain(function(){
+				myMorph2.start({
+					'margin-left': -1595
+				});
+			}).chain(function(){
+				fx();
+			});	
+		}
+	}
+	
+	fx();
+	
+	$('flash-left').addEvent('mousemove', function(e){
+		e = new Event(e);
+		myMorph2.cancel();
+		myMorph3.start({
+			'margin-left': -1595
+		}).chain(function(){
+			pos = 1;
+		});	
+		e.stop();
+	});
+	
+	$('flash-left').addEvent('mouseout', function(e){
+		e = new Event(e);
+		myMorph3.cancel();
+		fx();
+		e.stop();
+	});
+	
+	$('flash-right').addEvent('mousemove', function(e){
+		e = new Event(e);
+		myMorph2.cancel();
+		myMorph3.start({
+			'margin-left': 0
+		}).chain(function(){
+			pos = 0;
+		});	
+		e.stop();
+	});
+	
+	$('flash-right').addEvent('mouseout', function(e){
+		e = new Event(e);
+		myMorph3.cancel();
+		fx();
+		e.stop();
+	});
+	
+
+		
 });
 
