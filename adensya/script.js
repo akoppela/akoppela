@@ -3,7 +3,7 @@ window.addEvent('domready', function(){
     //Выбор итема поиска
         
     var searchbgnone = function() {
-        [ 'all', 'texts', 'picture', 'catalog', 'afisha', 'people' ].each(function(name){
+        $$('#search-box li').each(function(name){
             $(name).style.background = '';
             $(name).style.color = '#fff';
             $(name).style.textDecoration = 'underline';
@@ -65,30 +65,15 @@ window.addEvent('domready', function(){
     
     searchbg('all');
     
-    ['people', 'afisha', 'catalog', 'picture', 'texts', 'all'].each(function(name) {
-      $(name).addEvent('click', function() { 
-        searchbgstart(name);
+    $$('#search-box li').addEvent('click', function(e){
+        searchbgstart(this);
         return false;
-      });
     });
    
     //Выпадающие меню
     
-    $('submenu1').slide('hide');
-    $('submenu2').slide('hide');
-    $('submenu3').slide('hide');
-    $('submenu4').slide('hide');
-    $('submenu5').slide('hide');
-    
-//    [ 'users', 'what_dress', 'kuda_dress', 'how_dress', 'where_dress'].each(function(name){
-//        $(name).addEvent('mouseenter', function(e){
-//            [slideMenu1, 'users_li', 'users', 'rm1', 'sub1_ctl', 'sub1_ctr'][slideMenu2, 'what_dress_li', 'what_dress', 'rm2', 'sub2_ctl', 'sub2_ctr'][slideMenu3, 'kuda_dress_li', 'kuda_dress', 'rm3', 'sub3_ctl', 'sub3_ctr'][slideMenu4, 'how_dress_li', 'how_dress', 'rm4', 'sub4_ctl', 'sub4_ctr'][slideMenu5, 'where_dress_li', 'where_dress', 'rm5', 'sub5_ctl', 'sub5_ctr'].each(function(slideitem, obj1, obj2, obj3, ctl, ctr){
-//            menubgover(slideitem, obj1, obj2, obj3, ctl, ctr);
-//           return false;
-//            });
-//        });
-//    });
-        
+    $$('.submenu').slide('hide');
+            
     $('users').addEvent('mouseenter', function(e){
 		menubgover(slideMenu1, 'users_li', 'users', 'rm1', 'sub1_ctl', 'sub1_ctr');
         return false;
