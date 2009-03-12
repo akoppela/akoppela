@@ -370,16 +370,12 @@ body {
 }
 
 .submenu {
-    line-height:30px;
     position:relative;
     z-index:200;
 }
 
-.submenu li:hover {
-    background:#A61E00;
-}
-
 .submenu li {
+    padding:7px 0;
     background:#C32300;
 }
 

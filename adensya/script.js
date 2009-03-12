@@ -139,4 +139,12 @@ window.addEvent('domready', function(){
         return false;
     });
     
+    $$('.submenu_li').addEvent('mouseover', function(e){
+        this.style.backgroundColor = "#A61E00";
+    });
+    
+    $$('.submenu_li').addEvent('mouseout', function(e){
+        this.style.backgroundColor = "#C32300";
+    });
+    
 });
