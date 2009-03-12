@@ -44,19 +44,33 @@
                         <a class="alog" href="#">найти</a>
                     </form>
                 </div>
-                <div id="login_form">
-                    <a id="areg" href="#" title="Зарегистрировать аккаунт на Аденься!">РЕГИСТРАЦИЯ</a>
-                    <form id="login001" name="login" method="post" action="">
-                        <input type="text" onblur="if(this.value=='')this.value='логин (e-mail)';" onclick="if(this.value=='логин (e-mail)')this.value='';" value="логин (e-mail)" name="username" style="width: 120px;" />
-                        <input id="pass_fr_txt" type="password"  onblur="if(this.value=='')this.value='пароль';" onclick="if(this.value=='пароль')this.value='';" value="пароль" name="password_txt" style="width: 65px; display: inline;"/>
-                        <input id="pass_fr" type="password" onblur="passOnBlur(this)" onkeydown="login001subm(event)" onclick="" value="" name="password" style="width: 65px; display: none;"/>
-                        <a class="alog" href="#">войти</a>
-                        <div id="remember-box">
-                            <input id="remember" type="checkbox" checked="checked" value="1" name="remember" style="height: 15px; width: 15px;"/>
-                            <label for="remember">Запомнить меня</label>
-                            <a href="#">Забыли пароль?</a> 
-                        </div>
-                    </form>
+                <div id="login-container">
+                	<div id="login-wrapper">
+                		<div id="login_form">
+                		    <a id="areg" href="#" title="Зарегистрировать аккаунт на Аденься!">РЕГИСТРАЦИЯ</a>
+                		    <form id="login001" name="login" method="post" action="">
+                		        <input type="text" onblur="if(this.value=='')this.value='логин (e-mail)';" onclick="if(this.value=='логин (e-mail)')this.value='';" value="логин (e-mail)" name="username" style="width: 120px;" />
+                		        <input id="pass_fr_txt" type="password"  onblur="if(this.value=='')this.value='пароль';" onclick="if(this.value=='пароль')this.value='';" value="пароль" name="password_txt" style="width: 65px; display: inline;"/>
+                		        <input id="pass_fr" type="password" onblur="passOnBlur(this)" onkeydown="login001subm(event)" onclick="" value="" name="password" style="width: 65px; display: none;"/>
+                		        <a class="alog" href="#">войти</a>
+                		        <div id="remember-box">
+                		            <input id="remember" type="checkbox" checked="checked" value="1" name="remember" style="height: 15px; width: 15px;"/>
+                		            <label for="remember">Запомнить меня</label>
+                		            <a id="forgota" href="#">Забыли пароль?</a><span id="forgotspan"> &rarr;</span> 
+                		        </div>
+                		    </form>
+                		</div>
+                		<div id="forgot-pass">
+                			<a id="aforgot" href="#" title="Восстановление пароля!">Восстановление пароля!</a>
+                		    <form id="forgot001" name="forgot" method="post" action="">
+                		        <input type="text" onblur="if(this.value=='')this.value='введите e-mail';" onclick="if(this.value=='введите e-mail')this.value='';" value="введите e-mail" name="forgotmail" style="width: 180px;" />
+                		        <a class="alog" href="#">отправить</a>
+                		        <div id="back">
+                		            <span id="loginspan"> &larr;</span> <a id="logina" href="#">Вернуться назад</a>
+                		        </div>
+                		    </form>
+                		</div>
+                	</div>
                 </div>
             </div>
         </div>

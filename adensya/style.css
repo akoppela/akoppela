@@ -242,12 +242,25 @@ body {
     text-decoration:none;
 }
 
-#login_form {
+#login-container {
     width:284px;
     float:right;
+    overflow:hidden;
+    height:58px;
 }
 
-#login_form form {
+#login-wrapper {
+	width:852px;
+}
+
+#login_form {
+	width:284px;
+	float:left;
+	height:58px;
+	margin-right:284px;
+}
+
+#login-container form {
     margin-top:3px;
 }
 
@@ -255,11 +268,11 @@ body {
     margin-left:141px;
 }
 
-#login_form form a {
+#login-container form a {
     font-size:9px;
 }
 
-#login_form input {
+#login-container input {
     background:#FFFFFF none repeat scroll 0 0;
     border:1px solid #C51827;
     color:#808486;
@@ -286,8 +299,25 @@ body {
     margin-right:48px;
 }
 
+#login-container span {
+	font-family:tahoma;
+	font-size:11px;
+	color:#fff;
+	cursor:pointer;
+}
+
 *html #remember-box label {
     margin-right:45px;
+}
+
+#forgot-pass {
+	width:284px;
+	float:left;
+}
+
+#aforgot {
+	text-transform:uppercase;
+	margin-left:1px;
 }
 
 #main_menu {

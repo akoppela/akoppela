@@ -61,6 +61,10 @@ window.addEvent('domready', function(){
     var slideMenu4 = new Fx.Slide($('submenu4')); 
     var slideMenu5 = new Fx.Slide($('submenu5'));
     
+    //Анимаци забыл пароль
+    
+    var slideForgot = new Fx.Morph($('login_form'), {duration: '500', transition: Fx.Transitions.Circ.easeInOut});
+    
     //Выбор search итема
     
     searchbg('all');
@@ -130,6 +134,26 @@ window.addEvent('domready', function(){
     
     $$('.submenu_li').addEvent('mouseout', function(e){
         this.style.backgroundColor = "#C32300";
+    });
+    
+    //Анимация формы логин
+    
+    ['forgota', 'forgotspan'].each(function(name){
+		$(name).addEvent('click', function(e){
+			slideForgot.start({
+				'margin-left': '-568px'
+			});
+			return false;
+		});    	
+    });
+    
+    ['logina', 'loginspan'].each(function(name){
+		$(name).addEvent('click', function(e){
+			slideForgot.start({
+				'margin-left': '0'
+			});
+			return false;
+		});    	
     });
     
 });
