@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+	<meta name="description" content="Music shop" />
+	<meta name="keywords" content="music, music shop" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Adensya | Main</title>
+	<script type="text/javascript" src="mootools-1.2.1-core-nc.js"></script>
+	<script type="text/javascript" src="mootools-1.2-more.js"></script>
+	<script type="text/JavaScript" src="script.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header_banner">
+            <h1>Банер</h1>
+        </div>
+        <div id="header">
+            <div id="logo">
+                <a href="#"><img src="images/logo.gif" alt="Logo" /></a>
+            </div>
+            <div id="header-box">
+                <div id="search-box">
+                    <h3>Искать:</h3>
+                    <ul>
+                        <li id="all">
+                            везде
+                        </li>
+                        <li id="texts">
+                            тексты
+                        </li>
+                        <li id="picture">
+                            картинки
+                        </li>
+                        <li id="catalog">
+                            католог
+                        </li>
+                        <li id="afisha">
+                            афиша
+                        </li>
+                        <li id="people">
+                            люди
+                        </li>
+                    </ul>
+                    <form id="search001" action="" name="search" method="get">
+                        <input type="text" value="" name="words" />
+                        <a class="alog" href="#">найти</a>
+                    </form>
+                </div>
+                <div id="login_form">
+                    <a id="areg" href="#" title="Зарегистрировать аккаунт на Аденься!">РЕГИСТРАЦИЯ</a>
+                    <form id="login001" name="login" method="post" action="">
+                        <input type="text" onblur="if(this.value=='')this.value='логин (e-mail)';" onclick="if(this.value=='логин (e-mail)')this.value='';" value="логин (e-mail)" name="username" style="width: 120px;" />
+                        <input id="pass_fr_txt" type="password"  onblur="if(this.value=='')this.value='пароль';" onclick="if(this.value=='пароль')this.value='';" value="пароль" name="password_txt" style="width: 65px; display: inline;"/>
+                        <input id="pass_fr" type="password" onblur="passOnBlur(this)" onkeydown="login001subm(event)" onclick="" value="" name="password" style="width: 65px; display: none;"/>
+                        <a class="alog" href="#">войти</a>
+                        <div id="remember-box">
+                            <input id="remember" type="checkbox" checked="checked" value="1" name="remember" style="height: 15px; width: 15px;"/>
+                            <label for="remember">Запомнить меня</label>
+                            <a href="#">Забыли пароль?</a> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="anim-nav">
+            <ul id="main_menu">
+                <li id="users_li" class="main_menu_li">
+                    <em id="sub1_ctl" class="ctl"><b>&bull;</b></em>
+                    <em id="sub1_ctr" class="ctr"><b>&bull;</b></em>
+                    <span><a id ="users" class="main_menu_li_a" href="#">Пользователи</a></span>
+                    <div id="submenu1" class="submenu">
+                    <ul>
+                        <li class="submenu_li">
+                            <a href="#">Пользователи</a>
+                        </li>
+                        <li class="submenu_li">
+                            <a href="#">Нашли себя на фото</a>
+                        </li>
+                        <li class="submenu_li">
+                            <a href="#">Фотоальбомы</a>
+                        </li>
+                        <li class="submenu_li">
+                            <a href="#">Блоги</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="rm1" class="round_menu">
+                        <em id="sub1_cbl" class="cbl"><b>&bull;</b></em>
+                        <em id="sub1_cbr" class="cbr"><b>&bull;</b></em>
+                        <span></span>
+                    </div>
+                </li>
+                <li id="what_dress_li" class="main_menu_li">
+                    <em id="sub2_ctl" class="ctl"><b>&bull;</b></em>
+                    <em id="sub2_ctr" class="ctr"><b>&bull;</b></em>
+                    <span><a id="what_dress" class="main_menu_li_a" href="#">Что адевать?</a></span>
+                    <ul id="submenu2" class="submenu">
+                        <li>
+                            <a href="#">Статьи</a>
+                        </li>
+                        <li>
+                            <a href="#">Интервью</a>
+                        </li>
+                        <li>
+                            <a href="#">Известия</a>
+                        </li>
+                        <li>
+                            <a href="#">Официально</a>
+                        </li>
+                    </ul>
+                    <div id="rm2" class="round_menu">
+                        <em id="sub1_cbl" class="cbl"><b>&bull;</b></em>
+                        <em id="sub1_cbr" class="cbr"><b>&bull;</b></em>
+                        <span></span>
+                    </div>
+                </li>
+                <li id="kuda_dress_li" class="main_menu_li">
+                    <em id="sub3_ctl" class="ctl"><b>&bull;</b></em>
+                    <em id="sub3_ctr" class="ctr"><b>&bull;</b></em>
+                    <span><a id ="kuda_dress" class="main_menu_li_a" href="#">куда адеваться?</a></span>
+                    <ul id="submenu3" class="submenu">
+                        <li>
+                            <a href="#">Места</a>
+                        </li>
+                        <li>
+                            <a href="#">На этой неделе</a>
+                        </li>
+                        <li>
+                            <a href="#">Особый случай</a>
+                        </li>
+                        <li>
+                            <a href="#">Наш выбор</a>
+                        </li>
+                        <li>
+                            <a href="#">Нарядно</a>
+                        </li>
+                        <li>
+                            <a href="#">Кэжуал</a>
+                        </li>
+                        <li>
+                            <a href="#">Архив событий</a>
+                        </li>
+                    </ul>
+                    <div id="rm3" class="round_menu">
+                        <em id="sub1_cbl" class="cbl"><b>&bull;</b></em>
+                        <em id="sub1_cbr" class="cbr"><b>&bull;</b></em>
+                        <span></span>
+                    </div>
+                </li>
+                <li id="how_dress_li" class="main_menu_li">
+                    <em id="sub4_ctl" class="ctl"><b>&bull;</b></em>
+                    <em id="sub4_ctr" class="ctr"><b>&bull;</b></em>
+                    <span><a id ="how_dress" class="main_menu_li_a" href="#">как адеваются?</a></span>
+                    <ul id="submenu4" class="submenu">
+                        <li>
+                            <a href="#">Фотогалерея</a>
+                        </li>
+                        <li>
+                            <a href="#">Звезды</a>
+                        </li>
+                        <li>
+                            <a href="#">Коллекция</a>
+                        </li>
+                    </ul>
+                    <div id="rm4" class="round_menu">
+                        <em id="sub1_cbl" class="cbl"><b>&bull;</b></em>
+                        <em id="sub1_cbr" class="cbr"><b>&bull;</b></em>
+                        <span></span>
+                    </div>
+                </li>
+                <li id="where_dress_li" class="main_menu_li">
+                    <em id="sub5_ctl" class="ctl"><b>&bull;</b></em>
+                    <em id="sub5_ctr" class="ctr"><b>&bull;</b></em>
+                    <span><a id ="where_dress" class="main_menu_li_a" href="#">где адеваются?</a></span>
+                    <ul id="submenu5" class="submenu">
+                        <li>
+                            <a href="#">Новости шоппинга</a>
+                        </li>
+                        <li>
+                            <a href="#">Магазины</a>
+                        </li>
+                        <li>
+                            <a href="#">Бренды</a>
+                        </li>
+                        <li>
+                            <a href="#">Beauty</a>
+                        </li>
+                        <li>
+                            <a href="#">Дизайнеры</a>
+                        </li>
+                    </ul>
+                    <div id="rm5" class="round_menu">
+                        <em id="sub1_cbl" class="cbl"><b>&bull;</b></em>
+                        <em id="sub1_cbr" class="cbr"><b>&bull;</b></em>
+                        <span></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="nav">
+            <ul>
+                <li>
+                    <a href="#">Первая</a>
+                </li>
+                <li>
+                    <a style="color: rgb(255, 0, 0);" href="#">Оденься на Аденься!</a>
+                </li>
+                <li>
+                    <a href="#">Бренды</a>
+                </li>
+                <li>
+                    <a href="#">Дизайнеры</a>
+                </li>
+                <li>
+                    <a href="#">Коллекции</a>
+                </li>
+                <li>
+                    <a href="#">Магазины</a>
+                </li>
+                <li>
+                    <a href="#">Места</a>
+                </li>
+                <li>
+                    <a href="#">Афиша</a>
+                </li>
+                <li>
+                    <a href="#">Фотоотчеты</a>
+                </li>
+                <li>
+                    <a href="#">Звезды</a>
+                </li>
+                <li>
+                    <a href="#">Форум</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

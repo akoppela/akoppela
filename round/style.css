@@ -1,0 +1,48 @@
+/*
+=============================================================
+© 2008 Российская школа CSS (Russian CSS School)
+http://www.css-school.ru
+Урок CSS №23. Закругление углов 2
+style.css - Набор стилей для урока
+=============================================================
+*/
+
+.all {
+   position:relative;
+   background:#0072c9;
+   color:#fff;
+}
+
+#ctl, #cbl, #ctr, #cbr {
+   position:absolute;
+   width:20px;
+   height:20px;
+   color:#0072c9;
+   background:#fff;
+   overflow:hidden;
+   z-index:1;
+}
+
+#ctl {top:0; left:0;}
+#cbl {bottom:0; left:0;}
+#ctr {top:0; right:0;}
+#cbr {bottom:0; right:0;}
+
+.all em b {
+   position:absolute;
+   font:150px Arial;
+   color:#0072c9;
+   line-height:40px;
+   font-weight:normal;
+}
+
+#ctl b {left:-8px;}
+#ctr b {left:-25px;}
+#cbl b {left:-8px; top:-17px;}
+#cbr b {left:-25px; top:-17px;}
+
+.all p {
+   position:relative;
+   z-index:10;
+   padding:5px 10px;
+}
