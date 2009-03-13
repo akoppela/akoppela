@@ -209,6 +209,10 @@ img, div {
 	z-index:100;
 }
 
+*html #op-border {
+	width:98%;
+}
+
 #header ul {
 	margin:0 auto;
 	width:960px;
@@ -300,6 +304,7 @@ img, div {
 
 *html #logo {
 	height:183px;
+	margin-top:54px;
 }
 
 #logo h1 {
@@ -521,9 +526,7 @@ img, div {
 	font-family:arial;
 	font-size:10px;
 	width:210px;
-	position:absolute;
 	margin-top:15px;
-	left:35px;
 	padding-bottom:10px;
 }
 
