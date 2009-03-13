@@ -209,10 +209,6 @@ img, div {
 	z-index:100;
 }
 
-*html #op-border {
-	width:98%;
-}
-
 #header ul {
 	margin:0 auto;
 	width:960px;
