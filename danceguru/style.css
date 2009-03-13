@@ -526,6 +526,8 @@ img, div {
 	font-family:arial;
 	font-size:10px;
 	width:210px;
+	position:relative;
+	right:85px;
 	margin-top:15px;
 	padding-bottom:10px;
 }
