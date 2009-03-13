@@ -1,0 +1,676 @@
+html {
+	color: #000;
+	background: #fff;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+body {
+    font-family:tahoma;
+    font-size:12px;
+	color:#000;
+	width:100%;
+	height:100%;
+}
+
+.b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8 {
+     display:block; 
+     overflow:hidden;
+}
+
+.b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8 {
+     height:1px;
+}
+
+.b2, .b3, .b4 {
+     border-left:3px solid #000; 
+     border-right:3px solid #000; 
+}
+
+.b1 {
+	background:#000 !important;
+    margin:0 5px; 
+}
+
+.b2 {
+	border-width:0 4px;
+    margin:0 4px; 
+}
+
+.b3 {
+    margin:0 3px; 
+}
+
+.b4 {
+	height:2px;
+    margin:0 2px; 
+}
+
+.b5 {
+	margin:0 6px;
+	background:#000 !important;
+}
+
+.b6 {
+	margin:0 8px;
+	background:#000 !important;
+}
+
+.b7 {
+	margin:0 2px;
+}
+
+.b8 {
+	margin:0 1px;
+}
+
+img, div { 
+	behavior: url(iepngfix.htc); 
+}
+
+#container {
+	min-width:1000px;
+	width: expression(document.documentElement.clientWidth < 1000 ? "1000px" : "100%");
+}
+
+#header {
+	width:100%;
+	height:343px;
+	background:url(images/header2.jpg) no-repeat center;
+	/* background:url(images/header.jpg) no-repeat center; */
+	text-align:center;
+}
+
+#op-border {
+	width:100%;
+	background:black;
+	position:absolute;
+	opacity:0.4;
+	filter: alpha(opacity=40);
+	height:12px;
+	z-index:100;
+}
+
+#header ul {
+	margin:0 auto;
+	width:960px;
+	height:106px;
+	text-transform:uppercase;
+}
+
+#header li {
+	float:left;
+	width:132px;
+	height:106px;
+	margin-right:5px;
+	text-align:center;
+	cursor:pointer;
+}
+
+#header li a {
+	text-decoration:none;
+}
+
+#header li img {
+	position:relative;
+	z-index:50;
+	left:55px;
+}
+
+#header li h3 {
+	padding-top:20px;
+}
+
+#header li h3 a {
+	font-family:"tahoma";
+	font-size:13px;
+	line-height:16px;
+	color:#fff;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.one-string {
+	padding-top:36px !important;
+}
+
+.noimg {
+	padding-top:58px !important;
+}
+
+#header li div {
+	margin:0 auto;
+	width:124px;
+	height:99px;
+	border-left:3px solid #000;
+	border-right:3px solid #000;
+}
+
+#strip-round span, #strip {
+     background:#663e8f; 
+}
+
+#club-round span, #club {
+     background:#0b81c2; 
+}
+
+#rnb-round span, #rnb {
+     background:#ad501f; 
+}
+
+#stomach-round span, #stomach {
+     background:#446470; 
+}
+
+#hip-hop-round span, #hip-hop {
+     background:#ebb148; 
+}
+
+#b_aerobic-round span, #b_aerobic {
+     background:#61a0a0; 
+}
+
+#d_aerobic-round span, #d_aerobic {
+     background:#ff5353; 
+}
+
+#logo {
+	margin-top:50px;
+	/* background: url(images/people.png) no-repeat bottom; */
+	height:187px;
+}
+
+*html #logo {
+	height:183px;
+}
+
+/*
+
+#logo h1 {
+	color:#fff;
+	font-family:"tahoma";
+	font-size:80px;
+	line-height:61px;
+}
+
+#logo h2 {
+	color:#fff;
+	font-family:"tahoma";
+	font-size:33px;
+	line-height:30px;
+}
+
+#logo h3 {
+	color:#fff;
+	font-family:"tahoma";
+	font-size:22px;
+	letter-spacing:5px;
+	line-height:50px;
+}
+
+*/
+
+
+#logo h1 {
+	color:#fff;
+	font-family:"tahoma";
+	font-size:50px;
+	line-height:61px;
+}
+
+#logo h2 {
+	color:#de842d;
+	font-family:"tahoma";
+	font-size:28px;
+	line-height:30px;
+}
+
+#logo h3 {
+	color:#fff;
+	font-family:"tahoma";
+	font-size:22px;
+	letter-spacing:5px;
+	line-height:50px;
+}
+
+#nav {
+	width:100%;
+	height:38px;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	background:#642142;
+}
+
+#nav ul {
+	width:693px;
+	margin:0 auto;
+	height:38px;
+}
+
+#nav li {
+	float:left;
+	font-family:"tahoma";
+	font-size:14px;
+	line-height:38px;
+	color:#fff;
+	font-weight:bold;
+}
+
+#nav li a {
+	margin:0 5px;
+	color:#fff;
+	text-decoration:none;
+	
+}
+
+#nav li a:hover {
+	color:#e8b54d;
+}
+
+#spec {
+	width:100%;
+	height:256px;
+	background:#c5074d;
+	border-bottom:9px solid #8e2460;
+}
+
+#spec-block {
+	width:705px;
+	margin:0 auto;
+}
+
+#spec-block h2 {
+	font-family:"tahoma";
+	font-size:25px;
+	color:#fff;
+	line-height:62px;
+}
+
+#spec-block ul {
+	width:728px;
+	height:175px;
+	margin:0 auto;
+}
+
+#spec-block li {
+	float:left;
+	margin:0 5px;
+}
+
+#content {
+	width:100%;
+	background:#c63087; 
+}
+
+#uzor {
+	background: url(images/uzor.jpg) no-repeat bottom right;
+}
+
+#content-wrapper {
+	background: url(images/content_bg.jpg) repeat-x bottom;
+}
+
+#content-block {
+	width:768px;
+	margin:0 auto;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+}
+
+#welcome {
+	margin:0 45px;
+}
+
+#welcome p {
+	color:#e8b54d;
+	margin-bottom:18px;
+}
+
+#welcome span {
+	margin-bottom:30px;
+}
+
+#welcome h2 {
+	font-family:"tahoma";
+	font-size:25px;
+	color:#fff;
+	line-height:60px;
+}
+
+#last-news {
+	margin-top:30px;
+}
+
+#last-news h2 {
+	font-family:"tahoma";
+	font-size:25px;
+	color:#fff;
+	line-height:50px;
+	margin-left:45px;
+}
+
+#last-news-header {
+	height:50px;
+	border-top:1px solid #e7a2c2;
+	border-bottom:1px solid #e7a2c2;
+	background:#642142;
+}
+
+#news {
+	background:#e7a2c2;
+}
+
+#news ul {
+	height:auto;
+	height:187px;
+}
+
+#news li {
+	margin-top:20px;
+	float:left;
+	margin-left:45px;
+	width:200px;
+}
+
+*html #news li {
+	margin-left:23px;
+}
+
+#news li h3 {
+	font-family:"tahoma";
+	font-size:20px;
+	color:#fff;
+}
+
+#news p {
+	margin-top:20px;
+	font-family:arial;
+	font-size:12px;
+	font-weight:normal;
+}
+
+#news p span {
+	color:#b14d1c;
+	font-weight:bold;
+}
+
+#footer {
+	height:130px;
+	background: url(images/uzor2.jpg) no-repeat bottom right;
+}
+
+#footer-block {
+	font-family:arial;
+	font-size:10px;
+	width:210px;
+	position:absolute;
+	margin-top:10px;
+	left:35px;
+	padding-bottom:10px;
+}
+
+#footer-block span {
+	background:#e8a0b5;
+}
+
+#footer-round {
+	background:#e8a0b5;
+}
+
+#footer-block p {
+	padding:12px;
+}
+
+#footer-block a {
+	color:#b14d1c;
+	text-decoration:none;
+}
+
+#stomach-block {
+	width:768px;
+	margin:0 auto;
+	background:#642142;
+}
+
+#text {
+	margin:0 20px;
+	padding:0 10px 10px;
+	border-bottom:1px dotted #c28cb7;
+}
+
+#stomach-block h2 {
+	font-family:arial;
+	font-size:18px;
+	color:#b14d1c;
+	line-height:40px;
+}
+
+#text img {
+	margin:15px 0 20px 25px;
+	float:right;
+}
+
+#text p {
+	text-align:justify;
+	color:#fff;
+	font-size:12px;
+	font-family:arial;
+	margin-bottom:15px;
+}
+
+#rasp {
+	margin:10px 20px 0;
+	border-bottom:1px dotted #c28cb7;
+}
+
+#rasp h3 {
+	color:#fff;
+	text-decoration:underline;
+	font-size:14px;
+	line-height:40px;
+}
+
+#rasp table {
+	border-color:#fff;
+	width:100%;
+	margin-bottom:25px;
+}
+
+#rasp th {
+	color:#642142;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	line-height:30px;
+	text-align:center;
+	background:#e8b54d;
+}
+
+.first_c {
+	width:173px;
+}
+
+.second_c {
+	
+}
+
+#rasp td {
+	background:#c5074d;
+}
+
+tbody td {
+	color:#fff;
+	font-family:arial;
+	font-size:14px;
+	line-height:30px;
+}
+
+tbody ul {
+	margin-left:10px;
+}
+
+tfoot td {
+	text-align:center;
+	color:#fff;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	line-height:30px;
+}
+
+#trainers {
+	margin:0 20px;
+}
+
+#trainers h2 {
+	padding:0 10px 10px;
+}
+
+#trainers ul {
+	height:230px;
+}
+
+#trainers li {
+	float:left;
+	margin-right:30px;
+	margin-bottom:20px;
+}
+
+.trainer_img {
+	border:3px solid #a48089;
+}
+
+#trainers a {
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	display:block;
+	line-height:40px;
+	text-decoration:none;
+	color:#e8b54d;
+	padding-right:10px;
+}
+
+.arrow {
+	margin-left:7px;
+	margin-bottom:2px;
+}
