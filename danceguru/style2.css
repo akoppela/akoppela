@@ -480,15 +480,17 @@ img, div {
 }
 
 #news ul {
-	height:auto;
-	height:187px;
+	overflow:hidden;
+	height:1%;
+	padding:10px 0;
 }
 
 #news li {
-	margin-top:20px;
+	margin-top:10px;
 	float:left;
 	margin-left:45px;
 	width:200px;
+	padding-bottom:10px;
 }
 
 *html #news li {
@@ -514,7 +516,6 @@ img, div {
 }
 
 #footer {
-	height:130px;
 	background: url(images/uzor2.jpg) no-repeat bottom right; 
 }
 
@@ -646,13 +647,14 @@ tfoot td {
 }
 
 #trainers ul {
-	height:230px;
+	overflow:hidden;
+	height:1%;
 }
 
 #trainers li {
 	float:left;
 	margin-right:30px;
-	margin-bottom:20px;
+	padding-bottom:20px;
 }
 
 .trainer_img {
