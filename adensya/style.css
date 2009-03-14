@@ -445,6 +445,10 @@ body {
     background:#EDECEA;
 }
 
+#nav ul {
+	width:982px;
+}
+
 #nav li {
     display:inline;
     margin-left:34px;
