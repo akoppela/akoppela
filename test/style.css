@@ -175,8 +175,8 @@ body {
 }
 
 #footer {
-	margin:0 auto;
 	width:400px;
+	margin:0 auto;
 	background:blue;
 	height:50px;
 }
