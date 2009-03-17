@@ -1,6 +1,7 @@
 html {
 	color: #000;
-	background: #fff;
+	background: url(images/background.gif);
+	height:100%;
 }
 
 body,
@@ -123,8 +124,10 @@ select {
 	*font-size: 100%;
 }
 
-html, body {
+body {
 	height:100%;
+	font-family:arial;
+	font-size:12px;
 }
 
 #container {
@@ -133,39 +136,47 @@ html, body {
 
 #wrapper {
 	min-height:100%;
-	background:orange;
 }
 
 *html #wrapper {
 	height:100%;
 }
 
-#header-wrapper {
-	width:100%;
-	background:#fff;
-	height:30px;
+#head-wrapper {
+	position:relative;
+	z-index:100;
+	background: url(images/background.gif);
 }
 
 #header {
+	margin:0 auto;
 	background:green;
-	width:100px;
-	height:100%;
+	width:300px;
+	height:200px;
+	margin-bottom:-50px;
 }
 
-#content {
+#menu {
+	margin:0 auto;
+	background:yellow;
+	width:320px;
+	height:50px;
+	margin-bottom:-250px;
+}
+
+#wrapper {
+	margin:0 auto;
+	width:310px;
 	background:orange;
-	margin-bottom:40px;
 }
 
-#footer-wrapper {
-	width:100%;
-	background:white;
-	height:40px;
-	margin-top:-40px;
+#headspace {
+	height:250px;
 }
 
 #footer {
-	width:200px;
+	margin:0 auto;
+	width:400px;
 	background:blue;
-	height:100%;
+	height:50px;
 }
