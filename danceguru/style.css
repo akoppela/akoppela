@@ -229,14 +229,27 @@ img, div {
 	text-decoration:none;
 }
 
-#header li img {
+.right-cl {
 	position:relative;
 	z-index:50;
 	left:55px;
 }
 
+.left-cl {
+	position:relative;
+	z-index:50;
+	left:85px;
+}
+
+.center-cl {
+	position:relative;
+	z-index:50;
+	left:68px;
+}
+
 #header li h3 {
 	padding-top:20px;
+	padding-bottom:13px;
 }
 
 #header li h3 a {
@@ -250,6 +263,10 @@ img, div {
 
 .one-string {
 	padding-top:36px !important;
+}
+
+.one-string-noimg {
+	padding-top:74px !important;
 }
 
 .noimg {
@@ -293,9 +310,11 @@ img, div {
 }
 
 #logo {
+	margin:0 auto;
 	margin-top:50px;
 	background: url(images/people.png) no-repeat bottom; 
 	height:187px;
+	width:1000px;
 }
 
 *html #logo {
