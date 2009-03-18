@@ -278,6 +278,7 @@ body {
 
 #wrapper {
 	min-height:100%;
+	height: expression(document.documentElement.clientHeight < 100% ? "100%" : "100%");
 	width:100%;
 	position:absolute;
 	top:295px;
