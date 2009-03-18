@@ -204,9 +204,10 @@ body {
 	right:20px;
 	width:86px;
 	padding:0 21px;
+	height:20px;
 	font-size:13px;
 	font-weight:bold;
-	line-height:20px;
+	line-height:16px;
 	color:#666;
 	border:1px solid #7db5de;
 	background: url(images/button_bg.jpg) repeat-x;
