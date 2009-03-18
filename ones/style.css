@@ -133,6 +133,9 @@ body {
 }
 
 #container {
+	position:relative;
+	min-width:960px;
+	width: expression(document.documentElement.clientWidth < 960 ? "960px" : "auto");
 }
 
 #header {
@@ -199,11 +202,11 @@ body {
 #sub-button {
 	position:absolute;
 	right:20px;
-	height:20px;
 	width:86px;
 	padding:0 21px;
-	font-size:14px;
+	font-size:13px;
 	font-weight:bold;
+	line-height:20px;
 	color:#666;
 	border:1px solid #7db5de;
 	background: url(images/button_bg.jpg) repeat-x;
@@ -216,6 +219,7 @@ body {
 }
 
 #footer {
+	min-width:960px;
 	position:absolute;
 	bottom:0;
 	width:100%;
