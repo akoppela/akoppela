@@ -135,34 +135,51 @@ body {
 #container-wrapper {
 	width:970px;
 	margin:0 auto;
-	height:200px;
-	background:#e8e8dd;
+	height:100%;
 }
 
 #left-shadow {
-	margin-top:8px;
 	width:10px;
 	background: url(images/left_shadow.jpg) repeat-y;
-	height:200px;
+	height:100%;
 	float:left;
 }
 
-#container {
-	width:950px;
-	margin:0 auto;
-	height:200px;
-	background:orange;
-	float:left;
+#left-shadow img {
+	position:relative;
+	top:0;
+	z-index:10;
 }
 
 #top-shadow {
+	position:absolute;
+	top:0;
+	z-index:5;
+	width:970px;
 	height:8px;
 	background: url(images/top_shadow.jpg) repeat-x;
 }
 
+#container {
+	position:relative;
+	z-index:1000;
+	top:8px;
+	width:950px;
+	margin:0 auto;
+	height:100%;
+	float:left;
+}
+
 #right-shadow {
 	width:10px;
-	height:200px;
+	height:100%;
 	float:left;
 	background: url(images/right_shadow.jpg) repeat-y;
+}
+
+#right-shadow img {
+	position:relative;
+	top:0;
+	right:16px;
+	z-index:10;
 }

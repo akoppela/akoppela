@@ -161,7 +161,7 @@ a:hover {
 	letter-spacing:5px;
 	margin-left:30px;
 	font-weight:bold;
-	font-size:32px;
+	font-size:36px;
 	color:#f00;
 }
 
@@ -310,5 +310,5 @@ a:hover {
 	font-weight:bold;
 	margin:0 auto;
 	padding-bottom:10px;
-	color:#000;
+	color:#666;
 }
