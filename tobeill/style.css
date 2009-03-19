@@ -147,12 +147,12 @@ a:hover {
 }
 
 #header {
-	margin-top:19px;
+	margin-top:10px;
 }
 
 #header h1 {
 	text-align:center;
-	line-height:32px;
+	line-height:44px;
 	font-size:18px;
 	font-weight:bold;
 }
@@ -161,8 +161,7 @@ a:hover {
 	letter-spacing:5px;
 	margin-left:30px;
 	font-weight:bold;
-	font-size:28px;
-	line-height:36px;
+	font-size:32px;
 	color:#f00;
 }
 
@@ -243,8 +242,8 @@ a:hover {
 
 #content-nav li a {
 	color:#000;
-	font-size:12px;
-	line-height:24px;
+	font-size:11px;
+	line-height:22px;
 }
 
 .ul-red {
@@ -273,12 +272,12 @@ a:hover {
 .doc {
 	text-align:right;
 	font-weight:normal !important;
-	margin:3px 0;
+	margin:10px 0;
 }
 
 .number {
-	font-size:30px !important;
-	letter-spacing:7px;
+	font-size:36px !important;
+	letter-spacing:3px;
 	float:left;
 	margin-left:3px;
 }
@@ -311,4 +310,5 @@ a:hover {
 	font-weight:bold;
 	margin:0 auto;
 	padding-bottom:10px;
+	color:#000;
 }
