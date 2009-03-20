@@ -271,8 +271,10 @@ a:hover {
 
 .doc {
 	text-align:right;
-	font-weight:normal !important;
-	margin:10px 0;
+	margin:8px 0;
+	font-style:italic;
+	font-family:"book antiqua";
+	font-size:12px !important;
 }
 
 .number {
@@ -295,8 +297,14 @@ a:hover {
 
 #footer li a, #footer li {
 	display:inline;
-	font-size:13px;
+	font-size:12px;
+	font-weight:bold;
 	color:#fff;
+}
+
+#footer li {
+	position:relative;
+	top:4px;
 }
 
 #footer img {
@@ -310,5 +318,5 @@ a:hover {
 	font-weight:bold;
 	margin:0 auto;
 	padding-bottom:10px;
-	color:#666;
+	color:#ababab;
 }
