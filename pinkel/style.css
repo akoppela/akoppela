@@ -581,6 +581,10 @@ body {
 
 /* css страницы main */
 
+#main-html {
+	background:#DFDFDF;
+}
+
 #main-container {
 	height:750px;
 	width:1000px;
@@ -588,6 +592,7 @@ body {
 	background: url(images/main_bg.jpg) no-repeat;
 	border-left:1px solid #999;
 	border-right:1px solid #999;
+	border-bottom:1px solid #999;
 }
 
 #main-logo {
