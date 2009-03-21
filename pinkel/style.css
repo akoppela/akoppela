@@ -259,16 +259,20 @@ body {
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/top_list.png');
 }
 
-#head-text h3 {
+#head-text ul {
 	margin-left:110px;
+}
+
+#head-text li a {
+	padding-left:17px;
+	color:#000;
+	text-decoration:none;
+}
+
+#head-text li a:hover {
 	background: url(images/head-text-arrow.gif) no-repeat left center;
 	font-weight:bold;
 	color:#ef5401;
-	padding-left:17px;
-}
-
-#head-text ul {
-	margin-left:127px;
 }
 
 #pxdelete {
