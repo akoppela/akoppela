@@ -188,7 +188,7 @@ a {
 	*display:inline; /* Для IE */
 	zoom:1; /* Для корректного отображения в IE7 */
 	text-indent:-9000px; /* убираем текс, чтобы поисковики индексировали, но было видно картинку */
-	background: url(img/log_o.png) no-repeat;
+	background: url(img/logo.png) no-repeat;
 	width:281px;
 	line-height:67px;
 	margin:19px 0 0 13px;
@@ -196,7 +196,7 @@ a {
 
 *html #header h1 { 
 	background: none; 
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/log_o.png'); /* хак для ие6 png opacity */
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/logo.png'); /* хак для ие6 png opacity */
 	width:281px;
 	height:67px;
 	overflow:hidden;
