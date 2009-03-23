@@ -130,8 +130,8 @@ body {
 	position:relative; /* для корректного min-width */
     font-family: Arial;
     font-size:13px;
-	color:#000;
 	width:970px;
+	color:#000;
 	margin:0 auto;
 	background: url(img/left_shadow.jpg) no-repeat left; /* левая тень */
 }
