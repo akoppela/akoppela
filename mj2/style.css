@@ -142,16 +142,12 @@ a {
 
 #shadow-wrapper {
 	width:970px;
-	background: url(img/right_shadow.jpg) repeat-y right; /* правая тень */
-}
-
-#container-wrapper {
-	width:970px;
-	background: url(img/top_shadow.png) repeat-x top; /* верхняя тень */
+	background: url(img/right_shadow.jpg) no-repeat right; /* правая тень */
 }
 
 #container {
-	background: url(img/top_shadow_corners.png) no-repeat top; /* верхние углы тени */
+	width:970px;
+	background: url(img/top_shadow.png) no-repeat top; /* верхняя тень */
 }
 
 #main {
