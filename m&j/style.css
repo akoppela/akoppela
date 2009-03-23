@@ -1,9 +1,9 @@
 /* стандартные обнуления отступов и прочие настройки */
 
 html {
+	height:100%;
 	color: #000;
 	background: #e8e8dd url(img/main_bg.png) repeat-x;
-	height:100%;
 }
 
 body,
