@@ -267,9 +267,6 @@ dd a {
 
 #right-block ul {
 	margin-left:48px;
-}
-
-.team {
 	padding-top:35px;
 }
 
@@ -281,7 +278,11 @@ dd a {
 	font-weight:bold;
 }
 
-.team-active {
+#right-block li a:hover {
+	color:#7fd4ed;
+}
+
+.r-active {
 	color:#7fd4ed !important;
 }
 
