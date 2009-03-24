@@ -210,7 +210,7 @@ a {
 
 #left-block {
 	position:relative;
-	width:572px;
+	width:524px;
 	float:left;
 }
 
@@ -221,7 +221,6 @@ a {
 	margin-bottom:10px;
 	line-height:17px;
 	color:#666;
-	margin-right:40px;
 }
 
 #content p strong {
@@ -252,7 +251,7 @@ dd a {
 
 #right-block {
 	position:relative;
-	width:242px;
+	width:290px;
 	float:right;
 }
 
@@ -263,18 +262,32 @@ dd a {
 	color:#7fd4ed;
 	line-height:20px;
 	font-weight:bold;
+	margin-left:48px;
 }
 
-#right-block h3 {
+#right-block ul {
+	margin-left:48px;
+}
+
+.team {
+	padding-top:35px;
+}
+
+#right-block li a {
 	font-size:11px;
-	font-family:Arial;
+	font-family:tahoma;
 	color:#09c;
+	line-height:20px;
 	font-weight:bold;
-	line-height:19px;
+}
+
+.team-active {
+	color:#7fd4ed !important;
 }
 
 .mott {
-	margin-top:20px;
+	margin-left:48px;
+	margin-top:23px;
 	width:242px;
 	height:234px;
 	background: url(img/suzanne.png) no-repeat;
@@ -283,6 +296,19 @@ dd a {
 *html .mott {
 	background:none;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/suzanne.png'); /* хак для ие6 png opacity */
+}
+
+.sam {
+	margin-top:24px;
+	width:283px;
+	height:232px;
+	background: url(img/sam.png) no-repeat;
+	overflow:hidden;
+}
+
+*html .sam {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/sam.png'); /* хак для ие6 png opacity */
 }
 
 #right-block li {
