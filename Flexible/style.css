@@ -196,7 +196,7 @@ a {
 }
 
 #content h1 {
-	padding:20px 0 0 55px;
+	padding-left:55px;
 	color:#09c;
 	font-weight:bold;
 	font-family: "tahoma";
@@ -212,11 +212,17 @@ a {
 	position:relative;
 	width:524px;
 	float:left;
+	height:300px;
+	margin-top:20px;
+}
+
+.lb-full {
+	overflow-y:scroll;
 }
 
 #content p {
 	padding-left:55px;
-	font-family:"Trebuchet MS", Helvetica;
+	font-family:Helvetica, arial;
 	font-size:11px;
 	margin-bottom:10px;
 	line-height:17px;
@@ -247,6 +253,26 @@ dt, dd {
 
 dd a {
 	color:#09c;
+}
+
+#left-block h2 {
+	padding-left:55px;
+	color:#09c;
+	font-weight:bold;
+	font-family: "tahoma";
+	font-size:13px;
+	line-height:30px;
+}
+
+#left-block p a {
+	color:#666;
+}
+
+.training {
+	padding-left:55px;
+	font-family:Helvetica, arial;
+	font-size:11px;
+	color:#666;
 }
 
 #right-block {
@@ -317,7 +343,7 @@ dd a {
 }
 
 #right-block li a {
-	font-family:"Trebuchet MS", Helvetica;
+	font-family:Helvetica, arial;
 	color:#09c;
 	font-size:11px;
 	line-height:18px;
@@ -365,8 +391,11 @@ dd a {
 	color:#bfebf7;
 	font-family:tahoma;
 	font-size:13px;
-	font-weight:bold;
 	margin-bottom:18px;
+}
+
+#quote p strong {
+	font-weight:bold;
 }
 
 #slogan {
@@ -376,12 +405,17 @@ dd a {
 
 #slogan ul {
 	margin:20px 0 0 45px;
+	background: url(img/r_mus.png) no-repeat;
+}
+
+#slogan li {
+	text-indent:-9000px;
 }
 
 #slogan li span {
 	line-height:22px;
 	font-size:16px;
-	font-family:"Trebuchet MS", Helvetica;
+	font-family:Helvetica, arial;
 	color:#fff;
 }
 
@@ -406,6 +440,10 @@ dd a {
 
 #footer li span, #footer p {
 	font-size:11px;
-	font-family:"Trebuchet MS", Helvetica;
+	font-family:Helvetica, arial;
+	color:#7fd4ed;
+}
+
+#footer a {
 	color:#7fd4ed;
 }

@@ -328,11 +328,8 @@ a {
 
 #news ul {
 	overflow:hidden;
-	width:206px;
+	width:208px;
 	margin-bottom:7px;
-	border-left:1px solid #dcddde;
-	border-right:1px solid #dcddde;
-	border-bottom:1px solid #dcddde;
 }
 
 #news li {
@@ -360,8 +357,8 @@ a {
 
 #news li a {
 	display:block;
-	width:193px;
-	height:28px;
+	width:195px;
+	height:27px;
 	padding:0 0 0 13px;
 	font-size:13px;
 	font-family:arial;
@@ -465,6 +462,55 @@ a {
 	line-height:15px;
 }
 
+.search-title {
+	background: url(img/search.png) no-repeat;
+}
+
+.search-form {
+	width:208px;
+	height:65px;
+	background: url(img/search_form_bg.jpg) no-repeat !important;
+	border:none !important;
+}
+
+.search form {
+	padding:5px 0 0 10px;
+}
+
+.search li {
+	line-height:24px !important;
+}
+
+.search-form a {
+	font-size:14px !important;
+	font-family:arial;
+	font-weight:bold;
+	height:24px !important;
+}
+
+.s-text {
+	vertical-align:top;
+	font-size:12px;
+	font-family:arial;
+	font-weight:bold;
+	width:155px;
+	height:20px;
+	background:#f5f6f0;
+	border:none;
+	padding-top:8px;
+	padding-left:6px;
+}
+
+.s-sub {
+	vertical-align:top;
+	width:26px;
+	height:28px;
+}
+
+*html .s-sub {
+	margin-top:1px;
+}
+
 .spec-of-text h4 {
 	color:#060;
 	font-weight:bold;
@@ -550,10 +596,11 @@ a {
 }
 
 .basket {
-	height:39px !important;
+	height:46px !important;
 	width:208px;
 	overflow:hidden;
-	margin-bottom:14px;
+	margin-bottom:10px;
+	background: url(img/basket_bg.png) no-repeat bottom;
 }
 
 .basket div {
