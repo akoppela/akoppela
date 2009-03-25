@@ -201,7 +201,8 @@ a {
 	font-weight:bold;
 	font-family: "tahoma";
 	font-size:13px;
-	line-height:55px;
+	line-height:17px;
+	margin-bottom:18px;
 }
 
 #content h1 span {
@@ -212,12 +213,39 @@ a {
 	position:relative;
 	width:524px;
 	float:left;
-	height:300px;
-	margin-top:20px;
+	height:279px;
+	margin-top:39px;
 }
 
 .lb-full {
-	overflow-y:scroll;
+	overflow:hidden;
+}
+
+.slide {
+	position:relative;
+}
+
+#up {
+	width:11px;
+	height:11px;
+	display:block;
+	background: url(img/up.png) no-repeat;
+	float:right;
+	position:relative;
+	top:260px;
+	margin-right:10px;
+	cursor:pointer;
+}
+
+#down {
+	width:11px;
+	height:11px;
+	display:block;
+	background: url(img/down.png) no-repeat;
+	float:right;
+	position:relative;
+	top:260px;
+	cursor:pointer;
 }
 
 #content p {
@@ -232,6 +260,11 @@ a {
 #content p strong {
 	font-weight:bold;
 	font-size:12px;
+}
+
+#content p strong a {
+	margin-left:3px;
+	font-size:14px !important;
 }
 
 .vcard {
@@ -273,6 +306,7 @@ dd a {
 	font-family:Helvetica, arial;
 	font-size:11px;
 	color:#666;
+	line-height:12px;
 }
 
 #right-block {
