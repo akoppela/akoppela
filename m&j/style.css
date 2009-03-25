@@ -520,13 +520,16 @@ a {
 	position:relative;
 	vertical-align:top;
 	float:left;
-	width:522px;
+	width:730px;
 	margin-bottom:15px;
 }
 
 #content {
+	margin:0 10px;
+}
+
+.index-content {
 	width:502px;
-	margin:0 auto;
 }
 
 .con-img {
@@ -593,6 +596,7 @@ a {
 	vertical-align:top;
 	float:right;
 	width:208px;
+	margin-left:-208px;
 }
 
 .basket {

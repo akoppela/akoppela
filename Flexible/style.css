@@ -212,17 +212,26 @@ a {
 #left-block {
 	position:relative;
 	width:524px;
-	float:left;
 	height:279px;
+	float:left;
 	margin-top:39px;
+}
+
+#left-block p a {
+	color:#09c !important;
 }
 
 .lb-full {
 	overflow:hidden;
+	height:243px !important; 
 }
 
 .slide {
 	position:relative;
+}
+
+#slide p {
+	margin-right:45px;
 }
 
 #up {
@@ -232,7 +241,8 @@ a {
 	background: url(img/up.png) no-repeat;
 	float:right;
 	position:relative;
-	top:260px;
+	top:65px;
+	right:300px;
 	margin-right:10px;
 	cursor:pointer;
 }
@@ -244,7 +254,8 @@ a {
 	background: url(img/down.png) no-repeat;
 	float:right;
 	position:relative;
-	top:260px;
+	top:65px;
+	right:300px;
 	cursor:pointer;
 }
 
@@ -260,11 +271,6 @@ a {
 #content p strong {
 	font-weight:bold;
 	font-size:12px;
-}
-
-#content p strong a {
-	margin-left:3px;
-	font-size:14px !important;
 }
 
 .vcard {

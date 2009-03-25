@@ -1,6 +1,6 @@
 window.addEvent('domready', function(){
 	
-	var scroll = new Fx.Morph('slide', { duration: 500 });
+	var scroll = new Fx.Morph('slide', { duration: 600 });
 	
 	$('up').addEvent('mouseenter', function(e) {
 		scroll.start({
@@ -11,7 +11,7 @@ window.addEvent('domready', function(){
 	
 	$('down').addEvent('mouseenter', function(e) {
 		scroll.start({
-			'margin-top': -20
+			'margin-top': -50
 		});
 		return false;
 	});
