@@ -190,11 +190,6 @@ a {
 	display:block;
 }
 
-*html #content {
-	background:none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/content_bg.png'); /* хак для ие6 png opacity */
-}
-
 #content h1 {
 	padding-left:55px;
 	color:#09c;
