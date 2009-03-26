@@ -1,0 +1,492 @@
+/* стандартные обнуления отступов и прочие настройки */
+
+html {
+	height:100%;
+	color: #000;
+	background: #f1d98f url(img/mainup_bg.jpg) repeat-x top;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+body {
+    font-family: Arial;
+    font-size:13px;
+	color:#000;
+	width:100%;
+	height:auto !important;
+	height:100%;
+	min-height:100%;
+}
+
+a {
+	text-decoration:none;
+}
+
+.index {
+	background: url(img/maindown_bg.jpg) repeat-x bottom;
+}
+
+.second {
+	background: url(img/main_bg.jpg) repeat-x bottom;
+}
+
+#logo {
+	width:390px;
+	margin:0 auto 20px;
+	padding-top:45px;
+}
+
+#logo a {
+	margin-left:50px;
+	text-indent:-9000px;
+	height:106px;
+	display:block;
+	background: url(img/logo.png);
+}
+
+*html #logo a {
+	cursor:pointer;
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/logo.png'); /* хак для ие6 png opacity */
+}
+
+#main-svitok {
+	width:840px;
+	margin:0 auto 20px;
+	overflow:hidden;
+}
+
+#taxi {
+	float:left;
+}
+
+.small-svitok {
+	width:376px;
+	height:197px;
+	background: url(img/svitok_bg.png) no-repeat;
+}
+
+*html .small-svitok {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/svitok_bg.png'); /* хак для ие6 png opacity */
+}
+
+#taxi h2 {
+	padding:60px 0 0 121px;
+}
+
+#taxi h2 a {
+	position:relative;
+	text-indent:-9000px;
+	width:142px;
+	height:29px;
+	display:block;
+	background: url(img/taxi.png) no-repeat;
+}
+
+#taxi p, #autosalon p {
+	text-align:center;
+	font-size:20px;
+	font-family:"Times New Roman";
+	line-height:40px;
+	color:#464646;
+}
+
+.number {
+	text-indent:-9000px;
+	width:133px;
+	height:25px;
+	background: url(img/taxi_number.png) no-repeat;
+	margin-left:123px;
+}
+
+#autosalon {
+	float:right;
+}
+
+#autosalon h2 {
+	padding:73px 0 0 74px;
+}
+
+#autosalon h2 a {
+	position:relative;
+	text-indent:-9000px;
+	width:246px;
+	height:28px;
+	display:block;
+	background: url(img/autosalon.png) no-repeat;
+}
+
+#nedvig {
+	margin:0 auto 165px;
+}
+
+.large-svitok {
+	width:433px;
+	height:201px;
+	background: url(img/svitok_large_bg.png) no-repeat;
+}
+
+*html .large-svitok {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/svitok_large_bg.png'); /* хак для ие6 png opacity */
+}
+
+#nedvig h2 {
+	padding:76px 0 0 51px;
+}
+
+#nedvig h2 a {
+	position:relative;
+	text-indent:-9000px;
+	width:331px;
+	height:62px;
+	display:block;
+	background: url(img/nedvig.png) no-repeat;
+}
+
+#footer p {
+	text-align:center;
+	font-size:12px;
+	font-family:arial;
+	color:#d2bc7a;
+	line-height:50px;
+}
+
+#header {
+	height:254px;
+	background: url(img/header_bg.jpg) repeat-x bottom;
+}
+
+#small-logo {
+	width:264px;
+	margin:0 auto;
+	padding-top:10px;
+}
+
+#small-logo a {
+	margin-left:40px;
+	text-indent:-9000px;
+	height:69px;
+	display:block;
+	background: url(img/small_logo.png) no-repeat;
+}
+
+*html #small-logo a {
+	cursor:pointer;
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/small_logo.png'); /* хак для ие6 png opacity */
+}
+
+#svitok-block {
+	width:750px;
+	margin:4px auto 0;
+	overflow:hidden;
+}
+
+.smallest-svitok {
+	overflow:hidden;
+	width:214px;
+	height:83px;
+	background: url(img/small_svitok.png) no-repeat;
+}
+
+*html .smallest-svitok {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/small_svitok.png'); /* хак для ие6 png opacity */
+}
+
+#nedv-small {
+	float:left;
+	margin-right:40px;
+}
+
+#nedv-small h2 {
+	padding:31px 0 0 20px;
+}
+
+#nedv-small h2 a {
+	position:relative;
+	text-indent:-9000px;
+	width:174px;
+	height:15px;
+	display:block;
+	background: url(img/nedv_small.png) no-repeat;
+}
+
+.smallest-svitok p {
+	text-align:center;
+	font-size:10px;
+	font-family:georgia;
+	color:#464646;
+	line-height:16px;
+}
+
+#taxi-logo {
+	margin-top:20px;
+	margin-right:45px;
+	text-indent:-9000px;
+	width:234px;
+	height:47px;
+	float:left;
+	background: url(img/taxi_large.png) no-repeat;
+}
+
+*html #taxi-logo {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/taxi_large.png'); /* хак для ие6 png opacity */
+}
+
+#auto-small h2 {
+	padding:31px 0 0 30px;
+}
+
+#auto-small h2 a {
+	position:relative;
+	text-indent:-9000px;
+	width:149px;
+	height:15px;
+	display:block;
+	background: url(img/auto_small.png) no-repeat;
+}
+
+#large-number {
+	width:215px;
+	height:39px;
+	background: url(img/number_large.png) no-repeat;
+	text-indent:-9000px;
+	margin:5px auto 0;
+}
+
+*html #large-number {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/number_large.png'); /* хак для ие6 png opacity */
+}
+
+
+#wrapper {
+	padding-top:10px;
+	width:100%;
+	background:#f1d98f;
+}
+
+#taxi-content {
+	width:690px;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+#taxi-content ul {
+	overflow:hidden;
+	margin-left:50px;
+}
+
+#taxi-content li {
+	width:150px;
+	float:left;
+	margin-right:95px;
+}
+
+.no-marg {
+	margin:0 !important;
+}
+
+#taxi-content li a {
+	width:150px;
+	font-family:arial;
+	font-size:13px;
+	color:#772323;
+	text-decoration:underline;
+	font-weight:bold;
+	line-height:25px;
+}
+
+#left-block {
+	width:173px;
+	float:left;
+	margin-right:55px;
+	margin-top:40px;
+}
+
+#nana {
+	text-indent:-9000px;
+	width:157px;
+	height:37px;
+	background: url(img/auto_nana.png) no-repeat;
+	margin-bottom:15px;
+}
+
+#right-block {
+	margin-top:40px;
+	width:420px;
+	float:left;
+}
+
+#right-block h3 {
+	font-size:14px;
+	font-family:tahoma;
+	font-weight:bold;
+	color:#505050;
+	margin-bottom:20px;
+	text-indent:30px;
+}
+
+#right-block p {
+	font-size:14px;
+	font-family:tahoma;
+	margin-bottom:15px;
+	color:#505050;
+}
+
+#taxi-footer {
+	width:685px;
+	margin:0 auto;
+	height:95px;
+	color:#010101;
+}
+
+#taxi-footer p {
+	float:left;
+	margin-right:80px;
+	padding-top:40px;
+}
+
+.vcard {
+	padding-top:40px;
+	width:200px;
+	float:left;
+	line-height:16px;
+	font-size:12px;
+	
+}
+
+.vcard li {
+	height:16px;
+}
+
+.vcard dt {
+	float:left;
+	margin-right:5px;
+}
+
+.vcard a {
+	color:#010101;
+}

@@ -131,9 +131,8 @@ body {
     font-size:13px;
 	color:#000;
 	width:857px;
-	height:805px;
 	margin:40px auto 0;
-	background: url(img/main_bg.jpg) no-repeat 438px 0; /* левая тень */
+	background: url(img/main_bg.jpg) no-repeat 438px 0;
 }
 
 a {
@@ -335,4 +334,5 @@ a {
 	height:130px;
 	background: url(img/moto.jpg) no-repeat;
 	clear:both;
+	padding-bottom:60px;
 }
