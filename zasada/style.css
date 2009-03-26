@@ -1,0 +1,338 @@
+/* стандартные обнуления отступов и прочие настройки */
+
+html {
+	height:100%;
+	color: #000;
+	background: #000;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+body {
+    font-family: Arial;
+    font-size:13px;
+	color:#000;
+	width:857px;
+	height:805px;
+	margin:40px auto 0;
+	background: url(img/main_bg.jpg) no-repeat 438px 0; /* левая тень */
+}
+
+a {
+	text-decoration:none;
+}
+
+#header {
+	overflow:hidden;
+}
+
+#header h1 {
+	float:left;
+}
+
+#header h1 a {
+	width:184px;
+	height:65px;
+	display:block;
+	text-indent:-9000px;
+	background: url(img/zasada.png) no-repeat;
+}
+
+#header ul {
+	margin-left:40px;
+	float:left;
+	font-size:11px;
+	font-family:arial;
+	
+}
+
+#header li a {
+	padding-left:16px;
+	line-height:21px;
+	width:122px;
+	display:block;
+	color:#fff;
+	background: url(img/header_a.gif) no-repeat 4px 9px;
+}
+
+#header li a:hover {
+	background: #d11011 url(img/header_a.gif) no-repeat 4px 9px;
+}
+
+#welcome {
+	margin-top:20px;
+	clear:both;
+	width:356px;
+	height:150px;
+	display:block;
+	background: url(img/welcome.png) no-repeat;
+	overflow:hidden;
+}
+
+#welcome h2 {
+	width:296px;
+	height:37px;
+	text-indent:-9000px;
+	background: url(img/welcome_title.png) no-repeat 16px 12px;
+}
+
+#welcome img {
+	margin:6px 0 0 16px;
+	border:2px solid #5d6363;
+	float:left;
+}
+
+#welcome-text {
+	margin-top:6px;
+	margin-right:14px;
+	float:right;
+	width:186px;
+	height:92px;
+	border:1px solid #562a00;
+}
+
+*html #welcome-text {
+	margin-right:7px;
+}
+
+#welcome-text h3, #welcome-text p {
+	padding:10px 20px 0;
+	color:#958958;
+	font-size:10px;
+}
+
+#welcome-text p {
+	padding-top:0;
+	color:#bababa !important;
+}
+
+#afisha {
+	margin-top:20px;
+	margin-left:10px;
+	overflow:hidden;
+	width:345px;
+	font-size:11px;
+	line-height:13px;
+}
+
+#afisha h2 {
+	width:68px;
+	height:22px;
+	text-indent:-9000px;
+	background: url(img/afisha.png) no-repeat;
+}
+
+.afisha-text {
+	float:right;
+	width:270px;
+	margin-right:8px;
+}
+
+*html .afisha-text {
+	margin-right:4px;
+}
+
+#afisha ul {
+	margin-top:10px;
+	overflow:hidden;
+}
+
+#afisha li {
+	overflow:hidden;
+	clear:both;
+	margin-bottom:12px;
+	zoom:1;
+}
+
+.afisha-img {
+	width:54px;
+	height:54px;
+	background: url(img/afisha_img_bg.png) no-repeat;
+	float:left;
+	margin-right:10px;
+}
+
+.afisha-img img {
+	padding:2px 0 0 2px;
+}
+
+.date {
+	color:#fff !important;
+}
+
+#afisha li p {
+	color:#bababa;
+}
+
+#afisha li h3 {
+	color:#958958;
+}
+
+#content {
+	margin-top:20px;
+	width:470px;
+	float:right;
+	overflow:hidden;
+}
+
+#koncert {
+	margin-bottom:40px;
+}
+
+#koncert h2 {
+	width:205px;
+	height:21px;
+	text-indent:-9000px;
+	background: url(img/koncert.png) no-repeat;
+	margin-bottom:20px;
+}
+
+#koncert img {
+	margin:0 10px 0 3px;
+	border:3px solid #5b595a;
+	float:left;
+}
+
+#koncert p {
+	margin-top:5px;
+	color:#fff;
+	font-size:11px;
+	text-indent:20px;
+	margin-left:3px;
+}
+
+#news {
+	margin-bottom:80px;
+}
+
+#news h2 {
+	width:144px;
+	height:26px;
+	text-indent:-9000px;
+	background: url(img/news.png) no-repeat;
+	margin-bottom:20px;
+}
+
+#footer {
+	height:130px;
+	background: url(img/moto.jpg) no-repeat;
+	clear:both;
+}
