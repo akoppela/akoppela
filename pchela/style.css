@@ -131,9 +131,7 @@ body {
     font-size:13px;
 	color:#000;
 	width:100%;
-	height:auto !important;
 	height:100%;
-	min-height:100%;
 }
 
 a {
@@ -141,11 +139,6 @@ a {
 }
 
 .index {
-	background: url(img/maindown_bg.jpg) repeat-x bottom;
-}
-
-.second {
-	background: url(img/main_bg.jpg) repeat-x bottom;
 }
 
 #logo {
@@ -236,7 +229,7 @@ a {
 }
 
 #nedvig {
-	margin:0 auto 165px;
+	margin:0 auto;
 }
 
 .large-svitok {
@@ -263,12 +256,30 @@ a {
 	background: url(img/nedvig.png) no-repeat;
 }
 
+#footer {
+	position:relative;
+	height:245px;
+	margin-top:-245px;
+	background: url(img/maindown_bg.jpg) repeat-x bottom;
+}
+
 #footer p {
+	padding-top:195px;
 	text-align:center;
 	font-size:12px;
 	font-family:arial;
 	color:#d2bc7a;
 	line-height:50px;
+}
+
+#hfooter {
+	height:245px;
+}
+
+#container {
+	min-height:100%;
+	height:auto !important;
+	height:100%;
 }
 
 #header {
@@ -386,12 +397,12 @@ a {
 	padding-top:10px;
 	width:100%;
 	background:#f1d98f;
+	overflow:hidden;
 }
 
 #taxi-content {
 	width:690px;
 	margin:0 auto;
-	overflow:hidden;
 }
 
 #taxi-content ul {
@@ -438,6 +449,7 @@ a {
 	margin-top:40px;
 	width:420px;
 	float:left;
+	text-align:center;
 }
 
 #right-block h3 {
@@ -447,6 +459,7 @@ a {
 	color:#505050;
 	margin-bottom:20px;
 	text-indent:30px;
+	text-align:left;
 }
 
 #right-block p {
@@ -454,6 +467,18 @@ a {
 	font-family:tahoma;
 	margin-bottom:15px;
 	color:#505050;
+	text-align:left;
+}
+
+#hfoot {
+	height:95px;
+}
+
+#taxi-footer-wrapper {
+	width:100%;
+	background: url(img/main_bg.jpg) repeat-x bottom;
+	margin-top:-95px;
+	height:95px;
 }
 
 #taxi-footer {
