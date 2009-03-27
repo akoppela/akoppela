@@ -349,6 +349,10 @@ a {
 	border:none !important;
 }
 
+.inf-title {
+	background: url(img/information.jpg) no-repeat;
+}
+
 #news h2 {
 	line-height:36px;
 	text-indent:-9000px;
@@ -412,7 +416,7 @@ a {
 }
 
 .spec-of .title-li {
-	background: #7c0000 url(img/spec_bg.jpg) no-repeat !important;
+	background: #7c7d7d url(img/title_bg.jpg) no-repeat !important;
 }
 
 .spec-title {
@@ -830,12 +834,13 @@ a {
 	width:328px !important;
 }
 
-.trim li a {
-	display:block;
-	font-size:16px;
+.trim li p {
+	font-size:16px !important;
 	font-weight:bold;
 	font-family:arial;
 	color:#000;
+	line-height:20px;
+	margin:0 !important;
 }
 
 .trim li a img {
@@ -862,14 +867,6 @@ a {
 
 .new-product .trim img {
 	border:none !important;
-}
-
-.new-product .trim a, .new-product .trim p {
-	line-height:20px;
-	color:#000;
-	font-size:16px !important;
-	font-family:arial;
-	font-weight:bold;
 }
 
 .nprod-title h3 {
