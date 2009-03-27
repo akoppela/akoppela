@@ -860,6 +860,10 @@ a {
 	margin-top:15px;
 }
 
+.new-product .trim img {
+	border:none !important;
+}
+
 .new-product .trim a, .new-product .trim p {
 	line-height:20px;
 	color:#000;
