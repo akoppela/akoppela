@@ -261,6 +261,8 @@ a {
 	width:154px;
 	background:#fff;
 	border-left:1px solid #c5c5c5;
+	position:relative;
+	z-index:50;
 }
 
 #search-cat li {
@@ -482,6 +484,7 @@ a {
 	width:133px;
 	height:25px;
 	cursor:pointer;
+	z-index:10;
 }
 
 #map-filter p {
@@ -592,7 +595,6 @@ a {
 
 .ukoz-link {
 	position:relative;
-	z-index:50;
 	clear:both;
 	display:block;
 	text-align:center;
