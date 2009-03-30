@@ -55,7 +55,7 @@ window.addEvent('domready', function(){
 	$('scul').slide('hide');
 	
 	
-	$('sfilbut').addEvent('click', function(){
+	$('search-cat-value').addEvent('click', function(){
 		searchslide.cancel();
 		if(x == 0) {
 			$('search-cat').style.overflow = "visible";
@@ -69,5 +69,20 @@ window.addEvent('domready', function(){
 		}
 		return false;
 	});
-
+	
+	var val = $('search-text').value;
+	
+	$('search-text').addEvent('click', function(){
+		if(this.value == val) {
+			this.value = '';
+		}
+	});
+	
+	$('search-text').addEvent('blur', function(){
+		if(this.value == '') {
+			this.value = val;
+		}
+	});
+	
+	
 })
