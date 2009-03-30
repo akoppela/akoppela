@@ -144,17 +144,23 @@ a {
 	text-decoration:none;
 }
 
+#sdw-wrapper {
+	background: url(img/left_sdw.jpg) repeat-y left top;
+}
+
 #container {
 	min-height:100%;
 	height:auto !important;
 	height:100%;
 	background:#ebe7e1;
+	padding:0 15px;
+	background: url(img/right_sdw.jpg) repeat-y right top;
 }
 
 #header {
 	background: url(img/header_bg.jpg) repeat-x;
 	height:159px;
-	padding:0 24px 0 30px;
+	padding:0 9px 0 15px;
 }
 
 #header h1 {
@@ -321,8 +327,7 @@ a {
 
 #catalog {
 	width:364px;
-	margin-left:30px;
-	margin-right:606px;
+	margin-left:15px;
 	overflow:hidden;
 }
 
@@ -523,7 +528,7 @@ a {
 
 .map-button {
 	float:right;
-	margin-right:50px;
+	padding-right:50px;
 	height:25px;
 	overflow:hidden;
 }
@@ -636,7 +641,7 @@ a {
 }
 
 #soder-cat {
-	margin:0 24px 19px 30px;
+	margin:0 9px 19px 15px;
 	overflow:hidden;
 }
 
@@ -695,7 +700,7 @@ a {
 
 #posl-dob {
 	clear:both;
-	margin:0 24px 0 30px;
+	margin:0 9px 0 15px;
 	overflow:hidden;
 }
 
@@ -837,7 +842,7 @@ a {
 
 #news {
 	clear:both;
-	margin:0 24px 0 30px;
+	margin:0 9px 0 15px;
 	overflow:hidden;
 }
 
@@ -904,7 +909,7 @@ a {
 	border-top:14px solid #e3e4e9;
 	height:93px;
 	background:#ebe6df;
-	margin-top:-107px;
+	margin:-107px 15px 0 15px;
 	font-size:11px;
 	line-height:16px;
 }
