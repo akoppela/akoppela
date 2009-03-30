@@ -448,10 +448,6 @@ a {
 	font-size:13px;
 }
 
-.spec-of-text {
-	height:112px !important;
-}
-
 .spec-of .last-li {
 	background: url(img/end_spisok.jpg) no-repeat bottom !important;
 }
@@ -466,18 +462,22 @@ a {
 .spec-of-text a {
 	position:relative;
 	z-index:100;
-	float:left;
-	padding:10px 0 0 11px !important;
+	padding:10px 0 0 0 !important;
 	width:122px !important;
 	height:88px !important;
+	margin:0 auto;
 }
 
 .spec-of-text h4, .spec-of-text p  {
 	position:relative;
 	z-index:50;
-	left:8px;
 	padding-top:12px;
 	line-height:15px;
+	text-align:center;
+}
+
+.spec-of-text p {
+	padding-bottom:10px;
 }
 
 .cloud {
@@ -943,9 +943,9 @@ a {
 
 .update {
 	display:block;
-	width:79px;
+	width:105px;
 	height:26px;
-	padding-left:26px;
+	text-align:center;
 	background: url(img/update.png) no-repeat;
 	float:left;
 	margin-left:10px;
@@ -953,10 +953,10 @@ a {
 
 .continue {
 	display:block;
-	width:215px;
+	width:263px;
 	height:26px;
 	background: url(img/continue.png) no-repeat;
-	padding-left:48px;
+	text-align:center;
 	float:left;
 	margin-left:133px;
 }
@@ -964,12 +964,11 @@ a {
 .cart-sub {
 	float:right;
 	background: url(img/checkout.png) no-repeat;
-	border:none;
-	font-size:14px;
-	font-weight:bold;
-	cursor:pointer;
+	width:144px;
+	height:26px;
 	margin-right:10px;
 	display:block;
+	text-align:center;
 }
 
 #shop {
