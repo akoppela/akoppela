@@ -204,7 +204,7 @@ a {
 }
 
 #right {
-	width:730px;
+	width:700px;
 	float:right;
 	text-align:right;
 }
@@ -242,15 +242,7 @@ a {
 	display:block;
 	float:left;
 	width:170px;
-}
-
-.conauth {
-	position:absolute;
-	bottom:0;
-}
-
-*html .conauth {
-	margin-top:0;
+	margin-top:145px;
 }
 
 #auth input {
