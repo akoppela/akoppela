@@ -452,6 +452,10 @@ a {
 	background: url(img/end_spisok.jpg) no-repeat bottom !important;
 }
 
+.spec-of-text {
+	overflow:hidden;
+}
+
 .spec-of-text img {
 	padding:2px;
 	border:1px solid #e5e5e5;
@@ -471,13 +475,19 @@ a {
 .spec-of-text h4, .spec-of-text p  {
 	position:relative;
 	z-index:50;
-	padding-top:12px;
 	line-height:15px;
-	text-align:center;
+	padding-bottom:10px;
+	margin-left:10px;
 }
 
 .spec-of-text p {
-	padding-bottom:10px;
+	width:60px;
+}
+
+.spec-of-text h4 {
+	padding-top:12px;
+	overflow:hidden;
+	width:130px;
 }
 
 .cloud {
