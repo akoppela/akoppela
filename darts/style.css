@@ -1,0 +1,284 @@
+/* стандартные обнуления отступов и прочие настройки */
+
+html {
+	height:100%;
+	color: #000;
+	background: url(img/main_bg.jpg);
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+body {
+    font-family: arial;
+    font-size:13px;
+	color:#000;
+	width:886px;
+	height:100%;
+	margin:0 auto;
+}
+
+.index {
+	background: url(img/darts.jpg) no-repeat right top;
+}
+
+a {
+	text-decoration:none;
+}
+
+#left {
+	width:145px;
+	float:left;
+}
+
+#logo {
+	padding-top:26px;
+	margin:0 0 30px 60px;
+}
+
+#logo a {
+	width:81px;
+	height:43px;
+	display:block;
+	text-indent:-9000px;
+	background: url(img/logo.jpg) no-repeat;
+}
+
+#nav {
+	display:block;
+}
+
+#nav li {
+	text-align:right;
+}
+
+#nav li a {
+	font-size:16px;
+	font-weight:bold;
+	color:#fff;
+	line-height:28px;
+	font-family:"Verdana";
+}
+
+.main {
+	margin-right:-5px;
+}
+
+.club {
+	margin-right:0px;
+}
+
+.event {
+	margin-right:7px;
+}
+
+.dezign {
+	margin-right:5px;
+}
+
+.snav li {
+	margin-right:10px;
+}
+
+.snav li a {
+	font-size:14px !important;
+	font-weight:normal !important;
+	line-height:22px !important;
+}
+
+#right {
+	width:730px;
+	float:right;
+	text-align:right;
+}
+
+#right p {
+	float:right;
+	margin-top:425px;
+	padding-right:30px;
+	width:420px;
+	font-size:11px;
+}
+
+#right p span {
+	margin-right:200px;
+	font-size:12px;
+}
+
+#wrapper {
+	width:700px;
+	float:right;
+	height:100%;
+	border-left:6px solid #dd137b;
+	border-right:6px solid #dd137b;
+}
+
+#content {
+	height:100%;
+	background:#dededd;
+	border-left:14px solid #c2c1c1;
+	border-right:14px solid #c2c1c1;
+}
+
+#auth {
+	clear:both;
+	display:block;
+	float:left;
+	width:170px;
+}
+
+.conauth {
+	position:absolute;
+	bottom:0;
+}
+
+*html .conauth {
+	margin-top:0;
+}
+
+#auth input {
+	display:block;
+	color:#fff;
+}
+
+#login, #pwd {
+	width:121px;
+	height:21px;
+	border:none;
+	background: url(img/auth_bg.jpg) no-repeat;
+	padding-left:3px;
+	padding-top:2px;
+	margin-bottom:10px;
+	font-size:14px;
+}
+
+#pwd {
+	float:left;
+}
+
+#sub {
+	width:42px;
+	height:24px;
+	background: url(img/auth_sub.jpg) no-repeat;
+	font-size:11px;
+	font-weight:bold;
+	border:none;
+	cursor:pointer;
+}

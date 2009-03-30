@@ -3,7 +3,7 @@
 html {
 	height:100%;
 	color: #000;
-	background:#ebe7e1;
+	background:#eeebe4;
 }
 
 body,
@@ -148,6 +148,7 @@ a {
 	min-height:100%;
 	height:auto !important;
 	height:100%;
+	background:#ebe7e1;
 }
 
 #header {
@@ -837,6 +838,7 @@ a {
 #news {
 	clear:both;
 	margin:0 24px 0 30px;
+	overflow:hidden;
 }
 
 .news-list {
