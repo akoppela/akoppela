@@ -5,6 +5,9 @@
 	<meta name="description" content="Darts" />
 	<meta name="keywords" content="darts" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="mootools-1.2.1-core-nc.js"></script>
+	<script type="text/javascript" src="mootools-1.2-more.js"></script>
+	<script type="text/JavaScript" src="script.js"></script>
 	<title>Darts | Main</title>
 </head>
 <body>
@@ -15,8 +18,8 @@
 				<a href="#">главная</a>
 			</li>
 			<li>
-				<a href="#">всё о клубе</a>
-				<ul class="snav">
+				<a id="club" href="#">всё о клубе</a>
+				<ul id="club-menu" class="snav">
 					<li>
 						<a href="#">Link1</a>
 					</li>
@@ -32,8 +35,8 @@
 				<a href="#">мероприятия</a>
 			</li>
 			<li>
-				<a href="#">мир дизайна</a>
-				<ul class="snav">
+				<a id="design" href="#">мир дизайна</a>
+				<ul id="design-menu" class="snav">
 					<li>
 						<a href="#">Link1</a>
 					</li>
@@ -49,13 +52,11 @@
 				<a href="#">гостевая книга</a>
 			</li>
 		</ul>
-	<div id="auth" class="conauth">
-		<form action="">
+		<form id="auth" action="">
 			<input id="login" type="text" value="" />
 			<input id="pwd" type="password" value="" />
-			<input id="sub" type="submit" value="Вход" />
+			<input id="sub" type="submit" value="Ok" />
 		</form>
-	</div>
 	</div>
 	<div id="wrapper">
 		<div id="content">

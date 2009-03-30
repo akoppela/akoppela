@@ -163,6 +163,7 @@ a {
 
 #nav {
 	display:block;
+	height:400px;
 }
 
 #nav li {
@@ -175,22 +176,6 @@ a {
 	color:#fff;
 	line-height:28px;
 	font-family:"Verdana";
-}
-
-.main {
-	margin-right:-5px;
-}
-
-.club {
-	margin-right:0px;
-}
-
-.event {
-	margin-right:7px;
-}
-
-.dezign {
-	margin-right:5px;
 }
 
 .snav li {
@@ -240,9 +225,12 @@ a {
 #auth {
 	clear:both;
 	display:block;
-	float:left;
 	width:170px;
-	margin-top:145px;
+}
+
+.index-auth {
+	position:relative;
+	left:100px;
 }
 
 #auth input {
