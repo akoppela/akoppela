@@ -245,7 +245,7 @@ a {
 	margin-top:13px;
 	position:relative;
 	width:175px;
-	height:23px;
+	z-index:100000;
 	float:left;
 	overflow:hidden;
 }
@@ -272,7 +272,7 @@ a {
 	background:#fff;
 	border-left:1px solid #c5c5c5;
 	position:relative;
-	z-index:500;
+	z-index:50000;
 }
 
 #search-cat li {
@@ -377,12 +377,10 @@ a {
 	*background: url(img/catflevel_left_down.jpg) no-repeat;
 }
 
-/*
 .active-cat {
 	background: url(img/catflevel_left_up.png) no-repeat !important;
 	*background: url(img/catflevel_left_up.jpg) no-repeat !important;
 }
-*/
 
 .first-cat h3 {
 	font-family:"Arial";
@@ -410,7 +408,6 @@ a {
 .sec-cat-wrapper {
 	width:100%;
 	float:left;
-	position:relative;
 }
 
 .sec-cat-text {
@@ -420,23 +417,23 @@ a {
 .sec-cat-text a {
 	color:#000;
 	font-size:11px;
+	line-height:12px;
 }
 
 .sec-cat-number {
-	position:relative;
 	float:right;
 	width:31px;
 	margin-left:-45px;
 	text-align:right;
 	font-size:11px;
 	color:#7dc11c;
+	line-height:12px;
 }
 
 .scrollbar {
-	width:64px;
+	width:80px;
 	float:right;
-	margin-left:-64px;
-	visibility:hidden;
+	margin-left:-80px;
 }
 
 .scrollup {
@@ -446,6 +443,10 @@ a {
 	background: url(img/catup.png) no-repeat;
 	*background: url(img/catup.jpg) no-repeat;
 	margin:0 auto;
+}
+
+#cat-su {
+	*background: url(img/catup2.jpg) no-repeat;
 }
 
 #cat-scroll-line {
@@ -468,6 +469,10 @@ a {
 	margin:0 auto;
 }
 
+#cat-sd {
+	*background: url(img/catdown2.jpg) no-repeat;
+}
+
 .scroller {
 	position:relative;
 	cursor:pointer;
@@ -475,6 +480,10 @@ a {
 	height:23px;
 	background: url(img/scroller.png) no-repeat;
 	*background: url(img/scroller.jpg) no-repeat;
+}
+
+#cat-scroller {
+	*background: url(img/scroller2.jpg) no-repeat;
 }
 
 #map-wrapper {
@@ -486,17 +495,17 @@ a {
 }
 
 #map {
-	margin-left:380px;
+	margin-left:372px;
 }
 
 #map-filter {
-	position:relative;
-	right:25px;
+	display:inline;
+	margin-left:-25px;
 	float:left;
 	width:133px;
 	height:25px;
 	cursor:pointer;
-	z-index:10;
+	margin-bottom:7px;
 }
 
 #razvmap {
@@ -504,6 +513,8 @@ a {
 	width:28px;
 	height:25px;
 	float:left;
+	cursor:pointer;
+	position:relative;
 }
 
 #map-filter p {
@@ -518,12 +529,10 @@ a {
 
 #spec-obj {
 	cursor:pointer;
-	position:relative;
-	right:25px;
 	float:left;
 	width:166px;
 	height:25px;
-	background: url(img/map_right.jpg) right no-repeat;
+	background: url(img/map_open.jpg) right no-repeat;
 }
 
 #spec-obj p {
@@ -550,8 +559,6 @@ a {
 
 #karta-wrapper {
 	border:2px solid #8e8990;
-	position:relative;
-	top:7px;
 	clear:both;
 	display:block;
 	height:350px;
@@ -627,8 +634,6 @@ a {
 }
 
 #karta {
-	position:relative;
-	z-index:50;
 	border:1px solid #fff;
 	height:348px;
 	background: url(img/map.jpg) no-repeat;

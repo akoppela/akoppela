@@ -1,6 +1,8 @@
 window.addEvent('domready', function(){
 	
-	var scroll = new Fx.Morph('slide', { duration: 600 });
+	var heightsam = $('left-block').offsetHeight - $('slide').offsetHeight;
+	var dur = -heightsam*60/5;
+	var scroll = new Fx.Morph('slide', {duration: dur});
 	
 	$('up').addEvent('mouseenter', function(e) {
 		scroll.start({
@@ -11,7 +13,7 @@ window.addEvent('domready', function(){
 	
 	$('down').addEvent('mouseenter', function(e) {
 		scroll.start({
-			'margin-top': -50
+			'margin-top': heightsam
 		});
 		return false;
 	});
@@ -23,5 +25,4 @@ window.addEvent('domready', function(){
 		});
 	});
 
-	
 })

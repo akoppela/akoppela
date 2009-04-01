@@ -254,6 +254,18 @@ a {
 	cursor:pointer;
 }
 
+.upsam {
+	right:20px !important;
+	top:15px !important;
+}
+
+.downsam {
+	right:20px !important;
+	top:15px !important;
+}
+
+
+
 #content p {
 	padding-left:55px;
 	font-family:Helvetica, arial;
@@ -271,6 +283,7 @@ a {
 .vcard {
 	padding-top:20px;
 	padding-left:55px;
+	overflow:hidden;
 }
 
 .vcard li {

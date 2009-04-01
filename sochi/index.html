@@ -37,7 +37,7 @@
 						</li>
 					</ul>
 					<div id="search-cat">
-						<div id="search-cat-value"><p>Раздел каталога</p> <a href="#" id="sfilbut"></a></div>	
+						<div id="search-cat-value"><p id="sc-text">Раздел каталога</p> <div id="sfilbut"></div></div>	
 						<ul id="scul">
 							<li>
 								<span>Раздел каталога</span>
@@ -53,7 +53,7 @@
 							</li>
 						</ul>
 					</div>
-					<input id="search-text" type="text" value="Введите название объекта" />
+					<input id="search-text" class="intext" type="text" value="Введите название объекта" />
 					<input id="search-sub" type="submit" value="" />
 				</form>
 			</div>
@@ -119,9 +119,9 @@
 				<div id="cat-list">
 					<ul id="flevel-catalog" class="first-cat">
 						<li class="flevel-li">
-							<div class="first-level-cat active-cat">
-								<h3 id="catzag1">Каталог верхнего уровня номер один</h3>
-								<ul id="cat1">
+							<div class="first-level-cat">
+								<h3>Каталог верхнего уровня номер один</h3>
+								<ul class="catlevtwo">
 									<li>
 										<div class="sec-cat-wrapper">
 											<div class="sec-cat-text">
@@ -214,7 +214,7 @@
 							</div>
 						</li>
 						<li class="flevel-li">
-							<div class="first-level-cat active-cat">
+							<div class="first-level-cat">
 								<h3 id="catzag2">Каталог верхнего уровня номер два</h3>
 								<ul id="cat2">
 									<li>
@@ -245,7 +245,7 @@
 							</div>
 						</li>
 						<li class="flevel-li">
-							<div class="first-level-cat active-cat">
+							<div class="first-level-cat">
 								<h3 id="catzag3">Каталог верхнего уровня номер три</h3>
 								<ul id="cat3">
 									<li>
@@ -292,7 +292,7 @@
 							</div>
 						</li>
 						<li class="flevel-li">
-							<div class="first-level-cat active-cat">
+							<div class="first-level-cat">
 								<h3 id="catzag4">Каталог верхнего уровня номер четыре</h3>
 								<ul id="cat4">
 									<li>
@@ -339,7 +339,7 @@
 							</div>
 						</li>
 						<li class="flevel-li">
-							<div class="first-level-cat active-cat">
+							<div class="first-level-cat">
 								<h3 id="catzag5">Каталог верхнего уровня номер пять</h3>
 								<ul id="cat5">
 									<li>
@@ -388,11 +388,11 @@
 					</ul>
 				</div>
 				<div id="cat-scrollbar" class="scrollbar">
-					<div class="scrollup"></div>
+					<div id="cat-su" class="scrollup"></div>
 					<div id="cat-scroll-line" class="scroll-line">
 						<div id="cat-scroller" class="scroller"></div>
 					</div>
-					<div class="scrolldown"></div>
+					<div id="cat-sd" class="scrolldown"></div>
 				</div>
 			</div>
 			<div id="catalog-tree">
