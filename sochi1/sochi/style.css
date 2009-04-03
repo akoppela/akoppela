@@ -259,7 +259,6 @@ a {
 	line-height:22px;
 	padding-left:7px;
 	font-size:11px;
-	cursor:pointer;
 }
 
 #search-cat-value p {
@@ -348,7 +347,7 @@ a {
 	cursor:pointer;
 }
 
-#cat-list-wrapper {
+#cat-list {
 	width:100%;
 	height:288px;
 	overflow:hidden;
@@ -431,13 +430,13 @@ a {
 	line-height:12px;
 }
 
-.vScrollbar {
+.scrollbar {
 	width:80px;
 	float:right;
 	margin-left:-80px;
 }
 
-.arrowUp {
+.scrollup {
 	cursor:pointer;
 	width:23px;
 	height:23px;
@@ -454,14 +453,14 @@ a {
 	height:276px;
 }
 
-.vTrack {
+.scroll-line {
 	width:23px;
 	margin:0 auto;
 	height:276px;
 	background: url(img/scroll_line.png) 11px 0 repeat-y;
 }
 
-.arrowDown {
+.scrolldown {
 	cursor:pointer;
 	width:23px;
 	height:23px;
@@ -474,7 +473,7 @@ a {
 	*background: url(img/catdown2.jpg) no-repeat;
 }
 
-.vThumb {
+.scroller {
 	position:relative;
 	cursor:pointer;
 	width:23px;
@@ -500,9 +499,9 @@ a {
 }
 
 #map-filter {
-	float:left;
 	display:inline;
 	margin-left:-25px;
+	float:left;
 	width:133px;
 	height:25px;
 	cursor:pointer;
@@ -510,19 +509,12 @@ a {
 }
 
 #razvmap {
+	background: url(img/map_left.jpg) no-repeat;
 	width:28px;
 	height:25px;
 	float:left;
 	cursor:pointer;
 	position:relative;
-}
-
-.map-left {
-	background: url(img/map_right.jpg) no-repeat;
-}
-
-.map-right {
-	background: url(img/map_left.jpg) no-repeat;
 }
 
 #map-filter p {
@@ -563,10 +555,6 @@ a {
 .map-button li {
 	float:left;
 	margin-right:9px;
-}
-
-.map-button li img {
-	cursor:pointer;
 }
 
 #karta-wrapper {
@@ -675,7 +663,6 @@ a {
 	top:4px;
 	left:247px;
 	background: url(img/close.jpg) no-repeat;
-	cursor:pointer;
 }
 
 #ukoz img {

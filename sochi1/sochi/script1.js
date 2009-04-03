@@ -336,9 +336,7 @@
 	
 window.addEvent('domready', function(){
 	
-	var scr = new ScrollBar('cat-list-wrapper', 'cat-list', {
-		'hScroll': false
-	});
+var scr = new ScrollBar('catalog', 'cat-list');
 	
 })
 
