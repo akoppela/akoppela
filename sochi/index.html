@@ -6,7 +6,7 @@
 	<meta name="keywords" content="Найдутся все, сочи" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<title>Найдутся Все | Main</title>
-	<script type="text/javascript" src="mootools-1.2.1-core-nc.js"></script>
+	<script type="text/javascript" src="mootools-1.2.1-core-yc.js"></script>
 	<script type="text/javascript" src="mootools-1.2-more.js"></script>
 	<script type="text/JavaScript" src="script.js"></script>
 </head>
@@ -99,7 +99,7 @@
 			<div id="catalog">
 				<h2>Каталог объектов:</h2>
 				<p><span id="razvcat">развернуть</span> весь каталог</p>
-				<div id="cat-list-wrapper">
+				<div id="cat-list-wrapper" class='moocontent'>
 					<div id="cat-list">
 						<ul id="flevel-catalog" class="first-cat">
 							<li class="flevel-li">
@@ -393,7 +393,7 @@
 			<div id="soder-cat">
 				<h2>содержание каталога</h2>
 				<h3><a href="#">Каталог второго уровня номер три</a> | 654</h3>
-				<div id="soder-cat-wrapper">
+				<div id="soder-cat-wrapper" class="moocontent">
 					<ul id="slevel-cat">	
 						<li>
 							<a href="#">Наименование объекта который в этой группе <span>(ул. Карла Макркса, д. 5)</span></a>
@@ -625,12 +625,12 @@
 						</li>
 					</ul>
 				</div>
-				<div id="cat-tree-scrollbar" class="scrollbar">
-					<div id="cattreeup" class="scrollup"></div>
-					<div id="cat-tree-scroll-line" class="scroll-line">
-						<div id="cat-tree-scroller" class="scroller"></div>
+				<div id="cat-tree-scrollbar" class="vScrollbar">
+					<div class="arrowUp"></div>
+					<div id="cat-tree-scroll-line" class="vTrack">
+						<div class="vThumb"></div>
 					</div>
-					<div id="cattreedown" class="scrolldown"></div>
+					<div class="arrowDown"></div>
 				</div>
 			</div>
 			<div id="posl-dob">

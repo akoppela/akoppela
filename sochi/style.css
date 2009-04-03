@@ -475,16 +475,18 @@ a {
 }
 
 .vThumb {
-	position:relative;
 	cursor:pointer;
 	width:23px;
 	height:23px;
 	background: url(img/scroller.png) no-repeat;
-	*background: url(img/scroller.jpg) no-repeat;
 }
 
-#cat-scroller {
-	*background: url(img/scroller2.jpg) no-repeat;
+*html .vThumb {
+	background: url(img/scroller.jpg) no-repeat;
+}
+
+* html #cat-scroller {
+	background: url(img/scroller2.jpg) no-repeat;
 }
 
 #map-wrapper {
