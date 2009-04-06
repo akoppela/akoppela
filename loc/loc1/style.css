@@ -176,13 +176,17 @@ a {
 	margin:0 0 15px 17px;
 }
 
+.nav-active {
+	color:#a70200 !important;
+}
+
 #nav li a {
 	color:#000;
 	font-size:10px;
 }
 
 #nav li a:hover {
-	color:#850100;
+	color:#a70200;
 }
 
 #copyright {
@@ -200,6 +204,10 @@ a {
 #sec-nav a {
 	color:#000;
 	font-size:10px;
+}
+
+#sec-nav li a:hover {
+	color:#a70200;
 }
 
 #sec-nav dt {
@@ -223,6 +231,12 @@ a {
 }
 
 #tcol h2 {
+	font-family:arial;
+	font-size:10px;
+	color:#a70200;
+}
+
+.pragm {
 	text-indent:-9000px;
 	display:block;
 	width:285px;
@@ -231,14 +245,82 @@ a {
 	margin-bottom:20px;
 }
 
-#tcol p {
+.rekllist {
+	margin-bottom:55px;
+}
+
+.uptext {
+	font-size:10px;
 	text-transform:uppercase;
+}
+
+#tcol p {
 	font-size:10px;
 	display:block;
-	margin-bottom:70px;
+}
+
+.rekl {
+	color:#a70200 !important;
+}
+
+#picture {
+	margin-top:70px;
 }
 
 #picture li {
 	display:block;
 	margin-bottom:15px;
+}
+
+#content-text {
+	width:555px;
+}
+
+#content-text li {
+	display:none;
+	margin-bottom:50px;
+}
+
+.hideop {
+	opacity:0;
+	display:none;
+}
+
+.active-text {
+	display:block !important;
+}
+
+.showop {
+	opacity:1;
+}
+
+#content-text h3 {
+	font-family:"Times New Roman";
+	font-size:14px;
+	color:#b32e2d;
+	font-style:italic;
+	margin-bottom:20px;
+}
+
+#content-text p {
+	font-family:"Times New Roman";
+	font-size:14px !important;
+	font-style:italic;
+}
+
+.fstring {
+	margin-left:180px;
+}
+
+.sstring {
+	margin-left:110px;
+}
+
+.tstring {
+	margin-left:20px;
+	margin-bottom:20px;
+}
+
+.fostring {
+	margin-left:290px;
 }

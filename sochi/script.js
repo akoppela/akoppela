@@ -1,7 +1,5 @@
 var SearchPar = new Class({
 	
-	currentElement : null,
-	
 	initialize: function(el){
 		this.el = $(el);
 		if(!this.el) return;
