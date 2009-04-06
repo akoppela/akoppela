@@ -185,27 +185,27 @@ a {
 	vertical-align:top;
 	float:left;
 	margin:19px 0 0 13px;
+	width:281px;
+	height:67px;
+	background: url(img/logo.png) no-repeat;
 	overflow:hidden;
 }
 
+*html #header h1 { 
+	background: none; 
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/logo.png'); /* хак для ие6 png opacity */
+}
+
 #header h1 a {
-	position:relative;
-	cursor:pointer;
 	width:281px;
 	display:block;
 	line-height:67px;
 	height:67px;
 	overflow:hidden;
-	background: url(img/logo.png) no-repeat;
-	text-indent:-9000px;
-}
-
-* html #header h1 a { 
-	background: none; 
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/logo.png'); /* хак для ие6 png opacity */
 }
 
 #header p {
+	position:relative;
 	vertical-align:top;
 	float:left;
 	background: url(img/header_text.png) no-repeat;
@@ -213,12 +213,10 @@ a {
 	width:249px;
 	height:35px;
 	overflow:hidden;
-	text-indent:-9000px;
 }
 
-* html #header p { 
+*html #header p { 
 	background: none; 
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/header_text.png'); /* хак для ие6 png opacity */
 }
 
 #nav {
@@ -383,7 +381,7 @@ a {
 .our-prod-title {
 	background: url(img/products.png) no-repeat;
 }
-* html .our-prod-title {
+*html .our-prod-title {
 	background:none;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/products.png'); /* хак для ие6 png opacity */
 	width:1px;
@@ -398,7 +396,7 @@ a {
 	background: url(img/last_news.png) no-repeat;
 }
 
-* html .last-news-title {
+*html .last-news-title {
 	background:none;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/last_news.png'); /* хак для ие6 png opacity */
 	width:1px;
@@ -563,7 +561,7 @@ a {
 	height:28px;
 }
 
-* html .s-sub {
+*html .s-sub {
 	margin-top:1px;
 }
 
@@ -720,7 +718,7 @@ a {
 	margin-left:12px;
 }
 
-* html .content-signin {
+*html .content-signin {
 	margin-left:6px;
 }
 
@@ -1197,7 +1195,7 @@ a {
 	cursor:pointer;
 }
 
-* html .op-block a {
+*html .op-block a {
 	width:1px;
 	background:none;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/button_arrow.png'); /* хак для ие6 png opacity */
