@@ -256,15 +256,15 @@ var Scrollbar = new Class({
 		if(pos == 'up'){
 			this.durat = this.scrollerpos * this.options.vDur / this.vTrackLine;
 			if(this.durat == 0) this.durat = this.options.vDur;
-			this.stepScroll = this.scrollerpos - this.vTrackLine / 25;
-			this.stepMain = this.blockpos - this.hsteps / 25;
+			this.stepScroll = this.scrollerpos + 25 * this.vTrackLine / this.hsteps;
+			this.stepMain = this.blockpos + 25;
 			if(this.stepScroll < 0) this.stepScroll = 0;
 			if(this.stepMain > 0) this.stepMain = 0;
 		} else if(pos == 'down'){
 			this.durat = this.options.vDur - this.scrollerpos * this.options.vDur / this.vTrackLine;
 			if(this.durat == 0) this.durat = this.options.vDur;
-			this.stepScroll = this.scrollerpos + this.vTrackLine / 25;
-			this.stepMain = this.blockpos + this.hsteps / 25;
+			this.stepScroll = this.scrollerpos - 25 * this.vTrackLine / this.hsteps;
+			this.stepMain = this.blockpos - 25;
 			if(this.stepScroll > this.vTrackLine) this.stepScroll = this.vTrackLine;
 			if(this.stepMain < this.hsteps) this.stepMain = this.hsteps;
 		} else if(pos == 'pause') {
@@ -460,7 +460,10 @@ var FormValid = new Class({
 			this.elem.addEvent('keyup', this.loginValid.bind(this));
 		}
 		if(this.options.rule == 'email'){
-			this.elem.addEvent('keyup', this.emailValid.bind(this));
+			this.elem.addEvents({
+				'keyup': this.emailValid.bind(this),
+				'blur': this.emailValid.bind(this),
+			});
 		}
 	},
 	
