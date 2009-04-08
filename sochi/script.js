@@ -468,11 +468,9 @@ var FormValid = new Class({
 			this.elem.addEvent('keydown', this.loginValid.bind(this));
 		}
 		if(this.options.rule == 'email'){
-			this.elem.addEvent('blur', this.emailValid.bind(this));
+			this.elem.addEvent('keyup', this.emailValid.bind(this));
 		}
 	},
-	
-	Keys: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890',
 	
 	noVal: function(){
 		this.fx.cancel();
@@ -490,6 +488,7 @@ var FormValid = new Class({
 		this.fx.start({
 			'border-width': '2px',
 			'border-color': '#2EEF00',
+			'border-style': 'solid',
 			margin: '0 13px 7px 0'
 		}).chain(function(){
 			this.fx.start({
@@ -503,10 +502,12 @@ var FormValid = new Class({
 	
 	repPassValid: function(){
 		this.getPassValue();
-		if(this.fPass != this.sPass){
+		if(this.fpass == '' || this.sPass == ''){
 			this.noVal();
-		} else {
+		} else if(this.fPass == this.sPass){
 			this.Val();
+		} else {
+			this.noVal();
 		}
 	},
 	
@@ -515,28 +516,27 @@ var FormValid = new Class({
 		this.sPass = this.repPass.get('value');
 	},
 	
-	loginValid: function(){
-		
-	},
-	
-	passwordValid: function(){
-		this.passLength = this.elem.get('value').length;
-		if(this.passLength < 6){
-			this.noVal();
-		} else {
+	loginValid: function(e){
+		if(/^([\-0-9a-zA-Z_]+)$/.test(this.elem.get('value'))){
 			this.Val();
+		} else {
+			this.noVal();
 		}
 	},
 	
-	validText: function(e){
-		console.log(e.event.keyCode);
+	passwordValid: function(){
+		if(/^([\-0-9a-zA-Z_]{6,})$/.test(this.elem.get('value'))){
+			this.Val();
+		} else {
+			this.noVal();
+		}
 	},
 	
 	emailValid: function(){
-		if(this.elem.value.indexOf('@', 0) == -1){
-			this.noVal();
-		} else {
+		if (/^([\-0-9A-Za-z_]+)@([\-0-9a-z_^.]+\.[a-z]{2,4})$/.test(this.elem.get('value'))) {
 			this.Val();
+		} else {
+			this.noVal();
 		}
 	}
 	
