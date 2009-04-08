@@ -18,16 +18,173 @@
 				<p class="logo-text">Информационно-поисковый портал Краснодарского края</p>
 				<ul class="hnav">
 					<li>
-						<a href="#">вход</a>
+						<span id="signin-link" class="sgn">вход</span>
 					</li>
 					<li>
-						<a href="#">регистрация</a>
+						<span id="signup-link" class="sgp">регистрация</span>
 					</li>
 					<li class="hnav-last">
-						<a href="#">помощь</a>
+						<span id="help-link" class="hlp">помощь</span>
 					</li>
 				</ul>
-				<form action="#">
+				<div id="signin" class="head-window sgn">
+					<span class="close-help close">закрыть</span>
+					<h2>Вход в систему</h2>
+					<p class="signin-text">Чтобы войти в систему введите свои регистрационные данные в поля расположенные ниже. </p>
+					<form id="signin-form" action="">
+						<dl>
+							<dt>Логин</dt>
+							<dd><input type="text" value="" /></dd>
+						</dl>
+						<dl>
+							<dt>Пароль</dt>
+							<dd><input type="password" value="" /></dd>
+						</dl>
+						<div class="signin-submit">
+							<span class="clearinput">Очистить</span><span class="sendinput">Отправить</span>
+						</div>
+					</form>	
+					<p class="signin-forgot-text">Если Вы забыли свои регистрационные данные введите расположенное ниже окно, адрес своей электронной почты, которую Вы использовали при регистрации. </p>
+					<form class="forgot" action="">
+						<input class="forginp" type="text" value="" />
+						<div class="signin-submit">
+							<span class="clearinput">Очистить</span><span class="sendinput">Отправить</span>
+						</div>
+					</form>
+				</div>
+				<div id="signup" class="head-window sgp">
+					<span class="close-help close">закрыть</span>
+					<h2>Регистрация нового пользователя</h2>
+					<p>Для регистрации нового пользователя введите в расположенные ниже окна информацию о себе.</p>
+					<p class="signin-text">Все поля обазятельны для заполнения. </p>
+					<form action="">
+						<dl>
+							<dt>Логин</dt>
+							<dd>
+								<input class="wtext" type="text" value="" />
+								<span class="signin-subtext">Латинские знаки, цифры</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>Пароль</dt>
+							<dd>
+								<input class="wtext" type="password" value="" />
+								<span class="signin-subtext">Не менее 6 (шести) символов</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>Подтверждение пароля</dt>
+							<dd><input type="password" value="" /></dd>
+						</dl>
+						<dl>
+							<dt>Электронная почта</dt>
+							<dd><input type="text" value="" /></dd>
+						</dl>
+						<dl>
+							<dt>Проверочная фраза</dt>
+							<dd class="test-fraze"><div id='fraze'></div></dd>
+						</dl>
+						<dl>
+							<dt id="ntext2"></dt>
+							<dd><input type="text" value="" /></dd>
+						</dl>
+						<dl>
+							<dt id="ntext1"></dt>
+							<dd>
+								<div class="signup-submit">
+									<span class="clearinput">Очистить</span><span class="sendinput">Отправить</span>
+								</div>
+							</dd>
+						</dl>
+					</form>
+					<p class="signup-text">На указанный Вами адрес электронной почты будет выслан подтверждающая ссылка по которой будет необходимо перейти для завершения регистрации.</p>
+					<p class="signup-text">* Указанные Вами данные являются конфиденциальными и передаваться третьим лицам не будут.</p>
+				</div>
+				<div id="help" class="head-window hlp">
+					<span class="close-help close">закрыть</span>
+					<h2>Помощь пользователю по использованию системы</h2>
+					<div id="help-wrapper" class="moocontent">
+						<div id="help-content">
+							<p class="help-text">В этом разделе Вам предоставляется ознакомиться с руководством по использованию данной системы.</p>
+							<ul>
+								<li>
+									<h3><a href="#">Заголовок содержания _ 1</a></h3>
+								</li>
+								<li>
+									<h3><a href="#">Заголовок содержания _ 2</a></h3>
+									<ul>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+										</li>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+										</li>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+											<ul>
+												<li>
+													<h5>- <a href="#">подзаголовок подзаголовка</a></h5>
+													<p>Содержание позаголовка, текс текст, описание, и тому подобное, возможно 		использование картинок показывающих те или иные действия которые сложно		объяснить, а проще показать, а может быть даже и видеоролики. </p>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h3><a href="#">Заголовок содержания _ 3</a></h3>
+									<ul>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+										</li>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+										</li>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+											<ul>
+												<li>
+													<h5>- <a href="#">подзаголовок подзаголовка</a></h5>
+													<p>Содержание позаголовка, текс текст, описание, и тому подобное, возможно 		использование картинок показывающих те или иные действия которые сложно		объяснить, а проще показать, а может быть даже и видеоролики. </p>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h3><a href="#">Заголовок содержания _ 4</a></h3>
+								</li>
+								<li>
+									<h3><a href="#">Заголовок содержания _ 5</a></h3>
+									<ul>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+										</li>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+										</li>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+											<ul>
+												<li>
+													<h5>- <a href="#">подзаголовок подзаголовка</a></h5>
+													<p>Содержание позаголовка, текс текст, описание, и тому подобное, возможно 		использование картинок показывающих те или иные действия которые сложно		объяснить, а проще показать, а может быть даже и видеоролики. </p>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="help-scrollbar" class="vScrollbar">
+						<div id="help-su" class="arrowUp"></div>
+						<div id="help-scroll-line" class="vTrack">
+							<div id="help-scroller" class="vThumb"></div>
+						</div>
+						<div id="help-sd" class="arrowDown"></div>
+					</div>
+				</div>
+				<form id="search-form" action="#">
 					<ul class="search-type">
 						<li class="hactive-link">
 							<a href="#">поиск объекта</a>
@@ -92,6 +249,23 @@
 							<div id="mapcor-rt"></div>
 							<div id="mapcor-lb"></div>
 							<div id="mapcor-rb"></div>
+							<div id="ukoz">
+								<div class="close close-ukoz"></div>
+								<img src="img/ukoz_img.png" alt="" />
+								<h2>“Наименование объекта”</h2>
+								<ul>
+									<li>
+										<p>- некоторая краткая информа-ция об объекте.</p>
+									</li>
+									<li>
+										<p>- дата размещения</p>
+									</li>
+									<li>
+										<p>- автор или подобное</p>
+									</li>
+								</ul>
+								<a class="ukoz-link" href="#">Перейти на страницу объекта</a>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -192,20 +192,307 @@ a {
 	display:inline;
 }
 
-.hnav li a {
+.hnav li a, .hnav li span {
 	color:#6c706f;
 	font-size:11px;
 	text-decoration:underline;
 	padding:0 7px 0 3px;
 	line-height:12px;
 	background: url(img/hnav_sep.png) no-repeat right bottom;
+	cursor:pointer;
 }
 
-.hnav-last a {
+.hnav-last a, .hnav-last span {
 	background:none !important;
 }
 
-#header form {
+#signin {
+	position:absolute;
+	width:399px;
+	height:488px;
+	background: url(img/signin_bg.png) no-repeat;
+	*background: url(img/signin_bg_ie.png) no-repeat;
+	z-index:10000;
+	top:55px;
+	right:100px;
+	color:#fff;
+	font-size:12px;
+}
+
+#signin form {
+	padding:30px 30px 0 30px;
+}
+
+#signin dl {
+	clear:both;
+	overflow:hidden;
+	display:block;
+}
+
+#signin dt {
+	float:left;
+	line-height:20px;
+	display:inline;
+}
+
+#signin dd {
+	float:right;
+	display:inline;
+}
+
+#signin form input {
+	width:215px;
+	border:none;
+	height:16px;
+	font-size:11px;
+	padding:4px 0 0 5px;
+	margin-bottom:9px;
+}
+
+.signin-submit {
+	float:right;
+	right:30px;
+	width:220px;
+	color:#000;
+	line-height:25px;
+	margin-top:7px;
+	overflow:hidden;
+}
+
+.signup-submit {
+	right:30px;
+	width:220px;
+	color:#000;
+	line-height:25px;
+	margin-top:7px;
+	overflow:hidden;
+}
+
+.clearinput {
+	width:81px;
+	height:25px;
+	display:block;
+	float:left;
+	background: url(img/clear.png) no-repeat;
+	padding-left:30px;
+	cursor:pointer;
+}
+
+*html .clearinput {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/clear.png'); /* хак для ие6 png opacity */
+}
+
+.sendinput {
+	width:87px;
+	height:25px;
+	display:block;
+	float:right;
+	background: url(img/send.png) no-repeat;
+	padding-left:22px;
+	cursor:pointer;
+}
+
+*html .sendinput {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/send.png'); /* хак для ие6 png opacity */
+}
+
+.signin-forgot-text {
+	clear:both;
+	padding-top:30px;
+	zoom:1;
+	margin:0 30px 25px 30px;
+}
+
+.forgot {
+	padding-top:0 !important;
+}
+
+.forginp {
+	float:right;
+}
+
+#signup {
+	position:absolute;
+	width:631px;
+	height:592px;
+	background: url(img/registr.png) no-repeat;
+	*background: url(img/registr_ie.png) no-repeat;
+	z-index:10000;
+	top:55px;
+	right:30px;
+	color:#fff;
+	font-size:12px;
+}
+
+#signup p {
+	margin-left:30px;
+}
+
+#signup form {
+	padding:30px;
+}
+
+#signup dl {
+	clear:both;
+	overflow:hidden;
+	display:block;
+}
+
+#signup dt {
+	float:left;
+	line-height:16px;
+	display:inline;
+	width:100px;
+	padding-right:25px;
+	margin-bottom:9px;
+}
+
+#signup dd {
+	float:left;
+	display:inline;
+}
+
+#signup form input {
+	width:215px;
+	border:none;
+	height:16px;
+	font-size:11px;
+	padding:4px 0 0 5px;
+	margin-bottom:9px;
+}
+
+.wtext {
+	margin-right:15px;
+}
+
+.signin-subtext {
+	color:#30fe00;
+}
+
+.test-fraze {
+	padding-right:30px;
+	background: url(img/enter_arrow.png) no-repeat right center;
+	margin-bottom:15px;
+}
+
+#fraze {
+	width:115px;
+	height:32px;
+	display:block;
+	background: url(img/fraze.png) no-repeat;
+}
+
+#help {
+	position:absolute;
+	width:627px;
+	height:580px;
+	background: url(img/help_bg.png) no-repeat;
+	*background: url(img/help_bg_ie.png) no-repeat;
+	z-index:10000;
+	top:60px;
+	right:35px;
+}
+
+.close-help {
+	position:absolute;
+	top:80px;
+	right:30px;
+	color:#fff;
+	font-size:12px;
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+.head-window h2 {
+	margin:75px 0 30px 30px;
+	color:#fff;
+	font-size:18px;
+}
+
+#help-wrapper {
+	float:left;
+	width:100%;
+	overflow:hidden;
+	height:420px;
+	position:relative;
+}
+
+#help-content {
+	margin-right:80px;
+	position:relative;
+	color:#fff;
+	font-size:12px;
+}
+
+#help-content a {
+	color:#fff;
+}
+
+.help-text {
+	margin-left:30px;
+	margin-bottom:15px;
+	color:#fff;
+}
+
+.signin-text {
+	margin-left:30px;
+	margin-bottom:15px;
+	color:#fff;
+	margin-right:50px;
+}
+
+.signup-text {
+	margin:0 150px 17px 30px;
+}
+
+#help-content ul {
+	margin-left:30px;
+}
+
+#help-content li {
+	margin-bottom:15px;
+}
+
+#help-content ul h3 a {
+	line-height:20px;
+	text-decoration:underline;
+	padding-left:35px;
+	background: url(img/help_li_bg.png) no-repeat left center;
+}
+
+#help-content ul ul {
+	margin-left:45px;
+}
+
+#help-content ul ul li  {
+	margin-bottom:0;
+}
+
+#help-content ul ul ul {
+	margin-left:12px;
+}
+
+#help-content ul ul ul p {
+	margin-left:12px;
+}
+
+*html #help-su {
+	position:relative;
+	background: url(img/catup_ie.png) no-repeat;
+}
+
+#help-scroll-line {
+	height:370px;
+}
+
+*html #help-sd {
+	position:relative;
+	background: url(img/catdown_ie.png) no-repeat;
+}
+
+#search-form {
 	position:absolute;
 	top:67px;
 	right:110px;
@@ -245,7 +532,7 @@ a {
 	margin-top:13px;
 	position:relative;
 	width:175px;
-	z-index:100000;
+	z-index:1000;
 	float:left;
 	overflow:hidden;
 }
@@ -442,12 +729,13 @@ a {
 	width:23px;
 	height:23px;
 	background: url(img/catup.png) no-repeat;
-	*background: url(img/catup.jpg) no-repeat;
 	margin:0 auto;
+	position:relative;
 }
 
-#cat-su {
-	*background: url(img/catup2.jpg) no-repeat;
+*html .arrowUp {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/catup.png'); /* хак для ие6 png opacity */
 }
 
 #cat-scroll-line {
@@ -466,12 +754,13 @@ a {
 	width:23px;
 	height:23px;
 	background: url(img/catdown.png) no-repeat;
-	*background: url(img/catdown.jpg) no-repeat;
 	margin:0 auto;
+	position:relative;
 }
 
-#cat-sd {
-	*background: url(img/catdown2.jpg) no-repeat;
+*html .arrowDown {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/catdown.png'); /* хак для ие6 png opacity */
 }
 
 .vThumb {
@@ -482,11 +771,8 @@ a {
 }
 
 *html .vThumb {
-	background: url(img/scroller.jpg) no-repeat;
-}
-
-* html #cat-scroller {
-	background: url(img/scroller2.jpg) no-repeat;
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/scroller.png'); /* хак для ие6 png opacity */
 }
 
 #map-wrapper {
@@ -654,22 +940,22 @@ a {
 }
 
 #ukoz {
-	position:relative;
+	position:absolute;
 	width:275px;
 	height:187px;
-	top:100px;
-	left:200px;
+	top:300px;
+	right:100px;
 	display:block;
 	background: url(img/ukoz.png) no-repeat;
+	*background: url(img/ukoz_ie.png) no-repeat;
 	z-index:1000;
 }
 
-*html #ukoz {
-	background:none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/ukoz.png'); /* хак для ие6 png opacity */
+* html #ukoz {
+	background: url(img/ukoz_ie.png) no-repeat;
 }
 
-.close {
+.close-ukoz {
 	width:23px;
 	height:23px;
 	display:block;
@@ -956,12 +1242,13 @@ a {
 .news-list {
 	clear:both;
 	margin-top:40px;
+	overflow:hidden;
 }
 
 .news-list li {
 	width:50%;
 	float:left;
-	margin-bottom:25px;
+	padding-bottom:25px;
 }
 
 .news-list h5, .news-list h4  {

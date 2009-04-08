@@ -1,0 +1,473 @@
+/* стандартные обнуления отступов и прочие настройки */
+
+html {
+	height:100%;
+	color: #000;
+	background:#f26522 url(img/main_repeat_bg.png) repeat-y top center;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+body {
+	position:relative;
+    font-family: Arial;
+    font-size:12px;
+	color:#fff;
+	width:1000px;
+	height:100%;
+	margin:0 auto;
+}
+
+a {
+	color:#fff;
+}
+
+#container {
+	background: url(img/main_bg.jpg) no-repeat top;
+	min-height:100%;
+	height:auto !important;
+	height:100%;
+}
+
+#header {
+	overflow:hidden;
+}
+
+#header h1 {
+	padding-top:50px;
+	margin-left:90px;
+	overflow:hidden;
+	float:left;
+	display:inline;
+}
+
+#header h1 a {
+	display:block;
+	width:240px;
+	height:135px;
+	background: url(img/logo.jpg) no-repeat;
+	text-indent:-9000px;
+}
+
+#header ul {
+	float:left;
+	padding-top:115px;
+	margin-left:100px;
+	width:363px;
+}
+
+#header li {
+	display:inline;
+	float:left;
+	width:121px;
+	margin-bottom:5px;
+}
+
+#header a, #header p {
+	display:block;
+	font-size:14px;
+	font-family:tahoma;
+	font-weight:bold;
+}
+
+.head-last {
+	margin-left:55px;
+	width:66px !important;
+}
+
+#cont {
+	float:right;
+	display:inline;
+	padding-top:115px;
+	margin-right:25px;
+}
+
+.number {
+	width:148px;
+	height:22px;
+	background: url(img/number.png) no-repeat;
+	text-indent:-9000px;
+}
+
+#cont a {
+	width:73px;
+	height:15px;
+	margin:7px 0 0 75px;
+}
+
+#box {
+	clear:both;
+	margin-top:7px;
+	overflow:hidden;
+	width:400px;
+	height:675px;
+	background: url(img/box_bg.jpg) no-repeat;
+	display:block;
+	float:left;
+}
+
+#box li a {
+	color:#ff6a00;
+	font-weight:bold;
+	text-decoration:none;
+	line-height:13px;
+}
+
+.threed {
+	padding-left:3px;
+	margin:80px 0 0 90px;
+	text-indent:7px;
+	width:79px;
+	height:26px;
+	display:block;
+	padding-right:10px;
+	background: url(img/3d_bg.png) no-repeat;
+}
+
+.exmo {
+	padding-left:3px;
+	margin:100px 0 0 183px;
+	width:109px;
+	height:35px;
+	display:block;
+	padding-right:10px;
+	background: url(img/exmo.png) no-repeat;
+}
+
+.exmo span {
+	display:block;
+}
+
+.rekl-reg {
+	padding:7px 0 0 5px;
+	margin:180px 0 0 183px;
+	width:72px;
+	height:33px;
+	display:block;
+	padding-right:10px;
+	background: url(img/rekl_reg.png) no-repeat;
+	text-indent:13px;
+}
+
+#content {
+	position:relative;
+	width:600px;
+	float:right;
+}
+
+#content h2 {
+	font-size:24px;
+	padding-top:50px;
+	padding-left:20px;
+}
+
+.content-index h2, .content-contacts h2 {
+	padding:50px 0 30px 20px;
+}
+
+.content-index p {
+	width:360px;
+	margin-bottom:20px;
+	margin-left:20px;
+}
+
+.content-index h3 {
+	margin-left:20px;
+	font-size:16px;
+	font-weight:bold;
+	margin-bottom:20px;
+}
+
+.content-image {
+	display:block;
+	position:absolute;
+	top:140px;
+	left:450px;
+}
+
+.cont-map {
+	margin:0 20px;
+	float:left;
+	width:360px;
+	height:360px;
+}
+
+.content-contacts p, .content-contacts a {
+	font-weight:bold;
+}
+
+.tel-fax {
+	line-height:45px;
+}
+
+.partner {
+	clear:both;
+	padding-top:30px !important;
+}
+
+.partner-setka {
+	margin-top:-73px;
+}
+
+.partner-setka li {
+	width:600px;
+	height:130px;
+	display:block;
+	padding-top:70px;
+}
+
+.par-tov {
+	background: url(img/par_tov.png) no-repeat 52px 70px;
+}
+
+.partner-setka p {
+	width:160px;
+	margin-left:200px;
+	padding:0 20px;
+	font-weight:normal !important;
+	display:inline;
+	float:left;
+}
+
+.cont-text dt, .cont-text dd {
+	display:block;
+}
+
+#folder {
+	width:96px;
+	height:86px;
+	background: url(img/folder.png) no-repeat;
+}
+
+*html #folder {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/folder.png'); /* хак для ие6 png opacity */
+}
+
+#creative {
+	width:81px;
+	height:83px;
+	background: url(img/creative.png) no-repeat;
+}
+
+#rekl-map {
+	width:109px;
+	height:72px;
+	background: url(img/map.png) no-repeat;
+}
+
+.setka {
+	width:600px;
+	overflow:hidden;
+	margin-top:4px;
+}
+
+.setka li {
+	width:200px;
+	height:200px;
+	float:left;
+	display:block;
+	font-size:15px;
+	font-weight:bold;
+	text-align:center;
+}
+
+.setka li a {
+	display:block;
+	margin-top:129px;
+}
+
+.cubic {
+	background: url(img/cubic.png) no-repeat center 54px;
+}
+
+.book {
+	background: url(img/book.png) no-repeat center 54px;
+}
+
+.map {
+	background: url(img/map.png) no-repeat center 54px;
+}
+
+.metro {
+	background: url(img/metro.png) no-repeat center 54px;
+}
+
+.tv {
+	background: url(img/tv.png) no-repeat center 54px;
+}
+
+.newspaper {
+	background: url(img/newspaper.png) no-repeat center 54px;
+}
+
+.internet {
+	background: url(img/internet.png) no-repeat center 54px;
+}
+
+.micro {
+	background: url(img/micro.png) no-repeat center 50px;
+}
+
+.narug-rekl {
+	background: url(img/narug_rekl.png) no-repeat center 54px;
+}
+
+.clsetka a {
+	text-indent:-9000px;
+}
+
+.tovarish {
+	background: url(img/tovarish.png) no-repeat center;
+}
+
+#hfooter {
+	clear:both;
+	height:133px;
+}
+
+#footer {
+	height:133px;
+	margin-top:-133px;
+}
+
+#copyright {
+	padding-top:82px;
+	margin-left:125px;
+	float:left;
+	display:inline;
+}
+
+#copyright p {
+	width:150px;
+	text-align:center;
+	display:block;
+}
+
+#footer ul {
+	float:left;
+	margin-left:140px;
+	padding-top:85px;
+}
+
+#footer li a {
+	
+}

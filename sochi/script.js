@@ -213,6 +213,8 @@ var Scrollbar = new Class({
 		this.main.set('morph', {duration: this.options.vDur});
 		this.main.getParent('.moocontent').addEvent('mousewheel', this.textWheel.bind(this));
 		this.main.addEvent('mousemove', this.updatePos.bind(this));
+		this.vThumb.setStyle('top', 0);
+		this.main.setStyle('top', 0);
 		this.updatePos();
 	},
 	
@@ -245,7 +247,7 @@ var Scrollbar = new Class({
 	
 	getPos: function(){
 		this.scrollerpos = this.vThumb.getStyle('top').toInt();
-		this.blockpos = this.main.getStyle('top').toInt()
+		this.blockpos = this.main.getStyle('top').toInt();
 		return false;
 	},
 		
@@ -292,7 +294,7 @@ var Scrollbar = new Class({
 					top: this.stepScroll
 				});
 			}
-		}
+		} 
 		return false;
 	},
 	
@@ -339,6 +341,89 @@ var Scrollbar = new Class({
 	
 });
 
+var Help = new Class({
+	
+	initialize: function(elem, Link){
+		this.elem = $(elem);
+		this.Link = $(Link);
+		this.close = this.elem.getElement('.close');
+		if(!this.elem) return false;
+		
+		this.fx = new Fx.Morph(this.elem, {duration: 600});
+		
+		this.Link.addEvent('click', this.show.bind(this));
+		this.close.addEvent('click', this.hide.bind(this));
+		this.elem.setStyle('display', 'none');
+		this.fx.set({
+			opacity: 0
+		});
+	},
+	
+	show: function(){
+		this.elem.setStyle('display', 'block');
+		this.fx.start({
+			opacity: 1
+		});
+	},
+	
+	hide: function(){
+		this.fx.start({
+			opacity: 0
+		}).chain(function(){
+			this.elem.setStyle('display', 'none');
+		}.bind(this));
+	}
+	
+});
+
+var changeZindex = new Class({
+	
+	initialize: function(menu){
+		this.menu = $$(menu);
+		if(!this.menu) return false;
+		
+		this.curZind = 100001;
+		
+		this.menu.getElements('li span').each(function(name){
+			name.addEvent('click', this.setZindex.bind(this));
+		}.bind(this));
+	},
+	
+	setZindex: function(e){
+		this.curEl = $(e.target);
+		this.getZindex();
+		if(this.Zind <= this.curZind){
+			this.wind.setStyle('z-index', this.curZind);
+			this.curZind++;
+		}
+	}, 
+	
+	getZindex: function(){
+		this.windClass = this.curEl.get('class');
+		this.wind = this.menu.getParent('div').getElement('div.'+this.windClass);
+		
+		this.Zind = this.wind.getStyle('z-index');
+		return this.Zind;
+	}
+	
+});
+
+var clearInput = new Class({
+	
+	initialize: function(ar){
+		this.ar = $$(ar);
+		if(!this.ar) return false;
+		
+		this.ar.addEvent('click', this.clearIn.bind(this));
+	},
+	
+	clearIn: function(e){
+		this.cur = $(e.target);
+		this.cur.getParent('form').getElements('input').set('value', '');
+	}
+	
+});
+
 window.addEvent('domready', function(){
 	var slmenu = new SearchPar('search-cat');
 	var searchText = new inputText('search-text');
@@ -346,6 +431,13 @@ window.addEvent('domready', function(){
 	var catSlide = new menuSlide('flevel-catalog');
 	var catScroller = new Scrollbar('cat-scrollbar', 'flevel-catalog');
 	var cat2Scroller = new Scrollbar('cat-tree-scrollbar', 'slevel-cat');
+	var helpScroller = new Scrollbar('help-scrollbar', 'help-content');
+	var heplmenu = new Help('help', 'help-link');
+	var ukoz = new Help('ukoz', 'karta');
+	var signinwindow = new Help('signin', 'signin-link');
+	var signupwindow = new Help('signup', 'signup-link');
+	var chngwind = new changeZindex('.hnav');
+	var signinInp = new clearInput('.clearinput');
 	
 	$('razvcat').addEvent('click', function(){ catSlide.showAll(); });
 	
