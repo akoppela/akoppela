@@ -256,15 +256,15 @@ var Scrollbar = new Class({
 		if(pos == 'up'){
 			this.durat = this.scrollerpos * this.options.vDur / this.vTrackLine;
 			if(this.durat == 0) this.durat = this.options.vDur;
-			this.stepScroll = this.scrollerpos - this.vTrackLine / 3;
-			this.stepMain = this.blockpos - this.hsteps / 3;
+			this.stepScroll = this.scrollerpos - this.vTrackLine / 25;
+			this.stepMain = this.blockpos - this.hsteps / 25;
 			if(this.stepScroll < 0) this.stepScroll = 0;
 			if(this.stepMain > 0) this.stepMain = 0;
 		} else if(pos == 'down'){
 			this.durat = this.options.vDur - this.scrollerpos * this.options.vDur / this.vTrackLine;
 			if(this.durat == 0) this.durat = this.options.vDur;
-			this.stepScroll = this.scrollerpos + this.vTrackLine / 3;
-			this.stepMain = this.blockpos + this.hsteps / 3;
+			this.stepScroll = this.scrollerpos + this.vTrackLine / 25;
+			this.stepMain = this.blockpos + this.hsteps / 25;
 			if(this.stepScroll > this.vTrackLine) this.stepScroll = this.vTrackLine;
 			if(this.stepMain < this.hsteps) this.stepMain = this.hsteps;
 		} else if(pos == 'pause') {
@@ -279,20 +279,12 @@ var Scrollbar = new Class({
 		if(this.hsteps < 0){
 			if(e.wheel > 0) {
 				this.dur('up');
-				this.main.morph({
-					top: this.stepMain
-				});
-				this.vThumb.morph({
-					top: this.stepScroll
-				});
+				this.main.setStyle('top', this.stepMain);
+				this.vThumb.setStyle('top', this.stepScroll);
 			} else if(e.wheel < 0) {
 				this.dur('down');
-				this.main.morph({
-					top: this.stepMain 
-				});
-				this.vThumb.morph({
-					top: this.stepScroll
-				});
+				this.main.setStyle('top', this.stepMain);
+				this.vThumb.setStyle('top', this.stepScroll);
 			}
 		} 
 		return false;
