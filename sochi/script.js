@@ -465,7 +465,7 @@ var FormValid = new Class({
 			this.pass.addEvent('keyup', this.repPassValid.bind(this));
 		}
 		if(this.options.rule == 'login'){
-			this.elem.addEvent('keydown', this.loginValid.bind(this));
+			this.elem.addEvent('keyup', this.loginValid.bind(this));
 		}
 		if(this.options.rule == 'email'){
 			this.elem.addEvent('keyup', this.emailValid.bind(this));
