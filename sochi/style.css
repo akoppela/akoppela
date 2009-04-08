@@ -331,7 +331,7 @@ a {
 }
 
 #signup form {
-	padding:30px;
+	padding:30px 30px 0;
 }
 
 #signup dl {
@@ -343,15 +343,13 @@ a {
 #signup dt {
 	float:left;
 	line-height:16px;
-	display:inline;
 	width:100px;
 	padding-right:25px;
-	margin-bottom:9px;
+	padding-bottom:9px;
 }
 
 #signup dd {
 	float:left;
-	display:inline;
 }
 
 #signup form input {
@@ -360,21 +358,29 @@ a {
 	height:16px;
 	font-size:11px;
 	padding:4px 0 0 5px;
-	margin-bottom:9px;
-}
-
-.wtext {
+	margin-top:2px;
+	margin-left:2px;
 	margin-right:15px;
+	border:0;
+	margin-bottom:9px;
 }
 
 .signin-subtext {
 	color:#30fe00;
+	margin-top:10px;
+	vertical-align:top;
+	position:relative;
+	top:6px;
+}
+
+#reppwd {
+	border-color:#EF1D25;
 }
 
 .test-fraze {
 	padding-right:30px;
 	background: url(img/enter_arrow.png) no-repeat right center;
-	margin-bottom:15px;
+	padding-bottom:15px;
 }
 
 #fraze {
@@ -382,6 +388,7 @@ a {
 	height:32px;
 	display:block;
 	background: url(img/fraze.png) no-repeat;
+	margin-left:2px;
 }
 
 #help {
@@ -444,7 +451,8 @@ a {
 }
 
 .signup-text {
-	margin:0 150px 17px 30px;
+	margin:15px 150px 0 30px;
+	clear:both;
 }
 
 #help-content ul {

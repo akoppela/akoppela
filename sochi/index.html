@@ -57,28 +57,30 @@
 					<h2>Регистрация нового пользователя</h2>
 					<p>Для регистрации нового пользователя введите в расположенные ниже окна информацию о себе.</p>
 					<p class="signin-text">Все поля обазятельны для заполнения. </p>
-					<form action="">
+					<form id="signup-form" class="valid-form" action="">
 						<dl>
 							<dt>Логин</dt>
 							<dd>
-								<input class="wtext" type="text" value="" />
+								<input id="login" class="valid-log" type="text" value="" />
 								<span class="signin-subtext">Латинские знаки, цифры</span>
 							</dd>
 						</dl>
 						<dl>
 							<dt>Пароль</dt>
 							<dd>
-								<input class="wtext" type="password" value="" />
+								<input id="pwd" class="valid-pass" type="password" value="" />
 								<span class="signin-subtext">Не менее 6 (шести) символов</span>
 							</dd>
 						</dl>
 						<dl>
 							<dt>Подтверждение пароля</dt>
-							<dd><input type="password" value="" /></dd>
+							<dd>
+								<input id="reppwd" class="valid-reppass" type="password" value="" />
+							</dd>
 						</dl>
 						<dl>
 							<dt>Электронная почта</dt>
-							<dd><input type="text" value="" /></dd>
+							<dd><input id="email" type="text" value="" /></dd>
 						</dl>
 						<dl>
 							<dt>Проверочная фраза</dt>

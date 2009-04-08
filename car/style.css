@@ -148,9 +148,9 @@ a {
 #header {
 	width:100%;
 	background: url(images/header_bg.jpg) repeat-x;
-	height:311px;
 	border-bottom:1px solid #c9cacf;
 	margin-bottom:6px;
+	overflow:hidden;
 }
 
 #logo {
@@ -170,15 +170,31 @@ a {
 	margin-top:30px;
 }
 
-#header ul {
+#tel {
 	clear:right;
+	overflow:hidden;
+	width:600px;
+	float:right;
+}
+
+#header ul {
 	text-align:right;
-	margin-right:269px;
+	m1argin-right:269px;
+	overflow:hidden;
+	float:left;
+}
+
+#mod {
+	overflow:hidden;
+}
+
+#mod a {
+	float:right;
 }
 
 #header li {
 	margin-top:8px;
-	float:right;
+	float:left;
 	display:inline;
 	margin-right:2px;
 	font-family:"arial narrow";

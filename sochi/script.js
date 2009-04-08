@@ -133,7 +133,7 @@ var menuSlide = new Class({
 		this.menuHead = this.menu.getElements('h3');
 		this.LevelTwo = this.menu.getElements('ul');
 		
-		this.LevelTwo.set('slide', {duration: 400, transition: 'quad:in'});
+		this.LevelTwo.set('slide', {duration: 800, transition: 'bounce:out'});
 		if(!this.options.slidePos) {
 			this.LevelTwo.slide('hide');
 		} else {
@@ -382,17 +382,23 @@ var changeZindex = new Class({
 		this.menu = $$(menu);
 		if(!this.menu) return false;
 		
-		this.curZind = 100001;
+		this.curZind = 100000;
 		
 		this.menu.getElements('li span').each(function(name){
 			name.addEvent('click', this.setZindex.bind(this));
+		}.bind(this));
+		
+		this.window = this.menu.getParent('div').getElements('.head-window');
+		
+		this.window.each(function(name){
+			name.addEvent('click', this.setWindZindex.bind(this));
 		}.bind(this));
 	},
 	
 	setZindex: function(e){
 		this.curEl = $(e.target);
 		this.getZindex();
-		if(this.Zind <= this.curZind){
+		if(this.Zind < this.curZind - 1){
 			this.wind.setStyle('z-index', this.curZind);
 			this.curZind++;
 		}
@@ -404,6 +410,16 @@ var changeZindex = new Class({
 		
 		this.Zind = this.wind.getStyle('z-index');
 		return this.Zind;
+	}, 
+	
+	setWindZindex: function(e){
+		this.curEl = $(e.target).getParent('.head-window');
+		if(!this.curEl) this.curEl = $(e.target);
+		this.Zind = this.curEl.getStyle('z-index');
+		if(this.Zind < this.curZind - 1){
+			this.curEl.setStyle('z-index', this.curZind);
+			this.curZind++;
+		}
 	}
 	
 });
@@ -424,6 +440,108 @@ var clearInput = new Class({
 	
 });
 
+var FormValid = new Class({
+	
+	Implements: [Options],
+	
+	options: {
+		rule: 'login'
+	},
+	
+	initialize: function(elem, options){
+		this.setOptions(options);
+		this.elem = $(elem);
+		if(!this.elem) return false;
+		
+		this.pass = this.elem.getParent('.valid-form').getElement('.valid-pass');
+		this.repPass = this.elem.getParent('.valid-form').getElement('.valid-reppass');
+		this.fx = new Fx.Morph(this.elem);
+		
+		if(this.options.rule == 'password'){
+			this.elem.addEvent('keyup', this.passwordValid.bind(this));
+		}
+		if(this.options.rule == 'reppass'){
+			this.elem.addEvent('keyup', this.repPassValid.bind(this));
+			this.pass.addEvent('keyup', this.repPassValid.bind(this));
+		}
+		if(this.options.rule == 'login'){
+			this.elem.addEvent('keydown', this.loginValid.bind(this));
+		}
+		if(this.options.rule == 'email'){
+			this.elem.addEvent('blur', this.emailValid.bind(this));
+		}
+	},
+	
+	Keys: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890',
+	
+	noVal: function(){
+		this.fx.cancel();
+		this.fx.start({
+			'border-width': '2px',
+			'border-color': '#EF1D25',
+			'border-style': 'solid',
+			margin: '0 13px 7px 0'
+		});
+		return false;
+	}, 
+	
+	Val: function(){
+		this.fx.cancel();
+		this.fx.start({
+			'border-width': '2px',
+			'border-color': '#2EEF00',
+			margin: '0 13px 7px 0'
+		}).chain(function(){
+			this.fx.start({
+				'border-width': '0px',
+				'border-color': '#fff',
+				margin: '2px 15px 9px 2px'
+			});
+		}.bind(this));
+		return false;
+	},
+	
+	repPassValid: function(){
+		this.getPassValue();
+		if(this.fPass != this.sPass){
+			this.noVal();
+		} else {
+			this.Val();
+		}
+	},
+	
+	getPassValue: function(){
+		this.fPass = this.pass.get('value');
+		this.sPass = this.repPass.get('value');
+	},
+	
+	loginValid: function(){
+		
+	},
+	
+	passwordValid: function(){
+		this.passLength = this.elem.get('value').length;
+		if(this.passLength < 6){
+			this.noVal();
+		} else {
+			this.Val();
+		}
+	},
+	
+	validText: function(e){
+		console.log(e.event.keyCode);
+	},
+	
+	emailValid: function(){
+		if(this.elem.value.indexOf('@', 0) == -1){
+			this.noVal();
+		} else {
+			this.Val();
+		}
+	}
+	
+});
+
 window.addEvent('domready', function(){
 	var slmenu = new SearchPar('search-cat');
 	var searchText = new inputText('search-text');
@@ -438,6 +556,10 @@ window.addEvent('domready', function(){
 	var signupwindow = new Help('signup', 'signup-link');
 	var chngwind = new changeZindex('.hnav');
 	var signinInp = new clearInput('.clearinput');
+	var repPassVal = new FormValid('reppwd', {rule: 'reppass'});
+	var passVal = new FormValid('pwd', {rule: 'password'});
+	var logVal = new FormValid('login', {rule: 'login'});
+	var mailVal = new FormValid('email', {rule: 'email'});
 	
 	$('razvcat').addEvent('click', function(){ catSlide.showAll(); });
 	
