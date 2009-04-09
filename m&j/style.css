@@ -783,7 +783,7 @@ a {
 	height:245px !important;
 }
 
-.signin-button, .contact-button, .consignin-button{
+.signin-button, .contact-button, .consignin-button, .finish-con {
 	position:relative;
 	left:179px;
 	top:330px;
@@ -799,6 +799,47 @@ a {
 	background: url(img/sign_in_button.png) no-repeat !important;
 	margin:0 !important;
 	border:none !important;
+}
+
+.thanks {
+	line-height:175px;
+	margin-bottom:50px;
+	padding-bottom:95px;
+	margin:0 !important;
+	text-align:center;
+	font-size:24px !important;
+	font-weight:bold;
+	color:#31460e;
+}
+
+.notrel {
+	position:relative;
+}
+
+.finish-con {
+	position:absolute !important;
+	top:auto !important;
+	left:auto !important;
+	bottom:60px;
+	right:95px;
+}
+
+.ordproc-text {
+	margin:0 0 0 55px !important;
+	font-size:14px !important;
+	font-weight:bold;
+}
+
+.ordproc-table {
+	margin-top:45px;
+}
+
+.active-pos {
+	color:#000 !important;
+}
+
+.ordproc-title {
+	margin-bottom:60px;
 }
 
 .consignin-button {
@@ -1257,6 +1298,50 @@ a {
 	width:130px;
 	height:29px;
 	background: url(img/billing_address.png) no-repeat 0 12px;
+}
+
+.notify {
+	margin:4px 0 10px 55px !important;
+	line-height:20px;
+	font-weight:bold;
+}
+
+.notify-form {
+	margin-left:55px;
+}
+
+.notify-form li {
+	height:24px;
+}
+
+.checkbox {
+	width:12px;
+	height:24px;
+	vertical-align:middle;
+}
+
+.notify-form dl {
+	clear:both;
+	overflow:hidden;
+}
+
+.notify-form dt {
+	float:left;
+	width:30px;
+}
+
+.notify-form dd {
+	float:left;
+	line-height:24px;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.upd {
+	text-indent:-9000px;
+	width:70px;
+	height:29px;
+	background: url(img/upd.png) no-repeat 0 12px;
 }
 
 .new-bill-adr {
