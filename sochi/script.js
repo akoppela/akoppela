@@ -2,7 +2,7 @@ var SearchPar = new Class({
 	
 	initialize: function(el){
 		this.el = $(el);
-		if(!this.el) return;
+		if(!this.el) return false;
 		this.el.getElement('ul').slide('hide');
 		
 		this.fx = new Fx.Slide(this.el.getElement('ul'), {duration: '250'});
@@ -462,7 +462,7 @@ var FormValid = new Class({
 		if(this.options.rule == 'email'){
 			this.elem.addEvents({
 				'keyup': this.emailValid.bind(this),
-				'blur': this.emailValid.bind(this),
+				'blur': this.emailValid.bind(this)
 			});
 		}
 	},
