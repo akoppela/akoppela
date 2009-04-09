@@ -1087,6 +1087,7 @@ a {
 }
 
 .prod-desc {
+	width:717px;
 	margin-top:40px;
 	position:relative;
 }
@@ -1104,8 +1105,9 @@ a {
 	overflow:hidden;
 }
 
-.prod-desc li {
-	height:auto !important;
+.prod-des {
+	overflow:hidden;
+	height:auto;
 }
 
 .new-prod-last {
@@ -1135,8 +1137,12 @@ a {
 
 .proddesc-left {
 	width:275px;
-	height:300px;
 	text-align:center;
+	float:left;
+}
+
+.proddesc-right {
+	width:442px;
 	float:left;
 }
 
@@ -1166,12 +1172,20 @@ a {
 	margin-right:180px !important;
 }
 
+.prod-desc h4 {
+	font-size:18px;
+	color:#000;
+	line-height:36px;
+	margin-right:180px;
+}
+
 .prod-desc strong {
 	position:absolute;
 	line-height:36px;
 	font-size:18px;
 	font-weight:bold;
 	left:575px;
+	width:100px;
 }
 
 .prod-desc dl {
@@ -1190,7 +1204,8 @@ a {
 }
 
 .prod-desc li p {
-	margin:0 !important;
+	font-size:14px !important;
+	margin:0 50px 0 0 !important;
 }
 
 .prod-added {
