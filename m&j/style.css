@@ -873,22 +873,22 @@ a {
 
 .c1 {
 	width:91px;
-	background: url(img/c1.jpg) no-repeat;
+	background: #7D8182 url(img/c1.jpg) no-repeat;
 }
 
 .c2 {
 	width:459px;
-	background: url(img/c2.jpg) no-repeat;
+	background: #7D8182 url(img/c2.jpg) no-repeat;
 }
 
 .c3 {
 	width:98px;
-	background: url(img/c3.jpg) no-repeat;
+	background: #7D8182 url(img/c3.jpg) no-repeat;
 }
 
 .c4 {
 	width:62px;
-	background: url(img/c4.jpg) no-repeat;
+	background: #7D8182 url(img/c4.jpg) no-repeat;
 }
 
 #table-cart td img {
@@ -1086,8 +1086,26 @@ a {
 	width:717px;
 }
 
+.prod-desc {
+	margin-top:40px;
+	position:relative;
+}
+
+.pdrod-title {
+	background: url(img/product.png) no-repeat 15px 12px;
+}
+
+.newprod-title {
+	background: url(img/new_prod_title.jpg) no-repeat 36px 12px;
+}
+
 .new-product li {
 	height:160px;
+	overflow:hidden;
+}
+
+.prod-desc li {
+	height:auto !important;
 }
 
 .new-prod-last {
@@ -1113,7 +1131,104 @@ a {
 	color:#fff !important;
 	font-weight:bold;
 	text-indent:-9000px;
-	background: url(img/new_prod_title.jpg) no-repeat 36px 12px;
+}
+
+.proddesc-left {
+	width:275px;
+	height:300px;
+	text-align:center;
+	float:left;
+}
+
+.proddesc-left a img {
+	display:block;
+	margin:8px auto;
+}
+
+.proddesc-left a {
+	font-size:14px;
+	color:#000;
+}
+
+.soldout {
+	display:block;
+	margin:10px auto;
+	width:141px;
+	line-height:26px;
+	background: url(img/soldout_bg.png) no-repeat;
+	font-weight:bold;
+}
+
+.prod-desc h3 {
+	font-size:18px !important;
+	color:#000 !important;
+	line-height:36px !important;
+	margin-right:180px !important;
+}
+
+.prod-desc strong {
+	position:absolute;
+	line-height:36px;
+	font-size:18px;
+	font-weight:bold;
+	left:575px;
+}
+
+.prod-desc dl {
+	line-height:20px;
+	font-size:14px;
+}
+
+.prod-desc dt {
+	float:left;
+	margin-right:4px;
+}
+
+.prod-desc ul {
+	margin-top:28px;
+	line-height:16px;
+}
+
+.prod-desc li p {
+	margin:0 !important;
+}
+
+.prod-added {
+	clear:both;
+	font-size:14px;
+	font-weight:bold;
+	line-height:70px;
+	text-align:center;
+}
+
+.prod-desc .new-prod-last {
+	padding-bottom:50px;
+}
+
+.add-cart {
+	position:absolute;
+	right:83px;
+	width:102px;
+	line-height:26px;
+	display:block;
+	background: url(img/addcart.png) no-repeat;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:22px;
+	color:#000;
+}
+
+.reviews {
+	position:absolute;
+	left:110px;
+	width:112px;
+	line-height:26px;
+	display:block;
+	background: url(img/reviews.png) no-repeat;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:22px;
+	color:#000;
 }
 
 #shop h2 {
