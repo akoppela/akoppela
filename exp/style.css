@@ -377,7 +377,7 @@ a {
 	margin-top:4px;
 }
 
-.setka li {
+.setka td {
 	width:200px;
 	height:200px;
 	float:left;
@@ -387,9 +387,12 @@ a {
 	text-align:center;
 }
 
-.setka li a {
+.setka td img {
 	display:block;
-	margin-top:129px;
+	margin:54px auto 5px;
+}
+
+.setka td a {
 }
 
 .cubic {
@@ -434,6 +437,10 @@ a {
 
 .tovarish {
 	background: url(img/tovarish.png) no-repeat center;
+}
+
+.client-setka img {
+	margin-top:90px !important;
 }
 
 #hfooter {

@@ -1118,6 +1118,7 @@ a {
 	display:block;
 	text-align:center;
 	margin-bottom:85px;
+	margin-top:15px;
 }
 
 #search-res-pages li {
@@ -1128,7 +1129,6 @@ a {
 #search-res-pages li a {
 	color:#0088cc;
 	text-decoration:underline;
-	margin:0 2px;
 }
 
 .text-page {
