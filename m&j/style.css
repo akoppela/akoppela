@@ -606,7 +606,29 @@ a {
 	line-height:48px;
 }
 
+.acc-note {
+	margin:0 0 0 55px !important;
+	font-size:14px;
+	float:left;
+	font-weight:bold;
+	display:inline;
+}
+
+.acc-note span {
+	color:#f00;
+}
+
+.acc-note a {
+	color:#253c01;
+}
+
+.req-inf {
+	color:#f00;
+	float:right;
+}
+
 #table-news {
+	clear:both;
 	margin-top:15px;
 	overflow:hidden;
 	background: #f5f6f0 url(img/new_prod_bg.jpg) no-repeat bottom;
@@ -848,6 +870,12 @@ a {
 	float:left;
 	margin-top:15px !important;
 	position:static !important;
+}
+
+.acc-cons {
+	margin-left:510px !important;
+	display:inline;
+	padding-bottom:10px !important;
 }
 
 .shipbut {
@@ -1307,6 +1335,27 @@ a {
 	background: url(img/billing_address.png) no-repeat 0 12px;
 }
 
+.youraddr {
+	text-indent:-9000px;
+	width:115px;
+	height:29px;
+	background: url(img/youraddr.png) no-repeat 0 12px;
+}
+
+.compdet {
+	text-indent:-9000px;
+	width:145px;
+	height:29px;
+	background: url(img/comdet.png) no-repeat 0 12px;
+}
+
+.pers-det {
+	text-indent:-9000px;
+	width:184px;
+	height:29px;
+	background: url(img/pers_det.png) no-repeat 0 12px;
+}
+
 .ship-adr {
 	text-indent:-9000px;
 	width:152px;
@@ -1553,6 +1602,85 @@ a {
 	margin:0 !important;
 }
 
+.acc-form ul {
+	margin-left:55px;
+	line-height:31px;
+	font-size:14px;
+	margin-bottom:9px;
+	font-weight:bold;
+	overflow:hidden;
+}
+
+.acc-form li {
+	overflow:hidden;
+}
+
+.acc-form dl {
+	overflow:hidden;
+	height:35px;
+	padding:0;
+}
+
+.names {
+	width:235px;
+	float:left;
+	margin-right:56px;
+}
+
+.names dl {
+	height:70px !important;
+}
+
+.names dt {
+	width:230px !important;
+	float:left;
+}
+
+.names .billtext {
+	width:214px;
+}
+
+.names dd {
+	display:block;
+}
+
+.longpole {
+	clear:both;
+}
+
+.longpole dl {
+	height:70px !important;
+}
+
+.longpole .billtext {
+	width:504px !important;	
+	margin-right:10px;
+}
+
+.longpole dt, .longpole dd {
+	width:520px;
+}
+
+.longpole dd {
+	float:left;
+}
+
+.postcode {
+	margin-bottom:30px;
+}
+
+.pol dt {
+	width:220px;
+	float:left;
+	overflow:hidden;
+}
+
+.pol dd {
+	float:left;
+	margin-right:66px;
+	display:inline;
+}
+
 .new-bill-form ul {
 	margin-left:55px;
 	line-height:31px;
@@ -1627,6 +1755,10 @@ a {
 	vertical-align:top;
 }
 
+.radiodl strong {
+	vertical-align:bottom;
+}
+
 .payradiobut {
 	margin-top:10px;
 	width:14px;
@@ -1666,9 +1798,24 @@ a {
 
 .billstar {
 	color:#f00;
+	font-size:12px;
+	font-weight:normal !important;
+}
+
+.accstar {
+	width:5px !important;
+	height:35px;
+	float:right;
+}
+
+.accstarlong {
+	width:120px !important;
+	height:35px;
+	float:right;
 }
 
 .billtext {
+	clear:both;
 	font-size:12px !important;
 	font-weight:normal;
 	font-weight:bold;
