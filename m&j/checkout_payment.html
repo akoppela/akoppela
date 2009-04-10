@@ -5,7 +5,7 @@
 	<meta name="description" content="M&amp;J Interiors" />
 	<meta name="keywords" content="M&amp;J Interiors, mj" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<title>M&amp;J Interiors | News</title>
+	<title>M&amp;J Interiors | Payment</title>
 </head>
 <body>
 	<div id="shadow-wrapper">
@@ -162,6 +162,7 @@
 											</ul>
 										</dd>
 									</dl>
+									<a class="chng-addres" href="#">Change Address</a>
 								</td>
 							</tr>
 							<tr class="table-sep">
@@ -170,102 +171,99 @@
 							</tr>
 							<tr>
 								<th>
-									<h3 class="new-bill-adr">New Billing Address</h3>
+									<h3 class="paymet">Payment Method</h3>
 								</th>
 							</tr>
 							<tr>
 								<td>
-									<form class="new-bill-form" action="">
+									<p class="pay-text">Please select the preferred payment method to use on this order.</p>
+									<form class="pay-form" action="">
 										<ul>
 											<li>
 												<dl>
-													<dt>Gender:</dt>
-													<dd class="radiodl">
-														<label class="malelab" for="male">
-															<input id="male" class="radiobut" name="radiofem" type="radio" />
-															<strong class="test1">Male</strong>
-														</label>
-														<label for="female">
-															<input id="female" class="radiobut" name="radiofem" type="radio" />
-															<strong>Female</strong>
-														</label>
-													</dd>
-													<dd><span class="billstar">*</span></dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt>First Name:</dt>
-													<dd><input class="billtext" type="text" value="" /></dd>
-													<dd><span class="billstar">*</span></dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt>Last Name:</dt>
-													<dd><input class="billtext" type="text" value="" /></dd>
-													<dd><span class="billstar">*</span></dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt>Company Name:</dt>
-													<dd><input class="billtext" type="text" value="" /></dd>
-													<dd><span class="billstar">*</span></dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt>Street Address:</dt>
-													<dd><input class="billtext" type="text" value="" /></dd>
-													<dd><span class="billstar">*</span></dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt>Suburb:</dt>
-													<dd><input class="billtext" type="text" value="" /></dd>
-													<dd><span class="billstar">*</span></dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt>Post Code:</dt>
-													<dd><input class="billtext" type="text" value="" /></dd>
-													<dd><span class="billstar">*</span></dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt>City:</dt>
-													<dd><input class="billtext" type="text" value="" /></dd>
-													<dd><span class="billstar">*</span></dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt>County:</dt>
-													<dd><input class="billtext" type="text" value="" /></dd>
-													<dd><span class="billstar">*</span></dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt>Country:</dt>
+													<dt>Authorize.net</dt>
 													<dd>
-														<select class="counrty-sel">
-															<option>Country1</option>
-															<option>Country2</option>
-															<option>Country3</option>
-															<option>Country4</option>
-															<option>Country5</option>
+														<input id="authnet" class="payradiobut" name="paymethod" type="radio" />
+													</dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt class="secdl">Credit Card Owner:</dt>
+													<dd class="secdd"><input class="inpaytext" type="text" value="" /></dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt class="secdl">Credit Card Number:</dt>
+													<dd class="secdd"><input class="inpaytext" type="text" value="" /></dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt class="secdl">Credit Card Expiry Date:</dt>
+													<dd class="secdd">
+														<select class="month-sel">
+															<option>January</option>
+															<option>February</option>
+															<option>March</option>
+															<option>April</option>
+															<option>May</option>
+															<option>June</option>
+															<option>July</option>
+															<option>August</option>
+															<option>September</option>
+															<option>October</option>
+															<option>November</option>
+															<option>December</option>
+														</select>
+														<select class="day-sel">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
 														</select>
 													</dd>
-													<dd><span class="billstar">*</span></dd>
+												</dl>
+											</li>
+											<li>
+												<dl class="longtextdt">
+													<dt>All major credit/debit cards are accepted. For telephone orders please enter your daytime phone number in the comments box below. Once we havereceived your order we will call you to take a payment.</dt>
+													<dd>
+														<input class="payradiobut" name="paymethod" type="radio" />
+													</dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt>PayPal</dt>
+													<dd>
+														<input class="payradiobut" name="paymethod" type="radio" />
+													</dd>
 												</dl>
 											</li>
 										</ul>
 									</form>
+								</td>
+							</tr>
+							<tr class="table-sep">
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<h3 class="comm-add">Add Comments About Your Order</h3>
+								</th>
+							</td>
+							<tr>
+								<td>
+									<textarea class="order-com"></textarea>
 								</td>
 							</tr>
 							<tr class="table-sep">

@@ -232,23 +232,21 @@ a {
 }
 
 .threed {
-	padding-left:3px;
-	margin:80px 0 0 90px;
+	padding:40px 50px 0 3px;
+	margin:45px 0 0 91px;
 	text-indent:7px;
-	width:79px;
-	height:26px;
+	width:82px;
+	height:31px;
 	display:block;
-	padding-right:10px;
 	background: url(img/3d_bg.png) no-repeat;
 }
 
 .exmo {
-	padding-left:3px;
-	margin:100px 0 0 183px;
-	width:109px;
-	height:35px;
+	padding-left:54px;
+	margin:101px 0 0 133px;
+	width:106px;
+	height:73px;
 	display:block;
-	padding-right:10px;
 	background: url(img/exmo.png) no-repeat;
 }
 
@@ -257,12 +255,11 @@ a {
 }
 
 .rekl-reg {
-	padding:7px 0 0 5px;
-	margin:180px 0 0 183px;
-	width:72px;
-	height:33px;
+	padding:46px 35px 0 6px;
+	margin:103px 0 0 181px;
+	width:67px;
+	height:26px;
 	display:block;
-	padding-right:10px;
 	background: url(img/rekl_reg.png) no-repeat;
 	text-indent:13px;
 }
