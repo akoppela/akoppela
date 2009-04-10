@@ -1209,7 +1209,7 @@ a {
 .revbor {
 	border-bottom:1px solid #dedbca;
 	margin-bottom:4px;
-	clear:both;
+	display:block;
 }
 
 .new-product .trim {
@@ -1307,6 +1307,23 @@ a {
 	text-align:center;
 	font-size:14px;
 	font-weight:bold;
+}
+
+.clear {
+	clear:both;
+}
+
+.rating {
+	margin-top:135px;
+	font-size:14px;
+	font-weight:bold;
+	margin-left:55px;
+}
+
+.rating dt {
+	float:left;
+	display:inline;
+	margin-right:5px;
 }
 
 .rev-added {
