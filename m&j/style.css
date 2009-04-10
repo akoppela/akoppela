@@ -1622,9 +1622,9 @@ a {
 }
 
 .names {
-	width:260px;
+	width:258px;
 	float:left;
-	margin-right:6px;
+	margin-right:10px;
 }
 
 .names dl {
@@ -1645,7 +1645,7 @@ a {
 }
 
 .names .billtext {
-	width:250px !important;
+	width:240px !important;
 }
 
 .longpole {
