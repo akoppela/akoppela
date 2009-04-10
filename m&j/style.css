@@ -1178,6 +1178,10 @@ a {
 	background: url(img/product.png) no-repeat 15px 12px;
 }
 
+.reviews-title {
+	background: url(img/review.png) no-repeat 15px 12px;
+}
+
 .newprod-title {
 	background: url(img/new_prod_title.jpg) no-repeat 36px 12px;
 }
@@ -1199,6 +1203,13 @@ a {
 .nprod-title {
 	height:41px !important;
 	background: url(img/new_product.jpg) no-repeat !important;
+	clear:both;
+}
+
+.revbor {
+	border-bottom:1px solid #dedbca;
+	margin-bottom:4px;
+	clear:both;
 }
 
 .new-product .trim {
@@ -1292,10 +1303,23 @@ a {
 
 .prod-added {
 	clear:both;
-	font-size:14px;
-	font-weight:bold;
 	line-height:70px;
 	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.rev-added {
+	clear:both;
+	padding-left:55px;
+	padding-top:10px;
+	font-size:14px;
+	font-weight:bold;
+	padding-bottom:140px;
+}
+
+.prod-desc .rew-prod-last {
+	padding-bottom:50px;
 }
 
 .prod-desc .new-prod-last {
@@ -1313,6 +1337,19 @@ a {
 	font-weight:bold;
 	padding-left:22px;
 	color:#000;
+}
+
+.write-rev {
+	position:absolute;
+	right:83px;
+	width:124px;
+	line-height:26px;
+	display:block;
+	background: url(img/write_rev.png) no-repeat;
+	font-size:14px;
+	font-weight:bold;
+	color:#000;
+	text-align:center;
 }
 
 .reviews {
