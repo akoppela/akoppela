@@ -1186,9 +1186,15 @@ a {
 	background: url(img/new_prod_title.jpg) no-repeat 36px 12px;
 }
 
+.new-product .trim {
+	margin-bottom:15px;
+	height:auto;
+	clear:both;
+}
+
 .new-product li {
-	height:160px;
 	overflow:hidden;
+	height:auto;
 }
 
 .prod-des {
@@ -1213,7 +1219,8 @@ a {
 }
 
 .new-product .trim {
-	margin-top:15px;
+	padding-top:15px;
+	zoom:1;
 }
 
 .new-product .trim img {
