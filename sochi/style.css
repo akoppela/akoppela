@@ -509,6 +509,10 @@ a {
 	height:65px;
 }
 
+#search-form a {
+	text-decoration:none;
+}
+
 .search-type {
 	overflow:hidden;
 }
@@ -517,6 +521,7 @@ a {
 	position:relative;
 	vertical-align:top;
 	height:21px;
+	padding:0 2px;
 	float:left;
 }
 
@@ -524,15 +529,15 @@ a {
 	color:#000;
 	font-size:11px;
 	line-height:24px;
-	padding:0 4px;
-	border-left:1px solid #000;
+	text-decoration:underline;
 }
 
 .hactive-link a {
 	line-height:21px !important;
 	font-size:20px !important;
 	border:none !important;
-	padding-left:0px !important;
+	padding:0px !important;
+	text-decoration:none !important;
 }
 
 #search-cat {
@@ -1202,7 +1207,7 @@ a {
 
 #posl-dob ul {
 	overflow:hidden;
-	margin-bottom:40px;
+	margin-bottom:25px;
 	clear:both;
 }
 
@@ -1338,13 +1343,37 @@ a {
 
 #news {
 	clear:both;
-	margin:0 9px 0 15px;
+	margin:15px 9px 50px 15px;
 	overflow:hidden;
+	position:relative;
+}
+
+#period {
+	position:absolute;
+	left:40%;
+	font-size:11px;
+	line-height:24px;
+}
+
+#period p {
+	float:left;
+	margin-right:10px;
+}
+
+#period a {
+	float:left;
+	display:block;
+	padding-left:15px;
+	width:82px;
+	line-height:22px;
+	background: url(img/period_bg.png) no-repeat;
+	margin-right:15px;
 }
 
 .news-list {
 	clear:both;
-	margin-top:40px;
+	padding-top:40px;
+	zoom:1;
 	overflow:hidden;
 }
 
