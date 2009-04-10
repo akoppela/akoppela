@@ -850,6 +850,11 @@ a {
 	position:static !important;
 }
 
+.shipbut {
+	margin-top:8px !important;
+	padding-bottom:12px !important;
+}
+
 .contact-button {
 	top:470px !important;
 	left:510px !important;
@@ -1302,6 +1307,13 @@ a {
 	background: url(img/billing_address.png) no-repeat 0 12px;
 }
 
+.ship-adr {
+	text-indent:-9000px;
+	width:152px;
+	height:29px;
+	background: url(img/ship_adr.png) no-repeat 0 10px;
+}
+
 .comm-add {
 	text-indent:-9000px;
 	width:288px;
@@ -1325,6 +1337,13 @@ a {
 	width:142px;
 	height:29px;
 	background: url(img/paymet.png) no-repeat 0 12px;
+}
+
+.shipmet {
+	text-indent:-9000px;
+	width:145px;
+	height:29px;
+	background: url(img/shipmet.png) no-repeat 0 12px;
 }
 
 .chng-addres {
@@ -1399,9 +1418,26 @@ a {
 	background: url(img/contcheckprod.png) no-repeat 0 12px;
 }
 
+.shipdate {
+	text-indent:-9000px;
+	width:260px;
+	height:29px;
+	background: url(img/shipdate.png) no-repeat 0 12px;
+}
+
 .contcheckprod-text {
 	width:354px;
 	color:#ff0000;
+	margin:0 100px 0 57px !important;
+	padding:4px 0;
+	font-size:14px;
+	font-weight:bold;
+	float:left;
+	display:inline;
+}
+
+.contcheckprodship-text {
+	width:354px;
 	margin:0 100px 0 57px !important;
 	padding:4px 0;
 	font-size:14px;
@@ -1455,7 +1491,32 @@ a {
 	margin-left:55px !important;
 	margin-bottom:0px !important;
 	font-size:14px;
+	line-height:18px;
 	font-weight:bold;
+}
+
+.shipdeltext {
+	margin:2px 0 15px 55px;
+	width:619px;
+	font-size:12px !important;
+	font-weight:bold;
+	padding-left:6px;
+	padding-top:8px;
+	height:22px;
+	border:0;
+	border-bottom:1px solid #dedbca;
+}
+
+.shipdatetext {
+	margin:2px 0 15px 55px;
+	width:240px;
+	font-size:12px !important;
+	font-weight:bold;
+	padding-left:6px;
+	padding-top:8px;
+	height:22px;
+	border:0;
+	border-bottom:1px solid #dedbca;
 }
 
 .billadr-text {
@@ -1476,7 +1537,7 @@ a {
 
 .billadr-dl dt {
 	float:left;
-	margin-right:40px;
+	width:145px !important;
 }
 
 .billadr-dl dd {
@@ -1621,7 +1682,6 @@ a {
 
 .inpaytext {
 	font-size:12px !important;
-	font-weight:normal;
 	font-weight:bold;
 	width:269px;
 	padding-left:6px;
