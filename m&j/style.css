@@ -226,8 +226,9 @@ a {
 	background:#dddac9;
 	border-bottom:1px solid #c9c4ae;
 	display:block;
-	width:950px;
+	width:938px;
 	overflow:hidden;
+	text-align:center;
 }
 
 #nav li {
@@ -1104,7 +1105,6 @@ a {
 
 #check {
 	position:relative;
-	z-index:100;
 	padding:0 6px 0 10px;
 	float:right;
 	margin:4px 6px 0 0;
