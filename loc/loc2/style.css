@@ -308,8 +308,8 @@ a {
 }
 
 #content-text p {
-	font-family:"Times New Roman";
-	font-size:14px !important;
+	font-family:"Palatino Linotype", "Book Antiqua", "Palatino", serif;
+	font-size:13px !important;
 }
 
 .fstring {
