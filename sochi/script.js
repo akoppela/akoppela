@@ -174,11 +174,13 @@ var menuSlide = new Class({
 	showAll: function(){
 		this.LevelTwo.slide('in');
 		this.menuHead.getParent('.first-level-cat').set('class', 'first-level-cat active-cat');
+		this.menuHead.set('class', 'open');
 	},
 	
 	hideAll: function(){
 		this.LevelTwo.slide('out');
 		this.menuHead.getParent('.first-level-cat').set('class', 'first-level-cat');
+		this.menuHead.set('class', 'close');
 	}
 		
 });
@@ -233,6 +235,8 @@ var Scrollbar = new Class({
 		this.main.addEvent('click', this.updatePos.bind(this));
 		this.vThumb.setStyle('top', 0);
 		this.main.setStyle('top', 0);
+		this.allHeight = this.main.getHeight();
+		this.getH();
 		this.scrollOp();
 	},
 	
@@ -274,15 +278,15 @@ var Scrollbar = new Class({
 		if(pos == 'up'){
 			this.durat = this.scrollerpos * this.options.vDur / this.vTrackLine;
 			if(this.durat == 0) this.durat = this.options.vDur;
-			this.stepScroll = this.scrollerpos + 25 * this.vTrackLine / this.hsteps;
-			this.stepMain = this.blockpos + 25;
+			this.stepScroll = this.scrollerpos + 20 * this.vTrackLine / this.hsteps;
+			this.stepMain = this.blockpos + 20;
 			if(this.stepScroll < 0) this.stepScroll = 0;
 			if(this.stepMain > 0) this.stepMain = 0;
 		} else if(pos == 'down'){
 			this.durat = this.options.vDur - this.scrollerpos * this.options.vDur / this.vTrackLine;
 			if(this.durat == 0) this.durat = this.options.vDur;
-			this.stepScroll = this.scrollerpos - 25 * this.vTrackLine / this.hsteps;
-			this.stepMain = this.blockpos - 25;
+			this.stepScroll = this.scrollerpos - 20 * this.vTrackLine / this.hsteps;
+			this.stepMain = this.blockpos - 20;
 			if(this.stepScroll > this.vTrackLine) this.stepScroll = this.vTrackLine;
 			if(this.stepMain < this.hsteps) this.stepMain = this.hsteps;
 		} else if(pos == 'pause') {
@@ -326,7 +330,7 @@ var Scrollbar = new Class({
 			this.ulHeight = this.targ.getParent().getElement('ul').getHeight();
 			if(this.targ.get('class') == 'close') this.ulHeight = -this.ulHeight;
 			this.curHeight = this.main.getParent('.moocontent').getHeight() - this.main.getHeight() - this.ulHeight;
-		}
+		} else return false;
 		if(this.curHeight != this.hsteps) {
 			this.hsteps = this.curHeight;
 			this.setPos();
@@ -335,26 +339,48 @@ var Scrollbar = new Class({
 	},
 	
 	setPos: function(){
-		this.vThumb.set('morph', {duration: 500});
-		this.main.set('morph', {duration: 500});
+		this.vThumb.set('morph', {duration: 1000});
+		this.main.set('morph', {duration: 1000});
 		
-		if(this.main.getStyle('top').toInt() == 0){
+		if(Math.abs(this.main.getStyle('top').toInt()) < Math.abs(this.ulHeight) && this.targ.get('class') == 'close'){
 			this.main.morph({
-				top: 0
+				top: 0 
 			});
 			this.vThumb.morph({
 				top: 0
 			});
 		} else if(this.main.getStyle('top').toInt() < 0){
 			this.main.morph({
-				top: this.ulHeight 
+				top: this.main.getStyle('top').toInt() - this.ulHeight 
 			});
-		} else if(this.main.getStyle('top').toInt() > this.hsteps){
-			console.log(this.ulHeight / (this.main.getHeight() + this.ulHeight) * this.vTrackLine);
-			this.main.morph({
-				top: this.hsteps
+			this.vThumb.morph({
+				top: ( this.main.getStyle('top').toInt() - this.ulHeight ) * this.vTrackLine / this.hsteps
 			});
 		}
+	},
+	
+	updateAllPos: function(){
+		this.getH();
+		this.hsteps = this.main.getParent('.moocontent').getHeight() - this.allHeight;
+		this.scrollOp();
+		this.setAllPos();
+	},
+	
+	setAllPos: function(){
+		this.vThumb.set('morph', {duration: 1000});
+		this.main.set('morph', {duration: 1000});
+		
+		if(this.main.getStyle('top').toInt() < 0){
+			this.vThumb.morph({
+				top: this.main.getStyle('top').toInt() * this.vTrackLine / this.hsteps
+			});
+		}
+	},
+	
+	getH: function(){
+		this.main.getElements('h3.close').each(function(name){
+			this.allHeight = this.allHeight + name.getNext().getElement('ul').getHeight();
+		}.bind(this));
 	}
 	
 });
@@ -580,6 +606,9 @@ window.addEvent('domready', function(){
 	var logVal = new FormValid('login', {rule: 'login'});
 	var mailVal = new FormValid('email', {rule: 'email'});
 	
-	$('razvcat').addEvent('click', function(){ catSlide.showAll(); });
+	$('razvcat').addEvent('click', function(){ 
+		catSlide.showAll(); 
+		catScroller.updateAllPos();
+	});
 	
 });

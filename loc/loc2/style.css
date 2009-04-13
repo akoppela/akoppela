@@ -297,18 +297,18 @@ a {
 
 #content-text {
 	width:555px;
+	margin-bottom:20px;
 }
 
 #content-text h3 {
 	font-family:"Times New Roman";
 	font-size:14px;
 	color:#b32e2d;
-	font-style:italic;
 	margin:55px 0 20px 0;
 }
 
 #content-text p {
-	font-family:"Times New Roman";
+	font-family:"Trebuchet MS";
 	font-size:14px !important;
 }
 
