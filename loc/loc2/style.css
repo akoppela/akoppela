@@ -201,9 +201,14 @@ a {
 	margin:15px 0 0 28px;
 }
 
+#sec-nav {
+	overflow:hidden;
+	text-transform:uppercase;
+	font-size:10px;
+}
+
 #sec-nav a {
 	color:#000;
-	font-size:10px;
 }
 
 #sec-nav li a:hover {
@@ -213,10 +218,7 @@ a {
 #sec-nav dt {
 	display:block;
 	float:left;
-}
-
-#sec-nav dt a {
-	margin:0 18px;
+	margin-right:30px;
 }
 
 #sec-nav dd {
@@ -224,10 +226,35 @@ a {
 	float:left;
 }
 
+.nochngcol li a:hover {
+	color:#000 !important;
+}
+
 #tcol {
 	display:block;
 	float:left;
 	margin:15px 0 0 150px;
+}
+
+.info {
+	margin-left:0 !important;
+	position:relative;
+}
+
+.info h2 {
+	margin-left:245px;
+	color:#000 !important;
+}
+
+.info p {
+	margin-left:245px;
+}
+
+.info ul {
+	margin-top:10px;
+	margin-left:245px;
+	text-transform:uppercase;
+	font-size:10px;
 }
 
 #tcol h2 {
@@ -283,7 +310,6 @@ a {
 #content-text p {
 	font-family:"Times New Roman";
 	font-size:14px !important;
-	font-style:italic;
 }
 
 .fstring {
@@ -301,4 +327,10 @@ a {
 
 .fostring {
 	margin-left:290px;
+}
+
+#photo {
+	width:227px;
+	height:151px;
+	position:absolute;
 }
