@@ -1,0 +1,317 @@
+/* стандартные обнуления отступов и прочие настройки */
+
+html {
+	height:100%;
+	color: #000;
+	background:#fff;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+body {
+    font-family: Tahoma;
+    font-size:13px;
+	color:#000;
+	width:100%;
+	height:100%;
+	min-width:995px;
+	width: expression(document.documentElement.clientWidth < 995 ? "995px" : "100%");
+	max-width:1650px;
+	width: expression(document.documentElement.clientWidth > 1650 ? "1650px" : "100%");
+	margin:0 auto;
+}
+
+a {
+	text-decoration:none;
+	color: #000;
+}
+
+#hwrapper {
+	width:100%;
+	position:relative;
+	overflow:hidden;
+}
+
+#header {
+	width:995px;
+	margin:0 auto;
+	background: #fff url(img/header_bg.jpg) no-repeat 380px bottom;
+	border-bottom:2px solid #78ad1f;
+	margin-bottom:2px;
+	position:relative;
+}
+
+.logo-text {
+	position:absolute;
+	z-index:100;
+	top:40px;
+	left:130px;
+	font-family:Georgia;
+	font-size:11px;
+	color:#757272;
+	text-transform:uppercase;
+}
+
+#header h1 {
+	font-size:36px;
+	font-family:Georgia;
+	position:relative;
+	height:112px;
+	width:380px;
+	background:#fff;
+	border-bottom:4px solid #78ad1f;
+}
+
+#header h1 a {
+	margin-left:55px;
+	padding-left:72px;
+	position:relative;
+	top:50px;
+	background: url(img/logo.png) no-repeat 1px top;
+}
+
+#header h1 a span {
+	color:#43a3da;
+}
+
+.logo-color {
+	color:#ed2024 !important;
+}
+
+.home {
+	background: url(img/home.png) no-repeat;
+}
+
+.smap {
+	background: url(img/smap.png) no-repeat left 1px;
+}
+
+.mail {
+	background: url(img/mail.png) no-repeat left 2px;
+}
+
+#line {
+	position:absolute;
+	top:2px;
+	left:750px;
+	width:100%;
+	height:110px;
+	border-top:4px solid #f89a05;
+	border-bottom:2px solid #78ad1f;
+}
+
+.number {
+	position:absolute;
+	top:50px;
+	right:10px;
+	font-size:34px;
+	color:#ef893e;
+	font-family:"Times New Roman";
+	
+}
+
+#hnav {
+	position:absolute;
+	width:177px;
+	top:0;
+	border-top:6px solid #f89a05;
+	right:5px;
+	padding-left:63px;
+	z-index:100;
+}
+
+#hnav li {
+	float:left;
+}
+
+#hnav li a {
+	margin-top:7px;
+	width:13px;
+	height:10px;
+	text-indent:-9000px;
+	margin-right:40px;
+	display:block;
+}
+
+#header-nav {
+	width:915px;
+	text-align:right;
+	margin:6px auto 15px;
+	padding-right:80px;
+}
+
+#header-nav li {
+	display:inline;
+}
+
+#header-nav li a {
+	font-size:11px;
+	color:#7fa418;
+	margin:0 10px;
+	text-decoration:underline;
+}
+
+#wrapper {
+	background: url(img/sky.jpg) no-repeat center bottom;
+	overflow:hidden;
+	position:relative;
+	width:100%;
+}
+
+#main {
+	width:995px;
+	margin:0 auto;
+	padding-bottom:3px;
+	position:relative;
+}
+
+#nav {
+	padding-top:17px;
+	margin-bottom:35px;
+	width:179px;
+}
+
+.h2style {
+	height:39px;
+	line-height:25px;
+	text-indent:33px;
+	color:#f8fcff;
+	font-size:14px;
+	width:179px;
+	background: #78ad1f url(img/h2_bg.png) no-repeat;
+	text-transform:uppercase;
+}
+
+#nav ul {
+	margin-left:23px;
+	width:149px;
+}
+
+#nav li a {
+	font-size:12px;
+	color:#486a10;
+	line-height:21px;
+	width:139px;
+	display:block;
+	padding-left:10px;
+}
+
+#nav li a:hover {
