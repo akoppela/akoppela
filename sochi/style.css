@@ -626,6 +626,7 @@ a {
 	margin-right:-364px;
 	margin-left:15px;
 	overflow:hidden;
+	display:inline;
 }
 
 #catalog h2 {
@@ -633,6 +634,171 @@ a {
 	font-size:25px;
 	background: url(img/house.png) 2px 10px no-repeat;
 	line-height:48px;
+}
+
+#catalog h2 a {
+	color:#000;
+	text-decoration:underline;
+}
+
+.cat-ball {
+	width:330px;
+	height:34px;
+	display:block;
+	background: url(img/eight_ball.png) no-repeat right top;
+	margin-top:20px;
+	text-indent:11px;
+	font-family:arial;
+	font-size:18px;
+}
+
+.cat-address {
+	margin-top:-15px !important;
+	margin-left:11px !important;
+	font-weight:bold;
+	font-style:italic;
+	font-family:arial;
+	color:#8f9595;
+}
+
+.no-photo {
+	text-align:center;
+	font-size:20px !important;
+	color:#bebebe;
+	margin-top:28px !important;
+	width:309px;
+	line-height:232px !important;
+	background:#fff;
+	border:5px solid #d9d4cc;
+	margin-left:11px !important;
+}
+
+.obj-img {
+	display:block;
+	width:309px;
+	height:232px;
+	border:5px solid #d9d4cc;
+	margin-left:11px;
+	margin-top:28px;
+	display:none !important;
+}
+
+.leftcont-obj {
+	width:730px;
+	float:left;
+}
+
+#obj-news {
+	margin:0 9px 19px 15px;
+	overflow:hidden;
+}
+
+#obj-desc .vcard {
+	margin:0 0 15px 40px;
+	line-height:25px;
+}
+
+#obj-desc .vcard dl {
+	overflow:hidden;
+	height:25px;
+}
+
+.bigtexblock {
+	height:auto !important;
+}
+
+#obj-desc .vcard dt {
+	width:180px;
+	display:inline;
+	height:25px;
+	float:left;
+	color:#808080;
+}
+
+#obj-desc .vcard dd {
+	width:510px;
+	float:left;
+} 
+
+#obj-desc .vcard dd p {
+	width:500px !important;
+	line-height:14px;
+	margin:5px 0 0 !important;
+}
+
+#obj-desc .vcard a {
+	color:#000;
+}
+
+#obj-content p {
+	margin-top:25px;
+	width:600px;
+	margin-left:7px;
+	font-size:12px;
+	color:#002a40;
+}
+
+.rightcont-obj {
+	width:220px;
+	float:left;
+	text-align:center;
+}
+
+.rightcont-obj h2 {
+	font-size:20px;
+	line-height:54px;
+}
+
+.rightcont-obj li {
+	margin-bottom:10px;
+}
+
+.rightcont-obj p {
+	width:212px;
+	border:4px solid #d9d4cc;
+	background:#fff;
+	line-height:120px;
+	color:#bebebe;
+	font-size:20px;
+}
+
+.leftcont-obj .res-news {
+	margin-left:5px;
+	width:716px !important;
+}
+
+.name-usergreen {
+	color:#27cd00 !important;
+}
+
+.leftcont-obj .res-news h3 {
+	margin-bottom:0 !important;
+}
+
+.leftcont-obj .res-news h4 {
+	font-size:12px !important;
+	float:none !important;
+	line-height:40px;
+}
+
+.leftcont-obj .res-news p {
+	font-size:12px;
+	color:#414141;
+	margin-left:45px;
+	width:632px;
+} 
+
+.news-img {
+	display:inline;
+	border:5px solid #d9d4cc;
+	width:143px;
+	line-height:82px;
+	background:#fff;
+	margin:0 28px 19px 45px;
+	float:left;
+	text-align:center;
+	font-size:18px;
+	color:#BEBEBE;
 }
 
 #catalog p {
@@ -1072,6 +1238,12 @@ a {
 	float:right;
 }
 
+.res-news li {
+	clear:both;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+
 .res-news h3 {
 	margin-bottom:11px;
 	margin-left:45px;
@@ -1095,6 +1267,8 @@ a {
 	display:inline;
 	margin-right:4px;
 	font-size:11px;
+	color:#0088CC;
+	font-weight:bold;
 }
 
 .res-news h4 a {
@@ -1207,7 +1381,7 @@ a {
 
 #posl-dob ul {
 	overflow:hidden;
-	margin-bottom:25px;
+	padding-bottom:25px;
 	clear:both;
 }
 
@@ -1245,10 +1419,18 @@ a {
 	text-decoration:none !important;
 }
 
-#first-col {
+.first-col {
 	clear:both;
 	float:left;
 	width:35%;
+}
+
+.posl-page {
+	padding-top:10px;
+}
+
+.posl-page .first-col {
+	clear:left !important;
 }
 
 .obj-bar, .posl-dob-ul {
@@ -1290,17 +1472,17 @@ a {
 	margin-right:120px;
 }
 
-#second-col {
+.second-col {
 	float:left;
 	width:35%;
 }
 
-#third-col {
+.third-col {
 	float:right;
 	width:29%;
 }
 
-#third-col h5 {
+.third-col h5 {
 	font-size:11px;
 	clear:both;
 	padding-left:11px;
@@ -1309,27 +1491,27 @@ a {
 	line-height:40px;
 }
 
-#third-col h5 a {
+.third-col h5 a {
 	color:#08c;
 	text-decoration:underline;
 }
 
-#third-col h6 {
+.third-col h6 {
 	font-size:10px;
 	color:#639917;
 	margin-left:11px;
 }
 
-#third-col h6 a {
+.third-col h6 a {
 	color:#bd4f36 !important;
 }
 
-#third-col h5 span {
+.third-col h5 span {
 	color:#8f9595 !important;
 	font-size:10px !important;
 }
 
-#third-col p {
+.third-col p {
 	margin-right:15px;
 	padding-left:11px;
 	font-size:11px;
@@ -1339,6 +1521,17 @@ a {
 
 .comment li {
 	margin-bottom:10px;
+}
+
+#obj-desc {
+	margin:0 9px 19px 15px;
+	overflow:hidden;
+}
+
+.leftcont-obj h2 {
+	line-height:54px;
+	font-size:20px;
+	text-indent:15px;
 }
 
 #news {
@@ -1422,6 +1615,7 @@ a {
 }
 
 #banner {
+	clear:both;
 	text-align:center;
 	margin-bottom:23px;
 }

@@ -8,7 +8,8 @@ var SearchPar = new Class({
 		this.fx = new Fx.Slide(this.el.getElement('ul'), {duration: '250'});
 		this.el.addEvents({
 			'click': this.show.bind(this),
-			'mouseleave': this.hide.bind(this)
+			'mouseleave': this.hide.bind(this),
+			'mouseenter': this.stop.bind(this)
 		});
 		this.el.getElements('li').addEvents({
 			'mouseenter': this.enterMenu,
@@ -22,7 +23,13 @@ var SearchPar = new Class({
 	},
 	
 	hide: function(){
-		this.fx.slideOut();
+		this.timer = (function(){
+			this.fx.slideOut();
+		}).delay(700, this);
+	},
+	
+	stop: function(){
+		$clear(this.timer);
 	},
 	
 	setFilter: function(){
@@ -93,7 +100,9 @@ var mapSlide = new Class({
 					this.el.set('class', 'map-left');
 				}.bind(this));
 			}.bind(this));
-			this.cat.getElement('.vScrollbar').set('opacity', 0);
+			if(this.cat.getElement('.vScrollbar')){
+				this.cat.getElement('.vScrollbar').set('opacity', 0);
+			}
 			this.butSlide.start({
 				'margin-left': 0
 			});
@@ -300,6 +309,7 @@ var Scrollbar = new Class({
 	textWheel: function(e){
 		if(this.hsteps < 0){
 			if(e.wheel > 0) {
+				if(this.main.getStyle('top').toInt() == 100) return false;
 				this.dur('up');
 				this.main.setStyle('top', this.stepMain);
 				this.vThumb.setStyle('top', this.stepScroll);
@@ -606,9 +616,11 @@ window.addEvent('domready', function(){
 	var logVal = new FormValid('login', {rule: 'login'});
 	var mailVal = new FormValid('email', {rule: 'email'});
 	
-	$('razvcat').addEvent('click', function(){ 
-		catSlide.showAll(); 
-		catScroller.updateAllPos();
-	});
+	if($('razvcat')){
+		$('razvcat').addEvent('click', function(){ 
+			catSlide.showAll(); 
+			catScroller.updateAllPos();
+		});
+	}
 	
 });
