@@ -2,7 +2,7 @@
 
 html {
 	color: #000;
-	background:#fff;
+	background:#000;
 }
 
 body,
@@ -138,7 +138,7 @@ select {
 	margin:20px;
 	font-size:11px;
 	text-indent:6px;
-	background:#fff;
+	background:#FAFAFA;
 	position:relative;
 	z-index:10000;
 }
