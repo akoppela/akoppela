@@ -1,0 +1,203 @@
+/* стандартные обнуления отступов и прочие настройки */
+
+html {
+	color: #000;
+	background:#fff;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+
+/* Стили для списка */
+
+#languages {
+	font-family:Tahoma, Sans-Serif;
+	width:99px;
+	border:1px solid #E7E5E5;
+	padding:4px;
+	line-height:15px;
+	color:#686868;
+	margin:20px;
+	font-size:11px;
+	text-indent:6px;
+	background:#fff;
+	position:relative;
+	z-index:10000;
+}
+
+#languages ul {
+	display:none;
+}
+
+#languages li a {
+	color:#686868;
+	display:block;
+	text-decoration:none;
+	height:15px;
+}
+
+#languages li a:hover {
+	color:#2666B9;
+}
+
+.en {
+	background: url(flag_icons/en.gif) no-repeat right center;
+}
+
+.ru {
+	background: url(flag_icons/ru.gif) no-repeat right center;
+}
+
+.es {
+	background: url(flag_icons/es.gif) no-repeat right center;
+}
+
+.fr {
+	background: url(flag_icons/fr.gif) no-repeat right center;
+}
+
+.id {
+	background: url(flag_icons/id.gif) no-repeat right center;
+}
+
+.ir {
+	background: url(flag_icons/ir.gif) no-repeat right center;
+}
+
+.it {
+	background: url(flag_icons/it.gif) no-repeat right center;
+}
+
+.ja {
+	background: url(flag_icons/ja.gif) no-repeat right center;
+}
+
+.ko {
+	background: url(flag_icons/ko.gif) no-repeat right center;
+}
+
+.ma {
+	background: url(flag_icons/ma.gif) no-repeat right center;
+}
+
+.tu {
+	background: url(flag_icons/tu.gif) no-repeat right center;
+}

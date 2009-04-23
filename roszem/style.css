@@ -278,7 +278,7 @@ a {
 }
 
 #bg-wrapper {
-	background: url(img/sky.jpg) no-repeat center bottom;
+	background: url(img/sky.jpg) repeat-x center bottom;
 }
 
 #wrapper {
@@ -1223,7 +1223,7 @@ a {
 }
 
 #fwrapper {
-	background: #C8E15F url(img/footer_bg.jpg) no-repeat center bottom;
+	background: #C8E15F url(img/footer_bg.jpg) repeat-x center bottom;
 }
 
 #footer {
