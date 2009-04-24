@@ -9,6 +9,22 @@
     <script type="text/javascript" src="mootools-1.2.1-core-yc.js"></script>
     <script type="text/javascript" src="mootools-1.2-more.js"></script>
     <script type="text/JavaScript" src="script.js"></script>
+	<script type="text/javascript" src="swfobject.js"></script>
+	<script type="text/javascript">
+		if (swfobject.hasFlashPlayerVersion("10.0.0")) {<!-- указываем версию flash, на которой сделан ролик -->
+			var fn = function() {
+				var att = { data:"top_flash.swf", width:"990", height:"182" };<!-- указываем путь и имя flash-объекта, а так же его размеры -->
+				var par = {
+					menu:"true", <!-- для пользователя даем возможность управлять анимацией -->
+					quality:"high", <!-- высокое качество -->
+					wmode:"opaque" <!-- чтобы можно было перекрыть flash -->
+				};
+				var id = "topflash"; <!-- id блока, куда будет вставлен flash -->
+				var myObject = swfobject.createSWF(att, par, id);
+			};
+			swfobject.addDomLoadEvent(fn);
+		}
+	</script> 
 </head>
 <body>
 	<div id="container">
@@ -25,6 +41,8 @@
 						<li><a href="#">Раздел 5</a></li>
 						<li><a href="#">Раздел 6</a></li>
 						<li><a href="#">Раздел 7</a></li>
+						<li><a href="#">Раздел 8</a></li>
+						<li><a href="#">Раздел 9</a></li>
 					</ul>
 				</li>
 				<li>
@@ -94,9 +112,11 @@
     	</div>
     	<div id="spec-wrapper">
     		<div id="spec" class="maxwidth">
-    			<img id="flash-bg" src="img/flash_bg.png" alt="" />
-    			<h2>Специальное предложениею Готовый сайт за 18499р.</h2>
-    			<p>Готовый сайт - это наилучший способ с минималь- ными затратами организовать свой интернет-ресурс, мучительно не вынашивая идею как его лучше сделать. Просто доверьтесь нашему опыту!</p>
+    			<div id="topflash">
+    				<img id="flash-bg" src="img/flash_bg.png" alt="" />
+    				<h2>Специальное предложениею Готовый сайт за 18499р.</h2>
+    				<p>Готовый сайт - это наилучший способ с минималь- ными затратами организовать свой интернет-ресурс, мучительно не вынашивая идею как его лучше сделать. Просто доверьтесь нашему опыту!</p>
+				</div>
     		</div>
     	</div>
     	<div id="content" class="maxwidth">

@@ -1,0 +1,526 @@
+/* стандартные обнуления отступов и прочие настройки */
+
+html {
+	height:100%;
+	color: #000;
+	background:#fff;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+body {
+    font-family: Arial;
+    font-size:12px;
+	color:#464646;
+	width:100%;
+	height:100%;
+}
+
+a {
+	text-decoration:none;
+	color:#464646;
+}
+
+#header-wrapper {
+	height:106px;
+	background:#dedfdd;
+}
+
+#header {
+	width:910px;
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+}
+
+#header h1 {
+	float:left;
+}
+
+#header h1 a {
+	width:179px;
+	height:84px;
+	display:block;
+	text-indent:-9000px;
+	background: url(img/logo.png) no-repeat;
+	overflow:hidden;
+}
+
+#header ul {
+	line-height:90px;
+	font-size:20px;
+	color:#8d8d8d;
+	font-family:"Century Gothic";
+	float:left;
+	margin-left:34px;
+}
+
+#header li {
+	float:left;
+	margin-right:15px;
+	display:inline;
+}
+
+#header dt, #header dd {
+	display:inline;
+}
+
+.head-apple {
+	width:45px;
+	height:45px;
+	display:block;
+	background: #000 url(img/head_apple.png) no-repeat;
+	text-indent:-9000px;
+	overflow:hidden;
+}
+
+#header .head-apple {
+	float:right;
+	margin-top:20px;
+}
+
+#main {
+	clear:both;
+	width:910px;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+#nav {
+	width:165px;
+	text-align:right;
+	line-height:36px;
+	font-weight:bold;
+	float:left;
+}
+
+#nav li a {
+	color:#636363;
+}
+
+.current-nav-link .home, .home:hover, .last-news-home {
+	color:#f7941d !important;
+}
+
+.current-nav-link .contact-us, .contact-us:hover, .last-news-contact {
+	color:#92278f !important;
+}
+
+.current-nav-link .istore, .istore:hover, .last-news-istore {
+	color:#00aeef !important;
+}
+
+.current-nav-link .news, .news:hover, .last-news-news {
+	color:#ec008c !important;
+}
+
+.current-nav-link .macwork, .macwork:hover, .last-news-macwork {
+	color:#54ef00 !important;
+}
+
+#ipods {
+	width:180px;
+	clear:left;
+	float:left;
+	line-height:18px;
+	text-align:center;
+	color:#f7941d;
+	padding-top:125px;
+	margin-top:20px;
+	display:block;
+	overflow:hidden;
+	font-weight:bold;
+	background: url(img/ipods.jpg) no-repeat center top;
+}
+
+.content {
+	float:right;
+	width:645px;
+	height:435px;
+	margin-right:55px;
+	display:inline;
+}
+
+#web-apr {
+	width:615px !important;
+	margin-left:30px;
+	background: url(img/imac_bg.jpg) no-repeat center 20px;
+}
+
+#web-apr h2 {
+	font-size:18px;
+	margin:50px 0 20px;
+}
+
+#web-apr p {
+	margin-bottom:25px;
+}
+
+#istore-content {
+	font-weight:bold;
+	margin-right:0 !important;
+	width:700px !important;
+}
+
+#istore-img {
+	width:699px;
+	height:195px;
+	margin:45px 0 85px;
+}
+
+#istore-content p {
+	margin-bottom:25px;
+}
+
+#istore-content p a {
+	color:#00aeef;
+}
+
+#webtutorials-content {
+	margin-top:30px;
+}
+
+#webtutorials-content h2 {
+	font-size:18px;
+	margin-bottom:25px;
+	margin-left:30px;
+}
+
+#webtutorials-content p {
+	margin:0 0 50px 30px;
+	font-size:12px;
+	font-weight:bold;
+	width:585px;
+}
+
+#webtutorials-content ul {
+	margin-left:20px;
+}
+
+#webtutorials-content li {
+	display:inline;
+	margin-right:6px;
+}
+
+#webtutorials-content img {
+	border:none;
+}
+
+#webfootball-content {
+	margin:9px 0 0 !important;
+	width:700px !important;
+	font-weight:bold;
+}
+
+#webfootball-content h2 {
+	line-height:70px;
+	font-size:18px;
+}
+
+#webfootball-content li {
+	display:inline;
+	margin-right:6px;
+}
+
+#webfootball-content img {
+	vertical-align:top;
+}
+
+.wf-text {
+	line-height:105px;
+	font-size:18px;
+}
+
+#webmacusernight-content {
+	margin:18px 0 0 !important;
+	width:700px !important;
+	height:417px !important;
+}
+
+#webmacusernight-content ul {
+	margin-bottom:25px;
+}
+
+#webmacusernight-content h2 {
+	font-size:18px;
+	margin-bottom:25px;
+}
+
+#webmacusernight-content li {
+	display:inline;
+	margin-right:25px;
+}
+
+#webmacusernight-content p, #webmacusernight-content a {
+	width:675px;
+	margin-bottom:25px;
+}
+
+#webmacusernight-content a {
+	color:#ec008c;
+	font-weight:bold;
+}
+
+#webmacuserphoto-content {
+	width:728px;
+	margin:0 !important;
+}
+
+#webmacuserphoto-content h2 {
+	line-height:58px;
+	font-size:18px;
+}
+
+#webmacuserphoto-content ul {
+	overflow:hidden;
+}
+
+#webmacuserphoto-content li {
+	float:left;
+	margin-right:10px;
+}
+
+.last-photo {
+	margin-right:0 !important;
+}
+
+#webmacuserphoto-content li img {
+	vertical-align:top;
+	margin-bottom:8px;
+}
+
+.green-bor {
+	border:4px solid #54ef00;
+}
+
+.gray-bor {
+	border:4px solid #959696;
+}
+
+.purple-bor {
+	border:4px solid #92278f;
+}
+
+.orange-bor {
+	border:4px solid #f7941d;
+}
+
+.blue-bor {
+	border:4px solid #00bdec;
+}
+
+.yellow-bor {
+	border:4px solid #fef502;
+}
+
+#last-news {
+	clear:both;
+	font-weight:bold;
+	margin-bottom:15px;
+	overflow:hidden;
+}
+
+#last-news dt {
+	width:165px;
+	text-align:right;
+	float:left;
+}
+
+#last-news dd {
+	float:right;
+	width:700px;
+}
+
+#map {
+	float:right;
+	width:353px;
+	height:245px;
+	margin:25px 5px 45px 40px;
+	display:inline;
+}
+
+.content .vcard {
+	width:235px;
+	text-align:right;
+	margin-top:20px;
+	line-height:18px;
+	color:#707070;
+	font-weight:bold;
+}
+
+.content .vcard dl {
+	height:18px;
+}
+
+.content .vcard dt {
+	display:inline;
+	color:#92278f;
+}
+
+.content .vcard dd {
+	display:inline;
+}
+
+.friend {
+	clear:both;
+	text-indent:30px;
+	font-size:14px;
+	color:#707070;
+	font-weight:bold;
+	display:block;
+	float:left;
+}
+
+#fbms {
+	float:left;
+	margin-left:45px;
+	font-weight:bold;
+	font-size:14px;
+}
+
+#fbms a {
+	color:#92278f;
+}
+
+.content-text {
+	color:#555555;
+	margin:9px 0 25px;
+	font-weight:bold;
+}
+
+.moreapr {
+	color:#555555;
+	font-weight:bold;
+}
+
+.moreapr a {
+	color:#f7941d;
+}
+
+#imac {
+	width:333px;
+	height:334px;
+	display:block;
+	overflow:hidden;
+	margin:10px auto 0;
+	background: url(img/imac.jpg) no-repeat;
+	text-indent:-9000px;
+}

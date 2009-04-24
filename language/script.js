@@ -5,9 +5,9 @@ var slideMenu = new Class({
 		if(!this.main) return false;
 		
 		this.list = this.main.getElement('ul');
-		this.fx = new Fx.Slide(this.list, {duration: 200, transition: Fx.Transitions.Sine.easeInOut})
-		this.fx.hide();
+		this.fx = new Fx.Slide(this.list, {duration: 500, transition: Fx.Transitions.Sine.easeInOut});
 		this.list.setStyle('display', 'block');
+		this.fx.hide();
 		
 		this.main.addEvents({
 			'mouseenter': this.open.bind(this),
