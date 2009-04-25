@@ -2,7 +2,7 @@ var newsSlider = new Class({
 	
 	curPosition: 0,
 	step: 50,
-	dur: 700,
+	dur: 600,
 	
 	initialize: function(main){
 		this.main = $(main);

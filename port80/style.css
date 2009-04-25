@@ -659,7 +659,7 @@ a {
 #works-preview-wrapper {
 	margin-left:28px;
 	width:604px;
-	overflow:hidden;
+	overflow:auto;
 	position:relative;
 }
 
