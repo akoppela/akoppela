@@ -216,23 +216,23 @@ a {
 	color:#636363;
 }
 
-.current-nav-link .home, .home:hover, .last-news-home {
+.current-nav-link .home, .home:hover, .last-news-home dt, .last-news-home a {
 	color:#f7941d !important;
 }
 
-.current-nav-link .contact-us, .contact-us:hover, .last-news-contact {
+.current-nav-link .contact-us, .contact-us:hover, .last-news-contact dt, .last-news-contact a {
 	color:#92278f !important;
 }
 
-.current-nav-link .istore, .istore:hover, .last-news-istore {
+.current-nav-link .istore, .istore:hover, .last-news-istore dt, .last-news-istore a {
 	color:#00aeef !important;
 }
 
-.current-nav-link .news, .news:hover, .last-news-news {
+.current-nav-link .news, .news:hover, .last-news-news dt, .last-news-news a {
 	color:#ec008c !important;
 }
 
-.current-nav-link .macwork, .macwork:hover, .last-news-macwork {
+.current-nav-link .macwork, .macwork:hover, .last-news-macwork dt, .last-news-macwork a {
 	color:#54ef00 !important;
 }
 
@@ -296,6 +296,7 @@ a {
 
 #webtutorials-content {
 	margin-top:30px;
+	height:405px !important;
 }
 
 #webtutorials-content h2 {
@@ -328,6 +329,7 @@ a {
 	margin:9px 0 0 !important;
 	width:700px !important;
 	font-weight:bold;
+	height:426px;
 }
 
 #webfootball-content h2 {
@@ -436,6 +438,8 @@ a {
 	font-weight:bold;
 	margin-bottom:15px;
 	overflow:hidden;
+	position:relative;
+	line-height:16px;
 }
 
 #last-news dt {
@@ -446,7 +450,38 @@ a {
 
 #last-news dd {
 	float:right;
-	width:700px;
+	width:680px;
+	overflow:hidden;
+	position:relative;
+	margin-right:20px;
+	display:inline;
+}
+
+#last-news dd p {
+	width:9000px;
+	position:relative;
+	left:0;
+}
+
+.arrows {
+	position:absolute;
+	width:11px;
+	height:11px;
+	display:block;
+	cursor:pointer;
+	text-indent:-9000px;
+	top:3px;
+	display:none;
+}
+
+.prev {
+	background: url(img/prev.png) no-repeat;
+	left:190px;
+}
+
+.forw {
+	background: url(img/forw.png) no-repeat;
+	right:0;
 }
 
 #map {

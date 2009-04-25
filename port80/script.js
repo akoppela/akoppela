@@ -5,7 +5,8 @@ var menuSlide = new Class({
 		if(!this.menu) return false;
 		
 		this.secMenuTitle = this.menu.getElements('.doublelist');
-		this.menu.getElements('.secnav').fade('hide');
+    	this.menu.getElements('.secnav').set('tween', {duration: 500, transition: 'sine:out'});
+		this.menu.getElements('.secnav').set('opacity', 0);
 		
 		this.bound = {
 			close: this.close.bind(this),
@@ -37,20 +38,18 @@ var menuSlide = new Class({
     },
     
     show: function(){
-        this.curSecMenu.set('tween', {duration: 500, transition: 'sine:out'});
+    	this.curSecMenu.setStyle('display', 'block');
         this.curSecMenu.tween('opacity', 1);
     },
     
     hide: function(){
     	this.curTitle.set('class', this.curTitleClass);
-        this.curSecMenu.set('tween', {duration: 500, transition: 'sine:out'});
         this.curSecMenu.tween('opacity', 0);
     	this.curTitle.set('class', this.curTitleClass);
     	this.menuRemoveEvents();
     },
     
     hideAll: function(){
-    	this.menu.getElements('.secnav').set('tween', {duration: 500, transition: 'sine:out'});
     	this.menu.getElements('.secnav').tween('opacity', 0);
     	this.secMenuTitle.set('class', this.curTitleClass);
     	this.menuRemoveEvents();
