@@ -216,23 +216,23 @@ a {
 	color:#636363;
 }
 
-.current-nav-link .home, .home:hover, .last-news-home dt, .last-news-home a {
+.current-nav-link .home, .home:hover, .last-news-home {
 	color:#f7941d !important;
 }
 
-.current-nav-link .contact-us, .contact-us:hover, .last-news-contact dt, .last-news-contact a {
+.current-nav-link .contact-us, .contact-us:hover, .last-news-contact {
 	color:#92278f !important;
 }
 
-.current-nav-link .istore, .istore:hover, .last-news-istore dt, .last-news-istore a {
+.current-nav-link .istore, .istore:hover, .last-news-istore {
 	color:#00aeef !important;
 }
 
-.current-nav-link .news, .news:hover, .last-news-news dt, .last-news-news a {
+.current-nav-link .news, .news:hover, .last-news-news {
 	color:#ec008c !important;
 }
 
-.current-nav-link .macwork, .macwork:hover, .last-news-macwork dt, .last-news-macwork a {
+.current-nav-link .macwork, .macwork:hover, .last-news-macwork {
 	color:#54ef00 !important;
 }
 
@@ -329,7 +329,6 @@ a {
 	margin:9px 0 0 !important;
 	width:700px !important;
 	font-weight:bold;
-	height:426px;
 }
 
 #webfootball-content h2 {
@@ -440,6 +439,7 @@ a {
 	overflow:hidden;
 	position:relative;
 	line-height:16px;
+	height:16px;
 }
 
 #last-news dt {
@@ -458,7 +458,7 @@ a {
 }
 
 #last-news dd p {
-	width:50000px;
+	width:9000px;
 	position:relative;
 	left:0;
 }
@@ -471,7 +471,6 @@ a {
 	cursor:pointer;
 	text-indent:-9000px;
 	top:3px;
-	display:none;
 }
 
 .prev {

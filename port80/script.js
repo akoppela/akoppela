@@ -5,7 +5,7 @@ var menuSlide = new Class({
 		if(!this.menu) return false;
 		
 		this.secMenuTitle = this.menu.getElements('.doublelist');
-    	this.menu.getElements('.secnav').set('tween', {duration: 500, transition: 'sine:out'});
+    	this.menu.getElements('.secnav').set('tween', {transition: 'sine:out'});
 		this.menu.getElements('.secnav').set('opacity', 0);
 		
 		this.bound = {
@@ -157,20 +157,21 @@ var slidePreview = new Class({
 		this.main = $(main);
 		if(!this.main) return false;
 		
-		this.titleMenu = this.main.getElement('ul');
+		this.titleMenu = this.main.getElement('#works-title ul');
 		this.firstTitleMenu = this.titleMenu.getFirst(); 
 		this.lastTitleMenu = this.titleMenu.getLast();
 		this.cur = this.lastTitleMenu;
 		this.arrows = this.main.getElements('.works-arrows');
 		this.leftArrow = this.main.getElement('.prev-wtitle');
-		this.arrowWidth = 25;
 		this.rightArrow = this.main.getElement('.forw-wtitle');
+		this.arrowWidth = 25;
 		this.curPosition = this.arrowWidth;
 		this.wrapWidth = this.main.getFirst('div').getWidth();
 		this.fxTitleMenu = new Fx.Tween(this.titleMenu, {duration: 500, transition: Fx.Transitions.Sine.easeInOut});
 		
 		this.setTitleMenuWidth();
-		if(this.titleMenuWidth < this.titleMenu.getParent().getWidth()) return false;
+		if(this.titleMenuWidth < this.titleMenu.getParent().getWidth()) return false
+		else this.main.getElement('#works-title').setStyle('overflow', 'hidden');
 		
 		[this.leftArrow, this.rightArrow].each(function(arrow){
 			arrow.addEvents({
@@ -180,6 +181,7 @@ var slidePreview = new Class({
 		}.bind(this));
 		this.titleMenu.addEvent('mousewheel', this.start.bind(this));
 		this.setStartPosition();
+		console.log(this.titleMenu);
 	},
 	
 	startTimer: function(){
