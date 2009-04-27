@@ -257,7 +257,7 @@ a {
 }
 
 .secnav .full-list {
-	background: url(img/full_list_arrow.png) no-repeat 9px center !important;
+	background: url(img/arrows.png) no-repeat 5px -150px !important;
 	text-indent:19px !important;
 }
 
@@ -312,20 +312,20 @@ a {
 	font-size:10px;
 	font-family:verdana;
 	height:53px;
-	background: url(img/basket_bg.png) no-repeat;
 }
 
-#head-basket h2 a {
+#head-basket a {
 	color:#1e2172;
+	overflow:hidden;
 }
 
 .basket-img {
-	display:block;
 	width:36px;
 	height:30px;
 	text-indent:-9000px;
-	background: #f07c23 url(img/basket.png) no-repeat;
 	overflow:hidden;
+	background: #f07c23 url(img/basket.png) no-repeat;
+	padding-bottom:15px;
 	float:left;
 	margin-right:20px;
 }
@@ -405,7 +405,7 @@ a {
 	width:604px;
 	height:28px;
 	text-indent:-9000px;
-	background: url(img/solution.png) no-repeat 2px top;
+	background: url(img/headers.png) no-repeat left top;
 	border-bottom:1px solid #c9cacf;
 	position:relative;
 	z-index:-1;
@@ -431,7 +431,7 @@ a {
 
 #solution li a {
 	padding-left:22px;
-	background: url(img/solution_arrow_blue.png) no-repeat left 3px;
+	background: url(img/arrows.png) no-repeat left -5px;
 	cursor:pointer;
 	height:24px;
 }
@@ -445,7 +445,7 @@ a {
 }
 
 #solution .full-list {
-	background: url(img/solution_arrow_red.png) no-repeat left 3px !important;
+	background: url(img/arrows.png) no-repeat left -30px !important;
 }
 
 .solution-content {
@@ -500,7 +500,7 @@ a {
 }
 
 #support h2 {
-	background: url(img/support.png) no-repeat 2px top;
+	background: url(img/headers.png) no-repeat left -28px;
 	border-bottom:1px solid #C9CACF;
 	height:28px;
 	margin:25px 0 8px 11px;
@@ -531,7 +531,7 @@ a {
 }
 
 .graph {
-	background: url(img/graph.png) no-repeat;
+	background: url(img/headers.png) no-repeat left -125px;
 }
 
 #diagram {
@@ -544,7 +544,57 @@ a {
 }
 
 .money {
-	background: url(img/money.png) no-repeat;
+	height:12px !important;
+	margin-bottom:3px;
+	background: url(img/headers.png) no-repeat left -112px;
+}
+
+#receive {
+	width:282px !important;
+	overflow:hidden;
+	margin:0 !important;
+}
+
+#receive li {
+	float:left;
+	padding:0 !important;
+	margin-right:12px;
+	margin-bottom:0 !important;
+}
+
+#receive li a {
+	display:block;
+	height:66px;
+	text-indent:-9000px;
+}
+
+.last-method {
+	margin-right:0 !important;
+}
+
+#sberbank {
+	width:58px;
+	background: url(img/receive.png) no-repeat;
+}
+
+#wm {
+	width:55px;
+	background: url(img/receive.png) no-repeat -71px top;
+}
+
+#yad {
+	width:38px;
+	background: url(img/receive.png) no-repeat -140px top;
+}
+
+#mcash {
+	width:23px;
+	background: url(img/receive.png) no-repeat -193px top;
+}
+
+#cash {
+	width:59px;
+	background: url(img/receive.png) no-repeat -228px top;
 }
 
 #support li h4 {
@@ -570,7 +620,7 @@ a {
 }
 
 #works h2 {
-	background:transparent url(img/works.png) no-repeat 2px top;
+	background:transparent url(img/headers.png) no-repeat left -84px;
 	border-bottom:1px solid #C9CACF;
 	height:28px;
 	margin:10px 0 0 28px;
@@ -640,13 +690,13 @@ a {
 }
 
 .forw-wtitle {
-	background: #F8F8F8 url(img/forw_wtitle.png) no-repeat center !important;
+	background: #F8F8F8 url(img/arrows.png) no-repeat center -76px !important;
 	margin-left:100%;
 	left:-25px;
 }
 
 .prev-wtitle {
-	background: #F8F8F8 url(img/prev_wtitle.png) no-repeat center !important;
+	background: #F8F8F8 url(img/arrows.png) no-repeat center -51px !important;
 	left:0;
 }
 
@@ -702,6 +752,7 @@ a {
 	height:87px;
 	border:1px solid #c1c2c6;
 	margin:0 auto;
+
 }
 
 #works-preview li p {
@@ -711,7 +762,6 @@ a {
 #works-preview li h3 a {
 	color:#1e2172;
 	line-height:20px;
-	font-weight:bold;
 }
 
 #works-preview li p a {
@@ -720,7 +770,6 @@ a {
 
 .work-arrows {
 	position:absolute;
-	display:none;
 	cursor:pointer;
 	width:15px;
 	height:15px;
@@ -731,12 +780,12 @@ a {
 
 .prevwork {
 	left:10px;
-	background:#fff url(img/works_arrow_lblue.png) no-repeat center;
+	background:#fff url(img/arrows.png) no-repeat center -105px;
 }
 
 .forwork {
 	right:10px;
-	background:#fff url(img/works_arrow_rblue.png) no-repeat center;
+	background:#fff url(img/arrows.png) no-repeat center -130px;
 }
 
 #seo {
@@ -748,7 +797,7 @@ a {
 }
 
 #seo h2 {
-	background: url(img/seo.png) no-repeat 2px top;
+	background: url(img/headers.png) no-repeat left -56px;
 	border-bottom:1px solid #C9CACF;
 	height:28px;
 	margin:10px 0 12px 28px;

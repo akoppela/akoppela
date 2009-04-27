@@ -43,7 +43,6 @@ var newsSlider = new Class({
 	},
 	
 	start: function(e){
-		console.log(e);
 		if(!e) return false;
 		if(e.wheel){
 			this.fx.options.duration = 500;

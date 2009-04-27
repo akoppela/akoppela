@@ -6,17 +6,11 @@
     <meta name="keywords" content="port80" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Port://80 | Main</title> 
-	<script type="text/javascript" src="firebug-lite-compressed.js"></script>
-    <script type="text/javascript" src="mootools-1.2.1-core-yc.js"></script>
-    <script type="text/javascript" src="mootools-1.2-more.js"></script>
-    <script type="text/JavaScript" src="script.js"></script>
-	<script type="text/javascript" src="swfobject.js"></script>
-	<script type="text/javascript" src="head_flash.js"></script> 
 </head>
 <body>
 	<div id="container">
     	<div id="header" class="maxwidth">
-			<h1><a href="#">port://80</a></h1>
+			<h1><a href="#" title="port://80, вернутсья на главную страницу">port://80</a></h1>
 			<ul id="nav">
 				<li>
 					<a class="doublelist">О компании</a>
@@ -77,7 +71,7 @@
     	    	</li>
     	    </ul>
     	    <div id="head-basket">
-    	        <a class="basket-img" href="#">basket</a>
+    	        <a class="basket-img" href="#" title="Моя корзина">basket</a>
     	        <h2><a href="#">Ваша корзина:</a></h2>
     	        <dl>
     	            <dt>Позиций:</dt>
@@ -100,7 +94,7 @@
     	<div id="spec-wrapper">
     		<div id="spec" class="maxwidth">
     			<div id="topflash">
-    				<img id="flash-bg" src="img/flash_bg.png" alt="" />
+    				<img id="flash-bg" src="img/flash_bg.jpg" alt="" />
     				<h2>Специальное предложениею Готовый сайт за 18499р.</h2>
     				<p>Готовый сайт - это наилучший способ с минималь- ными затратами организовать свой интернет-ресурс, мучительно не вынашивая идею как его лучше сделать. Просто доверьтесь нашему опыту!</p>
 				</div>
@@ -175,7 +169,7 @@
     			<ul>
     				<li class="bordered-block">
     					<h3 class="graph">Граффик поступления и отработки задач</h3>
-    					<a href="#"><img id="diagram" src="img/diagram.png" alt="" /></a>
+    					<a href="#"><img id="diagram" src="img/diagram.png" alt="" title="Граффик поступления и отработки задач"/></a>
     					<h4>Продолжительность выполнения</h4>
     					<p>заявки: <span>4 часа</span></p>
     					<h4>Точность соответствия прогноза</h4>
@@ -183,6 +177,17 @@
     				</li>
     				<li class="bordered-block">
     					<h3 class="money">Мы принимаем к оплате</h3>
+    					<ul id="receive">
+    						<li><a id="sberbank" href="#">Сбербанк Росси</a></li>
+    						<li><a id="wm" href="#">WebMoney</a></li>
+    						<li><a id="yad" href="#">Яндекс Деньги</a></li>
+    						<li><a id="mcash" href="#">Мультикасса</a></li>
+    						<li class="last-method"><a id="cash" href="#">Наличные</a></li>
+    					</ul>
+    				</li>
+    				<li>
+    					<h3 class="consultation">On-line Консультация</h3>
+    					<p>RSS</p>
     				</li>
     			</ul>
     		</div>
@@ -333,5 +338,8 @@
     		</div>
     	</div>
     </div>
+    <script type="text/javascript" src="mootools-1.2.1-core-yc.js"></script>
+	<script type="text/javascript" src="swfobject.js"></script>
+    <script type="text/JavaScript" src="script.js"></script>
 </body>
 </html>
