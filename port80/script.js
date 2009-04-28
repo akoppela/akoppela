@@ -38,7 +38,6 @@ var menuSlide = new Class({
     },
     
     show: function(){
-    	this.curSecMenu.setStyle('display', 'block');
         this.curSecMenu.tween('opacity', 1);
     },
     

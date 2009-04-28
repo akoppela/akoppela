@@ -186,7 +186,7 @@ a {
 }
 
 #nav li:hover .secnav {
-	display:block;
+	visibility:visible;
 }
 
 #nav li a {
@@ -213,7 +213,7 @@ a {
 }
 
 .secnav {
-	display:none;
+	visibility:hidden;
 	position:absolute;
 	width:160px;
 	background:#fff;
@@ -524,6 +524,7 @@ a {
 #support li h3 {
 	height:15px;
 	text-indent:-9000px;
+	overflow:hidden;
 }
 
 .bordered-block {
@@ -595,6 +596,32 @@ a {
 #cash {
 	width:59px;
 	background: url(img/receive.png) no-repeat -228px top;
+}
+
+.consultation {
+	margin:-10px 20px 0 -10px;
+	width:114px;
+	height:97px !important;
+	background: url(img/consultation.png) no-repeat;
+	float:left;
+	display:inline;
+}
+
+.rss {
+	margin-top:40px;
+	padding:0 0 14px 35px;
+	width:120px;
+	float:right;
+	line-height:13px;
+	color:#1e2172;
+	font-size:10px;
+	background: url(img/rss.png) no-repeat left 4px;
+	font-family:verdana;
+}
+
+.rss span {
+	color:#8e8e8e;
+	display:block;
 }
 
 #support li h4 {
@@ -770,6 +797,7 @@ a {
 
 .work-arrows {
 	position:absolute;
+	display:none;
 	cursor:pointer;
 	width:15px;
 	height:15px;
@@ -830,4 +858,129 @@ a {
 	margin-top:58px;
 	height:112px;
 	background: #1e2172 url(img/footer_bg.png) repeat-x bottom;
+}
+
+#footer {
+	position:relative;
+	padding-top:58px;
+	color:#fff;
+}
+
+#footer h2 {
+	font-size:10px;
+	color:#737373;
+	font-family:verdana;
+	position:absolute;
+	top:-57px;
+	left:20px;
+	display:block;
+}
+
+#partners {
+	width:962px;
+	position:absolute;
+	top:-42px;
+	left:17px;
+	background:#fff;
+	border:3px solid #f1f1f1;
+	overflow:hidden;
+}
+
+#partners li {
+	float:left;
+}
+
+#partners a {
+	height:78px;
+	width:160px;
+	text-indent:-9000px;
+	display:block;
+}
+
+#openforum {
+	background: url(img/partners.png) no-repeat;
+}
+
+#openforum:hover {
+	background-position:left -78px;
+}
+
+#ural {
+	background: url(img/partners.png) no-repeat -160px top;
+}
+
+#ural:hover {
+	background-position:-160px -78px;
+}
+
+#mga {
+	background: url(img/partners.png) no-repeat -320px top;
+}
+
+#mga:hover {
+	background-position:-320px -78px;
+}
+
+#uniwell {
+	background: url(img/partners.png) no-repeat -480px top;
+}
+
+#uniwell:hover {
+	background-position:-480px -78px;
+}
+
+#reallogic {
+	background: url(img/partners.png) no-repeat -640px top;
+}
+
+#reallogic:hover {
+	background-position:-640px -78px;
+}
+
+#md {
+	background: url(img/partners.png) no-repeat -800px top;
+}
+
+#md:hover {
+	background-position:-800px -78px;
+}
+
+#footer p {
+	line-height:15px;
+	margin-left:33px;
+}
+
+.fn {
+	color:#fff17a;
+	margin-right:26px;
+}
+
+.locality {
+	margin-right:15px;
+}
+
+.number {
+	color:#fff17a;
+	font-weight:bold;
+}
+
+#footer-nav {
+	position:absolute;
+	right:45px;
+	top:33px;
+	line-height:78px;
+}
+
+#footer-nav li {
+	display:inline;
+	border-right:1px solid #fff;
+}
+
+#footer-nav li a {
+	margin:0 10px;
+	color:#fff;
+}
+
+.lastlink-footnav {
+	border:none !important;
 }
