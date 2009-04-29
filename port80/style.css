@@ -755,7 +755,8 @@ a {
 	width:604px;
 	height:170px;
 	position:absolute;
-	overflow:auto;
+	overflow-x:auto;
+	overflow-y:hidden;
 	padding-bottom:15px;
 }
 
@@ -950,12 +951,12 @@ a {
 	margin-left:33px;
 }
 
-.fn {
+.org {
 	color:#fff17a;
 	margin-right:26px;
 }
 
-.locality {
+.street-address {
 	margin-right:15px;
 }
 
