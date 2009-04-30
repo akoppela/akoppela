@@ -22,8 +22,7 @@ var menuSlide = new Class({
             this.stop();
             this.hideAll();
         }
-        this.curTitleClass = this.curTitle.get('class');
-        this.curTitle.set('class', this.curTitleClass+' nav-active');
+        this.curTitle.addClass('nav-active');
         this.curTitle.addEvent('mouseleave', this.bound.close);
         this.show();
         this.menuAddEvents();
@@ -42,15 +41,14 @@ var menuSlide = new Class({
     },
     
     hide: function(){
-        this.curTitle.set('class', this.curTitleClass);
+        this.curTitle.removeClass('nav-active');
         this.curSecMenu.tween('opacity', 0);
-        this.curTitle.set('class', this.curTitleClass);
         this.menuRemoveEvents();
     },
     
     hideAll: function(){
         this.menu.getElements('.secnav').tween('opacity', 0);
-        this.secMenuTitle.set('class', this.curTitleClass);
+        this.secMenuTitle.removeClass('nav-active');
         this.menuRemoveEvents();
     },
     
@@ -141,46 +139,47 @@ var changeSolution = new Class({
     changeSolution: function(){
         this.Content.fade('out');
         this.activeLink.getNext().fade('in');
-        this.main.getElements('li').set('class', '');
-        this.activeLink.getParent('li').set('class', 'active-solution');
+        this.main.getElements('li').removeClass('active-solution');
+        this.activeLink.getParent('li').addClass('active-solution');
         return false;
     }
     
 });
 
-var slidePreview = new Class({
-    
-    titleMenuWidth: 0,
-    
-    initialize: function(main){
+var Carousel = new Class({
+
+	menuWidth: 0,
+	
+	initialize: function(main){
         this.main = $(main);
         if(!this.main) return false;
         
-        this.titleMenu = this.main.getElement('#works-title ul');
-        this.firstTitleMenu = this.titleMenu.getFirst(); 
-        this.lastTitleMenu = this.titleMenu.getLast();
-        this.cur = this.lastTitleMenu;
-        this.arrows = this.main.getElements('.works-arrows');
-        this.leftArrow = this.main.getElement('.prev-wtitle');
-        this.rightArrow = this.main.getElement('.forw-wtitle');
-        this.arrowWidth = 25;
+        this.menu = this.main.getElement('.carousel');
+        this.firstSlide = this.menu.getFirst(); 
+        this.lastSlide = this.menu.getLast();
+        this.cur = this.lastSlide;
+        this.arrows = this.main.getElements('.arrows');
+        this.leftArrow = this.main.getElement('.prev-arrow');
+        this.rightArrow = this.main.getElement('.forw-arrow');
+        this.arrowWidth = this.leftArrow.getWidth();
+        if(this.leftArrow.get('class').test('nowidth')) this.arrowWidth = 0;
         this.curPosition = this.arrowWidth;
-        this.wrapWidth = this.main.getFirst('div').getWidth();
-        this.fxTitleMenu = new Fx.Tween(this.titleMenu, {duration: 500, transition: Fx.Transitions.Sine.easeInOut});
+        this.wrapWidth = this.main.getWidth();
+        this.fx = new Fx.Tween(this.menu, {duration: 500, transition: Fx.Transitions.Sine.easeInOut});
         
-        this.setTitleMenuWidth();
-        if(this.titleMenuWidth < this.titleMenu.getParent().getWidth()) return false
-        else this.main.getElement('#works-title').setStyle('overflow', 'hidden');
+        this.setMenuWidth();
+        if(this.menuWidth < this.main.getWidth()) return false
+        else this.setStartPosition();
         
         [this.leftArrow, this.rightArrow].each(function(arrow){
             arrow.addEvents({
                 'mousedown': this.start.bind(this),
-                'mouseup': this.pause.bind(this)
+                'mouseup': this.pause.bind(this),
+        		'mouseleave': this.pause.bind(this)
             });
         }.bind(this));
-        this.titleMenu.addEvent('mousewheel', this.start.bind(this));
-        this.setStartPosition();
-    },
+        this.main.addEvent('mousewheel', this.start.bind(this));
+	},
     
     startTimer: function(){
         if(this.interval) return false;
@@ -198,14 +197,14 @@ var slidePreview = new Class({
     start: function(e){
         if(e.wheel){
             if(e.wheel < 0){
-                if(this.curPosition != this.wrapWidth - this.titleMenuWidth - this.arrowWidth) this.slideMenu('forw');
+                if(this.curPosition != this.wrapWidth - this.menuWidth - this.arrowWidth) this.slideMenu('forw');
             } else if(e.wheel > 0){
                 if(this.curPosition != this.arrowWidth) this.slideMenu('prev');
             }
             return false; 
         }
         this.curArrow = $(e.target);
-        if(((this.curPosition == this.arrowWidth) && (this.curArrow.get('text') == '<')) || ((this.curPosition == this.wrapWidth - this.titleMenuWidth - this.arrowWidth) && (this.curArrow.get('text') == '>'))) return false;
+        if(((this.curPosition == this.arrowWidth) && (this.curArrow.get('text') == '<')) || ((this.curPosition == this.wrapWidth - this.menuWidth - this.arrowWidth) && (this.curArrow.get('text') == '>'))) return false;
         
         this.startTimer();
         return this;
@@ -221,52 +220,94 @@ var slidePreview = new Class({
         else if(this.curArrow.get('text') == '<') this.slideMenu('prev');
     },
     
-    setTitleMenuWidth: function(){
-        this.titleMenu.getElements('li').each(function(element){
-            this.titleMenuWidth = this.titleMenuWidth + element.getWidth();
+    setMenuWidth: function(){
+        this.menu.getElements('li').each(function(element){
+            this.menuWidth = this.menuWidth + element.getWidth();
         }.bind(this));
-        this.titleMenu.setStyle('width', this.titleMenuWidth);
+        this.menu.setStyle('width', this.menuWidth);
     },
     
     setStartPosition: function(){
         this.arrows.setStyle('visibility', 'visible');
-        this.fxTitleMenu.set('left', this.arrowWidth);
+        this.fx.set('left', this.arrowWidth);
     },
     
     slideMenu: function(how){
-        this.fxTitleMenu.pause();
+        this.fx.pause();
         if(how == 'prev'){
-            if(!this.cur.getNext()){
+            if(!this.cur.getNext() && this.curPosition == this.arrowWidth){
                 this.stopTimer();
                 return false;
             } else this.curWidth = this.cur.getWidth();
             this.curPosition += this.curWidth;
             if(this.curPosition >= this.arrowWidth){
                 this.curPosition = this.arrowWidth;
-                this.cur = this.lastTitleMenu;
+                this.cur = this.lastSlide;
             } else this.cur = this.cur.getNext();
         }
         else if(how == 'forw'){
-            if(!this.cur.getPrevious()){
+            if(!this.cur.getPrevious() && this.curPosition == this.wrapWidth - this.menuWidth - this.arrowWidth){
                 this.stopTimer();
                 return false;
             } else this.curWidth = this.cur.getWidth();
             this.curPosition -= this.curWidth;
-            if(this.curPosition <= this.wrapWidth - this.titleMenuWidth - this.arrowWidth){
-                this.curPosition = this.wrapWidth - this.titleMenuWidth - this.arrowWidth;
-                this.cur = this.firstTitleMenu;
+            if(this.curPosition <= this.wrapWidth - this.menuWidth - this.arrowWidth){
+                this.curPosition = this.wrapWidth - this.menuWidth - this.arrowWidth;
+                this.cur = this.firstSlide;
             } else this.cur = this.cur.getPrevious();
         }
-        this.fxTitleMenu.start('left', this.curPosition);
+        this.fx.start('left', this.curPosition);
     }
-    
+	
+});
+
+var changeWork = new Class({
+
+	initialize: function(title, main){
+		this.title = $(title);
+		this.main = $(main).getElement('ul');
+		if(!this.title || !this.main) return false;
+		
+		this.titles = this.title.getElements('li');
+		this.previews = this.main.getElements('li');
+		this.mainWidth = this.main.getWidth();
+		this.curPosition = 0;
+		this.fx = new Fx.Scroll(this.main);
+
+		this.titles.addEvent('click', this.start.bind(this));
+	},
+	
+	start: function(e){
+		this.curTitle = $(e.target).getParent('li') || $(e.target);
+		this.curWork = this.curTitle.get('class');
+		this.changeTitle();
+	},
+	
+	changeTitle: function(){
+		this.titles.removeClass('active-wlink');
+		this.curTitle.addClass('active-wlink');
+	},
+	
+	getWorkWidth: function(){
+		this.workWidth = 0;
+		this.previews.each(function(element){
+			if(element.get('class') == this.curWork) this.changeTitle();
+			this.workWidth -= element.getWidth();
+		}.bind(this));
+	}
+	
 });
 
 window.addEvent('domready', function(){
     
     var secnav = new menuSlide('nav');
     var solut = new changeSolution('solution');
-    var works = new slidePreview('works');
+    var worksTitle = new Carousel('works-title-wrapper');
+    var worksPreview = new Carousel('works-preview-wrapper');
+    var works = new changeWork('works-title', 'works-preview');
+
+	$('works-title-wrapper').setStyle('visibility', 'visible');
+	$('works-preview-wrapper').setStyle('overflow', 'hidden');
 
     /* Флешка */
     
