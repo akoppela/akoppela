@@ -50,11 +50,12 @@ a {
 
 .round-input, .round-input span, .round-input input {
 	background: url(img/input.png) no-repeat;
-	display:-moz-inline-stack;
 	display:inline-block;
 	font-size:10px;
 }
-	.round-input { margin-right:10px; }
+	.round-input { 
+		margin-right:10px;
+	 }
 
 	.round-input span {
 		position:relative;
@@ -67,10 +68,13 @@ a {
 	    padding:4px 0;
 	    margin-right:10px;
 	    height:13px;
+	    overflow:hidden;
 	    white-space:nowrap;
 	    background-position:-10px top;
 	    outline:0;
-	    background-color:#F2F2F2;
+	    background-color:#D6D6D6;
+		-moz-border-radius:9px;
+		-webkit-border-raduius:9px;
 	}
 	
 		#login .round-input span, #login .round-input {	height:21px; }
@@ -93,12 +97,19 @@ a {
 		#header h1 a {
 			width:11.25em;
 			height:3em;
+			line-height:3em;
+			color:#95BA01;
+			font-weight:bold;
+			font-family:"Tahoma";
+			font-style:italic;
 			display:block;
 			overflow:hidden;
+			background:#f3f4e3;
 		}
 		
-		#header h1 a i img {
-			margin-left:-100%;
+		#header h1 a img {
+			width:11.25em;
+			height:3em;
 		}
 		
 	#header form {
@@ -107,32 +118,51 @@ a {
 	}
 		
 		#header form label {
+			vertical-align:middle;
 			line-height:1.375em;
 			width:6.75em;
-			float:left;
 			text-align:right;
-			overflow:hidden;
-    		clear:both;
-    		display:block;
+    		display:inline-block;
 			margin:0 1.75em 0.25em 0;
 		}
 		
 			#header form label span { font-size:75%; }
-			
-		#header form .round-input, #header form input { float:left; }
+		
+		#header form .round-input {	
+			vertical-align:middle;
+			height:2.1em; 
+		 }
+				
+			#header form span input { 
+				line-height:1.375em; 
+				float:left; 
+			}
 		
 			#login { width:13.2em; }
 			 
 			#pass { width:8.8em; }
 			
 		#auth-sub {
-			background: url(img/auth_sub.png) no-repeat;
+			background: #AED92A url(img/auth_sub.png) no-repeat;
 			border:0;
 			color:#fff;
 			font-size:11px;
 			margin-left:6px;
-			width:3.3em;
-			height:21px;
+			width:3.27em;
+			-moz-border-radius:9px;
+			-webkit-border-radius:9px;
+			height:19px;
+			display:inline-block;
+			vertical-align:middle;
+		}
+		
+		#header form a {
+			font-size:68.75%;
+			line-height:2em;
+			display:inline;
+			margin-left:2em;
+			text-decoration:underline;
+			vertical-align:middle;
 		}
 		
 	#header-link {
@@ -173,14 +203,14 @@ a {
 #nav {
 	height:50px;
 	overflow:hidden;
-	background: url(img/nav_bg.png) no-repeat left top;
+	background: url(img/nav_bg.png) no-repeat left -40px;
 }
 
 	#nav .wrapper {
 		position:relative;
 		left:50%;
 		width:50%;
-		background: url(img/nav_bg.png) no-repeat right top;
+		background: url(img/nav_bg.png) no-repeat right -40px;
 		height:50px;
 	}
 
@@ -190,6 +220,9 @@ a {
 			width:57em;
 			height:40px;
 			margin-left:-28.5em;
+			background: #99BF05 url(img/nav_bg.png) no-repeat -25px -40px;
+			-moz-border-radius:25px;
+			-webkit-border-radius:25px;
 		}
 		
 			#nav li { 
@@ -198,12 +231,14 @@ a {
 			}
 			 
 			#nav li:hover {
-				background: url(img/nav_hover.png) no-repeat;
+				background: #E7EDC0 url(img/nav_bg.png) no-repeat;
+				-moz-border-radius:19px;
+				-webkit-border-radius:19px;
 			}
-			
+				
 			#nav li:hover a {
-				background: url(img/nav_hover.png) no-repeat right top;
 				color:#4d6a10;
+				background: url(img/nav_bg.png) no-repeat right top;
 			}
 		
 				#nav li a {
@@ -217,6 +252,143 @@ a {
 					overflow:hidden;
 				}
 			
-				#nav li a:hover {
+				#nav ul a:hover {
 					color:#4d6a10;
+				}
+
+#map-wrapper {
+	height:22.75em;
+	background: url(img/map.png) no-repeat center bottom;
+}
+	
+	#map {
+		overflow:hidden;
+	}
+	
+		#map a {
+			color:#fff;
+			background: url(img/map_link.png) no-repeat;
+			float:left;
+			display:inline;
+		}
+			
+			#map a span {
+				background: url(img/map_link.png) no-repeat right top;
+				position:relative;
+				left:20px;
+				padding-right:20px;
+				float:left;
+				cursor:pointer;
+			}
+				
+				.traffic {
+					line-height:39px;
+					position:relative;
+				}
+					
+				.tr-how {
+					clear:left;
+					position:relative;
+					left:1.435em;
+					font-size:2em;
+					line-height:46px;
+					margin-top:-12px;
+					background-position:left -39px !important;
+				}
+				
+					.tr-how span {
+						position:relative;
+						left:23px;
+						padding-right:23px;
+						background-position:right -39px !important;
+						text-decoration:underline;
+						z-index:200;
+					}
+		
+			#kazah {
+				margin:1.75em 0 0 7em;
+				float:left;
+				display:inline;
+				background: url(img/kazah.png) no-repeat;
+			}
+				
+			#gorod {
+				display:inline;
+				float:right;
+				margin:1.75em 5.875em 0 0;
+				background: url(img/gorod.png) no-repeat;
+			}
+
+#search {
+	background: url(img/search_shadow.png) no-repeat left bottom;
+}
+
+	#search .shadow {
+		position:relative;
+		width:50%;
+		left:50%;
+		background: url(img/search_shadow.png) no-repeat right bottom;
+		padding-bottom:12px;
+	}
+
+	#search .topleft {
+		width:59.375em;
+		background: #e4e6c5 url(img/search_cor.png) no-repeat left top;
+		margin-left:-29.6875em;
+		position:relative;
+		-moz-border-radius:18px;
+	}
+	
+	#search .topright {
+		background: url(img/search_cor.png) no-repeat right top;
+		position:relative;
+	}
+	
+	#search .bottomleft {
+		background: url(img/search_cor.png) no-repeat left bottom;
+	}
+	
+	#search .bottomright {
+		background: url(img/search_cor.png) no-repeat right bottom;
+		padding:0 25px;
+		overflow:hidden;
+		zoom:1;
+	}
+	
+		#search h2 {
+			margin-top:0.1em;
+			background: url(img/search.png) no-repeat left bottom;
+			height:24px;
+			text-indent:2.5em;
+			padding-top:18px;
+			color:#729820;
+			vertical-align:bottom;
+			font-size:1.25em;
+			float:left;
+			width:7.3em;
+		}
+		
+		#search p {
+			clear:left;
+			float:left;
+			width:13.3em;
+			font-size:68.75%;
+			margin-top:2em;
+		}
+		
+		#search form {
+			float:left;
+			line-height:1.5625em;
+		}
+		
+			#search form label {
+				display:inline-block;
+				margin:0 1.75em 0.25em 0;
+				text-align:right;
+				vertical-align:middle;
+				width:3.75em;
+			}
+			
+				#search form label span {
+					font-size:75%;
 				}

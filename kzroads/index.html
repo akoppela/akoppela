@@ -9,63 +9,88 @@
     <title>Dorogi KZ | Main</title> 
 </head>
 <body>
-	<div id="header" class="fixed">
-		<h1><a href="#" title="Dorogi.kz"><i><img src="img/logo.png" /></i><img src="img/logo.png" />dorogi.kz</a></h1>
-		<form action="#">
-			<label for="login"><span>Логин</span></label>
-			<span class="round-input"><span><input id="login" type="text" value="" /></span></span>
-			<div class="clear"></div>
-			<label for="pass"><span>Пароль</span></label>
-			<span class="round-input"><span><input id="pass" type="password" value="" /></span></span>
-			<input id="auth-sub" type="submit" value="ОК" />
-		</form>
-		<ul id="header-link">
-			<li><a href="#">Регистрация</a></li>
-			<li><a href="#">Забыли пароль?</a></li>
-		</ul>
-		<ul id="statistics">
-			<li>
-				<dl>
-					<dt>В системе</dt>
-					<dd>Всего</dd>
-					<dd>Сегодня</dd>
-				</dl>
-			</li>
-			<li>
-				<dl>
-					<dt><a href="#">Участников</a></dt>
-					<dd>51023</dd>
-					<dd>103</dd>
-				</dl>
-			</li>
-			<li>
-				<dl>
-					<dt><a href="#">Грузов</a></dt>
-					<dd>230131</dd>
-					<dd>1283</dd>
-				</dl>
-			</li>
-			<li>
-				<dl>
-					<dt><a href="#">Машин</a></dt>
-					<dd>92482</dd>
-					<dd>30427</dd>
-				</dl>
-			</li>
-		</ul>
-	</div>
-	<div id="nav" class="fixed">
-		<div class="wrapper">
-			<ul>
-				<li><a href="#">Главная</a></li>
-				<li><a href="#">Кабинет</a></li>
-				<li><a href="#">Расчет расстояний</a></li>
-				<li><a href="#">Форум</a></li>
-				<li><a href="#">Полезное</a></li>
-				<li><a href="#">Услуги и цены</a></li>
-				<li><a href="#">Информация о портале</a></li>
+	<div id="container">
+		<div id="header" class="fixed">
+			<h1><a href="#" title="Dorogi.kz"><img src="img/logo.png" alt="Dorogi.kz" />Dorogi.kz</a></h1>
+			<form action="#">
+				<label for="login"><span>Логин</span></label>
+				<span class="round-input"><span><input id="login" type="text" value="" /></span></span>
+				<a href="#">Регистрация</a>
+				<div class="clear"></div>
+				<label for="pass"><span>Пароль</span></label>
+				<span class="round-input"><span><input id="pass" type="password" value="" /></span></span>
+				<input id="auth-sub" type="submit" value="ОК" />
+				<a href="#">Забыли пароль?</a>
+			</form>
+			<ul id="statistics">
+				<li>
+					<dl>
+						<dt>В системе</dt>
+						<dd>Всего</dd>
+						<dd>Сегодня</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><a href="#">Участников</a></dt>
+						<dd>51023</dd>
+						<dd>103</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><a href="#">Грузов</a></dt>
+						<dd>230131</dd>
+						<dd>1283</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><a href="#">Машин</a></dt>
+						<dd>92482</dd>
+						<dd>30427</dd>
+					</dl>
+				</li>
 			</ul>
 		</div>
+		<div id="nav" class="fixed">
+			<div class="wrapper">
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Кабинет</a></li>
+					<li><a href="#">Расчет расстояний</a></li>
+					<li><a href="#">Форум</a></li>
+					<li><a href="#">Полезное</a></li>
+					<li><a href="#">Услуги и цены</a></li>
+					<li><a href="#">Информация о портале</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="map-wrapper">
+			<div id="map" class="fixed">
+				<div id="kazah"><a href="#" class="traffic"><span>Перевозки по</span></a><a class="tr-how" href="#"><span>Казахстану</span></a></div>
+				<div id="gorod"><a href="#" class="traffic"><span>Перевозки</span></a><a class="tr-how"><span>Международные</span></a></div>
+			</div>
+		</div>
+		<div id="search" class="fixed">
+			<div class="shadow">
+				<div class="topleft">
+					<div class="topright">
+						<div class="bottomleft">
+							<div class="bottomright">
+								<h2>Поиск</h2>
+								<form action="#">
+									<label for="">Откуда:</label>
+								</form>
+								<p>Либерализм, короче говоря, фактически определяет континентально-европейский тип политической культуры, отмечает Б. Рассел. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
 	</div>
 </body>
 </html>
