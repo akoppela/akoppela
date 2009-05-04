@@ -307,7 +307,7 @@ window.addEvent('domready', function(){
     var works = new changeWork('works-title', 'works-preview');
 
 	$('works-title-wrapper').setStyle('visibility', 'visible');
-	$('works-preview-wrapper').setStyle('overflow', 'hidden');
+	$('works-preview').setStyle('overflow', 'hidden');
 
     /* Флешка */
     
