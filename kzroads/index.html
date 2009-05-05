@@ -15,16 +15,18 @@
     <div id="container">
         <div id="header" class="fixed">
             <h1><a href="#" title="Dorogi.kz"><img src="img/logo.png" alt="Dorogi.kz" />Dorogi.kz</a></h1>
-            <form action="#">
-                <label for="login"><span>Логин</span></label>
-                <span class="round-input"><span><input id="login" type="text" value="" /></span></span>
-                <a href="#">Регистрация</a>
-                <br /><!-- для разрыва потока сточно-блочных элементов -->
-                <label for="pass"><span>Пароль</span></label>
-                <span class="round-input"><span><input id="pass" type="password" value="" /></span></span>
-                <input id="auth-sub" type="submit" value="ОК" />
-                <a href="#">Забыли пароль?</a>
-            </form>
+        	<form action="#">
+        		<div>
+            		<label for="login"><span>Логин</span></label>
+            		<span class="round-input"><span><input id="login" type="text" value="" /></span></span>
+            		<a href="#">Регистрация</a>
+            		<br /><!-- для разрыва потока сточно-блочных элементов -->
+            		<label for="pass"><span>Пароль</span></label>
+            		<span class="round-input"><span><input id="pass" type="password" value="" /></span></span>
+            		<input id="auth-sub" type="submit" value="ОК" />
+            		<a href="#">Забыли пароль?</a>
+        		</div>
+	        </form>
             <ul id="statistics">
                 <li>
                     <dl>
@@ -83,42 +85,44 @@
                             <div class="bottomright">
                                 <h2>Поиск</h2>
                                 <form action="#">
-                                    <ul>
-                                        <li>
-                                            <label for="where-from"><span>Откуда:</span></label>
-                                            <span class="round-linput"><span><input id="where-from" type="text" value="" /></span></span>
-                                            <span class="round-linput km"><span><input id="wf-km" type="text" value="" /></span></span>
-                                            <label for="wf-km" class="auto-width"><span>Км</span></label>
-                                        </li>
-                                        <li>
-                                            <label for="where"><span>Куда:</span></label>
-                                            <span class="round-linput"><span><input id="where" type="text" value="" /></span></span>
-                                            <span class="round-linput km"><span><input id="w-km" type="text" value="" /></span></span>
-                                            <label for="w-km" class="auto-width"><span>Км</span></label>
-                                        </li>
-                                        <li>
-                                            <label for="day"><span>День:</span></label>
-                                            <span class="round-linput d"><span><input id="day" type="text" value="" /></span></span>
-                                            <span class="round-linput d"><span><input id="month" type="text" value="" /></span></span>
-                                            <span class="round-linput"><span><input id="year" type="text" value="" /></span></span>
-                                        </li>
-                                        <li>
-                                            <label for="weight-from"><span>Вес:</span></label>
-                                            <label for="weight-from" class="auto-width"><span>От:</span></label>
-                                            <span class="round-linput w"><span><input id="weight-from" type="text" value="" /></span></span>
-                                            <label for="weight-till" class="auto-width"><span>До:</span></label>
-                                            <span class="round-linput"><span><input id="weight-till" type="text" value="" /></span></span>
-                                            <span class="tonne">Т.</span>
-                                            <label for="volume-from" class="auto-width"><span>Объем:</span></label>
-                                            <label for="volume-from" class="auto-width"><span>От:</span></label>
-                                            <span class="round-linput w"><span><input id="volume-from" type="text" value="" /></span></span>
-                                            <label for="volume-till" class="auto-width"><span>До:</span></label>
-                                            <span class="round-linput"><span><input id="volume-till" type="text" value="" /></span></span>
-                                            <span class="tonne">м<span>3</span></span>
-                                        </li>
-                                    </ul>
-                                    <input type="submit" name="search-car" class="search-sub" value="Поиск машины" />
-                                    <input type="submit" name="search-cargo" class="search-sub" value="Поиск груза" />
+                                	<div>
+                                    	<ul>
+                                    	    <li>
+                                    	        <label for="where-from"><span>Откуда:</span></label>
+                                    	        <span class="round-linput"><span><input id="where-from" type="text" value="" /></span></span>
+                                    	        <span class="round-linput km"><span><input id="wf-km" type="text" value="" /></span></span>
+                                    	        <label for="wf-km" class="auto-width"><span>Км</span></label>
+                                    	    </li>
+                                    	    <li>
+                                    	        <label for="where"><span>Куда:</span></label>
+                                    	        <span class="round-linput"><span><input id="where" type="text" value="" /></span></span>
+                                    	        <span class="round-linput km"><span><input id="w-km" type="text" value="" /></span></span>
+                                    	        <label for="w-km" class="auto-width"><span>Км</span></label>
+                                    	    </li>
+                                    	    <li>
+                                    	        <label for="day"><span>День:</span></label>
+                                    	        <span class="round-linput d"><span><input id="day" type="text" value="" /></span></span>
+                                    	        <span class="round-linput d"><span><input id="month" type="text" value="" /></span></span>
+                                    	        <span class="round-linput"><span><input id="year" type="text" value="" /></span></span>
+                                    	    </li>
+                                    	    <li>
+                                    	        <label for="weight-from"><span>Вес:</span></label>
+                                    	        <label for="weight-from" class="auto-width"><span>От:</span></label>
+                                    	        <span class="round-linput w"><span><input id="weight-from" type="text" value="" /></span></span>
+                                    	        <label for="weight-till" class="auto-width"><span>До:</span></label>
+                                    	        <span class="round-linput"><span><input id="weight-till" type="text" value="" /></span></span>
+                                    	        <span class="tonne">Т.</span>
+                                    	        <label for="volume-from" class="auto-width"><span>Объем:</span></label>
+                                    	        <label for="volume-from" class="auto-width"><span>От:</span></label>
+                                    	        <span class="round-linput w"><span><input id="volume-from" type="text" value="" /></span></span>
+                                    	        <label for="volume-till" class="auto-width"><span>До:</span></label>
+                                    	        <span class="round-linput"><span><input id="volume-till" type="text" value="" /></span></span>
+                                    	        <span class="tonne">м<span>3</span></span>
+                                    	    </li>
+                                    	</ul>
+                                    	<input type="submit" name="search-car" class="search-sub" value="Поиск машины" />
+                                    	<input type="submit" name="search-cargo" class="search-sub" value="Поиск груза" />
+                                    </div>
                                 </form>
                                 <p>Либерализм, короче говоря, фактически определяет континентально-европейский тип политической культуры, отмечает Б. Рассел. </p>
                             </div>
@@ -175,7 +179,7 @@
             <li><a href="#">Услуги и цены</a></li>
             <li><a href="#">Информация о портале</a></li>
         </ul>
-        <p id="developer">Разработка сайта – <a href="#" class="vcard fn url">1two3</a</p>
+        <p id="developer">Разработка сайта – <a href="#" class="vcard fn url">1two3</a></p>
     </div>
 </body>
 </html>

@@ -1,0 +1,6 @@
+input, button, textarea, select { font-size: 100%; }
+
+#nav li { 
+	display:inline !important;
+	zoom:1;
+}
