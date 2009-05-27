@@ -1,21 +1,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
 <head>
-	<!--Version 1.2-->
+	<!-- Version 1.5 -->
     <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
     <meta name="description" content="Port://80" />
     <meta name="keywords" content="port80" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="mootools-1.2.1-core-yc.js"></script>
     <script type="text/javascript" src="mootools-1.2-more.js"></script>
 	<script type="text/javascript" src="swfobject.js"></script>
     <script type="text/JavaScript" src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Port://80 | Main</title> 
 </head>
 <body>
 	<div id="container">
     	<div id="header" class="maxwidth">
-			<h1><a href="#" title="port://80, вернутсья на главную страницу">port://80</a></h1>
+			<div id="logo"><a href="#" title="port://80, вернутсья на главную страницу">port://80</a></div>
 			<ul id="nav">
 				<li>
 					<a class="doublelist">О компании</a>
@@ -88,12 +88,14 @@
     	        </dl>
     	    </div>
     	    <form id="head-signin" action="">
-    	        <h2>вход для клиентов</h2>
-    	        <input class="textin" type="text" />
-    	        <input class="textin" type="password" />
-    	        <input id="signin-sub" type="submit" value="ОК" />
-    	        <a href="#">Регистрация</a>
-    	        <a href="#">Забыли пароль?</a>
+    	    	<div>
+    	        	<h2>вход для клиентов</h2>
+    	        	<input class="textin" type="text" />
+    	        	<input class="textin" type="password" />
+    	        	<input id="signin-sub" type="submit" value="ОК" />
+    	        	<a href="#">Регистрация</a>
+    	        	<a href="#">Забыли пароль?</a>
+    	        </div>
     	    </form>
     	</div>
     	<div id="spec-wrapper">
@@ -103,6 +105,21 @@
     				<h2>Специальное предложениею Готовый сайт за 18499р.</h2>
     				<p>Готовый сайт - это наилучший способ с минималь- ными затратами организовать свой интернет-ресурс, мучительно не вынашивая идею как его лучше сделать. Просто доверьтесь нашему опыту!</p>
 				</div>
+				<script type="text/JavaScript">
+    				if (swfobject.hasFlashPlayerVersion("10.0.0")) {<!-- указываем версию flash, на которой сделан ролик -->
+    				    var fn = function() {
+    				        var att = { data:"top_flash.swf", width:"990", height:"182" };<!-- указываем путь и имя flash-объекта, а так же его размеры -->
+    				        var par = {
+    				            menu:"true", <!-- для пользователя даем возможность управлять анимацией -->
+    				            quality:"high", <!-- высокое качество -->
+    				            wmode:"opaque" <!-- чтобы можно было перекрыть flash -->
+    				        };
+    				        var id = "topflash"; <!-- id блока, куда будет вставлен flash -->
+    				        var myObject = swfobject.createSWF(att, par, id);
+    				    };
+    				    swfobject.addDomLoadEvent(fn);
+    				}
+				</script>
     		</div>
     	</div>
     	<div id="content" class="maxwidth">
@@ -200,78 +217,18 @@
     			<h2>Работы</h2>
     			<div id="works-title-wrapper">
     				<a class="arrows prev-arrow">&#60;</a>
-    				<ul id="works-title" class="carousel">
-    					<li class="work-seo"><a>Продвижение и Раскрутка</a></li>
-    					<li class="work-longrazd"><a>Раздел с очень длинным названием</a></li>
-    					<li class="work-flash"><a>Flash</a></li>
-    					<li class="work-banner"><a>Банер</a></li>
-    					<li class="active-wlink work-web"><a>Web</a></li>
+    				<ul id="works-title" class="carousel active">
+    					<li id="work-seo"><a>Продвижение и Раскрутка</a></li>
+    					<li id="work-longrazd"><a>Раздел с очень длинным названием</a></li>
+    					<li id="work-flash"><a>Flash</a></li>
+    					<li id="work-banner"><a>Банер</a></li>
+    					<li id="work-web" class="active-wlink"><a>Web</a></li>
     				</ul>
     				<a class="arrows forw-arrow">&#62;</a>
     			</div>
     			<div id="works-preview-wrapper">
     				<div id="works-preview">
-    					<ul class="carousel">
-    						<li class="work-web">
-    							<a href="#"><img src="icons/uniwell.jpg" alt="" /></a>
-    							<h3><a href="#">Сайт INCOM-Honda</a></h3>
-    							<p>Официальный дилер Honda "INCOM-AUTO"</p>
-    						</li>
-    						<li>
-    							<a href="#"><img src="icons/IP.jpg" alt="" /></a>
-    							<h3><a href="#">Сайт Cadillac.Motors.ru</a></h3>
-    							<p>Сайт первого в России официального дилера General Motors - ком-пании «Тринити Моторс».</p>
-    						</li>
-    						<li>
-    							<a href="#"><img src="icons/madam_kurag.jpg" alt="" /></a>
-    							<h3><a href="#">Мадам Кураж</a></h3>
-    							<p>Организация торжеств, вечеринок, свадебных мероприятий</p>
-    						</li>
-    						<li>
-    							<a href="#"><img src="icons/uralvipavia.jpg" alt="" /></a>
-    							<h3><a href="#">Урал VIP авио</a></h3>
-    							<p>Рекламный банер компании</p>
-    						</li>
-    						<li>
-    							<a href="#"><img src="icons/uniwell.jpg" alt="" /></a>
-    							<h3><a href="#">Сайт INCOM-Honda</a></h3>
-    							<p>Официальный дилер Honda "INCOM-AUTO"</p>
-    						</li>
-    						<li class="work-banner">
-    							<a href="#"><img src="icons/IP.jpg" alt="" /></a>
-    							<h3><a href="#">Сайт Cadillac.Motors.ru</a></h3>
-    							<p>Сайт первого в России официального дилера General Motors - ком-пании «Тринити Моторс».</p>
-    						</li>
-    						<li>
-    							<a href="#"><img src="icons/madam_kurag.jpg" alt="" /></a>
-    							<h3><a href="#">Мадам Кураж</a></h3>
-    							<p>Организация торжеств, вечеринок, свадебных мероприятий</p>
-    						</li>
-    						<li>
-    							<a href="#"><img src="icons/uralvipavia.jpg" alt="" /></a>
-    							<h3><a href="#">Урал VIP авио</a></h3>
-    							<p>Рекламный банер компании</p>
-    						</li>
-    						<li>
-    							<a href="#"><img src="icons/uniwell.jpg" alt="" /></a>
-    							<h3><a href="#">Сайт INCOM-Honda</a></h3>
-    							<p>Официальный дилер Honda "INCOM-AUTO"</p>
-    						</li>
-    						<li>
-    							<a href="#"><img src="icons/IP.jpg" alt="" /></a>
-    							<h3><a href="#">Сайт Cadillac.Motors.ru</a></h3>
-    							<p>Сайт первого в России официального дилера General Motors - ком-пании «Тринити Моторс».</p>
-    						</li>
-    						<li>
-    							<a href="#"><img src="icons/madam_kurag.jpg" alt="" /></a>
-    							<h3><a href="#">Мадам Кураж</a></h3>
-    							<p>Организация торжеств, вечеринок, свадебных мероприятий</p>
-    						</li>
-    						<li class="work-flash">
-    							<a href="#"><img src="icons/uralvipavia.jpg" alt="" /></a>
-    							<h3><a href="#">Урал VIP авио</a></h3>
-    							<p>Рекламный банер компании</p>
-    						</li>
+    					<ul id="p-work-web" class="carousel active-work">
     						<li>
     							<a href="#"><img src="icons/uniwell.jpg" alt="" /></a>
     							<h3><a href="#">Сайт INCOM-Honda</a></h3>
@@ -292,12 +249,80 @@
     							<h3><a href="#">Урал VIP авио</a></h3>
     							<p>Рекламный банер компании</p>
     						</li>
-    						<li class="work-longrazd">
+    						<li>
     							<a href="#"><img src="icons/uniwell.jpg" alt="" /></a>
     							<h3><a href="#">Сайт INCOM-Honda</a></h3>
     							<p>Официальный дилер Honda "INCOM-AUTO"</p>
     						</li>
-    						<li class="work-seo">
+    					</ul>
+    					<ul id="p-work-banner" class="carousel">
+    						<li>
+    							<a href="#"><img src="icons/IP.jpg" alt="" /></a>
+    							<h3><a href="#">Сайт Cadillac.Motors.ru</a></h3>
+    							<p>Сайт первого в России официального дилера General Motors - ком-пании «Тринити Моторс».</p>
+    						</li>
+    						<li>
+    							<a href="#"><img src="icons/madam_kurag.jpg" alt="" /></a>
+    							<h3><a href="#">Мадам Кураж</a></h3>
+    							<p>Организация торжеств, вечеринок, свадебных мероприятий</p>
+    						</li>
+    						<li>
+    							<a href="#"><img src="icons/uralvipavia.jpg" alt="" /></a>
+    							<h3><a href="#">Урал VIP авио</a></h3>
+    							<p>Рекламный банер компании</p>
+    						</li>
+    						<li>
+    							<a href="#"><img src="icons/uniwell.jpg" alt="" /></a>
+    							<h3><a href="#">Сайт INCOM-Honda</a></h3>
+    							<p>Официальный дилер Honda "INCOM-AUTO"</p>
+    						</li>
+    						<li>
+    							<a href="#"><img src="icons/IP.jpg" alt="" /></a>
+    							<h3><a href="#">Сайт Cadillac.Motors.ru</a></h3>
+    							<p>Сайт первого в России официального дилера General Motors - ком-пании «Тринити Моторс».</p>
+    						</li>
+    						<li>
+    							<a href="#"><img src="icons/madam_kurag.jpg" alt="" /></a>
+    							<h3><a href="#">Мадам Кураж</a></h3>
+    							<p>Организация торжеств, вечеринок, свадебных мероприятий</p>
+    						</li>
+    					</ul>
+    					<ul id="p-work-flash" class="carousel">
+    						<li>
+    							<a href="#"><img src="icons/uralvipavia.jpg" alt="" /></a>
+    							<h3><a href="#">Урал VIP авио</a></h3>
+    							<p>Рекламный банер компании</p>
+    						</li>
+    						<li>
+    							<a href="#"><img src="icons/uniwell.jpg" alt="" /></a>
+    							<h3><a href="#">Сайт INCOM-Honda</a></h3>
+    							<p>Официальный дилер Honda "INCOM-AUTO"</p>
+    						</li>
+    						<li>
+    							<a href="#"><img src="icons/IP.jpg" alt="" /></a>
+    							<h3><a href="#">Сайт Cadillac.Motors.ru</a></h3>
+    							<p>Сайт первого в России официального дилера General Motors - ком-пании «Тринити Моторс».</p>
+    						</li>
+    						<li>
+    							<a href="#"><img src="icons/madam_kurag.jpg" alt="" /></a>
+    							<h3><a href="#">Мадам Кураж</a></h3>
+    							<p>Организация торжеств, вечеринок, свадебных мероприятий</p>
+    						</li>
+    						<li>
+    							<a href="#"><img src="icons/uralvipavia.jpg" alt="" /></a>
+    							<h3><a href="#">Урал VIP авио</a></h3>
+    							<p>Рекламный банер компании</p>
+    						</li>
+    					</ul>
+    					<ul id="p-work-longrazd" class="carousel">
+    						<li>
+    							<a href="#"><img src="icons/uniwell.jpg" alt="" /></a>
+    							<h3><a href="#">Сайт INCOM-Honda</a></h3>
+    							<p>Официальный дилер Honda "INCOM-AUTO"</p>
+    						</li>
+    					</ul>
+    					<ul id="p-work-seo" class="carousel">
+    						<li>
     							<a href="#"><img src="icons/IP.jpg" alt="" /></a>
     							<h3><a href="#">Сайт Cadillac.Motors.ru</a></h3>
     							<p>Сайт первого в России официального дилера General Motors - ком-пании «Тринити Моторс».</p>
@@ -326,8 +351,8 @@
     	</div>
     	<div id="hfooter"></div>
     </div>
-    <div id="footer-wrapper">
-    	<div id="footer-bg-wrapper">
+    <div id="footer-wrapper" style="height:170px;">
+    	<div id="footer-bg-wrapper" style="height:112px;">
     		<div id="footer" class="maxwidth vcard">
     			<h2>наши клиенты</h2>
     			<ul id="partners">
@@ -336,7 +361,7 @@
     				<li><a id="mga" href="#">MGA, Interactive</a></li>
     				<li><a id="uniwell" href="#">Uniwell</a></li>
     				<li><a id="reallogic" href="#">Real logic, группа компаний</a></li>
-    				<li><a id="md" href="#">MD Club</a></li>
+    				<li class="last-partner"><a id="md" href="#">MD Club</a></li>
     			</ul>
     			<p><a href="#" class="org url">Компания PORT://80 - Весь спектр Web усулг</a>© 2009 Все права защищены.</p>
     			<p class="adr"><span class="postal-code">127106</span>, <span class="locality">г.Москва</span>, <span class="street-address">Гостиничная ул д.4 к.9 ООО "Зима"</span><span class="tel"><span class="type">Телефон:</span> <span class="value">+7 (495) <span class="number">788-72-41</span></span></span></p>

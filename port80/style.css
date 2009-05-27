@@ -157,13 +157,13 @@ a {
 	margin:0 auto;
 }
 
-#header h1 {
+#logo {
 	margin-left:25px;
 	background: url(img/logo.png) no-repeat left top;
 	height:108px;
 }
 
-#header h1 a {
+#logo a {
 	display:block;
 	text-indent:-9000px;
 	position:relative;
@@ -228,11 +228,10 @@ a {
 }
 
 .secnav li a {
-	text-indent:9px;
 	font-size:11px !important;
 	line-height:23px;
 	margin:0 !important;
-	padding:0 !important;
+	padding:0 0 0 9px !important;
 	font-weight:normal !important;
 	border-bottom:1px solid #ececee;
 	background:none;
@@ -431,17 +430,22 @@ a {
 
 #solution li a {
 	padding-left:22px;
-	background: url(img/arrows.png) no-repeat left -5px;
+	background: url(img/arrows.png) no-repeat left -180px;
 	cursor:pointer;
 	height:24px;
 }
 
 #solution li a:hover {
 	color:#1e2172;
+	background: url(img/arrows.png) no-repeat left -5px;
 }
 
 .active-solution, .active-solution a {
 	color:#1e2172 !important;
+}
+
+.active-solution a {
+	background: url(img/arrows.png) no-repeat left -5px !important;
 }
 
 #solution .full-list {
@@ -455,7 +459,6 @@ a {
 	top:63px;
 	right:0;
 	visibility:hidden;
-	background-position:30px top !important;
 }
 
 .active-solution .solution-content {
@@ -481,13 +484,13 @@ a {
 #solution h3 {
 	color:#1e2172;
 	font-weight:bold;
-	margin-left:265px;
+	margin-left:235px;
 	margin-bottom:10px;
 	font-size:11px;
 }
 
 #solution p {
-	margin-left:265px;
+	margin-left:235px;
 	color:#1d1d1d;
 	width:190px;
 	line-height:19px;
@@ -497,6 +500,8 @@ a {
 #support {
 	width:325px;
 	float:right;
+	margin-right:7px;
+	display:inline;
 }
 
 #support h2 {
@@ -672,6 +677,7 @@ a {
 	height:24px;
 	position:relative;
 	overflow:hidden;
+	float:right;
 }
 
 #works-title li {
@@ -734,6 +740,11 @@ a {
 	color:#b22600 !important;
 }
 
+.active-work {
+	display:block !important;
+	visibility:visible !important;
+}
+
 #works-preview-wrapper {
 	margin-left:28px;
 	width:604px;
@@ -742,26 +753,26 @@ a {
 	bottom:0;
 	position:relative;
 	z-index:10000;
+	overflow:hidden;
 }
 
 #works-preview {
 	width:604px;
 	height:170px;
 	position:absolute;
-	overflow-x:auto;
-	overflow-y:hidden;
 	padding-bottom:15px;
 }
 
 #works-preview ul {
-	width:3040px;
+	width:10000px;
 	overflow:hidden;
 	position:absolute;
+	visibility:hidden;
 }
 
 #works-preview li {
 	width:152px;
-	float:left;
+	float:right;
 	display:block;
 	text-align:center;
 	font-size:10px;
@@ -844,13 +855,11 @@ a {
 
 #footer-wrapper {
 	margin-top:-170px;
-	height:170px;
 	overflow:hidden;
 }
 
 #footer-bg-wrapper {
 	margin-top:58px;
-	height:112px;
 	background: #1e2172 url(img/footer_bg.png) repeat-x bottom;
 }
 
@@ -882,61 +891,48 @@ a {
 
 #partners li {
 	float:left;
+	background: url(img/partners_sep.png) no-repeat right top;
+	width:160px;
 }
 
 #partners a {
 	height:78px;
-	width:160px;
+	width:159px;
 	text-indent:-9000px;
 	display:block;
+	line-height:30px;
 }
 
-#openforum {
-	background: url(img/partners.png) no-repeat;
-}
-
-#openforum:hover {
+#partners a:hover {
 	background-position:left -78px;
 }
 
-#ural {
-	background: url(img/partners.png) no-repeat -160px top;
+.last-partner {
+	background:none !important;
 }
 
-#ural:hover {
-	background-position:-160px -78px;
+#openforum {
+	background: url(img/openforum.png) no-repeat;
+}
+
+#ural {
+	background: url(img/ural.png) no-repeat;
 }
 
 #mga {
-	background: url(img/partners.png) no-repeat -320px top;
-}
-
-#mga:hover {
-	background-position:-320px -78px;
+	background: url(img/mga.png) no-repeat;
 }
 
 #uniwell {
-	background: url(img/partners.png) no-repeat -480px top;
-}
-
-#uniwell:hover {
-	background-position:-480px -78px;
+	background: url(img/uniwell.png) no-repeat;
 }
 
 #reallogic {
-	background: url(img/partners.png) no-repeat -640px top;
-}
-
-#reallogic:hover {
-	background-position:-640px -78px;
+	background: url(img/real_logic.png) no-repeat;
 }
 
 #md {
-	background: url(img/partners.png) no-repeat -800px top;
-}
-
-#md:hover {
-	background-position:-800px -78px;
+	background: url(img/md.png) no-repeat;
 }
 
 #footer p {

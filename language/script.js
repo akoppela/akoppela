@@ -5,7 +5,7 @@ var slideMenu = new Class({
 		if(!this.main) return false;
 		
 		this.list = this.main.getElement('ul');
-		this.fx = new Fx.Slide(this.list, {duration: 500, transition: Fx.Transitions.Sine.easeInOut});
+		this.fx = new Fx.Slide(this.list, {duration: 300, transition: Fx.Transitions.Sine.easeInOut});
 		this.list.setStyle('display', 'block');
 		this.fx.hide();
 		

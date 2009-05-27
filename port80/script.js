@@ -5,8 +5,6 @@ var menuSlide = new Class({
         if(!this.menu) return false;
         
         this.secMenuTitle = this.menu.getElements('.doublelist');
-        this.menu.getElements('.secnav').set('tween', {transition: 'sine:out'});
-        this.menu.getElements('.secnav').set('opacity', 0);
         
         this.bound = {
             close: this.close.bind(this),
@@ -37,17 +35,17 @@ var menuSlide = new Class({
     },
     
     show: function(){
-        this.curSecMenu.tween('opacity', 1);
+        this.curSecMenu.fade('show');
     },
     
     hide: function(){
         this.curTitle.removeClass('nav-active');
-        this.curSecMenu.tween('opacity', 0);
+        this.curSecMenu.fade('hide');
         this.menuRemoveEvents();
     },
     
     hideAll: function(){
-        this.menu.getElements('.secnav').tween('opacity', 0);
+        this.menu.getElements('.secnav').fade('hide');
         this.secMenuTitle.removeClass('nav-active');
         this.menuRemoveEvents();
     },
@@ -137,8 +135,8 @@ var changeSolution = new Class({
     },
     
     changeSolution: function(){
-        this.Content.fade('out');
-        this.activeLink.getNext().fade('in');
+        this.Content.fade('hide');
+        this.activeLink.getNext().fade('show');
         this.main.getElements('li').removeClass('active-solution');
         this.activeLink.getParent('li').addClass('active-solution');
         return false;
@@ -150,18 +148,21 @@ var Carousel = new Class({
 
 	menuWidth: 0,
 	
-	initialize: function(main){
+	initialize: function(main, id){
         this.main = $(main);
+        this.id = id;
         if(!this.main) return false;
         
         this.menu = this.main.getElement('.carousel');
+        if (this.id) this.menu = $(this.id);
+       
         this.firstSlide = this.menu.getFirst(); 
         this.lastSlide = this.menu.getLast();
         this.cur = this.lastSlide;
         this.arrows = this.main.getElements('.arrows');
         this.leftArrow = this.main.getElement('.prev-arrow');
         this.rightArrow = this.main.getElement('.forw-arrow');
-        this.arrowWidth = this.leftArrow.getWidth();
+        this.arrowWidth = this.leftArrow.getStyle('width').toInt() + 2;
         if(this.leftArrow.get('class').test('nowidth')) this.arrowWidth = 0;
         this.curPosition = this.arrowWidth;
         this.wrapWidth = this.main.getWidth();
@@ -171,14 +172,14 @@ var Carousel = new Class({
         if(this.menuWidth < this.main.getWidth()) return false
         else this.setStartPosition();
         
-        [this.leftArrow, this.rightArrow].each(function(arrow){
+        this.arrows.each(function(arrow){
             arrow.addEvents({
                 'mousedown': this.start.bind(this),
                 'mouseup': this.pause.bind(this),
         		'mouseleave': this.pause.bind(this)
             });
         }.bind(this));
-        this.main.addEvent('mousewheel', this.start.bind(this));
+        this.menu.addEvent('mousewheel', this.start.bind(this));
 	},
     
     startTimer: function(){
@@ -195,6 +196,7 @@ var Carousel = new Class({
     },
     
     start: function(e){
+    	if(!this.menu.get('class').test('active')) return false;
         if(e.wheel){
             if(e.wheel < 0){
                 if(this.curPosition != this.wrapWidth - this.menuWidth - this.arrowWidth) this.slideMenu('forw');
@@ -230,6 +232,7 @@ var Carousel = new Class({
     setStartPosition: function(){
         this.arrows.setStyle('visibility', 'visible');
         this.fx.set('left', this.arrowWidth);
+        if(this.main.get('id') == 'works-title-wrapper') $('works-title').setStyle('float', 'none');
     },
     
     slideMenu: function(how){
@@ -265,22 +268,25 @@ var changeWork = new Class({
 
 	initialize: function(title, main){
 		this.title = $(title);
-		this.main = $(main).getElement('ul');
+		this.main = $(main);
 		if(!this.title || !this.main) return false;
 		
 		this.titles = this.title.getElements('li');
-		this.previews = this.main.getElements('li');
-		this.mainWidth = this.main.getWidth();
+		this.previews = this.main.getElements('ul');
 		this.curPosition = 0;
 		this.fx = new Fx.Scroll(this.main);
+		this.arrows = this.main.getParent().getElements('.arrows');
 
 		this.titles.addEvent('click', this.start.bind(this));
 	},
 	
 	start: function(e){
-		this.curTitle = $(e.target).getParent('li') || $(e.target);
-		this.curWork = this.curTitle.get('class');
+		if($(e.target).getParent('li') == this.curTitle) return false;
+		this.curTitle =  $(e.target).getParent('li') || $(e.target);
+		this.curWork = $('p-'+this.curTitle.get('id'));
 		this.changeTitle();
+		this.changeWork();
+		this.testArrow();
 	},
 	
 	changeTitle: function(){
@@ -288,41 +294,37 @@ var changeWork = new Class({
 		this.curTitle.addClass('active-wlink');
 	},
 	
-	getWorkWidth: function(){
-		this.workWidth = 0;
-		this.previews.each(function(element){
-			if(element.get('class') == this.curWork) this.changeTitle();
-			this.workWidth -= element.getWidth();
-		}.bind(this));
+	changeWork: function(){
+		this.previews.removeClass('active-work');
+		this.curWork.addClass('active-work');
+		
+	},
+	
+	testArrow: function(){
+		if(this.curWork.getWidth() < this.main.getWidth()) this.arrows.setStyle('display', 'none')
+		else this.arrows.setStyle('display', 'block');
 	}
 	
 });
+
+createCarouselPreview = function(name) {
+	var worksPreviews = $(name).getElements('.carousel');
+	
+	worksPreviews.each(function(element){
+		var preview = new Carousel('works-preview-wrapper', element.get('id'));
+	});
+};
 
 window.addEvent('domready', function(){
     
     var secnav = new menuSlide('nav');
     var solut = new changeSolution('solution');
     var worksTitle = new Carousel('works-title-wrapper');
-    var worksPreview = new Carousel('works-preview-wrapper');
     var works = new changeWork('works-title', 'works-preview');
+        
+    createCarouselPreview('works-preview-wrapper');
 
 	$('works-title-wrapper').setStyle('visibility', 'visible');
 	$('works-preview').setStyle('overflow', 'hidden');
-
-    /* Флешка */
-    
-    if (swfobject.hasFlashPlayerVersion("10.0.0")) {<!-- указываем версию flash, на которой сделан ролик -->
-        var fn = function() {
-            var att = { data:"top_flash.swf", width:"990", height:"182" };<!-- указываем путь и имя flash-объекта, а так же его размеры -->
-            var par = {
-                menu:"true", <!-- для пользователя даем возможность управлять анимацией -->
-                quality:"high", <!-- высокое качество -->
-                wmode:"opaque" <!-- чтобы можно было перекрыть flash -->
-            };
-            var id = "topflash"; <!-- id блока, куда будет вставлен flash -->
-            var myObject = swfobject.createSWF(att, par, id);
-        };
-        swfobject.addDomLoadEvent(fn);
-    }
     
 });

@@ -130,9 +130,8 @@ select {
 
 #languages {
 	font-family:Tahoma, Sans-Serif;
-	width:99px;
+	width:98px;
 	border:1px solid #E7E5E5;
-	padding:4px;
 	line-height:15px;
 	color:#686868;
 	margin:20px;
@@ -143,8 +142,13 @@ select {
 	z-index:10000;
 }
 
+#languages p {
+	margin:4px 4px 0;
+}
+
 #languages ul {
-	display:none;
+	margin:0 4px 4px;
+	width:90px;
 }
 
 #languages li a {
