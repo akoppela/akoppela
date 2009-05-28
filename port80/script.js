@@ -169,7 +169,7 @@ var Carousel = new Class({
         this.fx = new Fx.Tween(this.menu, {duration: 500, transition: Fx.Transitions.Sine.easeInOut});
         
         this.setMenuWidth();
-        if(this.menuWidth < this.main.getWidth()) return false
+        if(this.menuWidth <= this.main.getWidth()) return false
         else this.setStartPosition();
         
         this.arrows.each(function(arrow){
@@ -273,8 +273,6 @@ var changeWork = new Class({
 		
 		this.titles = this.title.getElements('li');
 		this.previews = this.main.getElements('ul');
-		this.curPosition = 0;
-		this.fx = new Fx.Scroll(this.main);
 		this.arrows = this.main.getParent().getElements('.arrows');
 
 		this.titles.addEvent('click', this.start.bind(this));
@@ -301,7 +299,7 @@ var changeWork = new Class({
 	},
 	
 	testArrow: function(){
-		if(this.curWork.getWidth() < this.main.getWidth()) this.arrows.setStyle('display', 'none')
+		if(this.curWork.getWidth() <= this.main.getWidth()) this.arrows.setStyle('display', 'none')
 		else this.arrows.setStyle('display', 'block');
 	}
 	
@@ -311,20 +309,27 @@ createCarouselPreview = function(name) {
 	var worksPreviews = $(name).getElements('.carousel');
 	
 	worksPreviews.each(function(element){
-		var preview = new Carousel('works-preview-wrapper', element.get('id'));
+		var preview = new Carousel(name, element.get('id'));
 	});
+	
+	if($(name).getElement('.active-work').getWidth() <= $(name).getWidth()) $(name).getElements('.arrows').setStyle('display', 'none');
 };
 
 window.addEvent('domready', function(){
     
     var secnav = new menuSlide('nav');
     var solut = new changeSolution('solution');
-    var worksTitle = new Carousel('works-title-wrapper');
-    var works = new changeWork('works-title', 'works-preview');
-        
-    createCarouselPreview('works-preview-wrapper');
-
-	$('works-title-wrapper').setStyle('visibility', 'visible');
-	$('works-preview').setStyle('overflow', 'hidden');
+    if($('works-title-wrapper')) {
+    	var worksTitle = new Carousel('works-title-wrapper');
+    	
+    	createCarouselPreview('works-preview-wrapper');
+		$('works-title-wrapper').setStyle('visibility', 'visible');
+	}
+    if($('instroy-preview')) {
+    	var instroy = new Carousel('instroy-preview');
+    	
+		$('instroy-preview').setStyle('overflow', 'hidden');
+	}
+    if($('works-title')) var works = new changeWork('works-title', 'works-preview');
     
 });
