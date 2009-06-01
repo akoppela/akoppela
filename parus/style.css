@@ -221,23 +221,30 @@ body {
 	padding:1.25em 2.5em 2.5em;
 	line-height: 1.7em;
 	overflow:hidden;
+	min-height:18.75em;
 }
 
 	#content h2 {
 		font:600 1.6em garamond,times,'times new romans',serif;
 		color:#600;
 		margin-bottom:0.625em;
-		text-align:center;
 	}
+	
+		#content h2 a {
+			color:#600;
+		}
 	
 		#content img {
 			border:0.0625em solid #660000;
-			clear:none;
 			margin:0.625em 0.625em 0.625em 0;
 			padding:0.125em;
 			width:9.375em;
-			height:8em;
+			height:9.375em;
 			float:left;
+		}
+		
+		.small {
+			height:8em !important;
 		}
 		
 	#content p {
@@ -262,6 +269,25 @@ body {
 			display:block;
 		}
 		
+		#content p em {
+			font-style:italic;
+		}
+		
+		#content dt strong {
+			margin-left:0.25em;
+			font-weight:bold;
+		}
+		
+	#content dd ul {
+		margin:1em 0 1em 3.125em;
+	}
+	
+		#content dd ul li {
+			margin-left:;
+			padding-left:1em;
+			background: url(img/bullet.gif) no-repeat left center;
+		}	
+			
 #footer {
 	color: #996633;
 	text-align: center;
@@ -282,3 +308,33 @@ body {
 			color:#c90;
 			text-decoration:none;
 		}
+		
+.map {
+	width:37em !important;
+	height:32em !important;
+	float:none !important;
+	overflow:hidden;
+	margin:0 !important;
+}
+
+.print {
+	width:1.5em;
+	height:1.5em;
+	display:block;
+	text-indent:-9999px;
+	margin-top:1.5em;
+	overflow:hidden;
+}
+
+	.print img {
+		width:1.5em !important;
+		height:1.5em !important;
+		border:none !important;
+		margin:0 !important;
+		padding:0 !important;
+	}
+	
+.discount {
+	width:14.5em !important;
+	float:none !important;
+}
