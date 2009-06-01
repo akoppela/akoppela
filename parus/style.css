@@ -222,6 +222,7 @@ body {
 	line-height: 1.7em;
 	overflow:hidden;
 	min-height:18.75em;
+	height: expression( this.scrollHeight < 300 ? "18.75em" : "100%" );
 }
 
 	#content h2 {
@@ -286,7 +287,22 @@ body {
 			margin-left:;
 			padding-left:1em;
 			background: url(img/bullet.gif) no-repeat left center;
+		}
+	
+	#content table {
+		margin-bottom:2em;
+		display:block;
+	}		
+		
+		#content table td, #content table th {
+			padding:0.25em 0.5em !important;
+			text-align:left;
+			vertical-align:top;
 		}	
+				
+			#content table strong {
+				font-weight:bold;
+			}	
 			
 #footer {
 	color: #996633;
