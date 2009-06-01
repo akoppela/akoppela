@@ -213,6 +213,7 @@ var Carousel = new Class({
     },
     
     pause: function(){
+    	if(!this.menu.get('class').test('active')) return false;
         this.stopTimer();
         return this;
     },

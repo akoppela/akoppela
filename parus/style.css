@@ -1,0 +1,284 @@
+/* стандартные обнуления отступов и прочие настройки */
+
+html {
+	height:100%;
+	color:#505050;;
+	background:#300;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+a {
+	text-decoration:none;
+}
+
+/* Основной css */
+
+body {
+	position:relative;
+	margin:0 auto;
+	width:42.625em;
+	font: 100% Times, 'Times New Roman', Serif;
+}
+
+#wrapper {
+	position:relative;
+	width:42.625em;
+	background: url(img/bg.png) no-repeat;
+	padding-left:160px;
+	margin-left:-160px;
+}
+
+	#container {
+		position:relative;
+		width:42.625em;
+		background: url(img/bg.jpg) no-repeat right top;
+		padding-right:160px;
+		margin-right:-160px;
+	}
+
+#title-img {
+	width:42.625em;
+	height:16.5em;
+	display:block;
+	background:#938868;
+}
+
+#ornament {
+	width:37.5em;
+	height:1.25em;
+}
+
+.brick {
+	background: #F9E8CE url(img/parchment.jpg);
+}
+
+#header {
+	text-align:center;
+} 
+
+	#header h1 {
+		font: 250% garamond, times, 'times new roman', serif;
+		font-weight: bold;
+		margin:0.75em 0 0.2em;
+		height:1em;
+		overflow:hidden;
+	}
+	
+		#header h1 a {
+			color:#663300;
+		}
+		
+			#header h1 a img {
+				width:1.25em;
+				height:0.475em;
+				margin:0 0.375em;
+			}
+	
+	#header p {
+		font: 100% times, 'times new roman', serif;
+		color: #505050;
+		letter-spacing:0.1875em;
+		margin: 0 auto 1.25em;
+		font-variant: small-caps;
+	}
+	
+	#header ul {
+		border-top: 1px solid #600;
+		width:37.5em;
+		margin:0.875em auto 0;
+	}
+	
+		#header li {
+			display:inline-block;
+		}
+		
+			#header li a {
+				padding: 10px 10px 10px 10px;
+				font: 600 1.2em garamond,times,'times new romans',serif;
+				color:#990000;
+				text-align:center;
+				display:block;
+			}
+			
+			#header li a:hover {
+				color:#C90;
+				background: url('img/menuhover.jpg') repeat-x bottom left;
+			}
+
+#content {
+	padding:1.25em 2.5em 2.5em;
+	line-height: 1.7em;
+	overflow:hidden;
+}
+
+	#content h2 {
+		font:600 1.6em garamond,times,'times new romans',serif;
+		color:#600;
+		margin-bottom:0.625em;
+		text-align:center;
+	}
+	
+		#content img {
+			border:0.0625em solid #660000;
+			clear:none;
+			margin:0.625em 0.625em 0.625em 0;
+			padding:0.125em;
+			width:9.375em;
+			height:8em;
+			float:left;
+		}
+		
+	#content p {
+		margin:1em 0;
+	}	
+		
+		#content p strong {
+			font-weight:bold;
+		}
+		
+		#content p a {
+			color:#800;
+			text-decoration:underline;
+		}
+		
+		#content p a:hover {
+			color:#C90;
+			text-decoration:none;
+		}
+		
+		#content p span {
+			display:block;
+		}
+		
+#footer {
+	color: #996633;
+	text-align: center;
+	background: #300 url('img/foot.jpg') no-repeat top center;
+}
+
+	#footer p {
+		font-size:0.8em;
+		line-height:7em;
+	}
+	
+		#footer p a {
+			color:#963;
+			text-decoration:underline;
+		}
+		
+		#footer p a:hover {
+			color:#c90;
+			text-decoration:none;
+		}

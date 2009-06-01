@@ -531,6 +531,7 @@ a {
 	height:41px;
 	text-indent:-9000px;
 	background: url(img/instroy.png) no-repeat;
+	overflow:hidden;
 }
 
 .title-text {
@@ -1244,4 +1245,34 @@ a {
 
 .lastlink-footnav {
 	border:none !important;
+}
+
+#footer dl {
+	margin:12px 0 0 33px;
+	font-family:verdana;
+	font-size:10px;
+}
+
+#footer dt {
+	display:block;
+	color:#dbdcee;
+	font-weight:bold;
+}
+
+#footer dd {
+	display:block;
+}
+
+#footer dd ul {
+	width:850px;
+	overflow:hidden;
+}
+
+#footer dd li {
+	display:inline;
+	margin-right:3px;
+}
+
+#footer dd li a {
+	color:#fff;
 }

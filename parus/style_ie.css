@@ -1,0 +1,11 @@
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+#header li {
+	display:inline;
+	zoom:1;
+}
