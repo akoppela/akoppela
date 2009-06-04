@@ -2,7 +2,7 @@
 
 html {
 	height:100%;
-	color:#505050;;
+	color:#505050;
 	background:#300;
 }
 
@@ -130,22 +130,23 @@ body {
 	margin:0 auto;
 	width:42.625em;
 	font: 100% Times, 'Times New Roman', Serif;
+	padding:0 160px;
 }
 
 #wrapper {
-	position:relative;
+	position:absolute;
 	width:42.625em;
-	background: url(img/bg.png) no-repeat;
-	padding-left:160px;
-	margin-left:-160px;
+	background: url(img/bg.jpg) no-repeat right top;
+	padding-right:160px;
+	margin-right:-160px;
 }
 
 	#container {
 		position:relative;
 		width:42.625em;
-		background: url(img/bg.jpg) no-repeat right top;
-		padding-right:160px;
-		margin-right:-160px;
+		background: url(img/bg.png) no-repeat;
+		padding-left:160px;
+		margin-left:-160px;
 	}
 
 #title-img {
@@ -195,7 +196,7 @@ body {
 	}
 	
 	#header ul {
-		border-top: 1px solid #600;
+		border-top: 0.0625em solid #600;
 		width:37.5em;
 		margin:0.875em auto 0;
 	}
@@ -205,7 +206,7 @@ body {
 		}
 		
 			#header li a {
-				padding: 10px 10px 10px 10px;
+				padding:0.52em;
 				font: 600 1.2em garamond,times,'times new romans',serif;
 				color:#990000;
 				text-align:center;
@@ -221,8 +222,8 @@ body {
 	padding:1.25em 2.5em 2.5em;
 	line-height: 1.7em;
 	overflow:hidden;
-	min-height:18.75em;
-	height: expression( this.scrollHeight < 300 ? "18.75em" : "100%" );
+	min-height:37.5em;
+	height: expression( this.scrollHeight < 600 ? "37.5em" : "100%" );
 }
 
 	#content h2 {
@@ -286,7 +287,7 @@ body {
 		#content dd ul li {
 			margin-left:;
 			padding-left:1em;
-			background: url(img/bullet.gif) no-repeat left center;
+			background: url(img/bullet.gif) no-repeat left 0.5em;
 		}
 	
 	#content table {
@@ -337,7 +338,7 @@ body {
 	width:1.5em;
 	height:1.5em;
 	display:block;
-	text-indent:-9999px;
+	text-indent:-9999em;
 	margin-top:1.5em;
 	overflow:hidden;
 }
@@ -354,3 +355,34 @@ body {
 	width:14.5em !important;
 	float:none !important;
 }
+
+#gallery {
+	overflow:hidden;
+	margin-top:1em;
+}
+
+	#gallery li {
+		width:50%;
+		float:left;
+		display:block;
+		text-align:center;
+	}
+	
+		#gallery li img {
+			float:none !important;
+			width:7.35em !important;
+			height:7.35em !important;
+			border:none !important;
+			margin:0 !important;
+		}
+		
+		#gallery li a {
+			font:1.6em garamond,times,'times new romans',serif;
+			color:#600;
+		}
+		
+			#gallery li a span {
+				display:block;
+				margin-bottom:0.325em;
+				text-decoration:underline;
+			}
