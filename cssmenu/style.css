@@ -1,0 +1,110 @@
+/* стандартные обнуления отступов и прочие настройки (reset.css) */
+
+html {
+	height:100%;
+	color:#f00;
+	background:#000;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+/* Основной css */
+
+body {
+	width:100%;
+	font: 100% Times, 'Times New Roman', Serif;
+}
+
+#nav {
+	margin:50px;
+}
+
+#nav, #nav ul {
+	width:200px;
+}
+
+	#nav li {
+		background:#fff;
+		-moz-border-radius:7px;
+		-webkit-border-radius:7px;
+		list-style:none;
+		position:relative;
+		border:1px solid #666;
+		cursor:pointer;
+		display:block;
+		m: expression(this.onmouseover = new Function("this.className = 'iehover';"), this.onmouseout = new Function("this.className = '';")); 
+	}
+	
+	#nav li:hover, .iehover {
+		background:#333;
+	}
+		
+		#nav li ul {
+			display:none;
+			position:absolute;
+			left:199px;
+			top:0px;
+			z-index:2000;
+		}
+	
+			#nav li:hover ul, .iehover ul {
+				display:block !important;
+			}
+
+		#nav a {
+			padding:10px 20px;
+			display:block;
+			position:relative;
+			font-size:13px;
+			color:#f00;
+			text-decoration:none;
+			cursor:pointer;
+			-moz-border-radius:6px;
+			-webkit-border-radius:6px;
+		}
+		
+			#nav a:hover {
+				color:#f0f;
+				background:#ccc;
+			}
+			
+				#nav li li a {
+					font-size:12px !important;
+					padding:5px 10px;
+				}
+				
+				#nav li:hover li ul, .iehover li ul {
+					display:none !important;
+				}
+				
+					#nav li:hover li:hover ul, .iehover li.iehover ul {
+						display:block !important;
+					}
