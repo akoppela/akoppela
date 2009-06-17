@@ -9,12 +9,16 @@ var Menu = new Class({
 		
 		this.columns.fade('hide');
 		
+		this.menu.addEvents({
+			'mouseenter': this.stopTimer.bind(this),
+			'mouseleave': this.startTimer.bind(this)
+		});
 		this.addTitlesEvents();
 	},
 	
 	startTimer: function(){
         if(this.interval) return false;
-        this.interval = this.hideAll.delay(400, this);
+        this.interval = this.close.delay(800, this);
         return true;
 	},
 	
@@ -29,20 +33,30 @@ var Menu = new Class({
 			if(element.getElement('ul')){
 				element.addEvents({
 					'mouseenter': this.start.bind(this),
-					'mouseleave': this.startTimer.bind(this)
+					'mouseleave': this.hide.bind(this)
 				});
-			}
+			} else element.addEvent('mouseenter', this.check.bind(this));
 		}.bind(this));
 	},
 	
 	start: function(e){
-		 if(this.interval){
-		 	this.stopTimer();
-		 	this.hide();
-	 	}
 		this.curElement = $(e.target).getElement('ul') || $(e.target).getNext();
+		if(!this.curElement || this.curElement.get('tag') != 'ul') return false;
 		
 		this.show();
+	},
+	
+	close: function(){
+		this.hideAll();
+		this.stopTimer();
+	},
+	
+	check: function(e){
+		if(this.interval) this.stopTimer();
+		if($(e.target).get('tag') == 'li') {this.curTitle = $(e.target)}
+		else this.curTitle = $(e.target).getParent('li');
+		
+		if(!this.curTitle.getParent('li')) this.hideAll();
 	},
 	
 	show: function(){
@@ -51,7 +65,7 @@ var Menu = new Class({
 	},
 	
 	hide: function(){
-		if(!this.curElement) return false;
+		if(!this.curElement || this.curElement.get('tag') != 'ul') return false;
 		this.curElement.fade('out');
 	},
 	
