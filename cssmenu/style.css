@@ -64,11 +64,11 @@ body {
 	}
 	
 	#nav li:hover, .iehover {
-		background:#333;
+		background:#333 !important;
 	}
 		
 		#nav li ul {
-			display:none;
+			visibility:hidden;
 			position:absolute;
 			left:199px;
 			top:0px;
@@ -76,7 +76,7 @@ body {
 		}
 	
 			#nav li:hover ul, .iehover ul {
-				display:block !important;
+				visibility:visible !important;
 			}
 
 		#nav a {
@@ -102,9 +102,9 @@ body {
 				}
 				
 				#nav li:hover li ul, .iehover li ul {
-					display:none !important;
+					visibility:hidden !important;
 				}
 				
 					#nav li:hover li:hover ul, .iehover li.iehover ul {
-						display:block !important;
+						visibility:visible !important;
 					}
