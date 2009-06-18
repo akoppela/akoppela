@@ -1,0 +1,101 @@
+/* стандартные обнуления отступов и прочие настройки (reset.css) */
+
+html {
+	height:100%;
+	color:#f00;
+	background:#000;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+/* Основной css */
+
+body {
+	width:100%;
+	font: 100% Verdana, Arial, Helvetica, sans-serif;;
+}
+
+#nav {
+	margin:50px;
+}
+
+#nav, #nav ul {
+	width:200px;
+	background:#FEF08F;
+}
+
+	#nav li {
+		border-bottom:1px solid #CCCCCC;
+		border-top:1px solid #FFFFFF;
+		list-style:none;
+		position:relative;
+		cursor:pointer;
+		display:block;
+		m: expression(this.onmouseover = new Function("this.className = 'iehover';"), this.onmouseout = new Function("this.className = '';")); 
+	}
+	
+	#nav li:hover, #nav .iehover {
+		border-top:1px solid #CCCCCC !important;
+	}	
+	
+		#nav li ul {
+			visibility:hidden;
+			position:absolute;
+			left:199px;
+			top:0px;
+			z-index:2000;
+		}
+	
+			#nav li:hover ul, #nav .iehover ul, #nav li:hover li:hover ul, #nav .iehover li.iehover ul {
+				visibility:visible !important;
+			}
+				
+			#nav li:hover li ul, #nav .iehover li ul {
+				visibility:hidden !important;
+			}
+
+		#nav a, #nav li:hover li a,  #nav li:hover li:hover li a, #nav .iehover li a, #nav .iehover .iehover li a {
+			padding:5px 0 5px 5px;
+			display:block;
+			font-size:14px;
+			color:#990000;
+			cursor:pointer;
+			font-weight:bold;
+			text-decoration:underline;
+			background:none;
+			zoom:1;
+		}
+		
+			#nav a:hover, #nav li:hover a, #nav li:hover li:hover a, #nav li:hover li:hover li:hover a, #nav .iehover a, #nav .iehover .iehover a, #nav .iehover .iehover .iehover a {
+				color:#009900;
+				background:#F4E556;
+				text-decoration:none;
+			}
