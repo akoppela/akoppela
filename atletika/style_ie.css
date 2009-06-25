@@ -7,11 +7,16 @@
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/r_blue_bg.png'); /* хак для ие6 png opacity */
 }
 
+#right .sale-nav .cn {
+	background:#fff;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/sale_nav_bg.png'); /* хак для ие6 png opacity */
+}
+
 .bdot {
 	margin-top:-3px;
 }
 
-#catalog li a, #left .banners li a, #left .banners li a img {
+#catalog li a, #left .banners li a, #left .banners li a img, #right .content-orange ul, #right .action-content, #right .popular ul.sec li a  {
 	zoom:1;
 }
 
@@ -34,4 +39,22 @@
 
 #right .basket .active .secline {
 	margin-right:0.2em;
+}
+
+#search-text {
+	filter: alpha(opacity=70);
+}
+
+#right .nav {
+	margin-top:2.2em;
+}
+
+#right .action-nav li {
+	display:inline;
+	zoom:1;
+	margin:0 2px;
+}
+
+#right .popular-text {
+	margin-top:1em;
 }
