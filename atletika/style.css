@@ -229,6 +229,9 @@ body {
 
 #header {
 	overflow:hidden;
+	position:relative;
+	z-index:150;
+	clear:both;
 }
 
 	#header .language {
@@ -252,35 +255,48 @@ body {
 				display:block;
 			}
 				
-	#header .pay {
+	#container .pay {
+		position:absolute;
+		left:50%;
+		top:1em;
 		float:left;
-		margin:1em 0 0 3em;
 	}
 	
-		#header .pay li {
+		#container .pay ul {
+			overflow:hidden;
+			height:1.4375em;
 			float:left;
-			margin:0 0.3em;
-			display:inline;
+			position:relative;
+			left:-50%;
 		}
 		
-			#header .pay li a {
+		#container .pay ul:nth-of-type(1) {
+			margin-left:-50%;
+			left:0;
+		} 
+	
+		#container .pay li {
+			margin:0 0.3em;
+			vertical-align:top;
+			float:left;
+		}
+		
+			#container .pay li a {
 				display:block;
 				overflow:hidden;
 				height:1.4375em;
 				width:2.75em;
 				position:relative;
-				float:left;
 			}
 			
-				#header .pay li a:hover img {
+				#container .pay li a:hover img {
 					top:-100%;
 				}
 			
-				#header .pay li a img {
+				#container .pay li a img {
 					background:#BFDCEC;
 					position:relative;
 					display:block;
-					float:left;
 				}
 			
 				.wm, .wm img {
@@ -451,16 +467,20 @@ body {
 	
 		#header .number span {
 			position:relative;
-			font:137.5% "Trebuchet MS", Helvetica, sans-serif;
 			color:#034ea2;
 			z-index:200;
-			text-indent:0.55em;
 			letter-spacing:0.1em;
 			display:block;
 			float:left;
 			background:#e8f1f8;
 			width:100%;
+			height:1.75em;
 		}
+		
+			#header .number span img {
+				width:15.5em;
+				height:1.75em;
+			}
 		
 			#header .number .title-number {
 				position:absolute;
@@ -641,15 +661,21 @@ body {
 		background: url(img/nav_bg.png) repeat-y right top;
 		padding:0.3em 0;
 	}
+	
+	#right .nav:nth-of-type(1) {
+		margin-top:2.5em;
+	}
+	
 		#right .nav ul {
-			width:100%;
 			background:#F3FBFF;
 			overflow:hidden;
+			margin-left:11em;
 		}
 	
 			#right .nav li {
-				float:right;
+				float:left;
 				padding:0 0.625em;
+				position:relative;
 			}
 		
 				#right .nav li a {
@@ -664,17 +690,21 @@ body {
 					}
 				
 	#right .sec-nav {
-		overflow:hidden;
+		width:100%;
 		line-height:1.5em;
 		position:relative;
 		z-index:10;
-		margin-right:3em;
-		float:right;
+		float:left;
 		display:inline;
 	}
 	
+		#right .sec-nav ul {
+			margin-left:11.5em;
+			overflow:hidden;
+		}
+	
 		#right .sec-nav li {
-			float:right;
+			float:left;
 			padding:0 1em;
 		}
 				
@@ -703,24 +733,31 @@ body {
 			overflow:hidden;
 		}
 	
-		#right .content-orange ul.first {
+		#right .content-orange ul {
 			padding:0.1em 0.5em;
 			text-align:left;
-			width:9999em;
 			overflow:hidden;
 			z-index:100;
 			position:relative;
 		}
 		
-		#right .content-orange li.first {
+		#right .content-orange li {
 			float:left;
-			border-right:1px dotted #a0a0a0;
-			padding-right:0.3em;
 			position:relative;
 			z-index:10;
 			display:block;
 			overflow:hidden;
+			width:50%;
+			text-align:center;
 		} 
+		
+		#right .content-orange .border {
+			border-right:1px dotted #a0a0a0;
+		}
+		
+		#right .content-orange li a img {
+			margin-top:1em;
+		}
 		
 			#right h3 {
 				color:#2b2b2b;
@@ -976,13 +1013,18 @@ body {
 			}
 			
 	.monika {
-		width:13em;
-		height:13.5em;
+		width:19.75em;
+		height:16.5em;
+	}
+	
+	.monika-action {
+		width:42em;
+		height:10.5em;
 	}
 	
 	.bc7200 {
-		width:16.5em;
-		height:15em;
+		width:20.5em;
+		height:17.25em;
 	}
 	
 	#right .other {
@@ -1013,6 +1055,7 @@ body {
 		border-left:1px solid #e9eef3;
 		border-right:1px solid #e9eef3;
 		border-bottom:1px solid #e9eef3;
+		text-align:center;
 	}
 	
 		#right .action-content .price {
@@ -1339,7 +1382,7 @@ body {
 					float:left;
 					clear:both;
 					display:inline;
-					margin:0 2.5em;
+					margin:1em 2.5em 0;
 				}
 				
 					#right .popular ul.sec li {
