@@ -1447,9 +1447,12 @@ body {
 			float:right;
 			position:relative;
 			z-index:100;
+			line-height:4.5em;
+			text-align:center;
 		}
 		
-			#right .footer .banner img {
+			#right .footer .banner a img, #right .footer .banner a  {
+				display:block;
 				width:30.5em;
 				height:4.5em;
 			}
@@ -1646,6 +1649,8 @@ body {
 		#left .banners li {
 			padding-bottom:0.2em;
 			overflow:hidden;
+			text-align:center;
+			line-height:21.875em;
 		}
 	
 			#left .banners li a, #left .banners li a img {
