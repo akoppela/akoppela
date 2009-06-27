@@ -1307,13 +1307,14 @@ body {
 		}
 	
 		#right .popular ul.first {
-			width:1000em;
 			overflow:hidden;
+			width:100%;
 		}
 		
 			#right .popular li.first {
 				float:left;
 				position:relative;
+				width:33%;
 			}
 			
 			#right .popular .corners .cn {
@@ -1345,10 +1346,10 @@ body {
 				position:relative;
 				overflow:hidden;
 				text-align:center;
-				margin:0 2.5em;
-				float:left;
-				display:inline;
 				z-index:100;
+				height:1.5em;
+				max-width:12.5em;
+				margin:0 auto;
 			}
 			
 				#right .popular .title .cn, #right .popular .pop-more .cn {
@@ -1373,24 +1374,24 @@ body {
 						font-weight:bold;
 						color:#fff;
 						text-transform:uppercase;
-						display:block;
 						line-height:2em;
+						display:block;
 						padding:0 2em;
 						height:2em;
 						background:#003685;
 						position:relative;
+						float:none;
 					}
 						
 				#right .popular ul.sec {
-					float:left;
-					clear:both;
-					display:inline;
-					margin:1em 2.5em 0;
+					max-width:12.5em;
+					margin:0 auto;
+					margin-top:1em;
 				}
 				
 					#right .popular ul.sec li {
-						clear:both;
 						overflow:hidden;
+						padding-left:1em;
 					}
 				
 					#right .popular ul.sec li a {
@@ -1398,7 +1399,6 @@ body {
 						color:#2f5b9a;
 						display:block;
 						line-height:2em;
-						float:left;
 					}
 					
 					#right .popular ul.sec li a:hover {
@@ -1406,13 +1406,12 @@ body {
 					}
 				
 		#right .pop-more {
-			clear:both;
 			position:relative;
 			overflow:hidden;
-			float:left;
-			margin-left:3.5em;
-			margin-top:2em;
-			display:inline;
+			width:6em;
+			margin:2em auto 0;
+			height:1.375em;
+			text-align:center;
 		}
 			
 			#right .popular .pop-more .cn {
@@ -1435,7 +1434,6 @@ body {
 				height:2em;
 				font-size:68.75%;
 				text-decoration:underline;
-				float:left;
 				background:#f85110;
 			}
 			

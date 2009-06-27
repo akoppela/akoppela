@@ -2,6 +2,10 @@
 	width: expression(document.documentElement.offsetWidth < (1000/12) * parseInt(document.documentElement.currentStyle.fontSize) ? "62.5em" : "auto"); /* Ёмул€ци€ em-based min-width дл€ IE6 */
 }
 
+#right .popular .title, #right .popular ul.sec {
+	width: expression(document.documentElement.offsetWidth > (200/12) * parseInt(document.documentElement.currentStyle.fontSize) ? "12.5em" : "auto"); /* Ёмул€ци€ em-based min-width дл€ IE6 */
+}
+
 .r-blue .cn {
 	background:#fff;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/r_blue_bg.png'); /* хак дл€ ие6 png opacity */
