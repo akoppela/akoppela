@@ -40,9 +40,8 @@
 #right .basket .active .secline {
 	margin-right:0.2em;
 }
-
 #search-text {
-	filter: alpha(opacity=70);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
 }
 
 #right .nav {

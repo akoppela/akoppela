@@ -506,8 +506,9 @@ body {
 	
 #content {
 	clear:both;
-	margin-top:-3.5em;
+	margin-top:-6.1em;
 	width:100%;
+	overflow:hidden;
 	position:relative;
 }
 		
@@ -515,6 +516,7 @@ body {
 		float:right;
 		margin-left:-17.25em;
 		width:100%;
+		margin-top:2.6em;
 	}	
 	
 		#right {
@@ -620,8 +622,8 @@ body {
 	}
 	
 		#right .search-block div {
-			float:right;
-			margin:0.7em 4em 0 0;
+			float:left;
+			margin:0.7em 0 0 27em;
 			display:inline;
 		}
 		
@@ -631,7 +633,7 @@ body {
 			
 				#search-text {
 					font-size:62.5%;
-					text-indent:0.5em;
+					text-indent:0.2em;
 					width:16em;
 					height:1.5em;
 					border:1px solid #d3dee3;
@@ -670,6 +672,7 @@ body {
 			background:#F3FBFF;
 			overflow:hidden;
 			margin-left:11em;
+			height:2.25em;
 		}
 	
 			#right .nav li {
@@ -1439,6 +1442,7 @@ body {
 	#right .footer {
 		width:100%;
 		position:relative;
+		margin-bottom:1em;
 	}
 	
 		#right .footer .banner {
@@ -1453,6 +1457,7 @@ body {
 		
 			#right .footer .banner a img, #right .footer .banner a  {
 				display:block;
+				background:#E9F2F6;
 				width:30.5em;
 				height:4.5em;
 			}
@@ -1499,10 +1504,8 @@ body {
 			}
 			
 		#right .footer p {
-			float:left;
-			display:inline;
 			font-size:75%;
-			margin-left:18.5em;
+			margin-left:18em;
 			line-height:1.6em;
 			position:relative;
 			z-index:100;
@@ -1526,7 +1529,7 @@ body {
 		position:relative;
 		z-index:100;
 		overflow:hidden;
-		margin-top:3.5em;
+		margin-top:6.1em;
 	}
 							
 	#left .login {
@@ -1659,7 +1662,7 @@ body {
 				display:block;
 				overflow:hidden;
 				float:left;
-				background:#E9F2F6;
+				background:#right .footer p ;
 			}
 			
 	#left .tags {
