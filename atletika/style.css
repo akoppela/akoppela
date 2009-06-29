@@ -915,6 +915,7 @@ body {
 		z-index:110;
 		float:left;
 		overflow:hidden;
+		background:#fff;
 	}
 	
 		#right .sale-nav .cn {
@@ -1467,6 +1468,7 @@ body {
 			float:right;
 			display:inline;		
 			margin-right:0.4em;
+			z-index:110;
 		}
 			
 			#right .footer .welitta .cn, #left .contacts .cn {
