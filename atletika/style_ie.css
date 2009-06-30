@@ -20,7 +20,7 @@
 	margin-top:-3px;
 }
 
-#catalog li a, #left .banners li a, #left .banners li a img, #right .content-orange ul, #right .action-content, #right .popular ul.sec li a  {
+#catalog li a, #left .banners li a, #left .banners li a img, #right .content-orange ul, #right .action-content, #right .popular ul.sec li a, #right .reg {
 	zoom:1;
 }
 
@@ -60,4 +60,8 @@
 
 #right .popular-text {
 	margin-top:1em;
+}
+
+#right .arrow-header {
+	margin-top:-8px;
 }
