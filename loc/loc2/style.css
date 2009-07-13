@@ -133,8 +133,8 @@ body {
 	color:#000;
 	width:100%;
 	height:100%;
-	min-width:1500px;
-	width: expression(document.documentElement.clientWidth < 1250 ? "1250px" : "100%");
+	min-width:1600px;
+	width: expression(document.documentElement.clientWidth < 1600 ? "1600px" : "100%");
 }
 
 a {
@@ -212,6 +212,10 @@ a {
 }
 
 #sec-nav li a:hover {
+	color:#a70200;
+}
+
+#sec-nav li.active a {
 	color:#a70200;
 }
 

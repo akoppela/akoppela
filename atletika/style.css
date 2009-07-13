@@ -233,6 +233,7 @@ body {
 #header {
 	overflow:hidden;
 	clear:both;
+	position:relative;
 }
 
 	#header .language {
