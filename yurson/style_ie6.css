@@ -3,9 +3,8 @@
 	margin-left:0;
 }
 
-.blue-cor .cn {
-	background:none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/blue_corners.png'); /* хак для ие6 png opacity */
+.blue-cor .cn, .blue-bor-cor .cn  {
+	filter: expression(fixPNG(this));
 }
 
 #container {
