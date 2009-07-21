@@ -86,7 +86,7 @@ h6 {
 
 q:before,
 q:after {
-	content: '';
+	content-main: '';
 }
 
 abbr,
@@ -275,101 +275,102 @@ body {
 				text-decoration:none;
 			}
 
-#content {
+#content-main {
 	margin-top:2.25em;
 	color:#fff;
 	overflow:hidden;
 }
 
-	#content .wrapper {
+	#content-main .wrapper {
 		width:100%;
 		margin-left:-18em;
 		float:left;
 	}
 	
-		#content .wrapper .left {
+		#content-main .wrapper .left {
 			margin-left:18em;
 			padding:0 2.75em 0 1em;
 		}
 		
-			#content .left p.slogan {
+			#content-main .left p.slogan {
 				font-size:87.5%;
 			}
 		
-			#content .left h2 {
+			#content-main .left h2 {
 				font:112.5% Arial, Helvetica, sans-serif;
 				margin-top:1.2em;
 			}
 			
-			#content .left .cars-logo {
+			#content-main .left .cars-logo {
 				background:#0c3b4f;
 				padding:2px;
 				margin-top:0.5em;
 				width:100%;
 			}
 			
-				#content .left .cars-logo ul {
+				#content-main .left .cars-logo ul {
 					background:#fff;
 					overflow:hidden;
 					padding:1.25em;
+					height:100%;
 				}
 				
-					#content .left .cars-logo li {
+					#content-main .left .cars-logo li {
 						float:left;
 						margin-bottom:1.75em;
 					}
 					
-						#content .left .cars-logo li a {
+						#content-main .left .cars-logo li a {
 							display:block;
 							width:6.3em;
 							text-align:center;
 							cursor:pointer;
 						}
 						
-							#content .left .cars-logo li a b {
+							#content-main .left .cars-logo li a b {
 								display:block;
 								height:4em;
 							}						
 						
-							#content .left .cars-logo li a span {
+							#content-main .left .cars-logo li a span {
 								text-decoration:underline;
 								font:93.75% Arial, Helvetica, sans-serif;
 								color:#395965;
 							}
 					
-								#content .left .cars-logo li a:hover span, #content .left .cars-logo li a.iehover span {
+								#content-main .left .cars-logo li a:hover span, #content-main .left .cars-logo li a.iehover span {
 									text-decoration:none;
 								}
 						
 			
-	#content .right {
+	#content-main .right {
 		float:right;
 		width:17.5em;
 	}
 	
-		#content .right h2 {
+		#content-main .right h2 {
 			font:150% "Trebuchet MS", Helvetica, sans-serif;
 			padding-left:0.75em;
 		}
 		
-		#content .right .news {
+		#content-main .right .news {
 			margin-top:1.25em;
 		}
 		
-			#content .right .news li {
+			#content-main .right .news li {
 				padding-left:1.125em;
 				background: url(img/blue_arrow.png) no-repeat left 1.85em;
 				margin-bottom:1em;
 			}
 			
-				#content .right .news li span.date {
+				#content-main .right .news li span.date {
 					font-size:62.5%;
 					background:#fff;
 					color:#001924;
 					padding:0.3em;
 				}
 				
-				#content .right .news li a {
+				#content-main .right .news li a {
 					font:75%/1.3em Arial, Helvetica, sans-serif;
 					margin-top:0.5em;
 					color:#fff;
@@ -377,24 +378,24 @@ body {
 					text-decoration:underline;
 				}
 				
-				#content .right .news li a:hover, #content .right .rss-news:hover, #content .right .all-news:hover span {
+				#content-main .right .news li a:hover, #content-main .right .rss-news:hover, #content-main .right .all-news:hover span {
 					text-decoration:none;
 				}
 				
-		#content .right .all-news {
+		#content-main .right .all-news {
 			color:#7dd0ff;
 			font:75% Arial, Helvetica, sans-serif;
 			display:block;
 			text-align:right;
 		}
 		
-			#content .right .all-news span {
+			#content-main .right .all-news span {
 				padding:0 0.5em 0 1.5em;
 				background: url(img/all_news.png) no-repeat;
 				text-decoration:underline;
 			}
 			
-		#content .right .rss-news {
+		#content-main .right .rss-news {
 			margin-top:1.5em;
 			display:block;
 			color:#125670;
