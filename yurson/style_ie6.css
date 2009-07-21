@@ -1,0 +1,21 @@
+#navigation li {
+	display:inline;
+	margin-left:0;
+}
+
+.blue-cor .cn {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/blue_corners.png'); /* хак для ие6 png opacity */
+}
+
+#container {
+	height:100%;
+}
+
+#content .left .cars-logo ul, #content .right .news li {
+	zoom:1;
+}
+
+#content .left .cars-logo li a {
+	m: expression(this.onmouseover = new Function("this.className = 'iehover';"), this.onmouseout = new Function("this.className = '';")); 
+}
