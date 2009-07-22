@@ -588,6 +588,13 @@ body {
 									vertical-align:bottom;
 									text-align:center;
 						 		}
+						 	
+						 		#content .text .text-content form .pages .select-page li.cur a {
+						 			color:#fff;
+						 			background:#4c88a0;
+						 			border:none;
+						 			padding:1px;
+						 		}  
 						 		
 						 		#content .text .text-content form .pages .select-page li a:hover {
 						 			color:#fff;
