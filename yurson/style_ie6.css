@@ -3,7 +3,7 @@
 	margin-left:0;
 }
 
-.blue-cor .cn, .blue-bor-cor .cn  {
+.blue-cor .cn, .blue-bor-cor .cn, .white-cor .cn {
 	filter: expression(fixPNG(this));
 }
 
@@ -11,10 +11,14 @@
 	height:100%;
 }
 
-#content-main .right .news li {
+#content-main .right .news li, #content .text .text-content {
 	zoom:1;
 }
 
 #content-main .left .cars-logo li a {
 	m: expression(this.onmouseover = new Function("this.className = 'iehover';"), this.onmouseout = new Function("this.className = '';")); 
+}
+
+#buy-sub {
+	margin-left:6em;
 }

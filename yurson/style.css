@@ -133,6 +133,10 @@ body {
 	font: 100% Verdana, Geneva, sans-serif;
 }
 
+.bold {
+	font-weight:bold;
+}
+
 .r-corners {
 	position:relative;
 	overflow:hidden;
@@ -150,24 +154,20 @@ body {
 		.r-corners .cn.bl, .r-corners .cn.br {
 			top:auto !important;
 		}
-
-	.blue-cor .cn {
-		width:100%;
-		height:10px;
-		top:-5px;
-		left:-5px;
-		background: url(img/blue_corners.png) no-repeat;
-	}
 		
-	.blue-bor-cor .cn {
+	.blue-cor .cn, .blue-bor-cor .cn, .white-cor .cn {
 		width:100%;
 		height:10px;
 		top:-5px;
 		left:-5px;
-		background: url(img/blue_bor_corners.png) no-repeat;
 	}
-	
 
+	.blue-cor .cn {	background: url(img/blue_corners.png) no-repeat; }
+		
+	.blue-bor-cor .cn {	background: url(img/blue_bor_corners.png) no-repeat; }
+	
+	.white-cor .cn { background: url(img/white_corners.png) no-repeat; }
+	
 #container {
 	min-height:100%;
 }
@@ -408,6 +408,181 @@ body {
 		border-bottom:1px solid #4f8499;
 		background: url(img/page.png) no-repeat 0.3em center;
 	}
+	
+	#content h2.site-map {
+		background: url(img/site_map.png) no-repeat 0.3em center;
+	}
+
+	#content .text {
+		margin-top:0.75em;
+		width:100%;
+		padding:5px 0;
+	}
+	
+		#content .text .text-content {
+			background:#fff;
+			color:#114f69;
+			padding:1.25em 1.25em 4em;
+			overflow:hidden;
+		}
+		
+			#content .text .text-content p {
+				font-size:93.75%;
+				margin-bottom:1.5em;
+			}
+			
+			#content .text .text-content a {
+				color:#114f69;
+			}
+			
+			#content .text .text-content img.map {
+				float:left;
+				margin-right:2.25em;
+				background:#5EA5D9;
+			}
+			
+	#content ul.site-map {
+		margin-top:0.75em;
+	}
+	
+		#content ul.site-map li {
+			padding-left:1.25em;
+			background: url(img/white_dot.png) no-repeat 0.2em 0.6em;
+		}
+		
+			#content ul.site-map li a {
+				font-size:106.25% Arial, Helvetica, sans-serif;
+				line-height:1.5em;
+				color:#fff;
+				text-decoration:underline;
+			}
+			
+			#content ul.site-map li a:hover {
+				text-decoration:none;
+			}
+			
+			#content ul.site-map li li {
+				padding-left:1.75em;
+				background:none;
+			}
+			
+				#content ul.site-map li li a {
+					font-size:93.75%;
+				}
+			
+				#content ul.site-map li li li {
+					margin-left:1em;
+					padding-left:1em;
+					background: url(img/black_dot.png) no-repeat left 0.5em;
+				}
+				
+					#content ul.site-map li li li a {
+						font-size:81.25%;
+					}
+				
+					#content ul.site-map li li li li {
+						margin-left:2.1em;
+						padding-left:1em;
+						background: url(img/blue_arrow.png) no-repeat left 0.5em;
+					}
+					
+						#content ul.site-map li li li li a {
+							font-size:75%;
+						}
+						
+			#content .text .text-content img.world-map {
+				float:left;
+				margin-right:2em;
+				margin-left:1em;
+				display:inline;
+			}
+			
+			#content .text .text-content h3 {
+				color:#4c88a0;
+				font-weight:bold;
+				font:112.5% "Trebuchet MS", Helvetica, sans-serif;
+			}
+			
+			#content .text .text-content form {
+				margin-top:1em;
+			}
+			
+				#content .text .text-content form label {
+					color:#114f68;
+					font-size:81.25%;
+					line-height:2em;
+				}
+				
+				#content .text .text-content form select {
+					display:block;
+					font-size:81.25%;
+					width:15em;
+				}
+				
+				#buy-sub {
+					background:#4c88a0 url(img/buy_sub_bg.png) no-repeat;
+					width:93px;
+					height:22px;
+					border:none;
+					color:#fff;
+					font-size:14px;
+					margin-top:1.25em;
+					margin-left:7em;
+					cursor:pointer;
+				}
+				
+				#content .text .text-content form table {
+					clear:both;
+					width:103.5%;
+					margin-left:-1em;
+				}
+				
+					#content .text .text-content form table th {
+						background:#4c88a0;
+						color:#fff;
+						text-align:center;
+						font-size:87.5%;
+						line-height:1.6em;
+						font-weight:normal;
+						position:relative;
+					}
+					
+					#content .text .text-content form table th.company { width:17%; }
+					
+					#content .text .text-content form table th.adress { width:27%; }
+					
+					#content .text .text-content form table th.telefon { width:16%; }
+					
+					#content .text .text-content form table th.sell { width:10%; }
+					
+					#content .text .text-content form table th.install { width:10%; }
+					
+					#content .text .text-content form table th.site { width:20%; }
+					
+					#content .text .text-content form table td {
+						font-size:75%;
+						padding:1em;
+						border-right:1px solid #d3d6d7;
+						border-bottom:1px solid #d3d6d7;
+						color:#114f68;
+					}
+					
+					#content .text .text-content form table td.last {
+						border-right:none;
+						text-align:center;
+					}
+					
+					#content .text .text-content form table td.yes {
+						background: url(img/yes.png) no-repeat center;
+					}
+					
+						#content .text .text-content form table td a {
+							text-decoration:underline;
+						}
+					
+						#content .text .text-content form table td a:hover {
+							text-decoration:none;
+						}
 
 #hfooter {
 	clear:both;
