@@ -131,6 +131,7 @@ body {
 	margin:0 auto;
 	height:100%;
 	font: 100% Verdana, Geneva, sans-serif;
+	position:relative;
 }
 
 .bold {
@@ -303,7 +304,7 @@ body {
 				width:100%;
 			}
 			
-				#content-main .left .cars-logo ul {
+				#content-main .left .cars-logo ul, #content .text .text-content.install ul {
 					overflow:hidden;
 					padding:1.25em;
 					height:100%;
@@ -313,30 +314,52 @@ body {
 					border-right:3px solid #0c3b4f;
 				}
 				
-					#content-main .left .cars-logo li {
+				#content .text .text-content.install ul {
+					border:none;
+					padding:1px;
+				}
+				
+					#content-main .left .cars-logo li, #content .text .text-content.install li {
 						float:left;
 						margin-bottom:1.75em;
 					}
 					
-						#content-main .left .cars-logo li a {
+					#content .text .text-content.install li {
+						padding:0.5em 1px;
+						margin-top:1px;
+						margin-bottom:25px;
+					}
+					
+					#content .text .text-content.install li:hover, #content .text .text-content.install li.iehover {
+						border:1px solid #d5d5d5;
+						padding:0.5em 0;
+						margin:0 0 24px 0;
+					}
+					
+						#content-main .left .cars-logo li a, #content .text .text-content.install li a {
 							display:block;
 							width:6.3em;
 							text-align:center;
 							cursor:pointer;
 						}
 						
-							#content-main .left .cars-logo li a b {
+						#content .text .text-content.install li a {
+							width:5.76em;
+							display:block;
+						}
+						
+							#content-main .left .cars-logo li a b, #content .text .text-content.install li a b {
 								display:block;
 								height:4em;
 							}						
 						
-							#content-main .left .cars-logo li a span {
+							#content-main .left .cars-logo li a span, #content .text .text-content.install li a span {
 								text-decoration:underline;
 								font:93.75% Arial, Helvetica, sans-serif;
 								color:#395965;
 							}
 					
-								#content-main .left .cars-logo li a:hover span, #content-main .left .cars-logo li a.iehover span {
+								#content-main .left .cars-logo li a:hover span, #content-main .left .cars-logo li a.iehover span, #content .text .text-content.install li:hover span, #content .text .text-content.install li.iehover span {
 									text-decoration:none;
 								}
 			
@@ -432,6 +455,15 @@ body {
 			color:#114f69;
 			padding:1.25em 1.25em 4em;
 			overflow:hidden;
+			position:relative;
+		}
+		
+		#content .text .text-content.install {
+			padding-bottom:1.25em;
+		}
+		
+		#content .text .text-content.buy {
+			padding-bottom:0;
 		}
 		
 			#content .text .text-content p {
@@ -447,6 +479,8 @@ body {
 				float:left;
 				margin-right:2.25em;
 				background:#5EA5D9;
+				width:19.5em;
+				height:19.5em;
 			}
 			
 	#content ul.site-map {
@@ -502,30 +536,32 @@ body {
 				float:left;
 				margin:0 2em 2em 1em;
 				display:inline;
+				width:21.25em;
+				height:12.75em;
 			}
 			
-			#content .text .text-content h3 {
+			#content .text .text-content h3.buy {
 				color:#4c88a0;
 				font-weight:bold;
 				font:112.5% "Trebuchet MS", Helvetica, sans-serif;
 			}
 			
-			#content .text .text-content form {
+			#content .text .text-content form.buy {
 				margin-top:1em;
 			}
 			
-				#content .text .text-content form .form-wrapper {
+				#content .text .text-content form.buy .form-wrapper {
 					float:left;
 					width:12.5em;
 				} 
 			
-				#content .text .text-content form label {
+				#content .text .text-content form.buy label {
 					color:#114f68;
 					font-size:81.25%;
 					line-height:2em;
 				}
 				
-				#content .text .text-content form select {
+				#content .text .text-content form.buy select {
 					display:block;
 					font-size:81.25%;
 					line-height:2em;
@@ -546,22 +582,22 @@ body {
 					float:right;
 				}
 				
-				#content .text .text-content form .pages {
+				#content .text .text-content form.buy .pages {
 					width:100%;
 					clear:both;
 					overflow:hidden;
 				}
 				
-					#content .text .text-content form .pages .how-many-page {
+					#content .text .text-content form.buy .pages .how-many-page {
 						float:right;
 					} 
 					
-					#content .text .text-content form .pages .select-page {
+					#content .text .text-content form.buy .pages .select-page {
 						float:right;
 						margin-left:1.5em;
 					}
 						
-						 #content .text .text-content form .pages .select-page p {
+						 #content .text .text-content form.buy .pages .select-page p {
 						 	margin:0;
 							color:#114f68;
 							font-size:81.25%;
@@ -570,15 +606,15 @@ body {
 							vertical-align:middle;
 						 }
 						 
-						 #content .text .text-content form .pages .select-page ul {
+						 #content .text .text-content form.buy .pages .select-page ul {
 							display:inline-block;
 						 }
 						 
-						 	#content .text .text-content form .pages .select-page li {
+						 	#content .text .text-content form.buy .pages .select-page li {
 						 		display:inline-block;
 						 	}
 						 	
-						 		#content .text .text-content form .pages .select-page li a {
+						 		#content .text .text-content form.buy .pages .select-page li a {
 									color:#11516b;
 									font-size:87.5%;
 									border:1px solid #11506a;
@@ -589,33 +625,35 @@ body {
 									text-align:center;
 						 		}
 						 	
-						 		#content .text .text-content form .pages .select-page li.cur a {
+						 		#content .text .text-content form.buy .pages .select-page li.cur a {
 						 			color:#fff;
 						 			background:#4c88a0;
 						 			border:none;
 						 			padding:1px;
 						 		}  
 						 		
-						 		#content .text .text-content form .pages .select-page li a:hover {
+						 		#content .text .text-content form.buy .pages .select-page li a:hover {
 						 			color:#fff;
 						 			background:#4c88a0;
 						 			border:none;
 						 			padding:1px;
 						 		}
 				
-					#content .text .text-content form .pages #page {
+					#content .text .text-content form.buy .pages #page {
 						display:inline;
-						width:3em;
+						width:4em;
 					}
 								
-				#content .text .text-content form table {
+				#content .text .text-content form.buy table {
 					clear:both;
 					width:103.5%;
 					margin-left:-1em;
 					margin-top:0.2em;
+					position:relative;
+					top:1px;
 				}
 				
-					#content .text .text-content form table th {
+					#content .text .text-content form.buy table th {
 						background:#4c88a0;
 						color:#fff;
 						text-align:center;
@@ -625,19 +663,19 @@ body {
 						position:relative;
 					}
 					
-					#content .text .text-content form table th.company { width:17%; }
+					#content .text .text-content form.buy table th.company { width:17%; }
 					
-					#content .text .text-content form table th.adress { width:27%; }
+					#content .text .text-content form.buy table th.adress { width:27%; }
 					
-					#content .text .text-content form table th.telefon { width:16%; }
+					#content .text .text-content form.buy table th.telefon { width:16%; }
 					
-					#content .text .text-content form table th.sell { width:10%; }
+					#content .text .text-content form.buy table th.sell { width:10%; }
 					
-					#content .text .text-content form table th.install { width:10%; }
+					#content .text .text-content form.buy table th.setup { width:10%; }
 					
-					#content .text .text-content form table th.site { width:20%; }
+					#content .text .text-content form.buy table th.site { width:20%; }
 					
-					#content .text .text-content form table td {
+					#content .text .text-content form.buy table td {
 						font-size:75%;
 						padding:1em;
 						border-right:1px solid #d3d6d7;
@@ -645,23 +683,192 @@ body {
 						color:#114f68;
 					}
 					
-					#content .text .text-content form table td.last {
+					#content .text .text-content form.buy table td.last {
 						border-right:none;
 						text-align:center;
 					}
 					
-					#content .text .text-content form table td.yes {
+					#content .text .text-content form.buy table td.yes {
 						background: url(img/yes.png) no-repeat center;
 					}
 					
-						#content .text .text-content form table td a {
+						#content .text .text-content form.buy table td a {
 							text-decoration:underline;
 						}
 					
-						#content .text .text-content form table td a:hover {
+						#content .text .text-content form.buy table td a:hover {
 							text-decoration:none;
 						}
-
+									
+	#content ul.headline-tree {
+		font-size:93.75%;
+		line-height:1.5em;
+		padding-left:1.5em;
+		border-bottom:1px solid #4f8499;
+		background: url(img/page.png) no-repeat 0.3em center;
+	}
+	
+		#content ul.headline-tree li {
+			display:inline;
+			padding-left:1em;
+			background: url(img/headline_tree_bg.png) no-repeat left center;
+		}
+	
+		#content ul.headline-tree li.cur {
+			padding-left:16px;
+			background: #fff url(img/headline_tree_cur_left_bg.png) no-repeat left center;
+		}
+		
+		#content ul.headline-tree li.first {
+			padding-left:0;
+			background:none;
+		}
+		
+			#content ul.headline-tree li h2 {
+				font-size:100%;
+				line-height:1.5em;
+				padding-left:0;
+				border-bottom:0;
+				background:none;
+				display:inline;
+			}
+		
+			#content ul.headline-tree li a {
+				color:#fff;
+			}
+		
+			#content ul.headline-tree li.cur a {
+				color:#12526c;
+				background:#fff;
+				padding-right:1.6em;
+				padding-left:0.3em;
+				background: #fff url(img/headline_tree_cur_right_bg.png) no-repeat right center;
+				overflow:hidden;
+			}
+						
+			#content .text .text-content h3.install-detail {
+				font-size:93.75%;
+				color:#12526c;
+				background:#ececec;
+				line-height:1.6em;
+				width:120%;
+				margin-left:-1.3em;
+				padding-left:1.3em;
+				margin-bottom:0.5em;
+			}
+			
+			#content .text .text-content .forum-comment {
+				position:absolute;
+				display:block;
+				font-size:75%;
+				bottom:0.8em;
+				right:1.5em;
+				color:#4a6f8b;
+				text-decoration:underline;
+				padding-left:1.8em;
+				background: url(img/comment.png) no-repeat;
+			}
+			
+			#content .text .text-content .forum-comment:hover {	text-decoration:none; }
+			
+			#content h3.install {
+				font-weight:bold;
+				font-family:Arial, Helvetica, sans-serif;
+				padding-top:0.75em;
+			}
+			
+	#content ul.install {
+		margin-top:1.5em;
+		margin-left:1.25em;
+		float:left;
+		display:inline;
+	}
+			
+			#content ul.install li a {
+				font-size:106.25%;
+				font-weight:bold;
+				color:#fff;
+			}
+			
+			#content ul.install ul {
+				margin:1em 0 1.5em 2.75em;
+			}
+						
+				#content ul.install li li a {
+					font-weight:normal;
+					font-size:87.5%;
+					text-decoration:underline;
+				}
+				
+				#content ul.install li li a:hover, #content ul.install li li:hover a, #content ul.install li li.iehover a  {
+					text-decoration:none;
+				}				
+												
+				#content ul.install ul .install-wrapper {
+					padding-top:1em;
+					display:none;
+				}
+																
+				#content ul.install ul .install {
+					padding:5px 0;
+					width:39.5em;
+				}
+				
+				#content ul.install li li:hover .install-wrapper, #content ul.install li li.iehover .install-wrapper {
+					display:block;
+				}
+				
+					#content ul.install ul .install .install-content {
+						background:#fff;
+						padding:0.5em 0.6em;
+						color:#53707c;
+						overflow:hidden;
+						height:100%;
+						position:relative;
+					}
+					
+						#content ul.install ul .install .install-content img {
+							border:2px solid #ced3d5;
+							float:left;
+							margin-right:0.4em;
+							width:8em;
+							height:5.5em;
+						}
+					
+						#content ul.install ul .install .install-content p {
+							float:right;
+							width:29em;
+							font-size:68.75%;
+							margin-right:1em;
+							display:inline;
+						}
+						
+						#content ul.install ul .install .install-content .read-more {
+							color:#596368;
+							font-size:75%;
+							text-decoration:underline;
+							padding-left:1.6em;
+							background: url(img/read_more.png) no-repeat left center;
+							position:absolute;
+							bottom:0.3em;
+							right:2em;
+						}
+						
+						#content ul.install ul .install .install-content .read-more:hover {
+							text-decoration:none;
+						}
+						
+	#content p.diller {
+		font-weight:bold;
+		color:#fff;
+		font-size:87.5%;
+		margin-top:2em;
+	}
+	
+	#content .text .text-content.diller {
+		padding:0;
+	}
+	
 #hfooter {
 	clear:both;
 	position:relative;

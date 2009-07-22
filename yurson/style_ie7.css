@@ -7,11 +7,15 @@
 	margin-left:6em;
 }
 
-#content .text .text-content form .pages .select-page p, #content .text .text-content form .pages .select-page li  {
+#content .text .text-content form.buy .pages .select-page p, #content .text .text-content form.buy .pages .select-page li  {
 	display:inline;
 	margin-right:0.3em;
 }
 						 
-#content .text .text-content form .pages .select-page ul{
+#content .text .text-content form.buy .pages .select-page ul {
 	display:inline;
+}
+
+#content ul.headline-tree li.first {
+	padding-right:0.4em;
 }
