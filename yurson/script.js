@@ -7,13 +7,13 @@ var slideFx = new Class ({
 		this.block = this.link.getElement('.install-wrapper');
 		if(!this.block) return false;
 		
-		this.fx = new Fx.Slide(this.block, {duration: '300', transition: Fx.Transitions.Sine.easeOut});
+		this.fx = new Fx.Slide(this.block, {duration: '300', transition: Fx.Transitions.Sine.easeInOut});
 		
 		this.startPos();
 		
 		this.link.addEvents({
 			'mouseenter': this.start.bind(this),
-			'mouseleave': this.close.bind(this)
+			'mouseleave': this.startTimer.bind(this)
 		});
 	},
 	
@@ -24,7 +24,7 @@ var slideFx = new Class ({
 	
     startTimer: function(){
         if(this.interval) return false;
-        this.interval = this.close.delay(800, this);
+        this.interval = this.close.delay(200, this);
         return true;
     },
     
