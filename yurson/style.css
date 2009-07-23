@@ -943,6 +943,7 @@ body {
 				#content ul.install ul .install-wrapper {
 					padding:1em 0;
 					display:none;
+					position:relative;
 				}
 				
 				#content ul.install ul .install {

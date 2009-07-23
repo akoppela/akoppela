@@ -13,7 +13,7 @@ var slideFx = new Class ({
 		
 		this.link.addEvents({
 			'mouseenter': this.start.bind(this),
-			'mouseleave': this.startTimer.bind(this)
+			'mouseleave': this.close.bind(this)
 		});
 	},
 	
@@ -35,16 +35,17 @@ var slideFx = new Class ({
     },
 	
 	open: function(){
+		this.fx.cancel();
 		this.fx.slideIn();
 	},
 	
 	close: function(){
+		this.fx.cancel();
 		this.fx.slideOut();
 	},
 	
 	start: function(e){
 		this.stopTimer();
-		this.fx.cancel();
 		this.open();
 		
 		return false;
