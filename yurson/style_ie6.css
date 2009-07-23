@@ -3,7 +3,7 @@
 	margin-left:0;
 }
 
-.blue-cor .cn, .blue-bor-cor .cn, .white-cor .cn {
+.blue-cor .cn, .blue-bor-cor .cn, .white-cor .cn, .gray-cor .cn {
 	filter: expression(fixPNG(this));
 }
 
@@ -11,7 +11,7 @@
 	height:100%;
 }
 
-#content-main .right .news li, #content .text .text-content, #content ul.install ul .install-wrapper {
+#content-main .right .news li, #content .text .text-content, #content ul.install ul .install-wrapper, #content .news li, .slide {
 	zoom:1;
 }
 
@@ -23,13 +23,17 @@
 	margin-left:6em;
 }
 
-#content .text .text-content form.buy .pages .select-page p, #content .text .text-content form.buy .pages .select-page li  {
+#content .text .text-content form.buy .pages .select-page p, #content .text .text-content form.buy .pages .select-page li, #content .catalog.right .pages .select-page p, #content .catalog.right .pages .select-page li  {
 	display:inline;
 	margin-right:0.3em;
 }
 						 
-#content .text .text-content form.buy .pages .select-page ul {
+#content .text .text-content form.buy .pages .select-page ul, #content .catalog.right .pages .select-page ul {
 	display:inline;
+}
+
+#content .catalog.right .pages.bottom {
+	margin-top:1em;
 }
 
 #content ul.headline-tree li.first {
