@@ -81,79 +81,34 @@
 							<a class="recount">пересчитать</a>
 							<p class="basket-price">Сумма заказа: <span>122 500<b>грн</b></span></p>
 							<div class="clear_medium hrb"></div>
-							<table>
-								<tr>
-									<td class="left">
-										<div class="basket-img">
-											<img src="/img/table4.png" alt="" />
-											<p>Тумба</p>
-											<span>360<b>грн</b></span>
-										</div>
-										<div class="basket-content">
-											<strong class="basket-title">Имя товара</strong>
-											<p>Ипользуется для установки в дверные проёмы. Ипользуется для установки в дверные проёмы.Ипользуется для установки в дверные проёмы.</p>
-											<p>Ипользуется для установки в дверные проёмы.Ипользуется для установки в дверные проёмы.</p>
-										</div>
-									</td>
-									<td class="right">
-										<span class="col">количество</span>
-										<input type="text" value="1" class="how-many" />
-										<span>общая сумма</span>
-										<strong>55 305 <b>грн</b></strong>
-										<a class="delete">удалить товар</a>
-									</td>
-								</tr>
-								<tr>
-									<td class="left">
-										<div class="basket-img">
-											<img src="/img/table4.png" alt="" />
-											<p>Тумба</p>
-											<span>360<b>грн</b></span>
-										</div>
-										<div class="basket-content">
-											<strong class="basket-title">Имя товара</strong>
-											<p>Ипользуется для установки в дверные проёмы. Ипользуется для установки в дверные проёмы.Ипользуется для установки в дверные проёмы.</p>
-											<p>Ипользуется для установки в дверные проёмы.Ипользуется для установки в дверные проёмы.</p>
-										</div>
-									</td>
-									<td class="right">
-										<span class="col">количество</span>
-										<input type="text" value="1" class="how-many" />
-										<span>общая сумма</span>
-										<strong>55 305 <b>грн</b></strong>
-										<a class="delete">удалить товар</a>
-									</td>
-								</tr>
-								<tr>
-									<td class="left">
-										<div class="basket-img">
-											<img src="/img/table4.png" alt="" />
-											<p>Тумба</p>
-											<span>360<b>грн</b></span>
-										</div>
-										<div class="basket-content">
-											<strong class="basket-title">Имя товара</strong>
-											<p>Ипользуется для установки в дверные проёмы. Ипользуется для установки в дверные проёмы.Ипользуется для установки в дверные проёмы.</p>
-											<p>Ипользуется для установки в дверные проёмы.Ипользуется для установки в дверные проёмы.</p>
-										</div>
-									</td>
-									<td class="right">
-										<span class="col">количество</span>
-										<input type="text" value="1" class="how-many" />
-										<span>общая сумма</span>
-										<strong>55 305 <b>грн</b></strong>
-										<a class="delete">удалить товар</a>
-									</td>
-								</tr>
-							</table>
-							<a class="recount">пересчитать</a>
-							<p class="thanks">Спасибо, что Вы с КОМОРОЙ!</p>
-							<div class="basket-buy">
-								<input id="basket-sub" type="submit" value="Оформить заказ" />
-								<p class="sum">Сумма заказа: <span>122 500</span><b>грн</b></p>
-								<div class="clear2"></div>
-								<p class="col-all">Количество товаров: <span>12</span></p>
-								<a class="delete-all"/>удалить все товары</a>
+							<div class="basket-reg">
+								<div class="left">
+									<input class="chbox" type="checkbox" id="with-delivery" />
+									<label for="with-delivery">С доставкой</label>
+									<input class="chbox" type="checkbox" id="without-delivery" />
+									<label for="without-delivery">Самовывоз</label>
+									<div class="input-text">
+										<input type="text" value="Фамилия" />
+										<input type="text" value="Имя" />
+										<input type="text" value="Отчество" />
+										<input id="basket-city" type="text" value="Город" />
+										<input type="text" value="Адресс" />
+										<input type="text" value="Телефон" />
+										<input type="text" value="e-mail" />
+									</div>
+								</div>
+								<div class="right">
+									<p class="">чтобы оформить заказ <br /> заполните форму </p>
+									<input id="basket-reg-sub" type="submit" value="Оформить заказ" />
+									<a href="#">обратно в корзину</a>
+								</div>
+								<p class="reg-col">Заказано товаров: <span>12</span></p>
+								<ul class="basket-reg">
+									<li><p><span>323123,  Тумба “Юмба”</span>   <i>5000</i>грн, заказано <b>7</b>единиц, на сумму <b>35 000</b> грн</p></li>
+									<li><p><span>323123,  Тумба “Юмба”</span>   <i>5000</i>грн, заказано <b>7</b>единиц, на сумму <b>35 000</b> грн</p></li>
+									<li><p><span>323123,  Тумба “Юмба”</span>   <i>5000</i>грн, заказано <b>7</b>единиц, на сумму <b>35 000</b> грн</p></li>
+									<li class="last"><p><span>323123,  Тумба “Юмба”</span>   <i>5000</i>грн, заказано <b>7</b>единиц, на сумму <b>35 000</b> грн</p></li>
+								</ul>
 							</div>
 						</div>
 					</form>

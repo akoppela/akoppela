@@ -1038,10 +1038,16 @@ body {
 				height:1.5em;
 				border:1px solid #7aa3b4;
 				font-size:75%;
-				color:#c73737;
 				vertical-align:top;
 				padding:0.2em 0 0 0.5em;
-				width:37%;
+				width:24em;
+				color:#44798d;
+				position:relative;
+			}
+			
+			#content .text .text-content.diller form input.notValid {
+				color:#c73737;
+				border-color:#c73737;
 			}
 			
 			#content .text .text-content.diller form #diller-sub {
@@ -1171,7 +1177,6 @@ body {
 									display:block;
 									text-indent:-9999px;
 									overflow:hidden;
-									cursor:pointer;
 									position:absolute;
 									top:50%;
 									z-index:100;
@@ -1182,10 +1187,20 @@ body {
 										background: #b4b4b4 url(img/arrows.png) no-repeat;
 										left:0.2em;
 									}
+									
+									#content .text .text-content.catalog-detail .active.left {
+										background: #21838F url(img/arrows.png) no-repeat left -25px;
+										cursor:pointer;
+									}
 							
 									#content .text .text-content.catalog-detail .arrows.right {
 										background: #b4b4b4 url(img/arrows.png) no-repeat -24px top;
 										right:0.2em;
+									}
+									
+									#content .text .text-content.catalog-detail .active.right {
+										background: #21838F url(img/arrows.png) no-repeat -24px -25px;
+										cursor:pointer;
 									}
 								
 								#content .text .text-content.catalog-detail .catalog-preview-wrapper {
@@ -1204,10 +1219,9 @@ body {
 								
 										#content .text .text-content.catalog-detail .catalog-preview-wrapper li {
 											float:left;
-											margin-right:1em;
 										}
 								
-										#content .text .text-content.catalog-detail .catalog-preview-wrapper li.last {
+										#content .text .text-content.catalog-detail .catalog-preview-wrapper li.last img {
 											margin-right:0;
 										}
 								
@@ -1215,6 +1229,7 @@ body {
 												border:3px solid #d5d5d5;
 												width:7.25em;
 												height:4.1em;
+												margin-right:1em;
 											}
 											
 				#content .text .text-content.catalog-detail .catalog-descr-wrapper {

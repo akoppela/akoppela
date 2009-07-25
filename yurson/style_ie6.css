@@ -15,7 +15,7 @@
 	zoom:1;
 }
 
-#content-main .left .cars-logo li a, #content .text .text-content.install li, #content ul.install li li {
+#content-main .left .cars-logo li a, #content .text .text-content.install li, #content ul.install li li.iefix {
 	m: expression(this.onmouseenter = new Function("this.className = 'iehover';"), this.onmouseleave = new Function("this.className = '';")); 
 }
 
@@ -42,4 +42,9 @@
 
 #content .text .text-content .forum-comment {
 	right:15.5em;
+}
+
+#content .text .text-content.diller form input {
+	padding-top:0.3em;
+	height:1.4em;
 }

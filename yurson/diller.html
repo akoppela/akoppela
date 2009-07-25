@@ -12,6 +12,8 @@
 	<![endif]-->
 	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="style_ie7.css" /><![endif]-->
     <title>Yurson | Анкета для диллеров</title> 
+    <script type="text/javascript" src="mootools-1.2.3-core-yc.js"></script>
+    <script type="text/JavaScript" src="script.js"></script>
 </head>
 <body class="vcard">
 	<div id="container">
@@ -47,27 +49,27 @@
 				<div class="cn tl"></div>
     	    	<div class="cn tr"></div>
     	    	<div class="text-content diller">
-    	    		<form action="#" method="get">
+    	    		<form action="#" method="get" id="dillerForm">
     	    			<div>
     	    				<label for="company-name">Название компании (ЧП)*:</label>
-    	    				<input type="text" id="company-name" value="" />
+    	    				<input class="need" type="text" id="company-name" value="" />
     	    				<label class="gray" for="diller-city">Город*:</label>
-    	    				<input type="text" id="diller-city" value="" />
+    	    				<input class="need" type="text" id="diller-city" value="" />
     	    				<label for="diller-adress">Адрес*:</label>
-    	    				<input type="text" id="diller-adress" value="" />
+    	    				<input class="need" type="text" id="diller-adress" value="" />
     	    				<label class="gray" for="contact-face">Контактное лицо*:</label>
-    	    				<input type="text" id="contact-face" value="" />
+    	    				<input class="need" type="text" id="contact-face" value="" />
     	    				<label for="diller-email">E-mail*:</label>
-    	    				<input type="text" id="diller-email" value="" />
+    	    				<input class="need email" type="text" id="diller-email" value="" />
     	    				<label class="gray" for="diller-site">Веб-сайт:</label>
     	    				<input type="text" id="diller-site" value="" />
     	    				<label for="diller-tel1">Телефон 1*:</label>
-    	    				<input type="text" id="diller-tel1" value="" />
+    	    				<input class="need" type="text" id="diller-tel1" value="" />
     	    				<label class="gray" for="diller-tel2">Телефон 2:</label>
     	    				<input type="text" id="diller-tel2" value="" />
     	    				<label for="diller-profile">Основной профиль деятельности:<br />(розничная продажа, инсталляция,…прочее):</label>
     	    				<input type="text" id="diller-profile" value="" />
-    	    				<label class="gray" for="diller-time">Как давно занимаетесь указанным <br /> видом деятельности?</label>
+    	    				<label class="gray" for="diller-time">Как давно занимаетесь указанным видом деятельности?</label>
     	    				<input type="text" id="diller-time" value="" />
     	    				<label for="diller-with-com">С какими компаниями сотрудничаете?</label>
     	    				<input type="text" id="diller-with-com" value="" />
@@ -76,7 +78,7 @@
     	    				<label for="diller-money">Какая форма оплаты для Вас наиболее предпочтительна: <br /> (наличный, безналичный расчет)</label>
     	    				<input type="text" id="diller-money" value="" />
     	    				<label class="gray" for="diller-search">Как Вы нас нашли?*</label>
-    	    				<input type="text" id="diller-search" value="" />
+    	    				<input class="need" type="text" id="diller-search" value="" />
     	    				<input type="submit" id="diller-sub" value="Отправить" />
     	    				<p>* поля обьязательны для заполнения</p>
     	    			</div>
