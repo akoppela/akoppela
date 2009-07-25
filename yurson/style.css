@@ -1236,7 +1236,7 @@ body {
 					padding:2px;
 					background:#ececec;
 					width:42.5em;
-					margin:0.3em;
+					margin:0.3em auto;
 				} 	
 	
 					#content .text .text-content.catalog-detail table.catalog-descr {
