@@ -95,10 +95,32 @@
 						<div class="padrr">
 							<span class="vxlarge gray2">{PAGE_NAME}</span><br />
 							<span class="orange" style="text-transform:uppercase;">{PAGE_DESC}</span>
+							<ul>
+								<li><a href="#">Жалюзи</a></li>
+								<li><a href="#">Вертикальные</a></li>
+								<li class="curpos"><a href="#">Отправить заказ</a></li>
+							</ul>
 							<div class="clear_medium"></div>
 						</div>
 						<div class="padrr2 large">
-        	  				{PAGE_CONTENT}          
+							<h2 class="title-order">чтобы оформить заказ<br /> заполните форму </h2>
+							<form class="order-form" action="#" method="get">
+								<div>
+									<input type="radio" id="with-del" class="radio" name="delivery" />
+									<label for="with-del">С доставкой</label>
+									<input type="radio" id="without-del" class="radio" name="delivery" />
+									<label for="without-del">Самовывоз</label>
+									<input type="text" value="Фамилия" />
+									<input type="text" value="Имя" />
+									<input type="text" value="Отчество" />
+									<input type="text" value="Город" id="order-city" />
+									<input type="text" value="Адрес" />
+									<input type="text" value="Телефон" />
+									<input type="text" value="e-mail" />
+									<input type="submit" value="Оформить заказ" id="order-sub" />
+									<a href="#">обратно в корзину</a>
+								</div>
+							</form>
          				</div>
 					</div>
 				</div>

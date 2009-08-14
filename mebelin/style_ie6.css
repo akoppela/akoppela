@@ -1,0 +1,7 @@
+#container { height:100%; }
+.png { filter: expression(fixPNG(this)); }
+#right-nav { height:401px; }
+#right-nav li, #links li div.wrap {	vertical-align:top; zoom:1; }
+#right-nav li { m: expression(this.onmouseenter = new Function("this.className = 'iehover';"), this.onmouseleave = new Function("this.className = '';")); }
+#layout { display:none; }
+#content ul.article li { margin-bottom:0; }
