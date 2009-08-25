@@ -62,29 +62,29 @@
 			<span class="slogan">гарантия <b>КАЧЕСТВА</b></span>
 			<span class="main-number">+38(044) 239-97-27</span>
 			<div class="clear_f"></div>
-			<div id="fMenu" class="flash-menu">
-				<div class="fmenu-bg">
-					<a class="f-basket" href="#">корзина</a>
-					<div class="clear_f"></div>
-					<a class="f-com" href="#">О компании</a>
-					<div class="clear_f"></div>
-					<a class="f-cond" href="#">условия</a>
-					<a class="f-partn" href="#">работы</a>
-					<a class="f-cont" href="#">контакты</a>
-					<div class="clear_f"></div>
-				</div>
-				<a id="fClose" href="#">свернуть</a>
-			</div>
-			<div id="closeMenu">
-				<ul>
-					<li><a href="#">О компании</a></li>
-					<li><a href="#">условия</a></li>
-					<li><a href="#">работы</a></li>
-					<li><a href="#">корзина</a></li>
-					<li><a href="#">контакты</a></li>
-				</ul>
-				<a id="fOpen" href="#">развернуть</a>
-			</div>
+      <div id="fMenu" class="flash-menu">
+        <div class="fmenu-bg">
+          <a class="f-basket" href="/ru/pages/dileram">дилерам</a>
+          <div class="clear_f"></div>
+          <a class="f-com" href="/ru/pages/investoll">О компании</a>
+          <div class="clear_f"></div>
+          <a class="f-cond" href="/ru/pages/info">информация</a>
+          <a class="f-partn" href="/ru/pages/proizvodstvo">производство</a>
+          <a class="f-cont" href="/ru/pages/contacts">контакты</a>
+          <div class="clear_f"></div>
+        </div>
+        <a id="fClose" href="#">свернуть</a>
+      </div>
+      <div id="closeMenu">
+        <ul>
+          <li><a href="/ru/pages/investoll">о компании</a></li>
+          <li><a href="/ru/pages/info">информация</a></li>
+          <li><a href="/ru/pages/proizvodstvo">производство</a></li>
+          <li><a href="/ru/pages/dileram">дилерам</a></li>
+          <li><a href="/ru/pages/contacts">контакты</a></li>
+        </ul>
+        <a id="fOpen" href="#">развернуть</a>
+      </div>  
 		</div>
 		<div class="clear_f"></div>
 		<div class="padr">
@@ -219,6 +219,10 @@
 <div class="clear2"></div>
 </div>
 </div>
+</div>
+<div id="notReady">
+	<p>сайт на стадии заполнения <span>обращайтесь по телефону  <b>+38(044) 239-97-27</b></span></p>
+	<a href="#">закрыть</a>
 </div>
 </body>
 </html>

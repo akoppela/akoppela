@@ -1,6 +1,7 @@
+body { width: expression(document.documentElement.clientWidth > 996 ? "auto" : "996px"); }
 #container { height:100%; overflow:visible; }
-#left .menu li, #left ul.recommend li, #content .title, #left .menu .slide { zoom:1; vertical-align:bottom; }
-.more span { 
+#basket li, #left .menu li, #left ul.recommend li, #content .title, #left .menu .slide { zoom:1; vertical-align:bottom; }
+.more span, #order-sub { 
 	jscript: expression(
 		this.p ? 0 : (
 			this.className == 'current' ? ( this.t = 'current ' ) : ( this.t = '' ),
@@ -18,3 +19,6 @@
 		)
 	);
 }
+#content .tovar, #windows .box .main .border { zoom:1; }
+#windows { right:0; }
+#windows .box .main .arrows { display:inline; }

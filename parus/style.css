@@ -161,8 +161,12 @@ body {
 	height:1.25em;
 }
 
-.brick {
-	background: #F9E8CE url(img/parchment.jpg);
+.brick-left {
+	background: #F9E8CE url(img/parchment_left.jpg) left top;
+}
+
+.brick-right {
+	background: url(img/parchment_right.jpg) repeat-y right top;
 }
 
 #header {
