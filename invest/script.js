@@ -8,6 +8,10 @@ var slideMenu = new Class ({
 		this.link = this.block.getParent('li').getElement('a');
 		
 		this.startPosition();
+		if(this.block.getElement('.current')){
+			this.fx.show();
+			this.block.getParent('li').addClass('current');
+		}
 		
 		this.link.addEvent('click', this.start.bind(this));
 	},

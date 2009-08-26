@@ -20,5 +20,5 @@ body { width: expression(document.documentElement.clientWidth > 996 ? "auto" : "
 	);
 }
 #content .tovar, #windows .box .main .border { zoom:1; }
-#windows { right:0; }
-#windows .box .main .arrows { display:inline; }
+#windows { right:0; z-index:20; }
+#content .wrapper { position:static; }
