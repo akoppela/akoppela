@@ -834,9 +834,10 @@ h1#logo i {
 	overflow:hidden;
 	background:#D8E6F3 url(img/loading.gif) no-repeat center;
 	width:120px;
-	height:160px
+	height:160px;
 }
 #popupBasket.box div.img img {
 	width:120px;
 	height:160px;
+	visibility:hidden;
 }

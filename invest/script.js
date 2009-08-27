@@ -340,15 +340,23 @@ var Basket = new Class({
 		this.popupHead = new Element('div', { 'class': 'head' }).inject(this.popupWindow);
 		this.popupHeadLink = new Element('a', {
 			'href': '#',
-			'text': 'свернуть',
+			'text': 'закрыть',
 			'events': {
 				'click': this.destroyWindow.bind(this)
 			}
 		}).inject(this.popupHead);
 		this.popupMain = new Element('div', { 'class': 'main' }).inject(this.popupWindow);
 		this.popupBorder = new Element('div', { 'class': 'border' }).inject(this.popupMain);
-		this.popupImgBox = new Element('div', { 'class': 'img' }).inject(this.popupBorder);
-		this.popupImg = new Element('img', { 'src': this.currentSrc }).inject(this.popupImgBox);
+		this.popupImgBox = new Element('div', {	'class': 'img' }).inject(this.popupBorder);
+		this.popupImg = new Element('img', {
+			'src': this.currentSrc,
+			'events': {
+				'load': function(){
+					alert(1);
+					this.setStyle('visibility', 'hidden');
+				}
+			}
+		}).inject(this.popupImgBox);
 	},
 	
 	destroyWindow: function(){
