@@ -320,7 +320,10 @@ var Basket = new Class({
 	},
 	
 	createWindow: function(e){
-		this.currentSrc = $(e.target).get('href');
+		this.currentTr = $(e.target);
+		this.currentSrc = this.currentTr.get('href');
+		this.textH2 = this.currentTr.get('text');
+		this.inputText = this.currentTr.getParent('tr').getElement('input').get('value');
 		this.overlay = new Element('div', {
 			'id': 'overlay',
 			'styles': {
@@ -347,16 +350,18 @@ var Basket = new Class({
 		}).inject(this.popupHead);
 		this.popupMain = new Element('div', { 'class': 'main' }).inject(this.popupWindow);
 		this.popupBorder = new Element('div', { 'class': 'border' }).inject(this.popupMain);
+		this.popupH2 = new Element('h2', { 'text': this.textH2 }).inject(this.popupBorder);
 		this.popupImgBox = new Element('div', {	'class': 'img' }).inject(this.popupBorder);
-		this.popupImg = new Element('img', {
-			'src': this.currentSrc,
-			'events': {
-				'load': function(){
-					alert(1);
-					this.setStyle('visibility', 'hidden');
-				}
+		this.popupImg = new Asset.image(this.currentSrc, {
+			onload: function(){
+				this.addClass('loaded');
+				this.fade('hide');
+				this.fade('in');
 			}
 		}).inject(this.popupImgBox);
+		this.popupInput = new Element('input', {
+			'value': this.inputText
+		}).inject(this.popupBorder);
 	},
 	
 	destroyWindow: function(){

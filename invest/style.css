@@ -214,7 +214,7 @@ body {
 	padding:13px 10px 5px 20px;
 	overflow:hidden;
 }
-#basketBox.box .main h2 {
+.box .main h2 {
 	color:#393939;
 	text-transform:uppercase;
 	font-size:18px;
@@ -826,6 +826,7 @@ h1#logo i {
 	display:block;
 	margin-left:-50px;
 	float:none;
+	top:10px;
 }
 #popupBasket.box .main .border { padding-right:20px;}
 #popupBasket.box div.img { 
@@ -840,4 +841,22 @@ h1#logo i {
 	width:120px;
 	height:160px;
 	visibility:hidden;
+}
+#popupBasket.box .main h2 { line-height:24px; margin-bottom:5px; }
+#popupBasket.box .main span, #popupBasket.box .main b { 
+	font-size:12px;
+	font-weight:bold;
+	line-height:16px;
+	color:#162B48;
+	display:block;
+	float:left;
+	margin-top:5px;
+}
+#popupBasket.box div.img img.loaded { visibility:visible; }
+#popupBasket.box input {
+	margin-top:20px;
+	width:50px;
+	text-align:center;
+	border:1px solid #113590;
+	font-size:12px;
 }
