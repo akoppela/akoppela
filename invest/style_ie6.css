@@ -1,7 +1,7 @@
 body { width: expression(document.documentElement.clientWidth > 996 ? "auto" : "996px"); }
 #container { height:100%; overflow:visible; }
 #basket li, #left .menu li, #left ul.recommend li, #content .title, #left .menu .slide { zoom:1; vertical-align:bottom; }
-.more span, #order-sub { 
+.more span, #order-sub, #basket-sub, #basketBox .main #save { 
 	jscript: expression(
 		this.p ? 0 : (
 			this.className == 'current' ? ( this.t = 'current ' ) : ( this.t = '' ),
@@ -19,6 +19,6 @@ body { width: expression(document.documentElement.clientWidth > 996 ? "auto" : "
 		)
 	);
 }
-#content .tovar, #windows .box .main .border { zoom:1; }
-#windows { right:0; z-index:20; }
+#content .tovar, #basketBox.box .main .border { zoom:1; }
 #content .wrapper { position:static; }
+#basketBox.box .main #basket td.first input { margin-right:3px; }

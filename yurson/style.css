@@ -355,18 +355,21 @@ body {
 							width:6.3em;
 							text-align:center;
 							cursor:pointer;
+							height:5.1em;
 						}
 						
 						#content .text .text-content.install li a {
 							width:5.76em;
 							display:block;
+							position:relative;
 						}
 						
-							#content-main .left .cars-logo li a b, #content .text .text-content.install li a b {
+							#content-main .left .cars-logo li a b, #content .text .text-content.install li a b, #content-main .left .cars-logo li a span.img {
 								display:block;
 								height:4em;
-							}						
-						
+								font-size:100%;
+							}	
+							
 							#content-main .left .cars-logo li a span, #content .text .text-content.install li a span {
 								text-decoration:underline;
 								font:93.75% Arial, Helvetica, sans-serif;
