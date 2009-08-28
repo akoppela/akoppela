@@ -264,7 +264,7 @@ var Basket = new Class({
 		});
 		this.elements.addEvent('click', this.createWindow.bind(this));
 		$(window.document).addEvent('keydown', function(e){
-			if(e.key = 'esc') this.destroyWindow();
+			if(e.key == 'esc') this.destroyWindow();
 		}.bind(this));
 	},
 	
@@ -362,12 +362,18 @@ var Basket = new Class({
 		this.popupInput = new Element('input', {
 			'value': this.inputText
 		}).inject(this.popupBorder);
+		this.overlay.fade('hide');
+		this.overlay.fade('0.7');
+		( function(){ this.popupWindow.addClass('ready'); }).delay(500, this);
 	},
 	
 	destroyWindow: function(){
 		if(this.overlay && this.popupWindow){
-			this.overlay.destroy();
+			this.overlay.fade('out');
 			this.popupWindow.destroy();
+			( function(){
+				this.overlay.destroy();
+			}).delay(500, this);
 		}
 		return false;
 	}

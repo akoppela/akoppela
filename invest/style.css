@@ -176,6 +176,14 @@ body {
 	z-index:20;
 }
 .box {	float:right; position:relative; width:320px; display:none; z-index:20; }
+.test {
+	position:absolute;
+	top:0;
+	right:0;
+	width:320px;
+	height:100%;
+	z-index:500;
+}
 #basketBox.box {
 	position:absolute !important;
 	z-index:100;
@@ -183,9 +191,9 @@ body {
 	right:0;
 	float:none;
 }
-#basketBox.box.closeWindow { z-index:0; }
-#basketBox.box.winblock { display:block; }
-.winfx { z-index:100000; top:0; right:0; height:100%; }
+.box.winblock { display:block !important; }
+.winfx { z-index:500; top:0; right:0; height:400px; }
+.box.closeWindow { z-index:0 !important; }
 .box .head {
 	width:100%;
 	height:19px;
@@ -816,7 +824,6 @@ h1#logo i {
 	top:0;
 	height:100%;
 	z-index:100000;
-	opacity:0.7;
 }
 #popupBasket.box {
 	width:200px;
@@ -827,7 +834,9 @@ h1#logo i {
 	margin-left:-50px;
 	float:none;
 	top:10px;
+	display:none;
 }
+#popupBasket.box.ready { display:block; }
 #popupBasket.box .main .border { padding-right:20px;}
 #popupBasket.box div.img { 
 	float:none;
