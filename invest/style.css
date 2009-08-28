@@ -188,8 +188,9 @@ body {
 	position:absolute !important;
 	z-index:100;
 	top:0;
-	right:0;
+	margin-left:100%;
 	float:none;
+	right:0;
 }
 .box.winblock { display:block !important; }
 .winfx { z-index:500; top:0; right:0; height:400px; }
@@ -239,6 +240,7 @@ body {
 	font-weight:bold;
 	cursor:pointer;
 }
+#basketForm { width:100%; position:relative; }
 .clear {width:100%; height:1px; clear:both; }
 #basketBox.box .main .arrows.scroll { display:inline-block; }
 #basketBox.box .main .arrows:hover { color:#072B7D; }
@@ -246,7 +248,7 @@ body {
 #basketBox.box .main .down { background:url(img/arrows.png) no-repeat left -7px; margin-right:18px; margin-top:4px; }
 #basketBox.box .main #basket { clear:both; height:180px; overflow-y:auto; overflow-x:hidden; width:100%; position:relative; }
 #basketBox.box .main #basket.scroll { overflow:hidden; }
-#basketBox.box .main #basket table { width:100%; }
+#basketBox.box .main #basket table { width:288px; }
 #basketBox.box .main #basket td.fourth { width:9px; }
 #basketBox.box .main #basket td.fourth a.delete {
 	display:block;
@@ -332,6 +334,7 @@ body {
 	background: #0B2F8C url(img/blue_img.png) no-repeat right top;
 	margin-top:1px;
 	position:relative;
+	width:100%;
 }
 #content .wrapper { border-top:1px solid #e7ebf3; background: #fff url(img/content_top_img.jpg) no-repeat right top; position:relative; z-index:10; }
 #content .title { padding-left:20px; border-bottom:1px solid #efeff0; }
@@ -837,7 +840,7 @@ h1#logo i {
 	display:none;
 }
 #popupBasket.box.ready { display:block; }
-#popupBasket.box .main .border { padding-right:20px;}
+#popupBasket.box .main .border { padding-right:20px; }
 #popupBasket.box div.img { 
 	float:none;
 	margin:0 auto;

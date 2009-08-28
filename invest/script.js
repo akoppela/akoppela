@@ -5,11 +5,11 @@ var slideMenu = new Class ({
 		if(!this.block) return false;
 		
 		this.fx = new Fx.Slide(this.block, {duration: 300, transition: Fx.Transitions.Sine.easeInOut, wait:false});
-		this.linktest = this.block.getParent('li').getElement('a');
+		this.link = this.block.getParent('li').getElement('a');
 		
 		this.startPosition();
 		
-		this.linktest.addEvent('click', this.start.bind(this));
+		this.link.addEvent('click', this.start.bind(this));
 	},
 	
 	startPosition: function(){
