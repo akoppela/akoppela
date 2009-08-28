@@ -169,7 +169,7 @@ var myScroll = new Class({
 		this.arrows = this.main.getElements('.arrows');
 		this.upArrow = this.main.getElement('.up');
 		this.downArrow = this.main.getElement('.down');
-		this.stepHeight = this.scrollBox.getElement('tr').getHeight();
+		this.stepHeight = 20;
 		this.curPosition = 0;
 		
 		this.startPosition();
@@ -178,7 +178,10 @@ var myScroll = new Class({
 		this.deletes.addEvent('click', this.check.bind(this));
 		this.upArrow.addEvent('mousedown', this.moveUp.bind(this));
 		this.downArrow.addEvent('mousedown', this.moveDown.bind(this));
-		this.arrows.addEvent('click', this.pause.bind(this));
+		this.arrows.addEvents({
+			'click': this.pause.bind(this),
+			'mouseleave': this.pause.bind(this)
+		});
 	},
 	
 	startPosition: function(){
@@ -276,7 +279,7 @@ var Basket = new Class({
 			if(element.get('value') != '') this.allText += element.get('value').toInt()
 		}.bind(this));
 		this.form.getElements('td.third').each(function(element){
-			this.summText += element.get('text').toInt() * element.getParent('tr').getElement('input').get('value').toInt();
+			this.summText += element.get('text').toFloat() * element.getParent('tr').getElement('input').get('value').toInt();
 		}.bind(this));
 		this.summText = this.separate(this.summText);
 		this.fxAll.set('color', '#fff');
@@ -288,8 +291,11 @@ var Basket = new Class({
 	},
 	
 	separate: function(str){
-		str = str.toString();
+		str = str.round(2).toString();
 		i = 0;
+		this.dotPosition = str.indexOf('.');
+		this.afterDot = str.substring(this.dotPosition);
+		str = str.substring(-1, this.dotPosition);
 		this.length = str.length;
 		this.howSep = (str.length / 3).toInt();
 		this.str = '';
@@ -300,7 +306,7 @@ var Basket = new Class({
 			this.str = " " + this.strLast + this.str;
 			i++;
 		}
-		this.str = str + this.str;
+		this.str = str + this.str + this.afterDot;
 		return this.str;
 	},
 	
@@ -342,7 +348,7 @@ var Basket = new Class({
 		this.currentSrc = this.currentTr.getElement('td.second').get('href');
 		this.textH2 = this.currentTr.getElement('td.second').get('text');
 		this.inputText = this.currentTr.getElement('input').get('value');
-		this.summText = this.currentTr.getElement('td.third').get('text').toInt() * this.inputText;
+		this.summText = this.currentTr.getElement('td.third').get('text').toFloat() * this.inputText;
 		this.summText = this.separate(this.summText);
 	},
 	
@@ -384,26 +390,28 @@ var Basket = new Class({
 				this.fade('in');
 			}
 		}).inject(this.popupImgBox);
-		this.popupAll = new Element('p', { 'class': 'all', 'text': 'Всего:' }).inject(this.popupBorder);
-		this.popupAllSpan = new Element('span', { 'text': this.inputText + ' товар(ов)'}).inject(this.popupAll);
-		this.popupSumm = new Element('p', { 'class': 'summ', 'text': 'На сумму:' }).inject(this.popupBorder);
-		this.popupSummSpan = new Element('span', { 'text': this.summText + 'грн'}).inject(this.popupSumm);
-		this.popupLeft = new Element('a', {
-			'class': 'arrows left',
-			'title': 'Предыдущий товар',
-			'text': 'влево',
-			'events': {
-				'click': this.prev.bind(this)
-			}
-		}).inject(this.popupBorder);
 		this.popupRight = new Element('a', {
 			'class': 'arrows right',
 			'title': 'Следущий товар',
+			'href': '#',
 			'text': 'вправо',
 			'events': {
 				'click': this.next.bind(this)
 			}
 		}).inject(this.popupBorder);
+		this.popupLeft = new Element('a', {
+			'class': 'arrows left',
+			'title': 'Предыдущий товар',
+			'href': '#',
+			'text': 'влево',
+			'events': {
+				'click': this.prev.bind(this)
+			}
+		}).inject(this.popupBorder);
+		this.popupAll = new Element('p', { 'class': 'all', 'text': 'Всего:' }).inject(this.popupBorder);
+		this.popupAllSpan = new Element('span', { 'text': this.inputText + ' товар(ов)'}).inject(this.popupAll);
+		this.popupSumm = new Element('p', { 'class': 'summ', 'text': 'На сумму:' }).inject(this.popupBorder);
+		this.popupSummSpan = new Element('span', { 'text': this.summText + 'грн'}).inject(this.popupSumm);
 		this.overlay.fade('hide');
 		this.overlay.fade('0.7');
 		( function(){ this.popupWindow.addClass('ready'); }).delay(500, this);
@@ -419,11 +427,13 @@ var Basket = new Class({
 	prev: function(){
 		this.currentTr = $pick(this.currentTr.getPrevious(), this.table.getLast('tr'));
 		this.move();
+		return false;
 	},
 	
 	next: function(){
 		this.currentTr = $pick(this.currentTr.getNext(), this.table.getFirst('tr'));
 		this.move();
+		return false;
 	},
 	
 	move: function(){
