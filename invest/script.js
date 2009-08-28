@@ -277,12 +277,30 @@ var Basket = new Class({
 		this.form.getElements('td.third').each(function(element){
 			this.summText += element.get('text').toInt() * element.getParent('tr').getElement('input').get('value').toInt();
 		}.bind(this));
+		this.summText = this.separate(this.summText);
 		this.fxAll.set('color', '#fff');
 		this.fxSumm.set('color', '#fff');
 		this.all.set('text', this.allText + ' товар(ов)');
-		this.summ.set('text', this.summText + ' грн');
+		this.summ.set('text', this.summText + 'грн');
 		this.fxAll.start('color', '#162b48');
 		this.fxSumm.start('color', '#162b48');
+	},
+	
+	separate: function(str){
+		str = str.toString();
+		i = 0;
+		this.length = str.length;
+		this.howSep = (str.length / 3).toInt();
+		this.str = '';
+		while(i != this.howSep){
+			this.length = this.length - 3;
+			this.strLast = str.substring(this.length);
+			str = str.substring(-1, this.length);
+			this.str = " " + this.strLast + this.str;
+			i++;
+		}
+		this.str = str + this.str;
+		return this.str;
 	},
 	
 	remove: function(e){
@@ -324,6 +342,9 @@ var Basket = new Class({
 		this.currentSrc = this.currentTr.get('href');
 		this.textH2 = this.currentTr.get('text');
 		this.inputText = this.currentTr.getParent('tr').getElement('input').get('value');
+		this.summText = this.currentTr.getParent('tr').getElement('td.third').get('text').toInt() * this.inputText;
+		this.summText = this.separate(this.summText);
+		console.info(this.summText);
 		this.overlay = new Element('div', {
 			'id': 'overlay',
 			'styles': {
@@ -359,9 +380,10 @@ var Basket = new Class({
 				this.fade('in');
 			}
 		}).inject(this.popupImgBox);
-		this.popupInput = new Element('input', {
-			'value': this.inputText
-		}).inject(this.popupBorder);
+		this.popupAll = new Element('p', { 'class': 'all', 'text': 'Всего:' }).inject(this.popupBorder);
+		this.popupAllSpan = new Element('span', { 'text': this.inputText + ' товар(ов)'}).inject(this.popupAll);
+		this.popupSumm = new Element('p', { 'class': 'summ', 'text': 'На сумму:' }).inject(this.popupBorder);
+		this.popupSummSpan = new Element('span', { 'text': this.summText + 'грн'}).inject(this.popupSumm);
 		this.overlay.fade('hide');
 		this.overlay.fade('0.7');
 		( function(){ this.popupWindow.addClass('ready'); }).delay(500, this);

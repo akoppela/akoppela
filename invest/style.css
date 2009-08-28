@@ -303,16 +303,17 @@ body {
 	position:relative;
 }
 #basketBox.box .main #basket div.pop-up a.img, #windows .box .main #basket div.pop-up a.img img { float:none !important; margin:0 auto; }
-#basketBox p.all, #basketBox p.summ {
+p.all { padding-top:10px; }
+p.all, p.summ {
 	color:#c5d6e8;
 	font-size:12px;
 	font-weight:bold;
 	line-height:16px;
 	clear:both;
 }
-#basketBox p.all span, #basketBox p.summ span, .gray { color:#162b48; }
-#basketBox p.all span.white, #basketBox p.summ span.white { color:#fff; } 
-#basketBox p.all span i, #basketBox p.summ span i { font-weight:normal; }
+p.all span, p.summ span, .gray { color:#162b48; padding-left:5px; }
+p.all span.white, p.summ span.white { color:#fff; } 
+p.all span i, p.summ span i { font-weight:normal; }
 #basket-sub { margin-top:6px !important; float:left; }
 #basketBox .main #save {
 	background:#16398F url(img/save.png) no-repeat;
@@ -829,12 +830,12 @@ h1#logo i {
 	z-index:100000;
 }
 #popupBasket.box {
-	width:200px;
+	width:250px;
 	position:absolute;
 	z-index:200000;
 	left:50%;
 	display:block;
-	margin-left:-50px;
+	margin-left:-80px;
 	float:none;
 	top:10px;
 	display:none;
@@ -855,15 +856,7 @@ h1#logo i {
 	visibility:hidden;
 }
 #popupBasket.box .main h2 { line-height:24px; margin-bottom:5px; }
-#popupBasket.box .main span, #popupBasket.box .main b { 
-	font-size:12px;
-	font-weight:bold;
-	line-height:16px;
-	color:#162B48;
-	display:block;
-	float:left;
-	margin-top:5px;
-}
+#popupBasket.box .main b { margin-left:5px; }
 #popupBasket.box div.img img.loaded { visibility:visible; }
 #popupBasket.box input {
 	margin-top:20px;
