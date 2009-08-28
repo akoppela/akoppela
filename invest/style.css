@@ -155,8 +155,8 @@ body {
 	z-index:100;
 	text-indent:-9999px;
 }
-#basketLink.active { background: url(img/basket_img.jpg) no-repeat left top; }
-#basketLink.active:hover { background: url(img/basket_img.jpg) no-repeat left -50px; }
+#basketLink.active { background: #0B2F8C url(img/basket_img.jpg) no-repeat left top; }
+#basketLink.active:hover { background: #FFA100 url(img/basket_img.jpg) no-repeat left -50px; }
 #windows {
 	position:absolute;
 	top:0;
@@ -841,7 +841,7 @@ h1#logo i {
 	display:none;
 }
 #popupBasket.box.ready { display:block; }
-#popupBasket.box .main .border { padding-right:20px; }
+#popupBasket.box .main .border { padding-right:20px; position:relative; }
 #popupBasket.box div.img { 
 	float:none;
 	margin:0 auto;
@@ -865,3 +865,14 @@ h1#logo i {
 	border:1px solid #113590;
 	font-size:12px;
 }
+#popupBasket.box .arrows {
+	display:block;
+	width:15px;
+	height:18px;
+	position:absolute;
+	bottom:7px;
+	text-indent:-99999px;
+}
+#popupBasket.box .arrows:hover { background-position:0 0 !important; background-color:#515252; }
+#popupBasket.box .arrows.left { background: #8D8D8D url(img/prev.gif) no-repeat 0 -22px; right:50px; }
+#popupBasket.box .arrows.right { background: #8D8D8D url(img/next.gif) no-repeat 0 -22px; right:30px; }

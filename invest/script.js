@@ -251,6 +251,7 @@ var Basket = new Class({
 		this.fxSumm = new Fx.Tween(this.summ);
 		this.deletes = this.form.getElements('.delete');
 		this.inputs = this.form.getElements('td input');
+		this.table = this.form.getElement('tbody');
 		this.elements = this.form.getElements('td.second');
 		this.body = document.body;
 		this.bodyHeight = $('container').getHeight();
@@ -337,14 +338,17 @@ var Basket = new Class({
 		else if(e.key.match(/^[^0-9]*$/)) return false;
 	},
 	
-	createWindow: function(e){
-		this.currentTr = $(e.target);
-		this.currentSrc = this.currentTr.get('href');
-		this.textH2 = this.currentTr.get('text');
-		this.inputText = this.currentTr.getParent('tr').getElement('input').get('value');
-		this.summText = this.currentTr.getParent('tr').getElement('td.third').get('text').toInt() * this.inputText;
+	count: function(){
+		this.currentSrc = this.currentTr.getElement('td.second').get('href');
+		this.textH2 = this.currentTr.getElement('td.second').get('text');
+		this.inputText = this.currentTr.getElement('input').get('value');
+		this.summText = this.currentTr.getElement('td.third').get('text').toInt() * this.inputText;
 		this.summText = this.separate(this.summText);
-		console.info(this.summText);
+	},
+	
+	createWindow: function(e){
+		this.currentTr = $(e.target).getParent('tr');
+		this.count();
 		this.overlay = new Element('div', {
 			'id': 'overlay',
 			'styles': {
@@ -384,9 +388,66 @@ var Basket = new Class({
 		this.popupAllSpan = new Element('span', { 'text': this.inputText + ' товар(ов)'}).inject(this.popupAll);
 		this.popupSumm = new Element('p', { 'class': 'summ', 'text': 'На сумму:' }).inject(this.popupBorder);
 		this.popupSummSpan = new Element('span', { 'text': this.summText + 'грн'}).inject(this.popupSumm);
+		this.popupLeft = new Element('a', {
+			'class': 'arrows left',
+			'title': 'Предыдущий товар',
+			'text': 'влево',
+			'events': {
+				'click': this.prev.bind(this)
+			}
+		}).inject(this.popupBorder);
+		this.popupRight = new Element('a', {
+			'class': 'arrows right',
+			'title': 'Следущий товар',
+			'text': 'вправо',
+			'events': {
+				'click': this.next.bind(this)
+			}
+		}).inject(this.popupBorder);
 		this.overlay.fade('hide');
 		this.overlay.fade('0.7');
 		( function(){ this.popupWindow.addClass('ready'); }).delay(500, this);
+	},
+	
+	setText: function(){
+		this.popupH2.set('text', this.textH2);
+		this.popupImg.set('src', this.currentSrc);
+		this.popupAllSpan.set('text', this.inputText + ' товар(ов)');
+		this.popupSummSpan.set('text', this.summText + 'грн');
+	},
+	
+	prev: function(){
+		this.currentTr = $pick(this.currentTr.getPrevious(), this.table.getLast('tr'));
+		this.move();
+	},
+	
+	next: function(){
+		this.currentTr = $pick(this.currentTr.getNext(), this.table.getFirst('tr'));
+		this.move();
+	},
+	
+	move: function(){
+		this.reset();
+		this.count();
+		this.setText();
+		[this.popupAllSpan, this.popupSummSpan].each(function(element){
+			element.tween('color', '#162b48');
+		});
+		this.popupH2.tween('color', '#393939');
+		this.popupImg = new Asset.image(this.currentSrc, {
+			onload: function(){
+				this.addClass('loaded');
+				this.fade('hide');
+				this.fade('in');
+			}
+		}).inject(this.popupImgBox);
+	},
+	
+	reset: function(){
+		[this.popupAllSpan, this.popupH2, this.popupSummSpan].each(function(element){
+			element.setStyle('color', '#fff');
+		});
+		this.popupImg.destroy();
 	},
 	
 	destroyWindow: function(){
