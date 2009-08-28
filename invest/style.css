@@ -261,7 +261,7 @@ body {
 }
 #basketBox.box .main #basket td.first { width:43px; }
 #basketBox.box .main #basket td.first input {
-	width:23px;
+	width:25px;
 	height:13px;
 	text-align:center;
 	font-size:10px;

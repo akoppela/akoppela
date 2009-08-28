@@ -267,8 +267,13 @@ var Basket = new Class({
 			'keydown': this.test.bind(this)
 		});
 		this.elements.addEvent('click', this.createWindow.bind(this));
-		$(window.document).addEvent('keydown', function(e){
-			if(e.key == 'esc') this.destroyWindow();
+		$(window).addEvent('keydown', function(e){
+			if($('overlay')){
+				if(e.key == 'esc') this.destroyWindow();
+				if(e.key == 'right' || e.key == 'space') this.next();
+				if(e.key == 'left') this.prev();
+				return false;
+			}
 		}.bind(this));
 	},
 	
@@ -278,7 +283,7 @@ var Basket = new Class({
 		this.form.getElements('td input').each(function(element){
 			if(element.get('value') != '') this.allText += element.get('value').toInt()
 		}.bind(this));
-		this.form.getElements('td.third').each(function(element){
+		this.form.getElements('td.third span').each(function(element){
 			this.summText += element.get('text').toFloat() * element.getParent('tr').getElement('input').get('value').toInt();
 		}.bind(this));
 		this.summText = this.separate(this.summText);
@@ -326,7 +331,7 @@ var Basket = new Class({
 
 	test: function(e){
 		this.currentInput = $(e.target);
-		this.inputValue = this.currentInput.get('value').toInt();
+		this.inputValue = this.currentInput.get('value');
 		if(e.key == 'up'){
 			this.inputValue++;
 			this.currentInput.set('value', this.inputValue);
@@ -342,13 +347,14 @@ var Basket = new Class({
 		if(this.currentInput.get('value') == '0') this.currentInput.set('value', '');
 		if(e.key == 'right' || e.key == 'left' || e.key == 'backspace' || e.key == 'delete') return true
 		else if(e.key.match(/^[^0-9]*$/)) return false;
+		if(!this.inputValue.match(/^.{1,3}$/)) return false;
 	},
 	
 	count: function(){
 		this.currentSrc = this.currentTr.getElement('td.second').get('href');
 		this.textH2 = this.currentTr.getElement('td.second').get('text');
 		this.inputText = this.currentTr.getElement('input').get('value');
-		this.summText = this.currentTr.getElement('td.third').get('text').toFloat() * this.inputText;
+		this.summText = this.currentTr.getElement('td.third span').get('text').toFloat() * this.inputText;
 		this.summText = this.separate(this.summText);
 	},
 	
