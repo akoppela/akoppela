@@ -1,10 +1,20 @@
 body { width: expression(document.documentElement.clientWidth > 996 ? "auto" : "996px"); }
 #container { height:100%; overflow:visible; }
 #basket li, #left .menu li, #left ul.recommend li, #content .title, #left .menu .slide { zoom:1; vertical-align:bottom; }
-.more span, #order-sub, #basket-sub, #basketBox .main #save { 
+.more span, #order-sub, #basket-sub, #basket-sub, #basketBox #save, #saveButton, #basketSubmit  { 
 	jscript: expression(
 		this.p ? 0 : (
 			this.className == 'current' ? ( this.t = 'current ' ) : ( this.t = '' ),
+			this.onmouseenter = new Function("this.className = this.t + 'hover';"),
+			this.onmouseleave = new Function("this.className = this.t;"),
+			this.p = 1
+		)
+	);
+}
+#basketBox.box tbody td.second {
+	jscript: expression(
+		this.p ? 0 : (
+			this.className == 'second' ? ( this.t = 'second ' ) : ( this.t = '' ),
 			this.onmouseenter = new Function("this.className = this.t + 'hover';"),
 			this.onmouseleave = new Function("this.className = this.t;"),
 			this.p = 1
@@ -21,3 +31,6 @@ body { width: expression(document.documentElement.clientWidth > 996 ? "auto" : "
 }
 #content .tovar, .box .main .border { zoom:1; }
 #basketBox.box .main #basket td.first input { margin-right:3px; }
+.box .border .head { top:1px; }
+#basketBox.box #basket tbody td.first .arrowsInput { display:inline; }
+#basketBox.box .foot .close { bottom:-1px; }

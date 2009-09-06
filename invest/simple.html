@@ -61,122 +61,77 @@
 						</div>
 					</div>
 					<a href="#" id="basketLink" title="Корзина">корзина</a>
-					<div class="box" id="basketBox">
-						<div class="head"><a href="#">свернуть</a></div>
-						<div class="main">
-							<div class="border">
-								<form action="#" method="get" id="basketForm">
-									<div>
-										<h2>корзина</h2>
-										<a href="#" class="arrows up">вверх</a>
-										<div id="basket" class="scrollBox">
-											<table>
-												<tr>
+					<div class="box closeWindow" id="basketBox">
+						<div class="border">
+							<form action="Cart.php" method="post" id="basketForm">
+								<div>
+									<a class="close top" href="#">свернуть</a>
+									<table class="headTable">
+										<thead>
+											<tr>
+												<td class="first">штук</td>
+												<td class="second">товар</td>
+												<td class="third">цена</td>
+												<td class="fourth"></td>
+											</tr>	
+										</thead>
+									</table>
+									<div id="basket" class="scrollBox">
+										<table>
+											<tbody>
+												<tr class="active">
 													<td class="first">
-														<input type="text" value="1" />x
-													</dt>
-													<td href="img/catalog_img.jpg" class="second">Жалюзи БРАВО</td>
-													<td class="third"><span>768.69</span>грн</td>
+														<a href="#" class="arrowsInput left">влево</a>
+														<input class="inputText" name="product[amount][1]" id="product[amount][1]" type="text" value="1" />
+														<a href="#" class="arrowsInput right">вправо</a>
+														<input class="hidden" name="product[deleted][1]" id="product[deleted][1]" type="hidden" value="n" />
+													</td>
+													<td class="second"><div><a href="img/catalog_img.jpg"><span>Жалюзи БРАВО</span></a></div><b>&hellip;</b></td>
+													<td class="third"><span>768.69</span><b>грн</b></td>
 													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
 												</tr>
-												<tr>
+												<tr class="active">
 													<td class="first">
-														<input type="text" value="1" />x
-													</dt>
-													<td href="img/rec_img1.jpg" class="second">Жалюзи БРАВО Необыкновенные</td>
-													<td class="third"><span>768.69</span>грн</td>
+														<a href="#" class="arrowsInput left">влево</a>
+														<input class="inputText" name="product[amount][2]" id="product[amount][2]" type="text" value="1" />
+														<a href="#" class="arrowsInput right">вправо</a>
+														<input class="hidden" name="product[deleted][2]" id="product[deleted][2]" type="hidden" value="n" />
+													</td>
+													<td class="second"><div><a href="img/rec_img1.jpg"><span>Жалюзи БРАВО Необыкновенные</span></a></div><b>&hellip;</b></td>
+													<td class="third"><span>768.69</span><b>грн</b></td>
 													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
 												</tr>
-												<tr>
+												<tr class="active">
 													<td class="first">
-														<input type="text" value="1" />x
-													</dt>
-													<td href="img/rec_img2.jpg" class="second">Жалюзи ТОРПЕДА</td>
-													<td class="third"><span>768.69</span>грн</td>
+														<a href="#" class="arrowsInput left">влево</a>
+														<input class="inputText" name="product[amount][3]" id="product[amount][3]" type="text" value="1" />
+														<a href="#" class="arrowsInput right">вправо</a>
+														<input class="hidden" name="product[deleted][3]" id="product[deleted][3]" type="hidden" value="n" />
+													</td>
+													<td class="second"><div><a href="img/rec_img2.jpg"><span>Жалюзи ТОРПЕДА</span></a></div><b>&hellip;</b></td>
+													<td class="third"><span>768.69</span><b>грн</b></td>
 													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
 												</tr>
-												<tr>
-													<td class="first">
-														<input type="text" value="1" />x
-													</dt>
-													<td href="img/catalog_img.jpg" class="second">Жалюзи БРАВО</td>
-													<td class="third"><span>768.69</span>грн</td>
-													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
-												</tr>
-												<tr>
-													<td class="first">
-														<input type="text" value="1" />x
-													</dt>
-													<td href="img/rec_img1.jpg" class="second">Жалюзи БРАВО Необыкновенные</td>
-													<td class="third"><span>768.69</span>грн</td>
-													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
-												</tr>
-												<tr>
-													<td class="first">
-														<input type="text" value="1" />x
-													</dt>
-													<td href="img/rec_img2.jpg" class="second">Жалюзи ТОРПЕДА</td>
-													<td class="third"><span>768.69</span>грн</td>
-													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
-												</tr>
-												<tr>
-													<td class="first">
-														<input type="text" value="1" />x
-													</dt>
-													<td href="img/catalog_img.jpg" class="second">Жалюзи БРАВО</td>
-													<td class="third"><span>768.69</span>грн</td>
-													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
-												</tr>
-												<tr>
-													<td class="first">
-														<input type="text" value="1" />x
-													</dt>
-													<td href="img/rec_img1.jpg" class="second">Жалюзи БРАВО Необыкновенные</td>
-													<td class="third"><span>768.69</span>грн</td>
-													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
-												</tr>
-												<tr>
-													<td class="first">
-														<input type="text" value="1" />x
-													</dt>
-													<td href="img/rec_img2.jpg" class="second">Жалюзи ТОРПЕДА</td>
-													<td class="third"><span>768.69</span>грн</td>
-													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
-												</tr>
-												<tr>
-													<td class="first">
-														<input type="text" value="1" />x
-													</dt>
-													<td href="img/catalog_img.jpg" class="second">Жалюзи БРАВО</td>
-													<td class="third"><span>768.69</span>грн</td>
-													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
-												</tr>
-												<tr>
-													<td class="first">
-														<input type="text" value="1" />x
-													</dt>
-													<td href="img/rec_img1.jpg" class="second">Жалюзи БРАВО Необыкновенные</td>
-													<td class="third"><span>768.69</span>грн</td>
-													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
-												</tr>
-												<tr>
-													<td class="first">
-														<input type="text" value="1" />x
-													</dt>
-													<td href="img/rec_img2.jpg" class="second">Жалюзи ТОРПЕДА</td>
-													<td class="third"><span>768.69</span>грн</td>
-													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
-												</tr>
-											</table>
-										</div>
-										<a href="#" class="arrows down">вниз</a>
-										<p class="all">Всего:<span>0 товар(ов)</span></p>
-										<p class="summ">Сумма:<span>0грн</span></p>
-										<button id="save">Сохранить</button>
-										<input type="submit" id="basket-sub" value="Оформить заказ" />
+											</tbody>
+										</table>
 									</div>
-								</form>
-							</div>
+									<div class="foot">
+										<ul class="priceTree">
+											<li>Всего</li>
+											<li class="all">7 товар(ов)</li>
+											<li class="summ">15 500грн</li>
+										</ul>
+										<button id="save">сохранить</button>
+										<input type="submit" id="basket-sub" value="оформить" />
+										<input class="hidden" type="hidden" name="action" value="update" />
+										<p class="message"></p>
+										<a href="#" class="close">свернуть</a>
+										<a href="#" class="arrows up">влево</a>
+										<a href="#" class="arrows down">вниз</a>
+									</div>
+									<div id="busy" class=""></div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -313,8 +268,25 @@
 			<a href="#" class="welitta">продвижение сайтов  Welitta</a>
 		</div>
 	</div>
-	<!--div id="overlay"></div>
-	<div id="popupBasket" class="box ready">
+	<div id="popup">
+		<div id="overlay"></div>
+		<div id="popupBox">
+			<div id="popupImgBox"><img src="img/imgae_tovar.jpg" alt="" /></div>
+			<a href="#" class="popupArrows prev">влево</a>
+			<a href="#" class="popupArrows next">вправо</a>
+			<div id="popupText">
+				<div class="top"></div>
+				<h2>Жалюзи лазижа  алюзи лазижа</h2>
+				<ul>
+					<li>Стоимость: <span class="price">577</span><b>грн</b></li>
+					<li>Выбрано: <span class="amount">5</span><b>штук</b></li>
+					<li>На сумму: <span class="all-price">3325</span><b>грн</b></li>
+				</ul>
+			</div>
+			<a class="close" href="#">закрыть окно</a>
+		</div>
+	</div>
+	<!--div id="popupBasket" class="box ready">
 		<div class="head"><a href="#">закрыть</a></div>
 		<div class="main">
 			<div class="border">
@@ -326,6 +298,7 @@
 				<p class="summ">На сумму:<span>234234грн</span></p>
 			</div>
 		</div>
-	</div-->
+	</div>
+	<div id="formSend"></div-->
 </body>
 </html>

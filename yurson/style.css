@@ -339,15 +339,13 @@ body {
 					}
 					
 					#content .text .text-content.install li {
-						padding:0.5em 1px;
-						margin-top:1px;
-						margin-bottom:25px;
+						padding:9px 1px;
+						margin-bottom:24px;
 					}
 					
 					#content .text .text-content.install li:hover, #content .text .text-content.install li.iehover {
 						border:1px solid #d5d5d5;
-						padding:0.5em 0;
-						margin:0 0 24px 0;
+						padding:8px 0;
 					}
 					
 						#content-main .left .cars-logo li a, #content .text .text-content.install li a {
@@ -355,25 +353,47 @@ body {
 							width:6.3em;
 							text-align:center;
 							cursor:pointer;
-							height:5.1em;
+							height:1.1em;
+							padding-top:4em;
+							position:relative;
 						}
 						
 						#content .text .text-content.install li a {
 							width:5.76em;
 							display:block;
 							position:relative;
+							text-align:center;
 						}
 						
-							#content-main .left .cars-logo li a b, #content .text .text-content.install li a b, #content-main .left .cars-logo li a span.img {
-								display:block;
-								height:4em;
+						   /* Изменения были сдесь */
+						
+							#content-main .left .cars-logo li a img {
+								position:absolute;
 								font-size:100%;
+								width:3.3em;
+								top:0;
+								left:50%;
+								margin-left:-1.65em;
+								z-index:1;
 							}	
+						
+							#content .text .text-content.install li a img {
+								position:absolute;
+								font-size:100%;
+								width:3.3em;
+								top:0;
+								left:50%;
+								margin-left:-1.65em;
+								z-index:1;
+							}	
+							
+							/* Конец */
 							
 							#content-main .left .cars-logo li a span, #content .text .text-content.install li a span {
 								text-decoration:underline;
 								font:93.75% Arial, Helvetica, sans-serif;
 								color:#395965;
+								display:block;
 							}
 					
 								#content-main .left .cars-logo li a:hover span, #content-main .left .cars-logo li a.iehover span, #content .text .text-content.install li:hover span, #content .text .text-content.install li.iehover span {

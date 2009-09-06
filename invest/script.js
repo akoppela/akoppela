@@ -104,10 +104,11 @@ var slideWindows = new Class({
 		this.link = $(link);
 		if(!this.main || !this.link) return false;
 		
-		this.fx = new Fx.Slide(this.main, {duration: 400, transition: Fx.Transitions.Sine.easeInOut, mode: 'horizontal'});
-		this.closeLink = this.main.getElement('.head a');
-		this.elements = this.main.getElement('tr');
+		this.fx = new Fx.Slide(this.main, {duration: 300, transition: Fx.Transitions.Sine.easeInOut});
+		this.closeLink = this.main.getElements('.close');
+		this.elements = this.main.getElement('tr.active');
 		this.startPosition();
+		if($('basketAdd')) $('basketAdd').addEvent('click', this.start.bind(this));
 		
 		this.link.addEvent('click', this.start.bind(this));
 		this.closeLink.addEvent('click', this.close.bind(this));
@@ -138,12 +139,12 @@ var slideWindows = new Class({
 	
 	start: function(){
 		this.main.removeClass('closeWindow');
-		this.fx.toggle();
+		this.fx.slideIn();
 		return false;
 	},
 	
 	close: function(){
-		if(!this.main.getElement('tr')) this.link.removeClass('active');
+		if(!this.main.getElement('tr.active')) this.link.removeClass('active');
 		this.fx.slideOut();
 		(function(){ this.main.addClass('closeWindow'); }).delay(500, this);
 		return false;
@@ -161,35 +162,39 @@ var myScroll = new Class({
 		this.scrollBoxHeight = this.scrollBox.getHeight();
 		this.menu = this.scrollBox.getElement('table');
 		this.menuHeight = this.menu.getHeight();
+		this.arrows = this.main.getElements('.arrows');
 		this.maxHeight = this.menuHeight - this.scrollBoxHeight;
 		this.deletes = this.main.getElements('.delete');
+		this.scrollBox.addClass('scroll');
 		if(this.maxHeight <= 0) return false;
 		
-		this.fx = new Fx.Scroll(this.scrollBox, {duration: 200, wait: false, wheelStops: false, transition: Fx.Transitions.Sine.easeInOut});
-		this.arrows = this.main.getElements('.arrows');
+		this.arrows.addClass('scroll');
+		
+		this.fx = new Fx.Scroll(this.scrollBox, {duration: 600, wait: false, wheelStops: false, transition: Fx.Transitions.Sine.easeInOut});
 		this.upArrow = this.main.getElement('.up');
 		this.downArrow = this.main.getElement('.down');
-		this.stepHeight = 20;
+		this.stepHeight = this.scrollBox.getHeight();
+		this.stepWheelHeight = 22;
 		this.curPosition = 0;
-		
-		this.startPosition();
 
+		if($('basketAdd')){
+			alert(1);
+			$('basketAdd').addEvent('click', this.check.bind(this));
+		}
 		this.scrollBox.addEvent('mousewheel', this.start.bind(this));
 		this.deletes.addEvent('click', this.check.bind(this));
-		this.upArrow.addEvent('mousedown', this.moveUp.bind(this));
-		this.downArrow.addEvent('mousedown', this.moveDown.bind(this));
-		this.arrows.addEvents({
-			'click': this.pause.bind(this),
-			'mouseleave': this.pause.bind(this)
-		});
-	},
-	
-	startPosition: function(){
-		this.scrollBox.addClass('scroll');
-		this.arrows.addClass('scroll');
+		this.upArrow.addEvent('click', function(){
+			this.minusPosition(this.stepHeight);
+			return false;
+		}.bind(this));
+		this.downArrow.addEvent('click', function(){
+			this.plusPosition(this.stepHeight);
+			return false;
+		}.bind(this));
 	},
 	
 	check: function(){
+		alert(1);
 		this.scrollBoxHeight = this.scrollBox.getHeight();
 		this.menuHeight = this.menu.getHeight();
 		this.maxHeight = this.menuHeight - this.scrollBoxHeight;
@@ -199,44 +204,24 @@ var myScroll = new Class({
 	
 	move: function(how){ this.fx.start(0, how); },
 	
-	minusPosition: function(){
-        if(this.curPosition > 0) {
-        	this.curPosition -= this.stepHeight;
+	minusPosition: function(how){
+        if(this.curPosition > 0){
+        	this.curPosition -= how;
         	if(this.curPosition < 0) this.curPosition = 0;
         	this.move(this.curPosition);
         }
 	},
 	
-	plusPosition: function(){
-        if(this.curPosition < this.maxHeight) {
-        	this.curPosition += this.stepHeight;
+	plusPosition: function(how){
+        if(this.curPosition < this.maxHeight){
+        	this.curPosition += how;
         	if(this.curPosition > this.maxHeight) this.curPosition = this.maxHeight;
         	this.move(this.curPosition);
         }
 	},
 	
-	moveUp: function(){
-        if(this.interval) return false;
-        this.interval = this.minusPosition.periodical(150, this);
-        this.minusPosition();
-		return false;
-	},
-	
-	moveDown: function(){
-        if(this.interval) return false;
-        this.interval = this.plusPosition.periodical(150, this);
-        this.plusPosition();
-		return false;
-	},
-	
-	pause: function(){
-        if(!this.interval) return false;
-        this.interval = $clear(this.interval);
-        return false;
-	},
-	
 	start: function(e){
-		e.wheel > 0	? this.minusPosition() : this.plusPosition();
+		e.wheel > 0	? this.minusPosition(this.stepWheelHeight) : this.plusPosition(this.stepWheelHeight);
 		return false;
 	}
 	
@@ -248,25 +233,21 @@ var Basket = new Class({
 		this.form = $(form);
 		if(!this.form) return false;
 		
-		this.all = this.form.getElement('.all span');
+		this.all = this.form.getElement('.all');
 		this.fxAll = new Fx.Tween(this.all);
-		this.summ = this.form.getElement('.summ span');
+		this.summ = this.form.getElement('.summ');
 		this.fxSumm = new Fx.Tween(this.summ);
-		this.deletes = this.form.getElements('.delete');
-		this.inputs = this.form.getElements('td input');
-		this.table = this.form.getElement('tbody');
-		this.elements = this.form.getElements('td.second');
+		this.table = this.form.getElement('.scrollBox tbody');
+		this.tableWrapper = this.table.getParent('table');
+		this.maxWordWidth = 149;
+		this.message = this.form.getElement('.message');
 		this.body = document.body;
 		this.bodyHeight = $('container').getHeight();
+		this.saveButton = $('save');
+		this.busy = $('busy');
+		if($('basketAdd')) $('basketAdd').addEvent('click', this.addArticle.bind(this));
 		
 		this.check();
-		
-		this.deletes.addEvent('click', this.remove.bind(this));
-		this.inputs.addEvents({
-			'keyup': this.start.bind(this),
-			'keydown': this.test.bind(this)
-		});
-		this.elements.addEvent('click', this.createWindow.bind(this));
 		$(window).addEvent('keydown', function(e){
 			if($('overlay')){
 				if(e.key == 'esc') this.destroyWindow();
@@ -275,24 +256,193 @@ var Basket = new Class({
 				return false;
 			}
 		}.bind(this));
+		this.saveButton.addEvent('click', this.save.bind(this));
+	},
+
+	addArticle: function(){
+		this.request = new Request.JSON({
+			method: 'post',
+			url: 'requests/Cart.php',
+			onRequest: function(){
+				this.busy.addClass('active');
+				this.message.setStyle('color', '#fff');
+				$clear(this.interval);
+			}.bind(this),
+			onComplete: function(responseJSON, responseText){
+				this.busy.removeClass('active');
+				this.status = 'Объект добавлен!';
+				if(!this.form.getElement('tbody')){
+					this.table = new Element('tbody').inject(this.tableWrapper);
+					$('basketLink').addClass('active');
+				}
+				this.product_id = 1;
+				this.image = 'image.jpg';
+				this.name = 'Жалюзи Торпеда Реактинвая';
+				this.amount = 1;
+				this.price = 1415.45;
+				this.productInput = this.table.getElement('#'+this.product_id);
+				if(this.productInput){
+					this.inputValue = this.productInput.get('value');
+					this.inputValue++;
+					this.productInput.set('value', this.inputValue);
+				} else {
+					this.createElement();
+					this.check();
+				}
+				this.message.set('text', this.status);
+				this.message.tween('color', '#FF8000');
+				this.interval = ( function(){ this.message.tween('color', '#fff')}).delay(5000, this);
+			}.bind(this)
+		}).send({ "data": { "action": "add", "product_id": "1",	"lang": "ru" }});
+		return false;
+	},
+	
+	save: function(){
+		this.object = { "test": {"apple":"test"}};
+		this.request = new Request.JSON({
+			method: 'post',
+			url: 'requests/Cart.php',
+			onRequest: function(){
+				this.busy.addClass('active');
+				this.message.setStyle('color', '#fff');
+				$clear(this.interval);
+			}.bind(this),
+			onComplete: function(responseJSON, responseText){
+				this.busy.removeClass('active');
+				this.status = 'Сохранено';
+				this.message.set('text', this.status);
+				this.message.tween('color', '#FF8000');
+				this.interval = ( function(){ this.message.tween('color', '#fff')}).delay(5000, this);
+			}.bind(this)
+		}).send(this.form);
+		
+		return false;
+	},
+
+	createElement: function(){
+		this.Tr = new Element('tr', { 'class': 'active' }).inject(this.table); 
+		this.firstTd = new Element('td', { 'class': 'first' }).inject(this.Tr);
+		this.arrowInputLeft = new Element('a', {
+			'href': '#',
+			'class': 'arrowsInput left',
+			'text': 'влево',
+			'events': {
+				'click': this.minusInput.bind(this)
+			}
+		}).inject(this.firstTd);
+		this.firstInputText = new Element('input', {
+			'class': 'inputText',
+			'id': this.product_id,
+			'name': this.product_id,
+			'type': 'text',
+			'value': this.amount,
+			'events': {
+				'keyup': this.start.bind(this),
+				'keydown': this.test.bind(this)
+			}
+		}).inject(this.firstTd);
+		this.arrowInputRight = new Element('a', {
+			'href': '#',
+			'class': 'arrowsInput right',
+			'text': 'вправо',
+			'events': {
+				'click': this.plusInput.bind(this)
+			}
+		}).inject(this.firstTd);
+		this.firstInputHidden = new Element('input', {
+			'class': 'hidden',
+			'id': this.product_id,
+			'name': this.product_id,
+			'type': 'hidden',
+			'value': 'n'
+		}).inject(this.firstTd);
+		this.secondTd = new Element('td', { 'class': 'second' }).inject(this.Tr);
+		this.secondTdDiv = new Element('div').inject(this.secondTd);
+		this.secondTdA = new Element('a', {
+			'href': this.image
+		}).inject(this.secondTdDiv);
+		this.secondTdSpan = new Element('span', { 'text': this.name }).inject(this.secondTdA);
+		this.secondTdB = new Element('b', { 'text': '...' }).inject(this.secondTd);
+		this.thirdTd = new Element('td', { 'class': 'third' }).inject(this.Tr);
+		this.thirdTdSpan = new Element('span', { 'text': this.price }).inject(this.thirdTd);
+		this.thirdTdB = new Element('b', { 'text': 'грн' }).inject(this.thirdTd);
+		this.fourthTd = new Element('td', { 'class': 'fourth' }).inject(this.Tr);
+		this.fourthTdA = new Element('a', {
+			'class': 'delete',
+			'href': '#',
+			'text': 'x',
+			'title': 'Удалить товар',
+			'events': {
+				'click': this.remove.bind(this)
+			}
+		}).inject(this.fourthTd);
+		this.checkLength(this.secondTdSpan);
+	},
+	
+	plusInput: function(e){
+		element = $(e.target) || e;
+		this.currentInput = element.getParent('td').getElement('input');
+		this.inputValue = this.currentInput.get('value');
+		this.inputValue++;
+		this.currentInput.set('value', this.inputValue);
+		this.check();
+		return false;
+	},
+	
+	minusInput: function(e){
+		element = $(e.target);
+		this.currentInput = element.getParent('td').getElement('input');
+		this.inputValue = this.currentInput.get('value');
+		if(this.inputValue == 0) return false;
+		this.inputValue--;
+		this.currentInput.set('value', this.inputValue);
+		this.check();
+		return false;
 	},
 	
 	check: function(){
 		this.allText = 0;
 		this.summText = 0;
-		this.form.getElements('td input').each(function(element){
+		this.elementTrs = this.form.getElements('tr.active');
+		this.elementTrs.each(function(element){
+			element = element.getElement('td input.inputText');
 			if(element.get('value') != '') this.allText += element.get('value').toInt()
 		}.bind(this));
-		this.form.getElements('td.third span').each(function(element){
-			this.summText += element.get('text').toFloat() * element.getParent('tr').getElement('input').get('value').toInt();
+		this.elementTrs.each(function(element){
+			element = element.getElement('td.third span');
+			this.summText += element.get('text').toFloat() * element.getParent('tr.active').getElement('input.inputText').get('value').toInt();
 		}.bind(this));
 		this.summText = this.separate(this.summText);
 		this.fxAll.set('color', '#fff');
 		this.fxSumm.set('color', '#fff');
 		this.all.set('text', this.allText + ' товар(ов)');
 		this.summ.set('text', this.summText + 'грн');
-		this.fxAll.start('color', '#162b48');
-		this.fxSumm.start('color', '#162b48');
+		this.fxAll.start('color', '#1A3D92');
+		this.fxSumm.start('color', '#1A3D92');
+		this.blueTr();
+	},
+	
+	checkLength: function(element){
+		if(element.getWidth() > this.maxWordWidth) element.getParent('td').getElement('b').addClass('active');
+	},
+	
+	blueTr: function(){
+		i = true;
+		this.table.getElements('tr').removeClass('blue');
+		this.currentTr = this.table.getFirst('tr.active');
+		if(!this.currentTr) return false;
+		this.lastTr = this.table.getLast('tr.active');
+		while(this.currentTr != this.lastTr){
+			if(i){
+				this.currentTr.addClass('blue');
+				this.currentTr = this.currentTr.getNext('tr.active');
+				i = false;
+			} else { 
+				this.currentTr = this.currentTr.getNext('tr.active');
+				i = true;
+			}
+		}
+		if(i) this.currentTr.addClass('blue');
 	},
 	
 	separate: function(str){
@@ -318,7 +468,8 @@ var Basket = new Class({
 	remove: function(e){
 		this.currentDelete = $(e.target);
 		this.currentTr = this.currentDelete.getParent('tr');
-		this.currentTr.destroy();
+		this.currentTr.set('class', 'deleted');
+		this.currentTr.getElement('.hidden').set('value', 'y');
 		this.check();
 		return false;
 	},
@@ -353,7 +504,7 @@ var Basket = new Class({
 	count: function(){
 		this.currentSrc = this.currentTr.getElement('td.second').get('href');
 		this.textH2 = this.currentTr.getElement('td.second').get('text');
-		this.inputText = this.currentTr.getElement('input').get('value');
+		this.inputText = this.currentTr.getElement('input.inputText').get('value');
 		this.summText = this.currentTr.getElement('td.third span').get('text').toFloat() * this.inputText;
 		this.summText = this.separate(this.summText);
 	},
@@ -374,7 +525,7 @@ var Basket = new Class({
 			'id': 'popupBasket',
 			'class': 'box',
 			'styles': {
-				'top': $(window).getScroll().y + 50
+				'top': $(window).getScroll().y + 90
 			}
 		}).inject(this.body);
 		this.popupHead = new Element('div', { 'class': 'head' }).inject(this.popupWindow);
@@ -495,5 +646,6 @@ window.addEvent('domready', function(){
 	if($('basketBox')){ new slideWindows('basketBox', 'basketLink'); }
 	if($('basket')){ new myScroll('basketBox'); }
 	if($('basketForm')){ new Basket('basketForm'); }
+	
 	
 });

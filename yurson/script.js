@@ -1,3 +1,4 @@
+var milkbox = new Milkbox;
 var slideFx = new Class ({
 	
 	initialize: function(link){
@@ -114,7 +115,7 @@ var Carousel = new Class({
 		this.block.getElements('li').each(function(element){
 			this.blocksWidth = this.blocksWidth + element.getWidth();
 		}.bind(this));
-		this.list.setStyle('width', this.blocksWidth);
+		this.list.setStyle('width', this.blocksWidth + 20);
 	},
 	
 	startPosition: function(){
@@ -191,5 +192,5 @@ window.addEvent('domready', function(){
 	if($('catDetail')){
 		new Carousel('catDetail');
 	}
-	
+	milkbox = new Milkbox();
 });

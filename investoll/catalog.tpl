@@ -1,243 +1,183 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
 <head>
-
-  <title>{PAGE_TITLE}</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="description" lang="ru" content="{PAGE_DESCRIPTION}" />
-  <meta name="keywords" lang="ru" content="{PAGE_KEYWORDS}" />
-  <link type="text/css" title="screen style" rel="stylesheet" href="/css/style.css" />
-  <link type="text/css" title="screen style" rel="stylesheet" href="/css/lightbox.css" /> 
-  <script type="text/javascript" src="/js/jquery.pack.js"></script> 
-  <script type="text/javascript" src="/js/main.js"></script>
-  <script type="text/javascript" src="/js/mootools-1.2.1-core-yc.js"></script> 
-  <script type="text/javascript" src="/js/mootools-1.2-more-yc.js"></script> 
-  <!--script type="text/javascript" src="/js/script.js"></script--> 
-
-  {PAGE_SCRIPTS}
-
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link type="text/css" title="screen style" rel="stylesheet" href="/css/style.css" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" lang="ru" content="{PAGE_DESCRIPTION}" />
+    <meta name="keywords" lang="ru" content="{PAGE_KEYWORDS}" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <!--[if IE]><link rel="stylesheet" type="text/css" href="/css/style_ie.css" /><![endif]-->
+  <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="/css/style_ie6.css" />
+    <script src="/js/ie6_fix.js" type="text/javascript"></script>
+  <![endif]-->
+    <script type="text/javascript" src="/js/mootools-1.2.3-core.js"></script>
+    <script type="text/javascript" src="/js/mootools-1.2.3.1-more.js"></script>
+    <script type="text/JavaScript" src="/js/script.js"></script>
+    <title>{PAGE_TITLE}</title>  
 </head>
 <body>
-			<div id="new" class="hideBlock">
-				<div class="blpl text_right"><a title="" class="whitel">свернуть <img src="/img/str.gif" width="9" height="9" alt="" title="" /></a></div>
-				<div class="bord">
-					<span class="vxlarge gray2">новинки</span>
-					<div class="clear_medium"></div>
-					<div class="imgcol fl">
-						<div class="imgborder2 fl"><a href="#" title=""><img src="/img/test.gif" width="120" height="160" alt="" title="" /></a></div>
-						<div class="imgbox fl">
-							<a href="#" title="" class="blue mrb fl"><b>Уход за жалюзями</b></a><br />
-							<span class="small gray">Добро пожаловать в Mozilla Firefox! Firefox является Интернет-браузером, предназначенным для просмотра веб-страниц и поиска</span>
-							<div class="clear_small"></div>
-							<span class="orange xlarge">386 </span><span class="large"><b>грн</b></span>
-							<div class="clear_small"></div>
-							<a href="#" title="" class="podr">подробнее</a>
-						</div>
-					</div>
-					<div class="imgcol fl">
-						<div class="imgborder2 fl"><a href="#" title=""><img src="/img/test.gif" width="120" height="160" alt="" title="" /></a></div>
-						<div class="imgbox fl">
-							<a href="#" title="" class="blue mrb fl"><b>Уход за жалюзями</b></a><br />
-							<span class="small gray">Добро пожаловать в Mozilla Firefox! Firefox является Интернет-браузером, предназначенным для просмотра веб-страниц и поиска</span>
-							<div class="clear_small"></div>
-							<span class="orange xlarge">386 </span><span class="large"><b>грн</b></span>
-							<div class="clear_small"></div>
-							<a href="#" title="" class="podr">подробнее</a>
-						</div>
-					</div>
-					<div class="imgcol fl">
-						<div class="imgborder2 fl"><a href="#" title=""><img src="/img/test.gif" width="120" height="160" alt="" title="" /></a></div>
-						<div class="imgbox fl">
-							<a href="#" title="" class="blue mrb fl"><b>Уход за жалюзями</b></a><br />
-							<span class="small gray">Добро пожаловать в Mozilla Firefox! Firefox является Интернет-браузером, предназначенным для просмотра веб-страниц и поиска</span>
-							<div class="clear_small"></div>
-							<span class="orange xlarge">386 </span><span class="large"><b>грн</b></span>
-							<div class="clear_small"></div>
-							<a href="#" title="" class="podr">подробнее</a>
-						</div>
-					</div>
-					<div class="clear_bbig"></div>
-				</div>
-				<div class="resize"><div></div></div>
-			</div>
-<div style="background: url('/img/bottom-bg.jpg') bottom left repeat-x;">
-<div style="background: url('/img/bottom-left.jpg') bottom left no-repeat;">
-<div style="padding-bottom:160px; position:relative; overflow:hidden;">
-		<!--bigmir)net TOP 100-->
-			<script type="text/javascript" language="javascript"><!--
-				function BM_Draw(oBM_STAT){
-					document.write('<table class="bigmir" cellpadding="0" cellspacing="0" border="0" style="display:inline;margin-right:4px;"><tr><td><div style="font-family:Tahoma;font-size:10px;padding:0px;margin:0px;"><div style="width:7px;float:left;background:url(\'http://i.bigmir.net/cnt/samples/default/b54_left.gif\');height:17px;padding-top:2px;background-repeat:no-repeat;"></div><div style="float:left;background:url(\'http://i.bigmir.net/cnt/samples/default/b54_center.gif\');text-align:left;height:17px;padding-top:2px;background-repeat:repeat-x;"><a href="http://www.bigmir.net/" target="_blank" style="color:#0000ab;text-decoration:none;">bigmir<span style="color:#ff0000;">)</span>net</a>&nbsp;&nbsp;<span style="color:#98b4f4;">хиты</span>&nbsp;<span style="color:#426ed2;font:10px Tahoma;">'+oBM_STAT.hits+'</span>&nbsp;<span style="color:#98b4f4;">хосты</span>&nbsp;<span style="color:#426ed2;font:10px Tahoma;">'+oBM_STAT.hosts+'</span></div><div style="width:7px;float: left;background:url(\'http://i.bigmir.net/cnt/samples/default/b54_right.gif\');height:17px;padding-top:2px;background-repeat:no-repeat;"></div></div></td></tr></table>');
-				}
-				//-->
-			</script>
-			<script type="text/javascript" language="javascript"><!--
-				bmN=navigator,bmD=document,bmD.cookie='b=b',i=0,bs=[],bm={o:1,v:16818134,s:16818134,t:0,c:bmD.cookie?1:0,n:Math.round((Math.random()* 1000000)),w:0};
-				for(var f=self;f!=f.parent;f=f.parent)bm.w++;
-				try{if(bmN.plugins&&bmN.mimeTypes.length&&(x=bmN.plugins['Shockwave Flash']))bm.m=parseInt(x.description.replace(/([a-zA-Z]|\s)+/,''));
-				else for(var f=3;f<20;f++)if(eval('new ActiveXObject("ShockwaveFlash.ShockwaveFlash.'+f+'")'))bm.m=f}catch(e){;}
-				try{bm.y=bmN.javaEnabled()?1:0}catch(e){;}
-				try{bmS=screen;bm.v^=bm.d=bmS.colorDepth||bmS.pixelDepth;bm.v^=bm.r=bmS.width}catch(e){;}
-				r=bmD.referrer.slice(7);if(r&&r.split('/')[0]!=window.location.host){bm.f=escape(r);bm.v^=r.length}
-				bm.v^=window.location.href.length;for(var x in bm) if(/^[ovstcnwmydrf]$/.test(x)) bs[i++]=x+bm[x];
-				bmD.write('<sc'+'ript type="text/javascript" language="javascript" src="http://c.bigmir.net/?'+bs.join('&')+'"></sc'+'ript>');
-				//-->
-			</script>
-			<noscript>
-				<a href="http://www.bigmir.net/" target="_blank"><img src="http://c.bigmir.net/?v16818134&s16818134&t2" width="88" height="31" alt="bigmir)net TOP 100" title="bigmir)net TOP 100" border="0" /></a>
-			</noscript>
-		<!--bigmir)net TOP 100-->
-<div class="page">
-			<div class="rpcol hideBlock" id="douknow">
-				<div class="blpl text_right"><a title="" class="whitel">свернуть <img src="/img/str.gif" width="9" height="9" alt="" title="" /></a></div>
-				<div class="bord">
-					<span class="vxlarge gray2">А знаете ли вы</span>
-					<div class="clear_medium"></div>
-					<a href="#" title="" class="blue small"><b>Уход за жалюзями</b></a><br />
-					<span class="small gray">Добро пожаловать в Mozilla Firefox! Firefox является Интернет-браузером</span>
-					<div class="clear_big"></div>
-					<a href="#" title="" class="blue small"><b>Уход за жалюзями</b></a><br />
-					<span class="small gray">Добро пожаловать в Mozilla Firefox! Firefox является Интернет-браузером</span>
-					<div class="clear_big"></div>
-					<a href="#" title="" class="blue small"><b>Уход за жалюзями</b></a><br />
-					<span class="small gray">Добро пожаловать в Mozilla Firefox! Firefox является Интернет-браузером</span>
-					<div class="clear_medium"></div>
-				</div>
-				<div class="resize"><div></div></div>
-			</div>
-	<div class="wrapper">
-	<div class="right_col">
-		<div class="clear_vbig"></div>
-		<div class="fla">
-		
-		<table width="100%" height="100%" border=0 cellpadding=0 cellspacing=0>
-	<!--		<tr>
-				<td height="50px">
-<div class="info">&nbsp;</div>
-				</td>
-				<td id="lang"><span>RU</span>
-				</td>
-			</tr>
-		-->
-    	<tr>
-				<td height="342px" colspan=2>
-        
-  <object id="header" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="909" height="342">
-	<param name="movie" value="/img/head.swf" />
-	<param name="quality" value="best" />
-	<!--[if IE]><param name="wmode" value="transparent" /><![endif]-->
-	<param name="wmode" value="opaque" />
-	<embed id="header2" src="/img/head.swf" wmode="transparent" quality="best" width="909" height="342" name="main" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-	</object>
-        
-        </td>
-			</tr>
-		</table>
-		
-		</div>
-		<div class="padr">
-			<div class="right_part">
-				<div class="plfon">&nbsp;</div>
-				<div class="box">
-					<div class="padrr">
-						<span class="vxlarge gray2">ЖАЛЮЗИ БУМАЖНЫЕ</span><br />
-						<ul>
-							<li><a href="#">Жалюзи</a></li>
-							<li><a href="#">Вертикальные</a></li>
-							<li class="curpos"><a href="#">Бумажные</a></li>
-						</ul>
-						<div class="clear_medium"></div>
-					</div>
-					<div class="padrr2 large">
-						<p>Вертикальные жалюзи дают возможность создания индивидуальной декорации интерьра.Обладают декоративными качествами, а также регулируют интенсивность наружного осветления. Широкая гамма образцов и расцветок среди декоративных, затемняющих тканей, а также проверенная система позволяет на приспособление и обслуживание наших жалюзи в каждом помещении.</p>
-						<p>Система дистанционного управления позволяет обеспечивать комфорт и быстроту в обслуживании жалюзи.</p>
-						<ul class="cat">
-							<li>
-								<div class="cat-wrapper">
-									<div class="cat-content">
-										<div class="cat-content-wrapper">
-											<strong>Уход за жалюзями</strong>
-											<p>Жалюзи нужно открывать правой рукой, потому что левой они просто не откроются...</p>
-											<div class="more"><a href="#">подробнее</a></div>
-											<span class="cat-price">386 <i>грн</i></span>
-										</div>
+  <div id="container">
+    <div id="wrapper">
+      <div id="right">
+        <div id="header">
+          <ul class="lang">
+            <li class="current"><a href="#">ru</a></li>
+            <li><a href="#">de</a></li>
+            <li><a href="#">eng</a></li>
+            <li><a href="#">ukr</a></li>
+          </ul>
+          <span class="slogan">гарантия <i>КАЧЕСТВА</i></span>
+          <span class="number" title="+38(044) 239-97-27">+38(044) 239-97-27</span>
+          <div class="menu">
+            <a href="/{PAGE_LANG}/pages/dileram" class="top second">дилерам</a>
+            <a href="/{PAGE_LANG}/pages/investoll" class="middle first">О компании</a>
+            <a href="/{PAGE_LANG}/pages/info" class="bottom second">информация</a>
+            <a href="/{PAGE_LANG}/pages/proizvodstvo" class="bottom third">производство</a>
+            <a href="/{PAGE_LANG}/pages/contacts" class="bottom fourth">контакты</a>
+            <a href="#" class="top fourth close">Свернуть</a>
+          </div>
+          <ul class="sm-menu">
+            <li><a href="/{PAGE_LANG}/pages/investoll">о компании</a></li>
+            <li><a href="/{PAGE_LANG}/pages/info">информация</a></li>
+            <li><a href="/{PAGE_LANG}/pages/proizvodstvo">производство</a></li>
+            <li><a href="/{PAGE_LANG}/pages/dileram">дилерам</a></li>
+            <li><a href="/{PAGE_LANG}/pages/contacts">контакты</a></li>
+            <li class="open"><a href="#">развернуть</a></li>
+          </ul>
+        </div>
+        <div id="content">
+          <div class="wrapper">
+            <div class="title">
+              <h2>{PAGE_NAME}</h2>
+              <ul>
+                {PAGE_PATH}
+              </ul>
+            </div>
+            <div class="text">
+              {PAGE_CONTENT}
+            </div>
+          </div>
+					<a href="#" id="basketLink" title="Корзина">корзина</a>
+					<div class="box closeWindow" id="basketBox">
+						<div class="border">
+							<form action="/requests/Cart.php" method="post" id="basketForm">
+								<div>
+									<a class="close top" href="#">свернуть</a>
+									<table class="headTable">
+										<thead>
+											<tr>
+												<td class="first">штук</td>
+												<td class="second">товар</td>
+												<td class="third">цена</td>
+												<td class="fourth"></td>
+											</tr>	
+										</thead>
+									</table>
+									<div id="basket" class="scrollBox">
+										<table>
+											<tbody>
+												<tr class="active">
+													<td class="first">
+														<a href="#" class="arrowsInput left">влево</a>
+														<input class="inputText" name="product[amount][1]" id="product[amount][1]" type="text" value="1" />
+														<a href="#" class="arrowsInput right">вправо</a>
+														<input class="hidden" name="product[deleted][1]" id="product[deleted][1]" type="hidden" value="n" />
+													</td>
+													<td class="second"><div><a href="img/catalog_img.jpg"><span>Жалюзи БРАВО</span></a></div><b>&hellip;</b></td>
+													<td class="third"><span>768.69</span><b>грн</b></td>
+													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
+												</tr>
+												<tr class="active">
+													<td class="first">
+														<a href="#" class="arrowsInput left">влево</a>
+														<input class="inputText" name="product[amount][2]" id="product[amount][2]" type="text" value="1" />
+														<a href="#" class="arrowsInput right">вправо</a>
+														<input class="hidden" name="product[deleted][2]" id="product[deleted][2]" type="hidden" value="n" />
+													</td>
+													<td class="second"><div><a href="img/rec_img1.jpg"><span>Жалюзи БРАВО Необыкновенные</span></a></div><b>&hellip;</b></td>
+													<td class="third"><span>768.69</span><b>грн</b></td>
+													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
+												</tr>
+												<tr class="active">
+													<td class="first">
+														<a href="#" class="arrowsInput left">влево</a>
+														<input class="inputText" name="product[amount][3]" id="product[amount][3]" type="text" value="1" />
+														<a href="#" class="arrowsInput right">вправо</a>
+														<input class="hidden" name="product[deleted][3]" id="product[deleted][3]" type="hidden" value="n" />
+													</td>
+													<td class="second"><div><a href="img/rec_img2.jpg"><span>Жалюзи ТОРПЕДА</span></a></div><b>&hellip;</b></td>
+													<td class="third"><span>768.69</span><b>грн</b></td>
+													<td class="fourth"><a class="delete" title="Удалить товар" href="#">x</a></td>
+												</tr>
+											</tbody>
+										</table>
 									</div>
-									<div class="cat-img"><a href="#"><img src="/img/cat_img.jpg" alt="" /></a></div>
-								</div>
-							</li>
-							<li>
-								<div class="cat-wrapper">
-									<div class="cat-content">
-										<div class="cat-content-wrapper">
-											<strong>Уход за жалюзями</strong>
-											<p>Жалюзи нужно открывать правой рукой, потому что левой они просто не откроются...</p>
-											<div class="more"><a href="#">подробнее</a></div>
-											<span class="cat-price">386 <i>грн</i></span>
-										</div>
+									<div class="foot">
+										<ul>
+											<li>Всего</li>
+											<li class="all">7 товар(ов)</li>
+											<li class="summ">15 500грн</li>
+										</ul>
+										<button id="save">сохранить</button>
+										<input type="submit" id="basket-sub" value="оформить" />
+										<input class="hidden" type="hidden" name="action" value="update" />
+										<p class="message"></p>
+										<a href="#" class="close">свернуть</a>
+										<a href="#" class="arrows up">влево</a>
+										<a href="#" class="arrows down">вниз</a>
 									</div>
-									<div class="cat-img"><a href="#"><img src="/img/cat_img.jpg" alt="" /></a></div>
+									<div id="busy"></div>
 								</div>
-							</li>
-						</ul>
-        			</div>
-				</div>
-			</div>
-			<div class="clear_bbig"></div>
-			
-		</div>
-	</div>
-	</div>
-	<div class="left_col">
-		<div class="clear_vbig"></div>
-		<a href="/ru/" title=""><img src="/img/0.gif" width="323" height="130" alt="" title="" /></a>
-		<div class="clear_vbig"></div>
-		<ul class="menu" id="sMenu">
-			{PAGE_MENU}
-<!--      <a href="#" title="" class="cur">жалюзи</a>
-			
-			<span><a href="#" title="">шторы рулоны</a></span>
-			<span><a href="#" title="">роллеты защитные</a></span>
-			<span><a href="#" title="">римские шторы</a></span>
-			<span><a href="#" title="">японские шторы</a></span>
-			<span><a href="#" title="">ворота гаражные</a></span>
-			<span><a href="#" title="">маркизы</a></span>
-			<span><a href="#" title="">сетки<br />противомаскитные</a></span>
-			<span><a href="#" title="">шлагбаумы</a></span>
-			<span><a href="#" title="">окна</a></span>
--->
-		</ul>
-		<div class="clear_vbig"></div>
-		<h3 class="hor">инвестолл рекомендует</h3>
-		<div class="lbox">
-			<div class="imgborder fl"><a href="#" title=""><img src="/img/test.gif" width="120" height="160" alt="" title="" /></a></div>
-			<div class="imgbox fl">
-				<a href="#" title="" class="blue mrb fl"><b>Уход за жалюзями</b></a><br />
-				<span class="small gray">Жалюзи это новое решение в оформлении оконных конструкций, визитная карточка любого помещения.</span>
-				<div class="clear_small"></div>
-				<span class="orange xlarge">386 </span><span class="large"><b>грн</b></span>
-				<div class="clear_small"></div>
-				<a href="#" title="" class="podr">подробнее</a>
-			</div>
-			<div class="clear_bbig"></div>
-			<div class="imgborder fl"><a href="#" title=""><img src="/img/test.gif" width="120" height="160" alt="" title="" /></a></div>
-			<div class="imgbox fl">
-				<a href="#" title="" class="blue mrb fl"><b>Уход за жалюзями</b></a><br />
-				<span class="small gray">Жалюзи это новое решение в оформлении оконных конструкций, визитная карточка любого помещения.</span>
-				<div class="clear_small"></div>
-				<span class="orange xlarge">386 </span><span class="large"><b>грн</b></span>
-				<div class="clear_small"></div>
-				<a href="#" title="" class="podr">подробнее</a>
-			</div>
-		</div>
-		<div class="clear_vbig"></div>
-		<div class="text_center"><img src="/img/investoll.gif" width="184" height="50" alt="" title="" /><div>© 2009 Investoll.ua</div></div>
-		<div class="clear_vbig"></div>
-	</div>
-</div>
-<div class="clear2"></div>
-</div>
-</div>
-</div>
+							</form>
+						</div>
+					</div>
+        </div>
+      </div>
+    </div>
+    <div id="left">
+      <h1 id="logo">
+        <a href="/{PAGE_LANG}/" title="На главную">Investoll, Инвестолл</a>
+        <i>на рынке Украины с 2000 года</i>
+      </h1>
+      <ul class="menu">
+        {PAGE_MENU}
+      </ul>
+      <h2 class="recommend"><span>Инвестолл рекомендует</span></h2>
+      <ul class="recommend">
+        {PAGE_RECOMMEND}
+      </ul>
+    </div>
+    <div id="hfooter"></div>
+  </div>
+  <div id="footer">
+    <div id="copyright">
+      <i>Investoll <b>Мы всегда рядом</b></i>
+      <p>© все права защищены</p>
+			<!--bigmir)net TOP 100-->
+				<script type="text/javascript" language="javascript"><!--
+					function BM_Draw(oBM_STAT){
+						document.write('<table class="bigmir" cellpadding="0" cellspacing="0" border="0" style="display:inline;margin-right:4px;"><tr><td><div style="font-family:Tahoma;font-size:10px;padding:0px;margin:0px;"><div style="width:7px;float:left;background:url(\'http://i.bigmir.net/cnt/samples/default/b54_left.gif\');height:17px;padding-top:2px;background-repeat:no-repeat;"></div><div style="float:left;background:url(\'http://i.bigmir.net/cnt/samples/default/b54_center.gif\');text-align:left;height:17px;padding-top:2px;background-repeat:repeat-x;"><a href="http://www.bigmir.net/" target="_blank" style="color:#0000ab;text-decoration:none;">bigmir<span style="color:#ff0000;">)</span>net</a>&nbsp;&nbsp;<span style="color:#98b4f4;">хиты</span>&nbsp;<span style="color:#426ed2;font:10px Tahoma;">'+oBM_STAT.hits+'</span>&nbsp;<span style="color:#98b4f4;">хосты</span>&nbsp;<span style="color:#426ed2;font:10px Tahoma;">'+oBM_STAT.hosts+'</span></div><div style="width:7px;float: left;background:url(\'http://i.bigmir.net/cnt/samples/default/b54_right.gif\');height:17px;padding-top:2px;background-repeat:no-repeat;"></div></div></td></tr></table>');
+					}
+					//-->
+				</script>
+				<script type="text/javascript" language="javascript"><!--
+					bmN=navigator,bmD=document,bmD.cookie='b=b',i=0,bs=[],bm={o:1,v:16818134,s:16818134,t:0,c:bmD.cookie?1:0,n:Math.round((Math.random()* 1000000)),w:0};
+					for(var f=self;f!=f.parent;f=f.parent)bm.w++;
+					try{if(bmN.plugins&&bmN.mimeTypes.length&&(x=bmN.plugins['Shockwave Flash']))bm.m=parseInt(x.description.replace(/([a-zA-Z]|\s)+/,''));
+					else for(var f=3;f<20;f++)if(eval('new ActiveXObject("ShockwaveFlash.ShockwaveFlash.'+f+'")'))bm.m=f}catch(e){;}
+					try{bm.y=bmN.javaEnabled()?1:0}catch(e){;}
+					try{bmS=screen;bm.v^=bm.d=bmS.colorDepth||bmS.pixelDepth;bm.v^=bm.r=bmS.width}catch(e){;}
+					r=bmD.referrer.slice(7);if(r&&r.split('/')[0]!=window.location.host){bm.f=escape(r);bm.v^=r.length}
+					bm.v^=window.location.href.length;for(var x in bm) if(/^[ovstcnwmydrf]$/.test(x)) bs[i++]=x+bm[x];
+					bmD.write('<sc'+'ript type="text/javascript" language="javascript" src="http://c.bigmir.net/?'+bs.join('&')+'"></sc'+'ript>');
+					//-->
+				</script>
+				<noscript>
+					<a href="http://www.bigmir.net/" target="_blank"><img src="http://c.bigmir.net/?v16818134&s16818134&t2" width="88" height="31" alt="bigmir)net TOP 100" title="bigmir)net TOP 100" border="0" /></a>
+				</noscript>
+			<!--bigmir)net TOP 100-->
+			<a href="http://welitta.com" title="продвижение сайтов" target="_blank" class="welitta">продвижение сайтов  Welitta</a>
+    </div>
+  </div>
 </body>
 </html>

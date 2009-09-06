@@ -107,10 +107,51 @@
 								</div>
 								<div class="tovar-basket">
 									<i class="price"><strong>386<b>грн</b></strong> <span>520<b>грн</b></span></i>
-									<a href="#" class="addbasket">добавить в корзину</a>
+									<a href="#" class="addbasket" id="basketAdd">добавить в корзину</a>
 									<a href="#" class="tovar-more">Подробнее</a>
 								</div>
 							</div>
+						</div>
+					</div>
+					<a href="#" id="basketLink" title="Корзина">корзина</a>
+					<div class="box closeWindow" id="basketBox">
+						<div class="border">
+							<form action="requests/Cart.php" method="post" id="basketForm">
+								<div>
+									<a class="close top" href="#">свернуть</a>
+									<table class="headTable">
+										<thead>
+											<tr>
+												<td class="first">штук</td>
+												<td class="second">товар</td>
+												<td class="third">цена</td>
+												<td class="fourth"></td>
+											</tr>	
+										</thead>
+									</table>
+									<div id="basket" class="scrollBox">
+										<table>
+											<tbody>
+											</tbody>
+										</table>
+									</div>
+									<div class="foot">
+										<ul>
+											<li>Всего</li>
+											<li class="all">7 товар(ов)</li>
+											<li class="summ">15 500грн</li>
+										</ul>
+										<button id="save">сохранить</button>
+										<input type="submit" id="basket-sub" value="оформить" />
+										<input class="hidden" type="hidden" name="action" value="update" />
+										<p class="message"></p>
+										<a href="#" class="close">свернуть</a>
+										<a href="#" class="arrows up">влево</a>
+										<a href="#" class="arrows down">вниз</a>
+									</div>
+									<div id="busy"></div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
