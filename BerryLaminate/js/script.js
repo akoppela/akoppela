@@ -103,6 +103,79 @@ var Slider = new Class({
 	
 });
 
+var slideMenu = new Class ({
+	
+	initialize: function(block){
+		this.block = $(block);
+		if(!this.block) return false;
+		
+		this.fx = new Fx.Slide(this.block, {duration: 300, transition: Fx.Transitions.Sine.easeInOut, wait:false});
+		this.link = this.block.getParent('li').getElement('a');
+		
+		this.startPosition();
+		
+		this.link.addEvent('click', this.start.bind(this));
+	},
+	
+	startPosition: function(){
+		this.block.getParent('div').addClass('slide');
+		this.fx.hide();
+	},
+	
+	start: function(e){
+		this.fx.toggle();
+		return false;
+	}
+	
+});
+
+var Comments = new Class({
+	
+	initialize: function(main){
+		this.main = $(main);
+		if(!this.main) return;
+		
+		this.addLink = this.main.getElement('.add-comment');
+		this.addBox = this.main.getElement('.add-commentfx');
+		this.nameInput = this.main.getElement('input.name');
+		this.textarea = this.main.getElement('textarea');
+		this.fxAdd = new Fx.Slide(this.addBox, { duration: 400, wait: false, transition: Fx.Transitions.Sine.easeOut });
+		new Input(this.nameInput);
+		new Input(this.textarea);
+		this.startPosition();
+		
+		this.addLink.addEvent('click', this.start.bind(this));
+	},
+	
+	startPosition: function(){
+		this.addBox.getParent('div').addClass('fx');
+		this.fxAdd.hide();
+	},
+	
+	start: function(){ this.fxAdd.toggle(); return false; }
+	
+});
+
+var Input = new Class({
+	
+	initialize: function(element){
+		this.element = $(element);
+		if(!this.element) return false;
+		
+		this.elementText = this.element.get('value') || this.element.get('text');
+		
+		this.element.addEvents({
+			'focus': this.removeText.bind(this),
+			'blur': this.addText.bind(this)
+		});
+	},
+	
+	removeText: function(){	if(this.element.get('value') == this.elementText) this.element.set('value', ''); },
+	
+	addText: function(){ if(this.element.get('value') == '') this.element.set('value', this.elementText); }
+	
+});
+
 window.addEvent('domready', function(){
 	
 	if($$('#header .navigation ul') != ''){
@@ -121,5 +194,11 @@ window.addEvent('domready', function(){
 			this.tween('color', '#dad9d7');
 		}
 	});}
+	if($$('ul.left ul') != ''){
+		$$('ul.left ul').each(function(element){
+			new slideMenu(element);
+		});
+	}
+	if($('Comments')){ new Comments('Comments'); }
 	
 });

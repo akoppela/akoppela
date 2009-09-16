@@ -178,7 +178,6 @@ var myScroll = new Class({
 		this.curPosition = 0;
 
 		if($('basketAdd')){
-			alert(1);
 			$('basketAdd').addEvent('click', this.check.bind(this));
 		}
 		this.scrollBox.addEvent('mousewheel', this.start.bind(this));
