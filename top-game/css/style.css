@@ -200,8 +200,8 @@ body {
 	text-indent:-999999px;
 	display:block;
 }
-#content .left .slider .arrow .left { background-image: url(../img/gray_arrow_left.png) !important; }
 #content .left .slider .arrow .right { background-image: url(../img/gray_arrow_right.png) !important; }
+#content .left .slider .arrow .left { background-image: url(../img/gray_arrow_left.png) !important; }
 #hfooter { height:5.5em; clear:both; width:100%; overflow:hidden; }
 #footer {
 	min-width:62em;
