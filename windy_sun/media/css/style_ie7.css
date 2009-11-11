@@ -1,0 +1,10 @@
+/* list */
+
+#why .corners li,
+#content .left ul.index-blog li,
+#content.search li,
+#content.blog .left ul.date li,
+#content.partners li,
+#content.two-column .left ul.links li,
+#content.contacts .left ul.contact-links li,
+#content ul.articles li { vertical-align:top; zoom:1; }

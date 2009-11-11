@@ -1,1 +1,1 @@
-#content .left ul.nav li { zoom:1; vertical-align:bottom; }
+#content .left ul.nav li, #content .right .description .bottom .left-desc li { zoom:1; vertical-align:bottom; }
