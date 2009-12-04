@@ -7,4 +7,7 @@
 #content.partners li,
 #content.two-column .left ul.links li,
 #content.contacts .left ul.contact-links li,
-#content ul.articles li { vertical-align:top; zoom:1; }
+#content ul.articles li,
+#content.two-column ul.command-list li,
+#content.two-column ul.photos li,
+#content.video .right ul.videos li { vertical-align:top; zoom:1; }

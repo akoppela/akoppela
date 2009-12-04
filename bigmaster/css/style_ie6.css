@@ -1,0 +1,27 @@
+body { width:expression(document.documentElement.clientWidth > 1280? "1280px" : (document.documentElement.clientWidth < 1000 ? "1000px" : "100%")); }
+
+/* Прозрачные png картинки */
+
+#header h1 a { filter: expression(fixPNG(this)); }
+
+/* header */
+
+#header .basket, #header .basket p, #header .basket a { background-image: url(../img/header_basket_ie6.png); }
+
+/* menu */
+
+#menu .search, #menu ul, #menu, #menu form, #menu form .wrapper, #menu form .wrapper .search-box .cn.r, #menu form .wrapper .search-box input { background-image: url(../img/menu_bg_ie6.png); }
+
+/* banner */ 
+
+#content .banner, #content .banner .cn-r, #content .banner .cn-c { background-image: url(../img/banner_corners_ie6.png); }
+
+/* content */
+
+#content .column .top { zoom:1; }
+
+/* corners */
+
+#content .corners .cn { background-image: url(../img/column_corners_ie6.png); }
+#content .corners.white .cn { background-image: url(../img/white_corners_ie6.png); }
+#content .corners .cn.tl { padding-right:28px; }

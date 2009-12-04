@@ -19,7 +19,10 @@ html { width: expression(document.documentElement.clientWidth > 1000 ? "auto" : 
 #content.partners li,
 #content.two-column .left ul.links li,
 #content.contacts .left ul.contact-links li,
-#content ul.articles li { vertical-align:top; zoom:1; }
+#content ul.articles li,
+#content.two-column ul.command-list li,
+#content.two-column ul.photos li,
+#content.video .right ul.videos li { vertical-align:top; zoom:1; }
 
 /* header contacts */
 
@@ -87,3 +90,11 @@ html { width: expression(document.documentElement.clientWidth > 1000 ? "auto" : 
 /* comments */
 
 #content.two-column .comments form #commentSubmit { position:static; }
+
+/* reservation page */
+
+/* content */
+
+/* right */
+
+#content.reservation .right form.reserv input#reservSubmit { position:static; }
