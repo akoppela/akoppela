@@ -1,0 +1,22 @@
+/* first-child */
+
+#authorize li, #header .menu li {
+	jscript: expression(
+		this.p ? 0 : (
+			this == parentNode.firstChild ? (className += " first-child") : 0,
+			this.p = 1
+		)
+	);
+}
+
+/* header menu */
+
+#header .menu li { display:inline; margin-left:0; }
+
+/* list */
+
+#content .left .menu li, #content .left .menu li h3, #content .left .menu li h2 { vertical-align:top; zoom:1; }
+
+/* png */
+
+.corners .cn, #content .left .menu li a img { filter: expression(fixPNG(this)); }
