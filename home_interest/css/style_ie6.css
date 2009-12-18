@@ -15,7 +15,7 @@
 
 /* header menu */
 
-#header .menu li { display:inline; margin-left:0; }
+#header .menu { width:645px; }
 
 /* list */
 

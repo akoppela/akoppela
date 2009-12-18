@@ -42,7 +42,7 @@ Input.Password = new Class({
 		this.element = $(element);
 		if(!this.element) return
 		
-		this.input = new Element('input', { 'class': this.element.className }).inject(this.element, 'after').setStyle('display', 'none');
+		this.input = new Element('input', { 'class':  'default ' + this.element.className }).inject(this.element, 'after').setStyle('display', 'none');
 		this.parent(this.element);
 		this.assignEvents(this.input);
 		this.input.removeEvents('blur');
