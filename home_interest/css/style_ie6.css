@@ -1,6 +1,10 @@
+/* main */
+
+#container { height:100%; }
+
 /* first-child */
 
-#authorize li, #header .menu li {
+#authorize li, #header .menu li, #content .right .left .learn-more li {
 	jscript: expression(
 		this.p ? 0 : (
 			this == parentNode.firstChild ? (className += " first-child") : 0,

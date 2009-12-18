@@ -4,4 +4,4 @@
 
 /* list */
 
-#content .left .menu li, #content .left .menu li h3, #content .left .menu li h2 { vertical-align:top; zoom:1; }
+#content .left .menu li { vertical-align:top; zoom:1; }
