@@ -1,0 +1,2 @@
+body { width: expression(document.documentElement.clientWidth > 927 ? "auto" : "927px"); }
+#content .left ul.images li { margin-top: expression(this.previousSibling == null ? 0 : '25px'); }

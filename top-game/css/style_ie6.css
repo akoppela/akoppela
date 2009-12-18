@@ -1,0 +1,5 @@
+#container { height:100%; width: expression(document.documentElement.offsetWidth < (992/12) * parseInt(document.documentElement.currentStyle.fontSize) ? "62em" : "auto"); /* Эмуляция em-based min-width для IE6 */ }
+#footer { width: expression(document.documentElement.offsetWidth < (992/12) * parseInt(document.documentElement.currentStyle.fontSize) ? "62em" : "auto"); /* Эмуляция em-based min-width для IE6 */ }
+#header .top div { overflow:hidden; }
+#content .left ul.nav li, #content .right .description .bottom .left-desc li { zoom:1; vertical-align:bottom; }
+#content .right .description .bottom .right-desc .games { display:inline; }

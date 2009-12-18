@@ -1,0 +1,497 @@
+/* стандартные обнуления отступов и прочие настройки */
+
+html {
+	height:100%;
+	color: #000;
+	background: #fff;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+/* основные стили */
+
+body {
+	min-width:814px;
+	width: expression(document.documentElement.clientWidth < 800 ? "800px" : "100%");
+    font-family: Arial;
+    font-size:13px;
+	color:#000;
+	margin-top:10px;
+}
+
+a {
+	text-decoration:none;
+}
+
+#container {
+	width:100%;
+	background:#00aedb url(img/main_bg.jpg) no-repeat center top; 
+	height:651px;
+}
+
+#header {
+	position:relative;
+	top:7px;
+	width:800px;
+	margin:0 auto;
+	padding-top:44px;
+	line-height:40px;
+	height:40px;
+	overflow:hidden;
+	z-index:100;
+}
+
+#header ul {
+	margin-left:100px;
+}
+
+#header li {
+	display:inline;
+}
+
+#header li a {
+	margin:0 27px;
+	color:#fff;
+	font-size:13px;
+	font-weight:bold;
+	font-family: "Tahoma";
+	padding:12px 0;
+}
+
+.head-active {
+	background: url(img/nav_arrow.png) no-repeat center bottom;
+}
+
+#content {
+	top:-7px;
+	width:814px;
+	height:334px;
+	margin:0 auto;
+	background: url(img/content_bg.png) no-repeat; 
+	overflow:hidden;
+	display:block;
+}
+
+#content h1 {
+	padding-left:55px;
+	color:#09c;
+	font-weight:bold;
+	font-family: "tahoma";
+	font-size:13px;
+	line-height:17px;
+	margin-bottom:18px;
+}
+
+#content h1 span {
+	font-weight:normal !important;
+}
+
+#left-block {
+	position:relative;
+	width:524px;
+	height:279px;
+	float:left;
+	margin-top:39px;
+}
+
+#left-block p a {
+	color:#09c !important;
+}
+
+.lb-full {
+	overflow:hidden;
+	height:243px !important; 
+}
+
+.slide {
+	position:relative;
+}
+
+#slide p {
+	margin-right:45px;
+}
+
+#up {
+	width:11px;
+	height:11px;
+	display:block;
+	background: url(img/up.png) no-repeat;
+	float:right;
+	position:relative;
+	top:65px;
+	right:300px;
+	margin-right:10px;
+	cursor:pointer;
+}
+
+#down {
+	width:11px;
+	height:11px;
+	display:block;
+	background: url(img/down.png) no-repeat;
+	float:right;
+	position:relative;
+	top:65px;
+	right:300px;
+	cursor:pointer;
+}
+
+.upsam {
+	right:20px !important;
+	top:15px !important;
+}
+
+.downsam {
+	right:20px !important;
+	top:15px !important;
+}
+
+
+
+#content p {
+	padding-left:55px;
+	font-family:Helvetica, arial;
+	font-size:11px;
+	margin-bottom:10px;
+	line-height:17px;
+	color:#666;
+}
+
+#content p strong {
+	font-weight:bold;
+	font-size:12px;
+}
+
+.vcard {
+	padding-top:20px;
+	padding-left:55px;
+	overflow:hidden;
+}
+
+.vcard li {
+	float:left;
+	margin-right:7px;
+}
+
+dt, dd {
+	font-family:tahoma;
+	font-size:12px;
+	color:#09c;
+	display:inline;
+}
+
+dd a {
+	color:#09c;
+}
+
+#left-block h2 {
+	padding-left:55px;
+	color:#09c;
+	font-weight:bold;
+	font-family: "tahoma";
+	font-size:13px;
+	line-height:30px;
+}
+
+#left-block p a {
+	color:#666;
+}
+
+.training {
+	padding-left:55px;
+	font-family:Helvetica, arial;
+	font-size:11px;
+	color:#666;
+	line-height:12px;
+}
+
+#right-block {
+	position:relative;
+	width:290px;
+	float:right;
+}
+
+#right-block h2 {
+	padding-top:35px;
+	font-size:11px;
+	font-family:tahoma;
+	color:#7fd4ed;
+	line-height:20px;
+	font-weight:bold;
+	margin-left:48px;
+}
+
+#right-block ul {
+	margin-left:48px;
+	padding-top:35px;
+}
+
+#right-block li a {
+	font-size:11px;
+	font-family:tahoma;
+	color:#09c;
+	line-height:20px;
+	font-weight:bold;
+}
+
+#right-block li a:hover {
+	color:#7fd4ed;
+}
+
+.r-active {
+	color:#7fd4ed !important;
+}
+
+.mott {
+	margin-left:48px;
+	margin-top:23px;
+	width:242px;
+	height:234px;
+	background: url(img/suzanne.png) no-repeat;
+}
+
+*html .mott {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/suzanne.png'); /* хак для ие6 png opacity */
+}
+
+.sam {
+	margin-top:24px;
+	width:283px;
+	height:232px;
+	background: url(img/sam.png) no-repeat;
+	overflow:hidden;
+}
+
+*html .sam {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/sam.png'); /* хак для ие6 png opacity */
+}
+
+#right-block li {
+	display:block;
+}
+
+#right-block li a {
+	font-family:Helvetica, arial;
+	color:#09c;
+	font-size:11px;
+	line-height:18px;
+	font-weight:bold;
+}
+
+#content a {
+	position:relative;
+}
+
+.logo {
+	cursor:pointer;
+	margin-top:90px;
+	margin-right:63px;
+	float:right;
+	display:block;
+	width:178px;
+	height:144px;
+	background: url(img/logo.png) no-repeat;
+}
+
+*html .logo {
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/logo.png'); /* хак для ие6 png opacity */
+	margin-right:32px;
+}
+
+#quote-block {
+	overflow:hidden;
+	width:800px;
+	margin:20px auto 0;
+}
+
+#quote {
+	width:517px;
+	float:left;
+	padding-top:20px;
+	border-right:1px solid #84cde5;
+	background: url(img/kov.png) no-repeat 425px 55px;
+	padding-bottom:50px;
+}
+
+#quote p {
+	margin:0 30px 0 40px;
+	color:#bfebf7;
+	font-family:tahoma;
+	font-size:13px;
+	margin-bottom:18px;
+}
+
+#quote p strong {
+	font-weight:bold;
+}
+
+#slogan {
+	width:282px;
+	float:right;
+}
+
+#slogan ul {
+	margin:20px 0 0 45px;
+	background: url(img/r_mus.png) no-repeat;
+}
+
+#slogan li {
+	text-indent:-9000px;
+}
+
+#slogan li span {
+	line-height:22px;
+	font-size:16px;
+	font-family:Helvetica, arial;
+	color:#fff;
+}
+
+#slogan li span strong {
+	font-weight:bold;
+}
+
+#footer {
+	width:800px;
+	height:100px;
+	margin:0 auto;
+	text-align:center;
+}
+
+#footer ul {
+	margin-top:15px;
+}
+
+#footer li {
+	display:inline;
+}
+
+#footer li span, #footer p {
+	font-size:11px;
+	font-family:Helvetica, arial;
+	color:#7fd4ed;
+}
+
+#footer a {
+	color:#7fd4ed;
+}

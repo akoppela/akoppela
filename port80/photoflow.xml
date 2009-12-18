@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<photos path="images/">
+	<photo name="Photo 1" url="1.jpg">This is the optional description for photo 1</photo>	
+	<photo name="Photo 2" url="2.jpg">This is the optional description for photo 2</photo>	
+	<photo name="Photo 3" url="3.jpg">This is the optional description for photo 3</photo>	
+	<photo name="Photo 4" url="4.jpg">This is the optional description for photo 4</photo>	
+	<photo name="Photo 5" url="5.jpg">This is the optional description for photo 5</photo>	
+	<photo name="Photo 5" url="6.jpg">This is the optional description for photo 5</photo>	
+	<photo name="Photo 5" url="7.jpg">This is the optional description for photo 5</photo>	
+	<photo name="Photo 5" url="8.jpg">This is the optional description for photo 5</photo>	
+	<photo name="Photo 5" url="9.jpg">This is the optional description for photo 5</photo>	
+	<photo name="Photo 5" url="10.jpg">This is the optional description for photo 5</photo>	
+	<photo name="Photo 5" url="11.jpg">This is the optional description for photo 5</photo>	
+	<photo name="Photo 5" url="12.jpg">This is the optional description for photo 5</photo>	
+	<photo name="Photo 5" url="13.jpg">This is the optional description for photo 5</photo>	
+</photos>

@@ -1,0 +1,234 @@
+html {
+	color: #000;
+	background: url(images/main_bg.jpg);
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+img, div { 
+	behavior: url(iepngfix.htc); 
+}
+
+body {
+	font-family:arial;
+	font-size:11px;
+	color:#333;
+	width:100%;
+	height:100%;	
+}
+
+#container {
+	width: expression(document.documentElement.clientWidth < 1024 ? "1024px" : "auto");
+	min-width:1024px;
+}
+
+a {
+	text-decoration:none;
+}
+
+#header {
+	width:100%;
+	background: url(images/header_bg.jpg) repeat-x;
+	height:183px;
+}
+
+#logo-wrapper {
+	float:right;
+	width:100%;
+	margin-left:-321px;
+}
+
+#logo {
+	margin-top:12px;
+	text-align:center;
+	margin-left:321px;
+}
+
+#photo {
+	float:left;
+	width:321px;
+}
+
+#nav {
+	height:65px;
+	background: url(images/nav_bg.jpg) repeat-x;
+	text-align:center;
+}
+
+.nav-border {
+	background: url(images/nav_border.gif) no-repeat right;
+}
+
+#nav ul {
+	margin:0 auto;
+	padding:0;
+	white-space:nowrap;
+	width:815px;
+}
+
+*html #nav ul {
+	padding-top:4px;
+}
+
+#nav li {
+	float:left;
+	margin:0;
+	padding:15px 25px 0;
+	height:45px;
+}
+
+*html #nav li {
+	height:41px;
+}
+
+#nav li a {
+	font-family: "Times New Roman";
+	font-size:24px;
+	color:#fced9a;
+	float:left;
+}
+
+#wrapper {
+	width:100%;
+	float:left;
+}
+
+#content {
+	margin:0 240px 0 257px;
+	height:100px;
+}
+
+#right {
+	float:left;
+	margin-left:-240px;
+	width:240px;
+	background: url(images/right.png) no-repeat;
+	height:520px;
+}
+
+#left {
+	float:left;
+	margin-left:-100%;
+	width:257px;
+	background: url(images/left.png) no-repeat;
+	height:520px;
+}
+

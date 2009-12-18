@@ -1,0 +1,29 @@
+#catalog li a, #left .banners li a, #left .banners li a img {
+	zoom:1;
+}
+
+#left #signin-sub {
+	margin-right:0.5em;
+}
+
+#search-text {
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+}
+
+#right .nav {
+	margin-top:2.2em;
+}
+
+#right .action-nav li {
+	display:inline;
+	zoom:1;
+	margin:0 2px;
+}
+
+#right .popular-text {
+	margin-top:1em;
+}
+
+#right .arrow-header {
+	margin-top:0;
+}

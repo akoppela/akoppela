@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+	<meta name="description" content="Music shop" />
+	<meta name="keywords" content="music, music shop" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Music shop | Main</title>
+	<script type="text/javascript" src="mootools-1.2.1-core-nc.js"></script>
+	<script type="text/javascript" src="mootools-1.2-more.js"></script>
+	<script type="text/JavaScript" src="script.js"></script>
+</head>
+<body>
+	<div id="container-wrapper">
+		<div id="container">
+			<div id="head-nav">
+				<ul>
+					<li>
+						<a href="#">Order Status</a>
+						<p>|</p>
+					</li>
+					<li>
+						<a href="#">Wish List</a>
+						<p>|</p>
+					</li>
+					<li>
+						<a href="#">Help</a>
+						<p>|</p>
+					</li>
+					<li>
+						<a href="#">Account</a>
+					</li>
+				</ul>
+			</div>
+			<div id="slogan-wrapper">
+				<div id="slogan-round">
+    				<b class="r3"></b><b class="r1"></b><b class="r1"></b>
+					<div id="slogan-border">
+						<div id="slogan">
+							<div id="slogan-img-wrapper">
+								<div id="slogan-image">
+									<img src="images/slogan.gif" alt="slogan" />
+								</div>
+							</div>
+							<div id="slogan-left-border">
+							</div>
+							<div id="frame-border">
+								<div id="slogan-frame-wrapper">
+									<div id="first-frame">
+										<img id="cart" src="images/cart.gif" alt="cart" />
+										<img id="your-cart" src="images/your_cart.gif" alt="your cart" />
+										<p>No Items in cart</p>
+										<img id="login" src="images/login.gif" alt="login" />
+										<img id="view-cart" src="images/view_cart.gif" alt="view cart" />
+									</div>
+									<div id="second-frame">
+										<p id="title-signin">Autorization:</p>
+										<form>
+											<input class="in-bor" id="sign-in" type="text" value="Login" onblur="if(this.value=='')this.value='Login';" onclick="if(this.value=='Login')this.value='';" />
+											<input class="in-bor" type="password" value="password" onblur="if(this.value=='')this.value='password';" onclick="if(this.value=='password')this.value='';"/>
+											<input id="log-but" type="image" src="images/login.gif" />
+											<label for="remind">
+												<input id="remind" type="checkbox" />
+												Remind me
+											</label>
+											<p id="back">&larr; Back</p>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+    				<b class="r1"></b><b class="r1"></b><b class="r3"></b>
+				</div>
+			</div>
+			<div id="logo-round">
+    			<b class="r3"></b><b class="r1"></b><b class="r1"></b>
+				<div id="logo">
+					<a href="#"><img src="images/logo.gif" alt="logo" /></a>
+				</div>
+			    <b class="r1"></b><b class="r1"></b><b class="r3"></b>
+			</div>
+			<div id="nav-wrapper">
+				<div id="nav-round">
+    				<b class="r3"></b><b class="r1"></b><b class="r1"></b>
+					<div id="nav-border">
+						<div id="nav">
+							<div id="nav-menu">
+								<ul id="nav-anim">
+									<li>
+										<a href="#">All Styles</a>
+										<p class="separ">|</p>
+									</li>
+									<li>
+										<a href="#">What's New</a>
+										<p class="separ">|</p>
+									</li>
+									<li>
+										<a href="#">Bestsellers</a>
+										<p class="separ">|</p>
+									</li>
+									<li>
+										<a href="#">Coming Soon</a>
+										<p class="separ">|</p>
+									</li>
+									<li>
+										<a href="#">Recomended</a>
+										<p class="separ">|</p>
+									</li>
+									<li>
+										<a href="#">Classical Store styles</a>
+									</li>
+								</ul>
+							</div>
+							<div id="nav-f-b-round">
+    							<b class="r3"></b><b class="r1"></b><b class="r1"></b>
+    							<div id="nav-f-b-border">
+									<div id="nav-f-b">
+										<p id="nav-back">Close menu</p>
+										<p id="nav-forvard">Open menu</p>
+									</div>
+								</div>
+    							<b class="r1"></b><b class="r1"></b><b class="r3"></b>
+							</div>
+						</div>
+					</div>
+    				<b class="r1"></b><b class="r1"></b><b class="r3"></b>
+				</div>
+			</div>
+			<div id="main-wrapper">
+				<div id="text">
+					<div id="content-wrapper">
+						<div id="content">
+							<div id="search">
+								<form>
+									<ul>
+										<li>
+											<p>Search:</P>
+										</li>
+										<li>
+											<input id="search-text" type="text" onblur="if(this.value=='')this.value='search text here…';" onclick="if(this.value=='search text here…')this.value='';" value="search text here…" />
+										</li>
+										<li>
+											<select name="">
+												<option value="">artist</option>
+												<option value="">date</option>
+												<option value="">else</option>
+											</select>
+										</li>
+										<li>
+											<input class="submit2" type="submit" value="OK" />
+										</li>
+									</ul>
+								</form>
+							</div>
+							<div id="content-text">
+								<div id="content-price">
+									<div id="frame-wrapper">
+										<div id="second-content-frame" class="price-border">
+											<a href="#"><img class="border-img Tips" title="Rolling Stone" src="images/rol-stone.jpg" alt="avril" /></a>
+											<p class="ECD">Let Go [ECD]</p>
+											<p class="name-artist">Rolling Stones</p>
+											<p class="money">$12,95</p>
+											<a href="#"><img class="add-to-cart" src="images/add_to_cart.gif" alt="add to cart" /></a>
+										</div>
+									</div>
+									<div id="first-content-frame" class="price-border">
+										<a href="#"><img class="border-img" src="images/avril.jpg" alt="avril" /></a>
+										<p class="ECD">Let Go [ECD]</p>
+										<p class="name-artist">Rolling Stones</p>
+										<p class="money">$12,95</p>
+										<a href="#"><img class="add-to-cart" src="images/add_to_cart.gif" alt="add to cart" /></a>
+									</div>
+									<div id="third-content-frame">
+										<a href="#"><img class="border-img" src="images/carey.jpg" alt="avril" /></a>
+										<p class="ECD">Let Go [ECD]</p>
+										<p class="name-artist">Rolling Stones</p>
+										<p class="money">$12,95</p>
+										<a href="#"><img class="add-to-cart" src="images/add_to_cart.gif" alt="add to cart" /></a>
+									</div>
+								</div>
+								<div id="img-ban">
+									<a href="#"><img class="border-img" src="images/ban.gif" alt="" /></a>
+								</div>
+								<div id="news">
+									<p><a href="#">ALL MUSIC NEWS</a></p>
+									<ul>
+										<li>
+											<div class="news-image">
+												<a href="#"><img src="images/news_img.gif" alt="image" /></a>
+											</div>
+											<div class="news-wrapper">
+												<div class="content-news">
+													<p class="news-date">20|12|2002</p>
+													<p class="title-news"><a href="#">Duis autem vel eum iruire.</a></p>
+													<p class="text-news">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 	ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="news-image">
+												<a href="#"><img src="images/news_img.gif" alt="image" /></a>
+											</div>
+											<div class="news-wrapper">
+												<div class="content-news">
+													<p class="news-date">20|12|2002</p>
+													<p class="title-news"><a href="#">Duis autem vel eum iruire.</a></p>
+													<p class="text-news">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 	ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="left">
+						<div id="music-nav">
+							<p class="title-left">BROWSE BY STYLES:</p>
+							<ul>
+								<li>
+									<a href="#">BLUES</a>
+								</li>
+								<li>
+									<a href="#">children's</a>
+								</li>
+								<li>
+									<a href="#">Country</a>
+								</li>
+								<li>
+									<a href="#">Dance / Electronica</a>
+								</li>
+								<li>
+									<a href="#">Folk</a>
+								</li>
+								<li>
+									<a href="#">holiday music</a>
+								</li>
+								<li>
+									<a href="#">international</a>
+								</li>
+								<li>
+									<a href="#">jazz</a>
+								</li>
+								<li>
+									<a href="#">latin</a>
+								</li>
+								<li>
+									<a href="#">New age</a>
+								</li>
+								<li>
+									<a href="#">R&B</a>
+								</li>
+								<li>
+									<a href="#">rap / hip-hop</a>
+								</li>
+								<li>
+									<a href="#">rock / pop</a>
+								</li>
+								<li>
+									<a href="#">shows / movies</a>
+								</li>
+							</ul>
+						</div>
+						<div id="calendar">
+							<img src="images/calendar.gif" alt="calendar" />
+						</div>
+						<div id="vote">
+							<p class="title-left">OUR VOTING:</p>
+							<p id="vote-text">Lorem ipsum dolor sit amet, consectetu adipiscing elit :</p>
+							<form action="" method="">
+								<ul>
+									<li>
+										<label for="stakka">
+											<input id="stakka" class="rad" type="radio" />
+											<span>Stakka Bo - Mute</span>
+										</label>
+									</li>
+									<li>
+										<label for="roxette">
+											<input id="roxette" class="rad" type="radio" />
+											<span>Roxette - Real Sugar</span>
+										</label>
+									</li>
+									<li>
+										<input class="submit" type="submit" value="OK" />
+									</li>
+								</ul>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div id="right">
+				<div id="save">
+					<img src="images/save.jpg" alt="save" />
+				</div>
+				<div id="new-rel">
+					<p id="head-release"><a href="#">NEW RELEASES</a>:</p>
+					<ul>
+						<li>
+							<a href="#"><img src="images/rel1.gif" alt="release1" /></a>
+							<p><a href="#">Alanis Monssette "Under Ruq Swept"</a></p>
+						</li>
+						<li>
+							<a href="#"><img src="images/rel2.gif" alt="release1" /></a>
+							<p><a href="#">STARSAILOR "Love is here"</a></p>
+						</li>
+					</ul>
+					<p id="rel-text">Lorem ipsum dolor sit amet, consectetu adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+				</div>
+			</div>
+			<div id="footer">
+				<div id="footer-text">
+					<p>Lorem ipsum dolor sit amet, consectetu adipiscing elit.</p>
+				</div>
+				<div id="footer-nav">
+					<div>
+						<ul id="first-nav">
+							<li>
+								<a href="#">Contact Us</a>
+								<p>|</p>
+							</li>
+							<li>
+								<a href="#">Lagal</a>
+							</li>
+						</ul>
+					</div>
+					<ul id="second-nav">
+						<li>
+							<p>© 2002 YOUR NAME COMPANY. All rights reserved.</p>
+						</li>
+						<li>
+							<a href="#">Terms of Use</a>
+							<p>|</p>
+						</li>
+						<li>
+							<a href="#">Privacy Statment</a>
+							<p>|</p>
+						</li>
+						<li>
+							<a href="#">Acessibility</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

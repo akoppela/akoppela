@@ -1,0 +1,4 @@
+/* menu */
+
+#tabs .menu li a:hover { text-decoration:underline; }
+#tabs .menu li.active a:hover { text-decoration:none; }

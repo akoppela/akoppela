@@ -1,0 +1,217 @@
+/* стандартные обнуления отступов и прочие настройки */
+
+html {
+	height:100%;
+	color:#505050;
+	background:#fff;
+	font-family:Arial,Tahoma,Sans-Serif;
+	font-size:13px;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+#nav {
+	background: url('/img/cprt.jpg') top left repeat-x;
+	height:35px;
+}
+
+#nav li {
+	float:left;
+	margin-top:5px;
+	position:relative;
+}
+
+#nav li:hover {
+	background-color:#dedede;
+}
+
+#nav li:hover .secnav {
+	visibility:visible;
+}
+
+#nav li a {
+	display:block;
+	color:#1e2172;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px 6px 10px;
+	margin:1px 1px 0;
+	cursor:pointer;
+}
+
+#nav li a:hover, #nav li:hover .doublelist {
+	border-width:1px 1px 0;
+	border-style:solid;
+	border-color:#b6b7bd;
+	margin:0 !important;
+}
+
+.nav-active {
+	border:1px solid #b6b7bd;
+	margin:0 !important;
+	border-bottom:0 solid #b6b7bd !important;
+}
+
+.secnav {
+	visibility:hidden;
+	position:absolute;
+	min-width:120px;
+	background:#fff;
+	color:#1e2172;
+	border:1px solid #b6b7bd;
+	z-index:20000;
+}
+
+.secnav li {
+	width:100%;
+	margin:0 !important;
+}
+
+.secnav li a {
+	font-size:11px !important;
+	line-height:23px;
+	margin:0 !important;
+	padding:0 0 0 9px !important;
+	font-weight:normal !important;
+	border-bottom:1px solid #ececee;
+	background:none;
+}
+
+.secnav li a:hover {
+	color:#ae1e04 !important;
+	border-width:0 0 1px !important;
+	border-color:#ececee !important;
+}
+
+.secnav-active {
+	text-indent:11px;
+}
+
+.secnav-no-active {
+	text-indent:9px;
+}
+
+.secnav-last a {
+	border:none !important;
+}
+
+.secnav .full-list {
+	background: url(img/arrows.png) no-repeat 5px -150px !important;
+	text-indent:19px !important;
+	padding:0 !important;
+}
+
+.full-list {
+	color:#ae1e04 !important;
+}

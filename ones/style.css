@@ -1,0 +1,229 @@
+html {
+	color: #000;
+	background: #fff;
+	height:100%;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+del,
+ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+legend {
+	color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+body {
+    font-family:Tahoma, Arial, Verdana;
+    font-size:11px;
+	color:#333;
+	width:100%;
+	height:100%;
+}
+
+#container {
+	position:relative;
+	min-width:960px;
+	width: expression(document.documentElement.clientWidth < 960 ? "960px" : "auto");
+}
+
+#header {
+	width:100%;
+	height:167px;
+	background: url(images/header_bg.jpg) no-repeat right;
+}
+
+#logo img {
+	margin:90px 0 0 120px;
+}
+
+#login-form {
+	position:absolute;
+	top:260px;
+	left:120px;
+	width:264px;
+	height:190px;
+	background: url(images/form.jpg) no-repeat;
+}
+
+#login-form h2 {
+	margin-left:25px;
+	line-height:40px;
+	text-transform:uppercase;
+	font-family:tahoma;
+	font-size:20px;
+	color:#00aeef;
+}
+
+#login-form ul {
+	margin:25px 0 0 25px;
+}
+
+#login-form li {
+	margin-bottom:20px;
+}
+
+#login-form li span {
+	font-family:tahoma;
+	font-size:14px;
+	color:#666;
+	line-height:22px;
+}
+
+#login-form li input {
+	position:absolute;
+	right:20px;
+	border:1px solid #979595;
+	width:127px;
+	height:20px;
+	font-size:14px;
+}
+
+#login-form a {
+	font-size:16px;
+	font-weight:bold;
+	font-family:tahoma;
+	color:#666;
+	text-decoration:none;
+	margin-left:25px;
+}
+
+#sub-button {
+	position:absolute;
+	right:20px;
+	width:86px;
+	padding:0 21px;
+	height:20px;
+	font-size:13px;
+	font-weight:bold;
+	line-height:16px;
+	color:#666;
+	border:1px solid #7db5de;
+	background: url(images/button_bg.jpg) repeat-x;
+}
+
+#text {
+	position:absolute;
+	left:450px;
+	right:100px;
+}
+
+#footer {
+	min-width:960px;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:138px;
+	background: url(images/footer_bg.jpg) no-repeat right
+}

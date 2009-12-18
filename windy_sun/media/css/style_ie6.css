@@ -1,0 +1,100 @@
+/* main */
+
+html { width: expression(document.documentElement.clientWidth > 1000 ? "auto" : "1000px"); }
+
+/* png */
+
+#header div.contacts .phone.skype .skype-img,
+#why .corners .decor,
+#content.index h2,
+#content.index .find-us .print a,
+#content.index .links a { filter: expression(fixPNG(this)); }
+
+/* list */
+
+#why .corners li,
+#content .left ul.index-blog li,
+#content.search li,
+#content.blog .left ul.date li,
+#content.partners li,
+#content.two-column .left ul.links li,
+#content.contacts .left ul.contact-links li,
+#content ul.articles li,
+#content.two-column ul.command-list li,
+#content.two-column ul.photos li,
+#content.video .right ul.videos li { vertical-align:top; zoom:1; }
+
+/* header contacts */
+
+.corners.white .cn.tl, .corners.orange .cn.tl, .corners.yellow .cn.tl, .corners.white .cn.bl, .corners.orange .cn.bl, .corners.yellow .cn.bl { padding-right:20px; }
+.corners.bordered-yellow .cn.tl, .corners.bordered-yellow .cn.bl { padding-right:30px; }
+.corners.orange .cn { background-image: url(../img/corners_orange_ie6.png); }
+.corners.white .cn { background-image: url(../img/corners_white_ie6.png); }
+.corners.yellow .cn { background-image: url(../img/corners_yellow_ie6.png); }
+.corners.bordered-yellow .cn { background-image: url(../img/corners_bordered_yellow_ie6.png); }
+
+/* why */
+
+#why .corners { display:inline; margin-right:30px; }
+#why .corners.price { margin-right:0; }
+#why .corners.bali .decor { left:-36px; }
+#why .corners.we .decor { left:-47px; }
+#why .corners.price .decor { left:-44px; }
+
+/* content */
+
+#content { margin-bottom:15px; }
+
+/* white */
+
+#content.white { padding-top:0; padding-bottom:0; }
+#content.white .wrap .text { margin-bottom:40px; padding-bottom:0; }
+#content.white .wrap .tags .text { margin-bottom:0; }
+
+/* serf-img */
+
+#content.serf-img { padding-top:230px !important; }
+
+/* two-column */
+
+#content.two-column .right { padding-left:2px; }
+
+/* left, right */
+
+#content .left, #content .right  { padding-right:0; }
+
+/* find us */
+
+#content .find-us .print { left:-135px; }
+#content .find-us .print a { background: url(../img/print_contacts_price_ie6.png) no-repeat left top; }
+
+/* serf sovet */
+
+#content .serf-sovet .decor { left:-54px; }
+
+/* links */
+
+#content .links .wavewatch { background: url(../img/wavewatch_ie6.png) no-repeat; }
+#content .links .go-bali { background: url(../img/go_bali_ie6.png) no-repeat; }
+
+/* footer */
+
+#footer a.logo { display:inline; }
+
+/* content index */
+
+#content.index .right { padding-right:0; }
+#content.index .find-us .print { left:-135px; }
+#content.index .serf-sovet .decor { left:-54px; }
+
+/* comments */
+
+#content.two-column .comments form #commentSubmit { position:static; }
+
+/* reservation page */
+
+/* content */
+
+/* right */
+
+#content.reservation .right form.reserv input#reservSubmit { position:static; }

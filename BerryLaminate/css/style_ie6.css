@@ -1,0 +1,15 @@
+#container { height:100%; }
+.maxwidth { width: expression(document.documentElement.offsetWidth > (1152/12) * parseInt(document.documentElement.currentStyle.fontSize) ? "72em" : "auto"); /* Ёмул€ци€ em-based max-width дл€ IE6 */ }
+#container { width: expression(document.documentElement.offsetWidth < (960/12) * parseInt(document.documentElement.currentStyle.fontSize) ? "60em" : "auto"); /* Ёмул€ци€ em-based min-width дл€ IE6 */ }
+#header ul { zoom:1; }
+#content ul.news li, #content div.left li, #inside ul.catalog li, #inside .comments li { zoom:1; vertical-align:bottom; }
+#header ul.iefix li {
+	jscript: expression(
+		this.p ? 0 : (
+			this.onmouseenter = new Function("this.className = 'hover';"),
+			this.onmouseleave = new Function("this.className = '';"),
+			this.p = 1
+		)
+	);
+}
+#content { margin-top:-0.2em; }

@@ -1,0 +1,15 @@
+/* header */
+
+#header li { display:inline; margin-left:0; }
+#tabs .menu li, #content .tree li {
+	jscript: expression(
+		this.p ? 0 : (
+			this == parentNode.firstChild ? (className += " first-child") : 0,
+			this.p = 1
+		)
+	);
+}
+
+/* list */
+
+#tabs .link-box li { vertical-align:top; }

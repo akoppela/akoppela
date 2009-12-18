@@ -1,0 +1,67 @@
+#container {
+	width: expression(document.documentElement.offsetWidth < (1000/12) * parseInt(document.documentElement.currentStyle.fontSize) ? "62.5em" : "auto"); /* Ёмул€ци€ em-based min-width дл€ IE6 */
+}
+
+#right .popular .title, #right .popular ul.sec {
+	width: expression(document.documentElement.offsetWidth > (200/12) * parseInt(document.documentElement.currentStyle.fontSize) ? "12.5em" : "auto"); /* Ёмул€ци€ em-based min-width дл€ IE6 */
+}
+
+.r-blue .cn {
+	background:#fff;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/r_blue_bg.png'); /* хак дл€ ие6 png opacity */
+}
+
+#right .sale-nav .cn {
+	background:#fff;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/sale_nav_bg.png'); /* хак дл€ ие6 png opacity */
+}
+
+.bdot {
+	margin-top:-3px;
+}
+
+#catalog li a, #left .banners li a, #left .banners li a img, #right .content-orange ul, #right .action-content, #right .popular ul.sec li a, #right .reg {
+	zoom:1;
+}
+
+#left #signin-sub {
+	margin-right:0.5em;
+}
+				
+#header .pay li {
+	m: expression(this.onmouseover = new Function("this.className = 'iehover';"), this.onmouseout = new Function("this.className = '';")); 
+}
+
+#header .pay li.iehover img {
+	top:-100%;
+	margin-top:-1px;
+}
+
+#content {
+	padding-bottom:3.5em;
+}
+
+#right .basket .active .secline {
+	margin-right:0.2em;
+}
+#search-text {
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+}
+
+#right .nav {
+	margin-top:2.2em;
+}
+
+#right .action-nav li {
+	display:inline;
+	zoom:1;
+	margin:0 2px;
+}
+
+#right .popular-text {
+	margin-top:1em;
+}
+
+#right .arrow-header {
+	margin-top:-8px;
+}

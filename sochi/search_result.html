@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+	<meta name="description" content="Найдутся все" />
+	<meta name="keywords" content="Найдутся все, сочи" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Найдутся Все | Результат Поиска</title>
+	<script type="text/javascript" src="mootools-1.2.1-core-yc.js"></script>
+	<script type="text/javascript" src="mootools-1.2-more.js"></script>
+	<script type="text/JavaScript" src="script.js"></script>
+</head>
+<body>
+	<div id="sdw-wrapper">
+		<div id="container">
+			<div id="header">
+				<h1><a href="#">Найдутся Все</a></h1>
+				<p class="logo-text">Информационно-поисковый портал Краснодарского края</p>
+				<ul class="hnav">
+					<li><span id="signin-link" class="sgn">вход</span></li>
+					<li><span id="signup-link" class="sgp">регистрация</span></li>
+					<li class="hnav-last"><span id="help-link" class="hlp">помощь</span></li>
+				</ul>
+				<div id="signin" class="head-window sgn">
+					<span class="close-help close">закрыть</span>
+					<h2>Вход в систему</h2>
+					<p class="signin-text">Чтобы войти в систему введите свои регистрационные данные в поля расположенные ниже. </p>
+					<form id="signin-form" action="">
+						<dl>
+							<dt>Логин</dt>
+							<dd><input type="text" value="" /></dd>
+						</dl>
+						<dl>
+							<dt>Пароль</dt>
+							<dd><input type="password" value="" /></dd>
+						</dl>
+						<div class="signin-submit">
+							<span class="clearinput">Очистить</span><span class="sendinput">Отправить</span>
+						</div>
+					</form>	
+					<p class="signin-forgot-text">Если Вы забыли свои регистрационные данные введите расположенное ниже окно, адрес своей электронной почты, которую Вы использовали при регистрации. </p>
+					<form class="forgot" action="">
+						<input class="forginp" type="text" value="" />
+						<div class="signin-submit">
+							<span class="clearinput">Очистить</span><span class="sendinput">Отправить</span>
+						</div>
+					</form>
+				</div>
+				<div id="signup" class="head-window sgp">
+					<span class="close-help close">закрыть</span>
+					<h2>Регистрация нового пользователя</h2>
+					<p>Для регистрации нового пользователя введите в расположенные ниже окна информацию о себе.</p>
+					<p class="signin-text">Все поля обазятельны для заполнения. </p>
+					<form id="signup-form" class="valid-form" action="">
+						<dl>
+							<dt>Логин</dt>
+							<dd>
+								<input id="login" class="valid-log" type="text" value="" />
+								<span class="signin-subtext">Латинские знаки, цифры</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>Пароль</dt>
+							<dd>
+								<input id="pwd" class="valid-pass" type="password" value="" />
+								<span class="signin-subtext">Не менее 6 (шести) символов</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>Подтверждение пароля</dt>
+							<dd>
+								<input id="reppwd" class="valid-reppass" type="password" value="" />
+							</dd>
+						</dl>
+						<dl>
+							<dt>Электронная почта</dt>
+							<dd><input id="email" type="text" value="" /></dd>
+						</dl>
+						<dl>
+							<dt>Проверочная фраза</dt>
+							<dd class="test-fraze"><div id='fraze'></div></dd>
+						</dl>
+						<dl>
+							<dt id="ntext2"></dt>
+							<dd><input type="text" value="" /></dd>
+						</dl>
+						<dl>
+							<dt id="ntext1"></dt>
+							<dd>
+								<div class="signup-submit">
+									<span class="clearinput">Очистить</span><span class="sendinput">Отправить</span>
+								</div>
+							</dd>
+						</dl>
+					</form>
+					<p class="signup-text">На указанный Вами адрес электронной почты будет выслан подтверждающая ссылка по которой будет необходимо перейти для завершения регистрации.</p>
+					<p class="signup-text">* Указанные Вами данные являются конфиденциальными и передаваться третьим лицам не будут.</p>
+				</div>
+				<div id="help" class="head-window hlp">
+					<span class="close-help close">закрыть</span>
+					<h2>Помощь пользователю по использованию системы</h2>
+					<div id="help-wrapper" class="moocontent">
+						<div id="help-content">
+							<p class="help-text">В этом разделе Вам предоставляется ознакомиться с руководством по использованию данной системы.</p>
+							<ul>
+								<li><h3><a href="#">Заголовок содержания _ 1</a></h3></li>
+								<li>
+									<h3><a href="#">Заголовок содержания _ 2</a></h3>
+									<ul>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+										</li>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+										</li>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+											<ul>
+												<li>
+													<h5>- <a href="#">подзаголовок подзаголовка</a></h5>
+													<p>Содержание позаголовка, текс текст, описание, и тому подобное, возможно 		использование картинок показывающих те или иные действия которые сложно		объяснить, а проще показать, а может быть даже и видеоролики. </p>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h3><a href="#">Заголовок содержания _ 3</a></h3>
+									<ul>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+										</li>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+										</li>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+											<ul>
+												<li>
+													<h5>- <a href="#">подзаголовок подзаголовка</a></h5>
+													<p>Содержание позаголовка, текс текст, описание, и тому подобное, возможно 		использование картинок показывающих те или иные действия которые сложно		объяснить, а проще показать, а может быть даже и видеоролики. </p>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h3><a href="#">Заголовок содержания _ 4</a></h3>
+								</li>
+								<li>
+									<h3><a href="#">Заголовок содержания _ 5</a></h3>
+									<ul>
+										<li><h4>- <a href="#">подзаголовок</a></h4></li>
+										<li><h4>- <a href="#">подзаголовок</a></h4></li>
+										<li>
+											<h4>- <a href="#">подзаголовок</a></h4>
+											<ul>
+												<li>
+													<h5>- <a href="#">подзаголовок подзаголовка</a></h5>
+													<p>Содержание позаголовка, текс текст, описание, и тому подобное, возможно 		использование картинок показывающих те или иные действия которые сложно		объяснить, а проще показать, а может быть даже и видеоролики. </p>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="help-scrollbar" class="vScrollbar">
+						<div id="help-su" class="arrowUp"></div>
+						<div id="help-scroll-line" class="vTrack">
+							<div id="help-scroller" class="vThumb"></div>
+						</div>
+						<div id="help-sd" class="arrowDown"></div>
+					</div>
+				</div>
+				<form id="search-form" action="#">
+					<ul class="search-type">
+						<li class="hactive-link"><a href="#">поиск объекта</a></li>
+						<li><a href="#">расширенный поиск</a></li>
+					</ul>
+					<div id="search-cat">
+						<div id="search-cat-value"><p id="sc-text">Раздел каталога</p> <div id="sfilbut"></div></div>	
+						<ul id="scul">
+							<li><span>Раздел каталога</span></li>
+							<li><span>Раздел каталога 1</span></li>
+							<li><span>Раздел каталога 2</span></li>
+							<li><span>Раздел каталога 3</span></li>
+						</ul>
+					</div>
+					<input id="search-text" type="text" value="Введите название объекта" />
+					<input id="search-sub" type="submit" value="" />
+				</form>
+			</div>
+			<div id="map-wrapper">
+				<div id="map">
+					<div id="map-filter">
+						<div id="razvmap" class="map-right"></div>
+						<p>Фильтр объектов</p>
+					</div>
+					<div id="spec-obj">
+						<p>Специальные объекты</p>
+					</div>
+					<ul class="map-button">
+						<li><img src="img/minus.jpg" alt="минус" /></li>
+						<li><img src="img/plus.jpg" alt="плюс" /></li>
+						<li><img src="img/left.jpg" alt="влево" /></li>
+						<li><img src="img/down.jpg" alt="вниз" /></li>
+						<li><img src="img/up.jpg" alt="вверх" /></li>
+						<li><img src="img/right.jpg" alt="вправо" /></li>
+					</ul>
+					<div id="karta-wrapper">
+						<div id="karta">
+							<div id="mapcor-lt"></div>
+							<div id="mapcor-rt"></div>
+							<div id="mapcor-lb"></div>
+							<div id="mapcor-rb"></div>
+							<div id="ukoz">
+								<div class="close close-ukoz"></div>
+								<img src="img/ukoz_img.png" alt="" />
+								<h2>“Наименование объекта”</h2>
+								<ul>
+									<li><p>- некоторая краткая информа-ция об объекте.</p></li>
+									<li><p>- дата размещения</p></li>
+									<li><p>- автор или подобное</p></li>
+								</ul>
+								<a class="ukoz-link" href="#">Перейти на страницу объекта</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="catalog">
+				<h2>Каталог объектов:</h2>
+				<p><span id="razvcat">развернуть</span> весь каталог</p>
+				<div id="cat-list-wrapper" class='moocontent'>
+					<div id="cat-list">
+						<ul id="flevel-catalog" class="first-cat">
+							<li class="flevel-li">
+								<div class="first-level-cat">
+									<h3>Каталог верхнего уровня номер один</h3>
+									<ul>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер раз</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">354</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер пять с длинным названием каталога чтобы проверить перенос по словам</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">12</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер два</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">1254</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер три</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">654</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер четыре</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">8322</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер два</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">1254</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер три</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">654</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер четыре</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">8322</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер два</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">1254</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер три</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">654</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер четыре</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">8322</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="flevel-li">
+								<div class="first-level-cat">
+									<h3>Каталог верхнего уровня номер два</h3>
+									<ul>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер раз</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">354</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер раз</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">354</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер раз</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">354</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="flevel-li">
+								<div class="first-level-cat">
+									<h3>Каталог верхнего уровня номер три</h3>
+									<ul>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер раз</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">354</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер два</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">1254</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер три</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">654</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер четыре</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">8322</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер пять с длинным названием каталога чтобы проверить перенос по словам</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">12</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="flevel-li">
+								<div class="first-level-cat">
+									<h3>Каталог верхнего уровня номер четыре</h3>
+									<ul>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер раз</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">354</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер два</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">1254</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер три</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">654</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер пять с длинным названием каталога чтобы проверить перенос по словам</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">12</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер четыре</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">8322</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="flevel-li">
+								<div class="first-level-cat">
+									<h3>Каталог верхнего уровня номер пять</h3>
+									<ul>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер раз</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">354</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер два</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">1254</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер три</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">654</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер четыре</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">8322</div>
+										</li>
+										<li>
+											<div class="sec-cat-wrapper">
+												<div class="sec-cat-text">
+													<a href="#">Каталог уровня номер два номер пять с длинным названием каталога чтобы проверить перенос по словам</a>
+												</div>
+											</div>
+											<div class="sec-cat-number">12</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="cat-scrollbar" class="vScrollbar">
+					<div id="cat-su" class="arrowUp"></div>
+					<div id="cat-scroll-line" class="vTrack">
+						<div id="cat-scroller" class="vThumb"></div>
+					</div>
+					<div id="cat-sd" class="arrowDown"></div>
+				</div>
+			</div>
+			<div id="catalog-tree">
+				<ul>
+					<li><a href="#">Каталог верхнего уровня номер один</a></li>
+					<li><a href="#">Каталог второго уровня номер один</a></li>
+				</ul>
+			</div>
+			<div id="search-res">
+				<h2>результаты поиска</h2>
+				<ul class="res-news">
+					<li>
+						<h3><span>1.</span><a href="#">новости</a> / <a href="#">дата добавления</a></h3>
+						<h4>“<a href="#">Название объекта или новости</a>”</h4>
+						<p class="descr-news">- описание данного объекта или новости в результате выполненных действий со	стороны пользователя, а именно поисковый запрос. Если это объект, то вместо (новости) выводится рубрика	к которой принадлежит объект.</p>
+						<a class="toobj" href="#">перейти к объекту</a>
+					</li>
+					<li>
+						<h3><span>2.</span><a href="#">новости</a> / <a href="#">дата добавления</a></h3>
+						<h4>“<a href="#">Название объекта или новости</a>”</h4>
+						<p class="descr-news">- описание данного объекта или новости в результате выполненных действий со	стороны пользователя, а именно поисковый запрос. Если это объект, то вместо (новости) выводится рубрика	к которой принадлежит объект.</p>
+						<a class="toobj" href="#">перейти к объекту</a>
+					</li>
+					<li>
+						<h3><span>3.</span><a href="#">новости</a> / <a href="#">дата добавления</a></h3>
+						<h4>“<a href="#">Название объекта или новости</a>”</h4>
+						<p class="descr-news">- описание данного объекта или новости в результате выполненных действий со	стороны пользователя, а именно поисковый запрос. Если это объект, то вместо (новости) выводится рубрика	к которой принадлежит объект.</p>
+						<a class="toobj" href="#">перейти к объекту</a>
+					</li>
+					<li>
+						<h3><span>4.</span><a href="#">новости</a> / <a href="#">дата добавления</a></h3>
+						<h4>“<a href="#">Название объекта или новости</a>”</h4>
+						<p class="descr-news">- описание данного объекта или новости в результате выполненных действий со	стороны пользователя, а именно поисковый запрос. Если это объект, то вместо (новости) выводится рубрика	к которой принадлежит объект.</p>
+						<a class="toobj" href="#">перейти к объекту</a>
+					</li>
+					<li>
+						<h3><span>5.</span><a href="#">новости</a> / <a href="#">дата добавления</a></h3>
+						<h4>“<a href="#">Название объекта или новости</a>”</h4>
+						<p class="descr-news">- описание данного объекта или новости в результате выполненных действий со	стороны пользователя, а именно поисковый запрос. Если это объект, то вместо (новости) выводится рубрика	к которой принадлежит объект.</p>
+						<a class="toobj" href="#">перейти к объекту</a>
+					</li>
+					<li>
+						<h3><span>6.</span><a href="#">новости</a> / <a href="#">дата добавления</a></h3>
+						<h4>“<a href="#">Название объекта или новости</a>”</h4>
+						<p class="descr-news">- описание данного объекта или новости в результате выполненных действий со	стороны пользователя, а именно поисковый запрос. Если это объект, то вместо (новости) выводится рубрика	к которой принадлежит объект.</p>
+						<a class="toobj" href="#">перейти к объекту</a>
+					</li>
+					<li>
+						<h3><span>7.</span><a href="#">новости</a> / <a href="#">дата добавления</a></h3>
+						<h4>“<a href="#">Название объекта или новости</a>”</h4>
+						<p class="descr-news">- описание данного объекта или новости в результате выполненных действий со	стороны пользователя, а именно поисковый запрос. Если это объект, то вместо (новости) выводится рубрика	к которой принадлежит объект.</p>
+						<a class="toobj" href="#">перейти к объекту</a>
+					</li>
+					<li>
+						<h3><span>8.</span><a href="#">новости</a> / <a href="#">дата добавления</a></h3>
+						<h4>“<a href="#">Название объекта или новости</a>”</h4>
+						<p class="descr-news">- описание данного объекта или новости в результате выполненных действий со	стороны пользователя, а именно поисковый запрос. Если это объект, то вместо (новости) выводится рубрика	к которой принадлежит объект.</p>
+						<a class="toobj" href="#">перейти к объекту</a>
+					</li>
+					<li>
+						<h3><span>9.</span><a href="#">новости</a> / <a href="#">дата добавления</a></h3>
+						<h4>“<a href="#">Название объекта или новости</a>”</h4>
+						<p class="descr-news">- описание данного объекта или новости в результате выполненных действий со	стороны пользователя, а именно поисковый запрос. Если это объект, то вместо (новости) выводится рубрика	к которой принадлежит объект.</p>
+						<a class="toobj" href="#">перейти к объекту</a>
+					</li>
+					<li>
+						<h3><span>10.</span><a href="#">новости</a> / <a href="#">дата добавления</a></h3>
+						<h4>“<a href="#">Название объекта или новости</a>”</h4>
+						<p class="descr-news">- описание данного объекта или новости в результате выполненных действий со	стороны пользователя, а именно поисковый запрос. Если это объект, то вместо (новости) выводится рубрика	к которой принадлежит объект.</p>
+						<a class="toobj" href="#">перейти к объекту</a>
+					</li>
+					<li>
+						<h3><span>11.</span><a href="#">новости</a> / <a href="#">дата добавления</a></h3>
+						<h4>“<a href="#">Название объекта или новости</a>”</h4>
+						<p class="descr-news">- описание данного объекта или новости в результате выполненных действий со	стороны пользователя, а именно поисковый запрос. Если это объект, то вместо (новости) выводится рубрика	к которой принадлежит объект.</p>
+						<a class="toobj" href="#">перейти к объекту</a>
+					</li>
+					<li>
+						<h3><span>12.</span><a href="#">новости</a> / <a href="#">дата добавления</a></h3>
+						<h4>“<a href="#">Название объекта или новости</a>”</h4>
+						<p class="descr-news">- описание данного объекта или новости в результате выполненных действий со	стороны пользователя, а именно поисковый запрос. Если это объект, то вместо (новости) выводится рубрика	к которой принадлежит объект.</p>
+						<a class="toobj" href="#">перейти к объекту</a>
+					</li>
+				</ul>
+				<div class="third-col">
+					<ul class="obj-bar">
+						<li class="obactive-link"><h4><a href="#">Комментарии</a></h4></li>
+						<li><h4><a href="#">все комментарии</a></h4></li>
+					</ul>
+					<ul class="comment">
+						<li>
+							<h5><a href="#">Имя учётки</a> / <a href="#">ID</a> <span>(325 комментариев)</span></h5>
+							<h6>22 февраля 2009 - <a href="#">“Эх-сейчас-бы-пивка”</a></h6>
+							<p>да уж, такого я давно не видовал, это просто супер улётное местечко...</p>
+						</li>
+						<li>
+							<h5><a href="#">Имя учётки</a> / <a href="#">ID</a> <span>(325 комментариев)</span></h5>
+							<h6>22 февраля 2009 - <a href="#">“Эх-сейчас-бы-пивка”</a></h6>
+							<p>да уж, такого я давно не видовал, это просто супер улётное местечко...</p>
+						</li>
+						<li>
+							<h5><a href="#">Имя учётки</a> / <a href="#">ID</a> <span>(325 комментариев)</span></h5>
+							<h6>22 февраля 2009 - <a href="#">“Эх-сейчас-бы-пивка”</a></h6>
+							<p>да уж, такого я давно не видовал, это просто супер улётное местечко...</p>
+						</li>
+						<li>
+							<h5><a href="#">Имя учётки</a> / <a href="#">ID</a> <span>(325 комментариев)</span></h5>
+							<h6>22 февраля 2009 - <a href="#">“Эх-сейчас-бы-пивка”</a></h6>
+							<p>да уж, такого я давно не видовал, это просто супер улётное местечко...</p>
+						</li>
+						<li>
+							<h5><a href="#">Имя учётки</a> / <a href="#">ID</a> <span>(325 комментариев)</span></h5>
+							<h6>22 февраля 2009 - <a href="#">“Эх-сейчас-бы-пивка”</a></h6>
+							<p>да уж, такого я давно не видовал, это просто супер улётное местечко...</p>
+						</li>
+						<li>
+							<h5><a href="#">Имя учётки</a> / <a href="#">ID</a> <span>(325 комментариев)</span></h5>
+							<h6>22 февраля 2009 - <a href="#">“Эх-сейчас-бы-пивка”</a></h6>
+							<p>да уж, такого я давно не видовал, это просто супер улётное местечко...</p>
+						</li>
+						<li>
+							<h5><a href="#">Имя учётки</a> / <a href="#">ID</a> <span>(325 комментариев)</span></h5>
+							<h6>22 февраля 2009 - <a href="#">“Эх-сейчас-бы-пивка”</a></h6>
+							<p>да уж, такого я давно не видовал, это просто супер улётное местечко...</p>
+						</li>
+						<li>
+							<h5><a href="#">Имя учётки</a> / <a href="#">ID</a> <span>(325 комментариев)</span></h5>
+							<h6>22 февраля 2009 - <a href="#">“Эх-сейчас-бы-пивка”</a></h6>
+							<p>да уж, такого я давно не видовал, это просто супер улётное местечко...</p>
+						</li>
+						<li>
+							<h5><a href="#">Имя учётки</a> / <a href="#">ID</a> <span>(325 комментариев)</span></h5>
+							<h6>22 февраля 2009 - <a href="#">“Эх-сейчас-бы-пивка”</a></h6>
+							<p>да уж, такого я давно не видовал, это просто супер улётное местечко...</p>
+						</li>
+						<li>
+							<h5><a href="#">Имя учётки</a> / <a href="#">ID</a> <span>(325 комментариев)</span></h5>
+							<h6>22 февраля 2009 - <a href="#">“Эх-сейчас-бы-пивка”</a></h6>
+							<p>да уж, такого я давно не видовал, это просто супер улётное местечко...</p>
+						</li>
+						<li>
+							<h5><a href="#">Имя учётки</a> / <a href="#">ID</a> <span>(325 комментариев)</span></h5>
+							<h6>22 февраля 2009 - <a href="#">“Эх-сейчас-бы-пивка”</a></h6>
+							<p>да уж, такого я давно не видовал, это просто супер улётное местечко...</p>
+						</li>
+						<li>
+							<h5><a href="#">Имя учётки</a> / <a href="#">ID</a> <span>(325 комментариев)</span></h5>
+							<h6>22 февраля 2009 - <a href="#">“Эх-сейчас-бы-пивка”</a></h6>
+							<p>да уж, такого я давно не видовал, это просто супер улётное местечко...</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="search-res-pages">
+				<ul>
+					<li><a class="text-page" href="#">назад</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#">10</a></li>
+					<li><a href="#">20</a></li>
+					<li><a href="#">30</a></li>
+					<li><a class="text-page" href="#">вперёд</a></li>
+				</ul>
+			</div>
+			<div id="banner">
+				<img src="img/banner.png" alt="" /> 
+			</div>
+			<div id="hfooter"></div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>© 2009  Найди своё место. Все права защищены.</p>
+		<p class="scnd-copy">Разработано в компании <a href="#">2energies</a></p>
+		<ul>
+			<li><a href="#">О проекте</a></li>
+			<li><a href="#">Условия</a></li>
+			<li><a href="#">Помощь</a></li>
+			<li class="fnav-nobord"><a href="#"> Контакты</a></li>
+		</ul>
+	</div>
+</body>
+</html>

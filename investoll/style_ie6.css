@@ -1,0 +1,23 @@
+body { width: expression(document.documentElement.clientWidth > 996 ? "auto" : "996px"); }
+#container { height:100%; overflow:visible; }
+#basket li, #left .menu li, #left ul.recommend li, #content .title, #left .menu .slide { zoom:1; vertical-align:bottom; }
+.more span, #order-sub, #basket-sub, #basketBox .main #save { 
+	jscript: expression(
+		this.p ? 0 : (
+			this.className == 'current' ? ( this.t = 'current ' ) : ( this.t = '' ),
+			this.onmouseenter = new Function("this.className = this.t + 'hover';"),
+			this.onmouseleave = new Function("this.className = this.t;"),
+			this.p = 1
+		)
+	);
+}
+.more b, #header .number { 
+	filter: expression(
+		this.p ? 0 : (
+			fixPNG(this),
+			this.p = 1
+		)
+	);
+}
+#content .tovar, .box .main .border { zoom:1; }
+#basketBox.box .main #basket td.first input { margin-right:3px; }

@@ -1,0 +1,154 @@
+/* Reset */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin: 0; padding: 0; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+fieldset, img { border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup { font-style: inherit; font-weight: inherit; }
+
+del, ins { text-decoration: none; }
+
+li { list-style: none; }
+
+caption, th { text-align: left; }
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+
+q:before, q:after {	content: ''; }
+
+abbr, acronym {	border: 0; font-variant: normal; }
+
+sup { vertical-align: baseline; }
+
+sub { vertical-align: baseline; }
+
+legend { color: #000; }
+
+input, button, textarea, select, optgroup, option { font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; }
+
+/* Layout */
+
+html {
+    height:100%;
+    color: #000;
+    background:#fff;
+}
+
+body {
+    font:10px Verdana, Geneva, sans-serif;
+    color:#6d6f71;
+	width:746px;
+	margin:0 auto;
+}
+
+a {
+    text-decoration:none;
+    color:#6d6f71;
+}
+
+#flash {
+	height:498px;
+	background: url(img/flash_bg.jpg) no-repeat;
+	position:relative;
+}
+	
+	#flash a {
+		text-indent:-9999px;
+		display:block;
+		position:absolute;
+		overflow:hidden;
+		background: #6d6f71 url(img/flash_bg.jpg) no-repeat;
+	}
+	
+		#flash h1 a {
+			width:146px;
+			height:90px;
+			top:217px;
+			left:293px;
+			background-position:-293px -217px !important;
+		}
+	
+		#dezign {
+			width:88px;
+			height:86px;
+			top:41px;
+			left:146px;
+			background-position:-146px -41px !important;
+		}
+		
+		#events {
+			width:107px;
+			height:121px;
+			left:479px;
+			background-position:-479px 0 !important;
+		}
+		
+		#tv {
+			width:77px;
+			height:82px;
+			top:139px;
+			left:68px;
+			background-position:-68px -139px !important;
+		}
+		
+		#souvenir {
+			width:100px;
+			height:77px;
+			left:15px;
+			top:296px;
+			background-position:-15px -296px !important;
+		}
+		
+		#out {
+			width:82px;
+			height:109px;
+			top:386px;
+			left:188px;
+			background-position:-188px -386px !important;
+		}
+		
+		#radio {
+			width:91px;
+			height:88px;
+			top:331px;
+			left:415px;
+			background-position:-415px -331px !important;
+		}
+		
+		#press {
+			width:102px;
+			height:104px;
+			top:145px;
+			left:607px;
+			background-position:-607px -145px !important;
+		}
+		
+		#internet {
+			width:127px;
+			height:89px;
+			top:298px;
+			left:600px;
+			background-position:-600px -298px !important;
+		}
+		
+#nav {
+	text-align:center;
+	margin:21px 0 0 35px;
+}
+
+	#nav li {
+		display:inline-block;
+		background: url(img/dot.png) no-repeat right center;
+		overflow:hidden;
+		position:relative;
+	}
+	
+		#nav li a { 
+			display:block;
+			margin:0 18px 0 10px;
+			font-weight:bold;
+		 }
+		
+.last-link { background:none !important; }

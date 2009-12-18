@@ -1,0 +1,30 @@
+#navigation li {
+	display:inline;
+	margin-left:0;
+}
+
+#buy-sub {
+	margin-left:6em;
+}
+
+#content .text .text-content form.buy .pages .select-page p, #content .text .text-content form.buy .pages .select-page li, #content .catalog.right .pages .select-page p, #content .catalog.right .pages .select-page li  {
+	display:inline;
+	margin-right:0.3em;
+}
+						 
+#content .text .text-content form.buy .pages .select-page ul, #content .catalog.right .pages .select-page ul {
+	display:inline;
+}
+
+#content .catalog.right .pages.bottom {
+	margin-top:1em;
+}
+
+#content ul.headline-tree li.first {
+	padding-right:0.4em;
+}
+
+#content .text .text-content.diller form input {
+	padding-top:0.3em;
+	height:1.4em;
+}

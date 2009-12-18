@@ -1,0 +1,7 @@
+/* header menu */
+
+#header .menu li { display:inline; margin-left:0; }
+
+/* list */
+
+#content .left .menu li { vertical-align:top; zoom:1; }
