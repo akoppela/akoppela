@@ -17,6 +17,21 @@ input, button, textarea, select, optgroup, option {	font-family: inherit; font-s
 * { outline:0; }
 a {	text-decoration:none; cursor:pointer; }
 
+/* corners */
+
+.corners { position:relative; overflow:hidden; }
+.corners.gray .cn {
+	width:18px;
+	height:18px;
+	overflow:hidden;
+	background:url(../img/gray_corners.png) no-repeat;
+	position:absolute;
+	top:-9px;
+	left:-9px;
+}
+.corners.gray .cn.tr, .corners.gray .cn.br { margin-left:100%; }
+.corners.gray .cn.bl, .corners.gray .cn.br { top:auto; margin-top:-9px; }
+
 /* main.css */
 
 body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no-repeat center top; }
@@ -168,3 +183,10 @@ body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no
 #header .navigation .menu .second li { float:left; margin-right:15px; }
 #header .navigation .menu .second li a { color:#333333; font:bold 14px Arial, Helvetica, sans-serif; display:block; padding-bottom:1px; }
 #header .navigation .menu .second li a:hover { color:#cc0000; background: url(../img/red_dotted.png) repeat-x left bottom; }
+
+/* benner slider */
+
+#bannerSlider { padding:0 5px; }
+#bannerSlider .corners { width:100%; }
+#bannerSlider .corners .main { padding:5px; background:#ededed; height:150px; }
+#bannerSlider .corners .main .test { width:100%; height:100%; background:#000; }
