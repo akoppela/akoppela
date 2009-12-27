@@ -1,0 +1,11 @@
+/* list */
+
+#header .service li, #header .service .userbar .popup li { vertical-align:top; zoom:1; }
+
+/* png */
+
+#header .service .userbar .user i, #header .service .arrow, #header .navigation h1 a { filter: expression(fixPNG(this)); }
+
+/* user popup */
+
+#header .service .userbar .popup li.second ol { width:100%; }

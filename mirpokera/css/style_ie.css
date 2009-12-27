@@ -1,0 +1,3 @@
+/* opacity */
+
+#header .service .black_line { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10); }

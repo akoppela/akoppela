@@ -163,7 +163,8 @@ var Menu = new Class({
 		this.menu.addClass('active');
 		this.togglers = this.menu.getElements('li.first');
 		this.elements = this.menu.getElements('li ul');
-		this.displayPosition = this.menu.getElement('.first.active').get('displayPosition');
+		this.displayPosition = this.menu.getElement('.first.active');
+		this.displayPosition = this.displayPosition ? this.displayPosition.get('displayPosition') : 0;
 		
 		new Fx.Accordion(this.togglers, this.elements, {
 			trigger: 'mouseenter',
@@ -175,7 +176,7 @@ var Menu = new Class({
 				toggler.removeClass('active');
 			},
 			display: this.displayPosition,
-			duration: 400
+			duration: 350
 		});
 	}
 	
