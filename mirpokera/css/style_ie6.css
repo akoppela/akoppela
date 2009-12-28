@@ -4,7 +4,7 @@
 
 /* png */
 
-#header .service .userbar .user i, #header .service .arrow, #header .navigation h1 a { filter: expression(fixPNG(this)); }
+#header .service .userbar .user i, #header .service .arrow, #header .navigation h1 a, .corners .cn { filter: expression(fixPNG(this)); }
 
 /* user popup */
 
