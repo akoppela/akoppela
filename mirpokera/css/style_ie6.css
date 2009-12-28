@@ -1,6 +1,6 @@
 /* list */
 
-#header .service li, #header .service .userbar .popup li { vertical-align:top; zoom:1; }
+#header .service li, #header .service .userbar li { vertical-align:top; zoom:1; }
 
 /* png */
 
@@ -8,4 +8,4 @@
 
 /* user popup */
 
-#header .service .userbar .popup li.second ol { width:100%; }
+#header .service .userbar li.second ol { width:230px; }
