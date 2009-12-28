@@ -90,8 +90,7 @@ body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no
 
 /* popup */
 
-
-#header .service .popup.active ul { display:block; }
+#header .service .popup.active ul { display:block !important; }
 #header .service .popup:hover ul { display:block; }
 
 /* service anounce */
@@ -122,7 +121,7 @@ body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no
 
 /* service userbar */
 
-#header .service .userbar { position:absolute; width:228px; top:0; left:-228px; margin-left:100%; margin-top:10px; z-index:1; height:30px; }
+#header .service .userbar { position:absolute; width:228px; top:0; left:-240px; padding-left:12px; margin-left:100%; margin-top:10px; z-index:1; height:30px; }
 #header .service .userbar .user { width:110px; overflow:hidden; position:relative; float:left; }
 #header .service .userbar .user a {
 	display:block;
@@ -160,7 +159,7 @@ body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no
 	width:230px;
 	border:1px solid #e5e5e5;
 	top:30px;
-	left:-12px;
+	left:0;
 	background:#fff;
 	border-top:0;
 	font-family:Arial, Helvetica, sans-serif;

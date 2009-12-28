@@ -7,17 +7,17 @@ var popUp = new Class({
 		this.heightFx = this.main.hasClass('withoutHeight') ? false : true;
 		this.main.addClass('active');
 		this.popUpBox = this.main.getElement('ul');
-		this.arrow = this.main.getElement('.arrow');
+		this.arrow = this.main.getElement('.clickarea');
 		this.fxDuration = this.heightFx ? 250 : 0;
 		this.fx = new Fx.Tween(this.main, { duration: this.fxDuration, wait: false });
 		this.fadeFx = new Fx.Tween(this.popUpBox, { duration:300, wait: false });
 		this.startPosition();
 		
 		this.main.addEvents({
-			'click': this.click.bind(this),
 			'mouseleave': this.startTimer.bind(this),
 			'mouseenter': this.stopTimer.bind(this)
 		});
+		this.arrow.addEvent('click', this.click.bind(this));
 	},
 	
 	startPosition: function(){
@@ -62,6 +62,6 @@ var popUp = new Class({
 
 window.addEvent('domready', function(){
 	
-	$$('.popup').each(function(element){ new popUp(element) });
+	$$('.popup').each(function(element){ new popUp(element); });
 	
 });
