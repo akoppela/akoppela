@@ -121,8 +121,8 @@ body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no
 
 /* service userbar */
 
-#header .service .userbar { position:absolute; width:228px; top:0; left:-240px; padding-left:12px; margin-left:100%; margin-top:10px; z-index:1; height:30px; }
-#header .service .userbar .user { width:110px; overflow:hidden; position:relative; float:left; }
+#header .service .userbar { position:absolute; width:228px; top:0; left:-240px; padding-left:12px; margin-left:100%; z-index:1; height:40px; }
+#header .service .userbar .user { width:110px; margin-top:10px; overflow:hidden; position:relative; float:left; }
 #header .service .userbar .user a {
 	display:block;
 	font:bold 14px/20px Arial, Helvetica, sans-serif;
@@ -148,17 +148,17 @@ body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no
 	margin-top:-20px;
 	background: url(../img/white_fade.png) repeat-y right top;
 }
-#header .service .userbar .coins { margin-left:10px; font:16px Arial, Helvetica, sans-serif; color:#666666; display:block; float:left; }
+#header .service .userbar .coins { padding:10px 0 0 10px; font:16px Arial, Helvetica, sans-serif; color:#666666; display:block; float:left; width:108px; }
 #header .service .userbar .coins b { line-height:18px; float:left; }
 #header .service .userbar .coins i { float:left; margin-left:3px; font-style:normal; font-weight:normal; color:#999999; font-size:14px; line-height:24px; }
 #header .service .userbar .coins .coin { float:left; margin-left:4px; }
-#header .service .userbar .arrow { left:-14px; top:7px; }
+#header .service .userbar .arrow { left:-14px; top:-17px; }
 #header .service .userbar ul {
 	display:none;
 	position:absolute;
 	width:230px;
 	border:1px solid #e5e5e5;
-	top:30px;
+	top:40px;
 	left:0;
 	background:#fff;
 	border-top:0;
