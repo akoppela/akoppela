@@ -203,9 +203,10 @@ body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no
 #bannerSlider { padding:0 5px; }
 #bannerSlider .corners { width:100%; }
 #bannerSlider .corners .main { padding:5px; background:#ededed; height:150px; }
-#bannerSlider .corners .main .slider { width:100%; position:relative; height:100%; overflow:hidden; }
+#bannerSlider .corners .main .slider { width:100%; position:relative; height:100%; overflow:hidden; background:#000; }
 #bannerSlider .corners .main ul { width:100000px; height:100%; }
-#bannerSlider .corners .main li { float:left; display:block; width:auto; }
+#bannerSlider .corners .main ul.active { visibility:hidden; }
+#bannerSlider .corners .main li { float:left; display:block; height:150px; }
 #bannerSlider .corners .main li a { display:block; float:left; }
 #bannerSlider .corners .main li img { float:left; }
 #bannerSlider .corners .main li b { float:left; display:block; position:relative; margin-left:-1px; width:1px; height:150px; background:#fff; opacity:0.5; }
@@ -233,7 +234,7 @@ body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no
 
 /* search */
 
-#content .search { float:right; border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; margin-right:17px; height:28px; }
+#content .search { float:right; border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; margin-right:17px; }
 #content .search .corners { float:left; border-left:1px solid #e5e5e5; border-right:1px solid #e5e5e5; margin:0 -1px; height:28px; overflow:visible; }
 #content .search input.text { float:left; color:#333; background:#fff; border:0; width:270px; padding:6px 10px 6px; line-height:16px; height:16px; }
 #content .search input.default { color:#ccc; }
