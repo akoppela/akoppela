@@ -1,11 +1,28 @@
+/* coin */
+
+.coin { background-image: url(../img/coins_ie6.png); }
+
 /* list */
 
 #header .service li, #header .service .userbar li { vertical-align:top; zoom:1; }
 
 /* png */
 
-#header .service .userbar .user i, #header .service .arrow, #header .navigation h1 a, .corners .cn { filter: expression(fixPNG(this)); }
+#header .service .userbar .user i, #header .service .arrow, #header .navigation h1 a, .corners .cn, #content .search input.submit { filter: expression(fixPNG(this)); }
+
+/* float */
+
+#content .exchange, #content .search { display:inline; }
 
 /* user popup */
 
 #header .service .userbar li.second ol { width:230px; }
+
+/* exchange */
+
+#content .exchange { line-height:28px; }
+#content .exchange p, #content .exchange .coin.small, #content .exchange form input, #content .exchange form label { display:inline; }
+
+/* search */
+
+#content .search { overflow:hidden; }

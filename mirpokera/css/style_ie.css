@@ -1,3 +1,4 @@
 /* opacity */
 
 #header .service .black_line { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10); }
+#bannerSlider .corners .main li b { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50); }

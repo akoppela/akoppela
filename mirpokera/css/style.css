@@ -37,7 +37,15 @@ a {	text-decoration:none; cursor:pointer; }
 
 body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no-repeat center top; }
 #container { width:960px; margin:0 auto; }
-.coin { display:block; width:16px; height:16px; overflow:hidden; background: url(../img/coins.png) no-repeat; }
+
+/* coins */
+
+.coin { overflow:hidden; display:block; background: url(../img/coins.png) no-repeat; }
+.coin.small { width:16px; height:16px; }
+.coin.big { width:32px; height:32px; }
+.silver.small { background-position:-32px top !important; }
+.silver.big { background-position:left top !important; }
+.small.gold { background-position:-32px -16px !important; }
 
 /* header */
 
@@ -148,11 +156,11 @@ body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no
 	margin-top:-20px;
 	background: url(../img/white_fade.png) repeat-y right top;
 }
-#header .service .userbar .coins { padding:10px 0 0 10px; font:16px Arial, Helvetica, sans-serif; color:#666666; display:block; float:left; width:108px; }
+#header .service .userbar .coins { padding:10px 0 0 10px; font:16px Arial, Helvetica, sans-serif; color:#666666; display:block; float:left; width:108px; height:30px; }
 #header .service .userbar .coins b { line-height:18px; float:left; }
 #header .service .userbar .coins i { float:left; margin-left:3px; font-style:normal; font-weight:normal; color:#999999; font-size:14px; line-height:24px; }
 #header .service .userbar .coins .coin { float:left; margin-left:4px; }
-#header .service .userbar .arrow { left:-14px; top:-17px; }
+#header .service .userbar .arrow { left:-14px; top:-23px; }
 #header .service .userbar ul {
 	display:none;
 	position:absolute;
@@ -197,6 +205,36 @@ body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no
 #bannerSlider .corners .main { padding:5px; background:#ededed; height:150px; }
 #bannerSlider .corners .main .slider { width:100%; position:relative; height:100%; overflow:hidden; }
 #bannerSlider .corners .main ul { width:100000px; height:100%; }
-#bannerSlider .corners .main li { float:left; }
+#bannerSlider .corners .main li { float:left; display:block; width:auto; }
+#bannerSlider .corners .main li a { display:block; float:left; }
 #bannerSlider .corners .main li img { float:left; }
 #bannerSlider .corners .main li b { float:left; display:block; position:relative; margin-left:-1px; width:1px; height:150px; background:#fff; opacity:0.5; }
+
+/* content */
+
+#content { padding:0 10px; margin-top:19px; }
+#content .wrapper { width:100%; padding:1px 0; overflow:hidden; }
+
+/* exchange */
+
+#content .exchange { border-top:1px solid #f2f2f2; border-bottom:1px solid #f2f2f2; float:left; line-height:26px; margin-left:9px; float:left; }
+#content .exchange .corners { background:#f2f2f2; margin:0 -1px; padding:0 8px; overflow:visible; height:28px; float:left; }
+#content .exchange .coin.big { float:left; margin-top:-2px; margin-left:-16px; margin-right:7px; position:relative; }
+#content .exchange form { overflow:hidden; font-family:Arial, Helvetica, sans-serif; float:left; height:28px; color:#999999; }
+#content .exchange .coin.small, #content .exchange form label, #content .exchange form input, #content .exchange p { display:inline-block; vertical-align:middle; }
+#content .exchange form label { padding-right:6px; }
+#content .exchange form input.text { width:60px; padding:2px 3px; border:1px solid #d9d9d9; color:#333; margin-right:2px; }
+#content .exchange form input.default { color:#ccc; }
+#content .exchange p { padding-left:2px; }
+#content .exchange p a { color:#333333; font-weight:bold; text-decoration:underline; }
+#content .exchange p a.dotted { text-decoration:none; background: url(../img/black_dotted.png) repeat-x left bottom; }
+#content .exchange p .dotted:hover { background:none; }
+#content .exchange p a:hover { text-decoration:none; }
+
+/* search */
+
+#content .search { float:right; border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; margin-right:17px; height:28px; }
+#content .search .corners { float:left; border-left:1px solid #e5e5e5; border-right:1px solid #e5e5e5; margin:0 -1px; height:28px; overflow:visible; }
+#content .search input.text { float:left; color:#333; background:#fff; border:0; width:270px; padding:6px 10px 6px; line-height:16px; height:16px; }
+#content .search input.default { color:#ccc; }
+#content .search input.submit { float:left; width:32px; height:32px; overflow:hidden; background: url(../img/search.png) no-repeat; border:0; top:-2px; margin-right:-16px; position:relative; }

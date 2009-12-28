@@ -1,3 +1,7 @@
 /* list */
 
-#header .service li { vertical-align:top; zoom:1; }
+#header .service li, #header .service .userbar li { vertical-align:top; zoom:1; }
+
+/* exchange */
+
+#content .exchange p, #content .exchange .coin.small, #content .exchange form input, #content .exchange form label { display:inline; }
