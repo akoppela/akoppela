@@ -214,8 +214,8 @@ var Slider = new Class({
 				this.fx.set(this.circBannersRightWidth, 0);
 				this.currentPosition = this.circBannersRightWidth;
 			} else if(set && left){
-					this.fx.set(this.circWidth - this.circBannersRightWidth, 0);
-					this.currentPosition = this.circWidth - this.circBannersRightWidth;
+				this.fx.set(this.circWidth - this.circBannersRightWidth, 0);
+				this.currentPosition = this.circWidth - this.circBannersRightWidth;
 			}
 			this.busy = false;
 		}.bind(this));
