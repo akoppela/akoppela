@@ -13,7 +13,8 @@ i.fade,
 #header .navigation h1 a,
 .corners .cn,
 #content .search input.submit,
-#content .superposts .posts li .path li i { filter: expression(fixPNG(this)); }
+#content .superposts .posts li .path li i,
+#content .minishop li a .img i { filter: expression(fixPNG(this)); }
 
 /* float */
 

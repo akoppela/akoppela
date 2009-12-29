@@ -35,7 +35,7 @@ a {	text-decoration:none; cursor:pointer; }
 
 /* main.css */
 
-body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no-repeat center top; }
+body { font:12px Arial, Helvetica, sans-serif; background: url(../img/main_bg.jpg) no-repeat center top; }
 #container { width:960px; margin:0 auto; }
 
 /* coins */
@@ -49,7 +49,7 @@ body { font:12px Georgia, Georgia, serif; background: url(../img/main_bg.jpg) no
 
 /* action */
 
-.action { border-top:1px solid #999999; border-bottom:1px solid #999999; line-height:21px; width:118px; font-family:Arial, Helvetica, sans-serif; }
+.action { border-top:1px solid #999999; border-bottom:1px solid #999999; line-height:21px; width:118px; }
 .action .corners { margin:0 -1px; width:118px; overflow:visible; background:#999999; border-left:1px solid #999999; border-right:1px solid #999999; }
 .action a.write { color:#fff; padding-left:6px; height:21px; display:block; }
 .action .arrow {
@@ -142,7 +142,6 @@ i.fade {
 	top:0;
 	white-space:nowrap;
 	z-index:1;
-	font-family:Arial, Helvetica, sans-serif;
 }
 #header .service .anounce.active { height:40px; overflow:hidden; }
 #header .service .anounce p { padding:0 30px 0 15px; overflow:hidden; height:40px; cursor:pointer; }
@@ -171,7 +170,9 @@ i.fade {
 #header .service .userbar .user { width:110px; margin-top:10px; overflow:hidden; position:relative; float:left; }
 #header .service .userbar .user a {
 	display:block;
-	font:bold 14px/20px Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:14px;
+	line-height:20px;
 	color:#666666;
 	float:left;
 	white-space:nowrap;
@@ -188,7 +189,7 @@ i.fade {
 }
 #header .service .userbar .coins {
 	padding:10px 0 0 10px;
-	font:16px Arial, Helvetica, sans-serif;
+	font-size:16px;
 	color:#666666;
 	display:block;
 	float:left;
@@ -216,7 +217,6 @@ i.fade {
 	left:0;
 	background:#fff;
 	border-top:0;
-	font-family:Arial, Helvetica, sans-serif;
 }
 #header .service .userbar li { padding:6px 0 5px; background: url(../img/gray_sep.png) no-repeat center top; }
 #header .service .userbar li a {
@@ -244,13 +244,14 @@ i.fade {
 #header .navigation .menu { float:left; margin-left:20px; margin-top:33px; }
 #header .navigation .menu ul { overflow:hidden; width:100%; }
 #header .navigation .menu .first li { float:left; margin-right:20px; }
-#header .navigation .menu .first li a { color:#fff; font:bold 20px Arial, Helvetica, sans-serif; }
+#header .navigation .menu .first li a { color:#fff; font-weight:bold; font-size:20px; }
 #header .navigation .menu .first li a:hover { color:#cccccc; }
 #header .navigation .menu .second { margin-top:5px; }
 #header .navigation .menu .second li { float:left; margin-right:15px; }
 #header .navigation .menu .second li a {
 	color:#333333;
-	font:bold 14px Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:14px;
 	display:block;
 	padding-bottom:1px;
 }
@@ -282,22 +283,22 @@ i.fade {
 
 #content { padding:0 10px; margin-top:19px; }
 #content .wrapper { width:100%; padding:1px 0; overflow:hidden; }
-#content .left { float:left; width:460px; }
+#content .left { clear:left; float:left; width:460px; }
 #content .right { float:right; width:460px; }
-#content h2 { font-size:36px; color:#333333; line-height:44px; font-family:Georgia, Georgia, serif; }
-.more { width:100%; font:italic 14px Arial, Helvetica, sans-serif; margin-top:20px; }
+#content h2 { font-size:36px; color:#333333; line-height:44px; }
+.more { width:100%; font-style:italic; font-size:14px; margin-top:20px; }
 .more li { float:right; margin-left:15px; }
 .more li a { color:#333333; }
 .more li a:hover { text-decoration:underline; }
 .more li.leftMore { float:left; margin:0; }
-.more li.leftMore a { color:#999999; }
+.more li.leftMore { color:#999999; }
 
 /* exchange */
 
 #content .exchange { border-top:1px solid #f2f2f2; border-bottom:1px solid #f2f2f2; float:left; line-height:26px; margin-left:9px; float:left; }
 #content .exchange .corners { background:#f2f2f2; margin:0 -1px; padding:0 8px; overflow:visible; height:28px; float:left; }
 #content .exchange .coin.big { float:left; margin-top:-2px; margin-left:-16px; margin-right:7px; position:relative; }
-#content .exchange form { overflow:hidden; font-family:Arial, Helvetica, sans-serif; float:left; height:28px; color:#999999; }
+#content .exchange form { overflow:hidden; float:left; height:28px; color:#999999; }
 #content .exchange .coin.small, #content .exchange form label, #content .exchange form input, #content .exchange p { display:inline-block; vertical-align:middle; }
 #content .exchange form label { padding-right:6px; }
 #content .exchange form input.text { width:60px; padding:2px 3px; border:1px solid #d9d9d9; color:#333; margin-right:2px; }
@@ -333,11 +334,14 @@ i.fade {
 	top:-2px;
 	margin-right:-16px;
 	position:relative;
+	cursor:pointer;
+	opacity:0.9;
 }
+#content .search input.submit:hover { opacity:1; }
 
 /* superposts */
 
-#content .superposts { margin-top:20px; position:relative; font-family:Arial, Helvetica, sans-serif; }
+#content .superposts { margin-top:20px; position:relative; }
 #content .superposts .action { position:absolute; top:8px; margin-left:100%; left:-120px; }
 #content .superposts .posts { width:100%; }
 #content .superposts .posts li.post { margin-top:25px; }
@@ -349,8 +353,11 @@ i.fade {
 #content .superposts .posts li .meta li span { display:block; padding-right:19px; }
 #content .superposts .posts li .meta .coin { float:right; margin-top:-16px; }
 #content .superposts .posts li .meta .comments { color:#999999; display:block; float:right; padding-right:21px; background:url(../img/comments.png) no-repeat right top; }
+#content .superposts .posts li .meta .comments:hover { color:#333333; }
 #content .superposts .posts li a.user img { width:30px; height:30px; padding:1px; border:1px solid #999999; float:left; margin-right:6px; margin-top:1px; }
 #content .superposts .posts li a.user span { color:#666666; line-height:14px; }
+#content .superposts .posts li a.user:hover span { color:#333; }
+#content .superposts .posts li a.user:hover img { border-color:#333; }
 #content .superposts .posts li .path { line-height:17px; margin-left:40px; }
 #content .superposts .posts li .path ul { overflow:hidden; width:100%; }
 #content .superposts .posts li .path li { margin-top:2px; position:relative; }
@@ -361,7 +368,9 @@ i.fade {
 	border-bottom:1px solid #fff;
 	margin-left:1px;
 	background:url(../img/path_gradient.png) repeat-x left top;
+	opacity:0.9;
 }
+#content .superposts .posts li .path li.first:hover { opacity:1; }
 #content .superposts .posts li .path li .corners { margin-left:-1px; border-left:1px solid #aad555; overflow:visible; float:left; }
 #content .superposts .posts li .path li.first a { font-size:13px; color:#fff !important; padding-right:8px; line-height:17px; }
 #content .superposts .posts li .path li i {
@@ -386,13 +395,30 @@ i.fade {
 #content .superposts .posts h3 { font-size:20px; padding:4px 0; }
 #content .superposts .posts h3 a { color:#333; }
 #content .superposts .posts h3 a:hover { text-decoration:underline; }
-#content .superposts .posts .text { width:100%; font-family:Georgia, Georgia, serif; color:#333; }
+#content .superposts .posts .text { width:100%; color:#333; }
 #content .superposts .posts .text ul { margin:10px 10px; }
 #content .superposts .posts .text li { list-style-type:disc; margin-left:15px; }
 #content .superposts .posts .foot { width:100%; overflow:hidden; color:#999999; margin-top:10px; }
-#content .superposts .posts .foot p { float:right; }
+#content .superposts .posts .foot acronym { float:right; cursor:help; }
 #content .superposts .posts .foot .tags { width:300px; float:left; overflow:hidden; }
 #content .superposts .posts .foot .tags ul { float:left; height:14px; overflow:hidden; width:10000px; }
 #content .superposts .posts .foot .tags li { float:left; margin-right:4px; }
 #content .superposts .posts .foot .tags li a { color:#999999; }
 #content .superposts .posts .foot .tags li a:hover { text-decoration:underline; }
+
+/* minishop */
+
+#content .minishop { margin-top:40px; }
+#content .minishop .shop { width:100%; }
+#content .minishop .shop li { margin-bottom:10px; }
+#content .minishop .shop li a { display:block; width:100%; color:#666666; overflow:hidden; }
+#content .minishop .shop li a .img { float:left; position:relative; width:60px; height:60px; padding:4px 2px; margin-right:7px; }
+#content .minishop .shop li a .img img { width:60px; height:60px; overflow:hidden; }
+#content .minishop .shop li a .img i { position:absolute; width:64px; height:68px; top:0; left:0; background: url(../img/gray_fade_corners.png) no-repeat; }
+#content .minishop .shop li .coins { float:right; font-size:22px; width:80px; text-align:right; line-height:26px; color:#cccccc; }
+#content .minishop .shop li .coins span { display:block; padding-right:19px; }
+#content .minishop .shop li .coins b { float:right; margin-top:-22px; }
+#content .minishop .shop li a:hover .coins { color:#333; }
+#content .minishop .shop li h3 { width:300px; margin-left:71px; padding:4px 0; font-size:14px; font-weight:bold; color:#333333; }
+#content .minishop .shop li a:hover h3 { text-decoration:underline; }
+#content .minishop .shop li p { width:300px; margin-left:71px; }
