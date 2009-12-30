@@ -285,6 +285,29 @@ var Tabs = new Class({
 	
 });
 
+var Accordion = new Class({
+	
+	initialize: function(main){
+		this.main = $(main);
+		if(!this.main) return
+		
+		this.main.addClass('active');
+		this.titles = this.main.getElements('li.room');
+		this.activeElement = this.main.getElement('li.active');
+		
+		this.titles.addEvent('click', this.click.bind(this));
+	},
+	
+	click: function(e){
+		this.currentElement = $(e.target).getParent('li.room') || $(e.target);
+		if(this.activeElement) this.activeElement.removeClass('active');
+		this.currentElement.addClass('active');
+		this.activeElement = this.currentElement;
+		return false;
+	}
+	
+});
+
 window.addEvent('domready', function(){
 	
 	$$('.popup').each(function(element){ new popUp(element); });
@@ -292,7 +315,7 @@ window.addEvent('domready', function(){
 		element.get('type') != 'password' ? new Input(element) : new Input.Password(element);
 	});
 	new Slider('bannerSlider');
-	
 	$$('.tabs').each(function(element){ new Tabs(element); });
+	$$('.bonusList').each(function(element){ new Accordion(element); })
 	
 });
