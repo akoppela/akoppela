@@ -253,6 +253,38 @@ var Slider = new Class({
 	
 });
 
+var Tabs = new Class({
+	
+	initialize: function(main){
+		this.main = $(main);
+		if(!this.main) return
+		
+		this.titles = this.main.getElements('dt');
+		this.activeTitle = this.main.getElement('dt.active');
+		this.activeContent = this.main.getElement('dd.active');
+		
+		this.titles.addEvent('click', this.click.bind(this));
+	},
+	
+	click: function(e){
+		this.currentTitle = $(e.target).getParent('dt') || $(e.target);
+		if(this.currentTitle != this.activeTitle) {
+			this.currentContent = this.currentTitle.getNext('dd');
+			this.changeTabs();
+		}
+		
+		return false;
+	},
+	
+	changeTabs: function(){
+		if(this.activeTitle){ [this.activeTitle, this.activeContent].each(function(element){ element.removeClass('active'); }); }
+		[this.currentContent, this.currentTitle].each(function(element){ element.addClass('active'); });
+		this.activeTitle = this.currentTitle;
+		this.activeContent = this.currentContent;
+	}
+	
+});
+
 window.addEvent('domready', function(){
 	
 	$$('.popup').each(function(element){ new popUp(element); });
@@ -260,5 +292,7 @@ window.addEvent('domready', function(){
 		element.get('type') != 'password' ? new Input(element) : new Input.Password(element);
 	});
 	new Slider('bannerSlider');
+	
+	$$('.tabs').each(function(element){ new Tabs(element); });
 	
 });

@@ -1,7 +1,16 @@
 /* list */
 
-#header .service li, #header .service .userbar li { vertical-align:top; zoom:1; }
+#header .service li,
+#header .service .userbar li,
+#content .superposts .posts .post,
+#content .superposts .posts li .path li.first,
+#content .poker .bonus li { vertical-align:top; zoom:1; }
 
 /* exchange */
 
 #content .exchange p, #content .exchange .coin.small, #content .exchange form input, #content .exchange form label { display:inline; }
+
+/* poker */
+
+#content .poker .bonus li .bonuses li p .coin { vertical-align:middle; margin-right:6px; }
+#content .poker .bonus li .bonuses li .coin { margin-right:4px; }

@@ -20,18 +20,25 @@ a {	text-decoration:none; cursor:pointer; }
 /* corners */
 
 .corners { position:relative; overflow:hidden; }
+.corners .cn.tr, .corners .cn.br { margin-left:100%; }
+.corners .cn.bl, .corners .cn.br { top:auto !important; }
+.corners .cn { position:absolute; overflow:hidden; z-index:2; }
 .corners.gray .cn {
 	width:18px;
 	height:18px;
-	overflow:hidden;
 	background:url(../img/gray_corners.png) no-repeat;
-	position:absolute;
 	top:-9px;
 	left:-9px;
-	z-index:2;
 }
-.corners.gray .cn.tr, .corners.gray .cn.br { margin-left:100%; }
-.corners.gray .cn.bl, .corners.gray .cn.br { top:auto; margin-top:-9px; }
+.corners.gray .cn.bl, .corners.gray .cn.br { margin-top:-9px; }
+.corners.white .cn {
+	width:2px;
+	height:2px;
+	background:#fff;
+	top:-1px;
+	left:-1px;
+}
+.corners.white .cn.bl, .corners.white .cn.br { margin-top:-1px; }
 
 /* main.css */
 
@@ -46,6 +53,7 @@ body { font:12px Arial, Helvetica, sans-serif; background: url(../img/main_bg.jp
 .silver.small { background-position:-32px top !important; }
 .silver.big { background-position:left top !important; }
 .small.gold { background-position:-32px -16px !important; }
+.close.small { background-position:-48px top; }
 
 /* action */
 
@@ -284,14 +292,34 @@ i.fade {
 #content { padding:0 10px; margin-top:19px; }
 #content .wrapper { width:100%; padding:1px 0; overflow:hidden; }
 #content .left { clear:left; float:left; width:460px; }
-#content .right { float:right; width:460px; }
+#content .right { clear:right; float:right; width:460px; }
 #content h2 { font-size:36px; color:#333333; line-height:44px; }
-.more { width:100%; font-style:italic; font-size:14px; margin-top:20px; }
+.more { width:100%; font-style:italic; font-size:14px; margin-top:20px; overflow:hidden; }
 .more li { float:right; margin-left:15px; }
 .more li a { color:#333333; }
 .more li a:hover { text-decoration:underline; }
 .more li.leftMore { float:left; margin:0; }
 .more li.leftMore { color:#999999; }
+
+/* tabs */
+
+dl.tabs { width:100%; overflow:hidden; }
+dl.tabs dt { float:right; border-bottom:1px solid #d9d9d9; padding:0 4px; }
+dl.tabs dt .corners { border-top:1px solid #fff; position:relative; top:1px; overflow:visible; }
+dl.tabs dt .corners .cn { display:none; }
+dl.tabs dt a { display:block; padding:7px 7px 6px; border-bottom:1px solid #d9d9d9; font-size:14px; font-weight:bold; color:#999999; margin:0 -1px; }
+dl.tabs dt.active .corners { border-color:#d9d9d9; }
+dl.tabs dt.active a {
+	border-left:1px solid #d9d9d9;
+	border-right:1px solid #d9d9d9;
+	border-bottom:1px solid #fff;
+	padding:7px 6px 6px;
+	color:#333 !important;
+}
+dl.tabs dt a:hover { color:#666; }
+dl.tabs dt.active .corners .cn { display:block; }
+dl.tabs dd { display:none; float:left; width:100%; margin-right:-100%; margin-top:35px; }
+dl.tabs dd.active { display:block; }
 
 /* exchange */
 
@@ -369,8 +397,11 @@ i.fade {
 	margin-left:1px;
 	background:url(../img/path_gradient.png) repeat-x left top;
 	opacity:0.9;
+	position:relative;
+	z-index:1;
 }
-#content .superposts .posts li .path li.first:hover { opacity:1; }
+#content .superposts .posts li .path .first:hover { opacity:1; }
+#content .superposts .posts li .path .first:hover a { text-decoration:none; }
 #content .superposts .posts li .path li .corners { margin-left:-1px; border-left:1px solid #aad555; overflow:visible; float:left; }
 #content .superposts .posts li .path li.first a { font-size:13px; color:#fff !important; padding-right:8px; line-height:17px; }
 #content .superposts .posts li .path li i {
@@ -384,6 +415,7 @@ i.fade {
 	background: url(../img/fade_arrow.png) no-repeat;
 }
 #content .superposts .posts li .path li a { display:block; padding-left:3px; font-size:14px; line-height:20px; font-weight:bold; }
+#content .superposts .posts li .path li a:hover { text-decoration:underline; }
 #content .superposts .posts li .path.green li.first { background-color:#aad555; border-color:#aad555; }
 #content .superposts .posts li .path.green li.first .corners { border-color:#aad555; }
 #content .superposts .posts li .path.green li a { color:#9acc35; }
@@ -422,3 +454,39 @@ i.fade {
 #content .minishop .shop li h3 { width:300px; margin-left:71px; padding:4px 0; font-size:14px; font-weight:bold; color:#333333; }
 #content .minishop .shop li a:hover h3 { text-decoration:underline; }
 #content .minishop .shop li p { width:300px; margin-left:71px; }
+
+/* poker */
+
+#content .poker { margin-top:20px; position:relative; }
+#content .poker dl.tabs { margin-top:-35px; }
+#content .poker .bonus ul { width:100%; }
+#content .poker .bonus li.room { border-top:1px solid #e1e1e1; padding:15px 0; }
+#content .poker .bonus li:first-child, #content .poker .bonus li.first-child { border-top:0; }
+#content .poker .bonus li h3 a { display:block; overflow:hidden; }
+#content .poker .bonus li h3 img { float:left; width:40px; height:40px; overflow:hidden; position:relative; margin-top:3px; }
+#content .poker .bonus li h3 b { font-size:24px; color:#333; display:block; margin-left:45px; }
+#content .poker .bonus li h3 span { color:#999; display:block; margin-left:45px; }
+#content .poker .bonus li .bonuses { display:none; }
+#content .poker .bonus li.active .bonuses { display:block; }
+#content .poker .bonus li .bonuses { width:100%; }
+#content .poker .bonus li .bonuses li { margin-top:15px; overflow:hidden; width:100%; }
+#content .poker .bonus li .bonuses li p span { display:block; color:#999999; }
+#content .poker .bonus li .bonuses li p b { display:block; font-weight:normal; font-size:24px; color:#333333; }
+#content .poker .bonus li .bonuses li p b i { font-style:normal; font-size:16px; line-height:18px; position:relative; top:-3px; }
+#content .poker .bonus li .bonuses li p b i.gray { color:#999999; }
+#content .poker .bonus li .bonuses li .coin { display:inline-block; }
+#content .poker .bonus li .bonuses li .partnerscode { float:right; text-align:right; }
+#content .poker .bonus li .bonuses li .startbonus { float:left; }
+#content .poker .bonus li .bonuses li li { margin-top:0; line-height:24px; color:#666666; }
+#content .poker .bonus li .bonuses li li span { display:block; font-size:16px; margin-top:-24px; }
+#content .poker .bonus li .bonuses li li b { display:block; font-size:16px; font-weight:normal; text-align:right; }
+#content .poker .bonus li .bonuses li li b i { font-size:24px; font-style:normal; }
+#content .poker .bonus li .bonuses li li i .coin { display:inline-block; }
+#content .poker .bonus li .bonuses li li.gray { color:#cccccc; }
+#content .poker .bonus li .bonuses li li.here { color:#333; }
+#content .poker .more { margin-top:10px; }
+
+/* video */
+
+#content .video { margin-top:30px; }
+#content .video .tabs { margin-top:-35px; }

@@ -4,7 +4,22 @@
 
 /* list */
 
-#header .service li, #header .service .userbar li, #content .superposts .posts li .path li.first { vertical-align:top; zoom:1; }
+#header .service li,
+#header .service .userbar li,
+#content .superposts .posts .post,
+#content .superposts .posts li .path li.first,
+#content .poker .bonus li { vertical-align:top; zoom:1; }
+
+/* first-child */
+
+#content .poker .bonus li {
+	jscript: expression(
+		this.p ? 0 : (
+			this == parentNode.firstChild ? (className += " first-child") : 0,
+			this.p = 1
+		)
+	);
+}
 
 /* png */
 
@@ -36,3 +51,13 @@ i.fade,
 /* superposts */
 
 #content .superposts .posts li .main { margin-top:-15px; }
+
+/* tabs */
+
+dl.tabs dt .corners .cn.br { left:-9px; }
+
+/* poker */
+
+#content .poker .bonus li h3 a { zoom:1; }
+#content .poker .bonus li .bonuses li p .coin { vertical-align:middle; margin-right:6px; }
+#content .poker .bonus li .bonuses li .coin { margin-right:4px; }
