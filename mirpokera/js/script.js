@@ -272,7 +272,6 @@ var Tabs = new Class({
 			this.currentContent = this.currentTitle.getNext('dd');
 			this.changeTabs();
 		}
-		
 		return false;
 	},
 	
@@ -281,6 +280,34 @@ var Tabs = new Class({
 		[this.currentContent, this.currentTitle].each(function(element){ element.addClass('active'); });
 		this.activeTitle = this.currentTitle;
 		this.activeContent = this.currentContent;
+	}
+	
+});
+
+Tabs.Columns = new Class({
+	
+	Extends: Tabs,
+	
+  initialize: function(main){
+  	this.main = $(main);
+		if(!this.main) return;
+
+		this.titlesPart = this.main.getElement('.titles');
+		this.contentsPart = this.main.getElement('.contents');
+		this.titles = this.titlesPart.getElements('li');
+		this.activeTitle = this.titlesPart.getElement('li.active');
+		this.activeContent = this.contentsPart.getElement('li.active');
+		
+		this.titles.addEvent('click', this.click.bind(this));
+  },
+
+	click: function(e){
+		this.currentTitle = $(e.target).getParent('li') || $(e.target);
+		if(this.currentTitle != this.activeTitle) {
+			this.currentContent = this.contentsPart.getElement('#' + this.currentTitle.get('id') + 'Content');
+			this.changeTabs();
+		}
+		return false;
 	}
 	
 });
@@ -308,6 +335,36 @@ var Accordion = new Class({
 	
 });
 
+var Position = new Class({
+	
+	initialize: function(){
+		this.topBox = document.getElement('.moved.top');
+		this.bottomBox = document.getElement('.moved.bottom');
+		this.up = document.getElement('.up a');
+		this.fx = new Fx.Scroll(document);
+		
+		this.up.addEvent('click', this.click.bind(this));
+	},
+	
+	click: function(e){
+		this.getBoxesHtml();
+		$(e.target).hasClass('inTop') ? this.moveDown() : this.moveUp();
+		return false;
+	},
+	
+	getBoxesHtml: function(){
+		this.topBoxHtml = this.topBox.get('html');
+		this.bottomBoxHtml = this.bottomBox.get('html');
+	},
+	
+	moveDown: function(){
+	},
+	
+	moveUp: function(){
+	}
+	
+});
+
 window.addEvent('domready', function(){
 	
 	$$('.popup').each(function(element){ new popUp(element); });
@@ -315,7 +372,7 @@ window.addEvent('domready', function(){
 		element.get('type') != 'password' ? new Input(element) : new Input.Password(element);
 	});
 	new Slider('bannerSlider');
-	$$('.tabs').each(function(element){ new Tabs(element); });
-	$$('.bonusList').each(function(element){ new Accordion(element); })
+	$$('.tabs').each(function(element){ element.hasClass('columns') ? new Tabs.Columns(element) : new Tabs(element); });
+	$$('.bonusList').each(function(element){ new Accordion(element); });
 	
 });
