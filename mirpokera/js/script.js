@@ -7,7 +7,7 @@ var popUp = new Class({
 		this.heightFx = this.main.hasClass('withoutHeight') ? false : true;
 		this.main.addClass('active');
 		this.popUpBox = this.main.getElement('ul');
-		this.arrow = this.main.getElement('.clickarea');
+		this.clickarea = this.main.getElement('.clickarea');
 		this.fxDuration = this.heightFx ? 250 : 0;
 		this.fx = new Fx.Tween(this.main, { duration: this.fxDuration, wait: false });
 		this.fadeFx = new Fx.Tween(this.popUpBox, { duration:300, wait: false });
@@ -17,7 +17,7 @@ var popUp = new Class({
 			'mouseleave': this.startTimer.bind(this),
 			'mouseenter': this.stopTimer.bind(this)
 		});
-		this.arrow.addEvent('click', this.click.bind(this));
+		this.clickarea.addEvent('click', this.click.bind(this));
 	},
 	
 	startPosition: function(){
@@ -294,7 +294,7 @@ Tabs.Columns = new Class({
 
 		this.titlesPart = this.main.getElement('.titles');
 		this.contentsPart = this.main.getElement('.contents');
-		this.titles = this.titlesPart.getElements('li');
+		this.titles = this.titlesPart.getElements('.title');
 		this.activeTitle = this.titlesPart.getElement('li.active');
 		this.activeContent = this.contentsPart.getElement('li.active');
 		
@@ -340,27 +340,35 @@ var Position = new Class({
 	initialize: function(){
 		this.topBox = document.getElement('.moved.top');
 		this.bottomBox = document.getElement('.moved.bottom');
+		if(this.topBox && this.bottomBox){
+			this.getUpLink();
+			this.bottomBoxClass = this.bottomBox.get('class');
+			this.bottomBoxId = this.bottomBox.get('class');
+			this.fx = new Fx.Scroll(document);
+		}
+	},
+	
+	getUpLink: function(){
 		this.up = document.getElement('.up a');
-		this.fx = new Fx.Scroll(document);
-		
 		this.up.addEvent('click', this.click.bind(this));
 	},
 	
-	click: function(e){
-		this.getBoxesHtml();
-		$(e.target).hasClass('inTop') ? this.moveDown() : this.moveUp();
+	click: function(){
+		this.bottomBoxHtml = this.bottomBox.get('html');
+		this.position == 'up' ? this.move('down') : this.move('up');
 		return false;
 	},
 	
-	getBoxesHtml: function(){
-		this.topBoxHtml = this.topBox.get('html');
-		this.bottomBoxHtml = this.bottomBox.get('html');
-	},
-	
-	moveDown: function(){
-	},
-	
-	moveUp: function(){
+	move: function(how){
+		this.bottomBox.destroy();
+		this.bottomBox = new Element('div', {
+			'id': this.bottomBoxId,
+			'class': this.bottomBoxClass,
+			'html': this.bottomBoxHtml
+		}).inject(this.topBox, how == 'up' ? 'before' : 'after');
+		this.getUpLink();
+		this.fx.toElement(this.bottomBox);
+		this.position = how;
 	}
 	
 });
