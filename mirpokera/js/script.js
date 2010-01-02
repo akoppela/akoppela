@@ -341,16 +341,13 @@ var Position = new Class({
 		this.topBox = document.getElement('.moved.top');
 		this.bottomBox = document.getElement('.moved.bottom');
 		if(this.topBox && this.bottomBox){
-			this.getUpLink();
+			this.up = document.getElement('.up a');
 			this.bottomBoxClass = this.bottomBox.get('class');
 			this.bottomBoxId = this.bottomBox.get('class');
-			this.fx = new Fx.Scroll(document);
+			this.fx = new Fx.Scroll(document, { duration: 0, fps: 10000 });
+			
+			this.up.addEvent('click', this.click.bind(this));
 		}
-	},
-	
-	getUpLink: function(){
-		this.up = document.getElement('.up a');
-		this.up.addEvent('click', this.click.bind(this));
 	},
 	
 	click: function(){
@@ -360,13 +357,7 @@ var Position = new Class({
 	},
 	
 	move: function(how){
-		this.bottomBox.destroy();
-		this.bottomBox = new Element('div', {
-			'id': this.bottomBoxId,
-			'class': this.bottomBoxClass,
-			'html': this.bottomBoxHtml
-		}).inject(this.topBox, how == 'up' ? 'before' : 'after');
-		this.getUpLink();
+		this.bottomBox.inject(this.topBox, how == 'up' ? 'before' : 'after');
 		this.fx.toElement(this.bottomBox);
 		this.position = how;
 	}
@@ -382,5 +373,6 @@ window.addEvent('domready', function(){
 	new Slider('bannerSlider');
 	$$('.tabs').each(function(element){ element.hasClass('columns') ? new Tabs.Columns(element) : new Tabs(element); });
 	$$('.bonusList').each(function(element){ new Accordion(element); });
+	new Position();
 	
 });

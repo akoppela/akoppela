@@ -347,9 +347,11 @@ i.fade {
 	background: url(../img/path_gradient.png) repeat-x left -17px;
 	margin-left:10px;
 	opacity:0.25;
+	position:relative;
+	z-index:1;
 }
 .tabs.horizontal .titles li .title:hover { opacity:0.5; }
-.tabs.horizontal .titles li.active .title { width:239px; height:37px; margin-left:1px; opacity:1 !important; background-position:left -43px; }
+.tabs.horizontal .titles li.active .title { width:239px; height:37px; margin-left:1px; opacity:1; background-position:left -43px; }
 .tabs.horizontal .titles li .title .corners { margin-left:-1px; border-left:1px solid #fff; height:26px; overflow:visible; }
 .tabs.horizontal .titles li.active .title .corners { height:37px; }
 .tabs.horizontal .titles li .title .corners a { display:block; height:26px; }
@@ -408,6 +410,7 @@ i.fade {
 .tabs.horizontal .titles li.gray li a, .tabs.horizontal li.gray li { color:#676767; }
 .tabs.horizontal .titles li.white .title { border-color:#bfbfbf; background:#fff; opacity:0.5; }
 .tabs.horizontal .titles li.white .title:hover { opacity:0.75; }
+.tabs.horizontal .titles li.white.active .title { opacity:1; }
 .tabs.horizontal .titles li.white .title .corners { border-color:#bfbfbf; border-bottom-color:#bfbfbf; }
 .tabs.horizontal .titles li.white li a, .tabs.horizontal li.white li { color:#bfbfbf; }
 .tabs.horizontal .titles li.white .title .corners i { background-position:right -47px; }
