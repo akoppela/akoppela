@@ -6,11 +6,11 @@ var popUp = new Class({
 		
 		this.heightFx = this.main.hasClass('withoutHeight') ? false : true;
 		this.main.addClass('active');
-		this.popUpBox = this.main.getElement('ul');
+		this.popUpBox = this.main.hasClass('action') ? this.main.getElement('.actionPopup') : this.main.getElement('ul');
 		this.clickarea = this.main.getElement('.clickarea');
 		this.fxDuration = this.heightFx ? 250 : 0;
-		this.fx = new Fx.Tween(this.main, { duration: this.fxDuration, wait: false });
-		this.fadeFx = new Fx.Tween(this.popUpBox, { duration:300, wait: false });
+		this.fx = new Fx.Tween(this.main, { duration: this.fxDuration, fps: 100, wait: false });
+		this.fadeFx = new Fx.Tween(this.popUpBox, { duration:300, fps: 100, wait: false });
 		this.startPosition();
 		
 		this.main.addEvents({
@@ -109,7 +109,7 @@ var Slider = new Class({
 		if(this.testWidth()){
 			this.firstBanner = this.bannersBox.getFirst('li');
 			this.lastBanner = this.bannersBox.getLast('li');
-			this.fx = new Fx.Scroll(this.scrollBox, { duration:600, wait: false, wheelStops: false, transition: Fx.Transitions.Sine.easeInOut });
+			this.fx = new Fx.Scroll(this.scrollBox, { duration: 600, fps: 100, wait: false, wheelStops: false, transition: Fx.Transitions.Sine.easeInOut });
 			this.startPosition();
 		
 			this.scrollBox.addEvents({
@@ -259,9 +259,9 @@ var Tabs = new Class({
 		this.main = $(main);
 		if(!this.main) return
 		
-		this.titles = this.main.getElements('dt');
-		this.activeTitle = this.main.getElement('dt.active');
-		this.activeContent = this.main.getElement('dd.active');
+		this.titles = this.main.getElements('dt.titleTab');
+		this.activeTitle = this.main.getElement('dt.titleTab.active');
+		this.activeContent = this.main.getElement('dd.contentTab.active');
 		
 		this.titles.addEvent('click', this.click.bind(this));
 	},
@@ -364,8 +364,58 @@ var Position = new Class({
 	
 });
 
+var Pages = new Class({
+	
+	initialize: function(main){
+		this.main = $(main);
+		if(!this.main) return
+		
+		this.pagesContents = this.main.getElement('.pagesContents');
+		this.pagesList = this.main.getElement('.pagesList');
+		this.pages = this.main.getElements('.pages li');
+		this.getPagesContentsWidth();
+		this.fx = new Fx.Scroll(this.pagesContents);
+		
+		this.pages.addEvent('click', this.click.bind(this));
+	},
+	
+	getPagesContentsWidth: function(){
+		this.pagesContentsWidth = 0;
+		this.pagesContents.getElements('li.pageContent').each(function(element){
+			this.pagesContentsWidth += element.getWidth();
+			this.pageWidth = element.getWidth();
+		}.bind(this));
+		this.pagesList.setStyle('width', this.pagesContentsWidth);
+		this.currentPageLink = this.main.getElement('.pages li.active');
+		this.currentPosition = 0;
+	},
+	
+	click: function(e){
+		this.activePageLink = $(e.target).getParent('li.page') || $(e.target);
+		this.activePage = this.activePageLink.get('page');
+		this.changePage();
+		return false;
+	},
+	
+	changePage: function(){
+		if(this.currentPageLink) this.currentPageLink.removeClass('active');
+		if(this.activePage == 'next'){
+			this.currentPosition += this.pageWidth;
+			this.activePageLink = this.currentPageLink.getNext('li');
+		} else if(this.activePage == 'prev'){
+			this.currentPosition -= this.pageWidth;
+			this.activePageLink = this.currentPageLink.getPrevious('li');
+		} else this.currentPosition = this.pageWidth * (this.activePage - 1);
+		this.currentPageLink = this.activePageLink;
+		this.currentPageLink.addClass('active');
+		this.fx.start(this.currentPosition, 0);
+	}
+	
+});
+
 window.addEvent('domready', function(){
 	
+	Cufon.replace('h2');
 	$$('.popup').each(function(element){ new popUp(element); });
 	$$('input[default], textarea[default]').each(function(element){
 		element.get('type') != 'password' ? new Input(element) : new Input.Password(element);
@@ -374,5 +424,6 @@ window.addEvent('domready', function(){
 	$$('.tabs').each(function(element){ element.hasClass('columns') ? new Tabs.Columns(element) : new Tabs(element); });
 	$$('.bonusList').each(function(element){ new Accordion(element); });
 	new Position();
+	$$('.pagesnav').each(function(element){ new Pages(element); });
 	
 });
