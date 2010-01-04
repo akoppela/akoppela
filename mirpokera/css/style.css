@@ -336,8 +336,8 @@ i.fade {
 /* vertical */
 
 .tabs.vertical dt.titleTab { border-bottom:1px solid #d9d9d9; padding:0 4px; }
-.tabs.vertical.right dt.titleTab { float:right; }
-.tabs.vertical.left dt.titleTab { float:left; }
+.tabs.vertical.rightTabs dt.titleTab { float:right; }
+.tabs.vertical.leftTabs dt.titleTab { float:left; }
 .tabs.vertical dt.titleTab .corners { border-top:1px solid #fff; position:relative; top:1px; overflow:visible; }
 .tabs.vertical dt.titleTab .corners .cn { display:none; }
 .tabs.vertical dt.titleTab a { display:block; padding:7px 7px 6px; border-bottom:1px solid #d9d9d9; font-size:14px; font-weight:bold; color:#999999; margin:0 -1px; }
@@ -352,8 +352,8 @@ i.fade {
 .tabs.vertical dt.titleTab a:hover { color:#666; }
 .tabs.vertical dt.titleTab.active .corners .cn { display:block; }
 .tabs.vertical dd.contentTab { width:100%; margin-top:35px; }
-.tabs.vertical.right dd.contentTab { float:left; margin-right:-100%; }
-.tabs.vertical.left dd.contentTab { float:right; margin-left:-100%; }
+.tabs.vertical.rightTabs dd.contentTab { float:left; margin-right:-100%; }
+.tabs.vertical.leftTabs dd.contentTab { float:right; margin-left:-100%; }
 
 /* horizontal */
 
