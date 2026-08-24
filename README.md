@@ -1,7 +1,7 @@
 # Andrey Koppel
 
 Co-founder & lead developer at **[Interaktiv Audio](https://interaktivaudio.com)** —
-we build live performance instruments for DJs, producers, and musicians.
+we build live performance tools for DJs, producers, and musicians.
 
 Our first instrument: **[Interaktiv Tap](https://interaktivaudio.com/tap)** — a
 multi-touch iPad instrument that plays Traktor Pro over USB MIDI. Swift + SwiftUI,
